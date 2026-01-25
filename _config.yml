@@ -1,11 +1,17 @@
 # Site Settings
 title: BioBridge
+title_separator: "|"
+subtitle: "Making biotech accessible to everyone"
 email: contact@biobridge.org
 description: >-
   A student-led biotech access initiative helping students who are curious about 
   biotechnology but don't know where to begin.
 baseurl: "/biobridge"
 url: "https://jean-biotech.github.io"
+repository: "jean-biotech/biobridge"
+
+# Logo
+logo: "/biobridge/assets/images/biobridge-logo.png"
 
 # Theme
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
@@ -15,15 +21,8 @@ minimal_mistakes_skin: "default"
 author:
   name: "BioBridge"
   bio: "Making biotech accessible to everyone"
-  avatar: "/assets/images/biobridge-logo.png"
-
-# Build settings
-markdown: kramdown
-plugins:
-  - jekyll-feed
-  - jekyll-include-cache
-  - jekyll-seo-tag
-  - jekyll-sitemap
+  avatar: "/biobridge/assets/images/biobridge-logo.png"
+  location: "Philadelphia, PA"
 
 # Reading Files
 include:
@@ -35,6 +34,32 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor
+
+# Outputting
+permalink: /:categories/:title/
+timezone: America/New_York
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# Archives
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
 
 # Defaults
 defaults:
@@ -63,3 +88,6 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jean-biotech/biobridge"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:contact@biobridge.org"
