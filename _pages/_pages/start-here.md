@@ -14,9 +14,9 @@ BioBridge is not a course. It's not a bootcamp. It's a **starting point** — a 
 
 ### Three Simple Paths:
 
-1. **"I don't even know what biotech is"** → Start with [What is Biotech?](/what-is-biotech/)
-2. **"I'm interested but don't know what I could do"** → Explore [Career Pathways](/career-pathways/)
-3. **"I want to learn more on my own"** → Browse the [Resource Hub](/resources/)
+1. **"I don't even know what biotech is"** → Start with [What is Biotech?](/biobridge/what-is-biotech/)
+2. **"I'm interested but don't know what I could do"** → Explore [Career Pathways](/biobridge/career-pathways/)
+3. **"I want to learn more on my own"** → Browse the [Resource Hub](/biobridge/resources/)
 
 ## The BioBridge Philosophy
 
@@ -27,4 +27,4 @@ BioBridge is not a course. It's not a bootcamp. It's a **starting point** — a 
 
 ## Ready to Begin?
 
-Choose your path above, or learn more [about our story](/your-story/).
+Choose your path above, or learn more [about our story](/biobridge/your-story/).
