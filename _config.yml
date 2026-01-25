@@ -11,25 +11,6 @@ logo: "https://raw.githubusercontent.com/jean-biotech/biobridge/main/assets/imag
 remote_theme: mmistakes/minimal-mistakes@4.26.2
 minimal_mistakes_skin: default
 
-# Navigation
-main:
-  - title: "Home"
-    url: /biobridge/
-  - title: "Start Here"
-    url: /biobridge/start-here/
-  - title: "What is Biotech?"
-    url: /biobridge/what-is-biotech/
-  - title: "Career Pathways"
-    url: /biobridge/career-pathways/
-  - title: "Resources"
-    url: /biobridge/resources/
-  - title: "Your Story"
-    url: /biobridge/your-story/
-  - title: "Get Involved"
-    url: /biobridge/get-involved/
-  - title: "Products"
-    url: /biobridge/products/
-
 # Site Author
 author:
   name: "BioBridge"
@@ -52,3 +33,13 @@ defaults:
     values:
       layout: single
       author_profile: false
+
+# Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/jean-biotech/biobridge"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:contact@biobridge.org"
