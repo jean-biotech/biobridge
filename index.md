@@ -21,3 +21,4 @@ Use the menu above to navigate, or start here:
 - **What even is biotech?** → [What is Biotech?](/biobridge/what-is-biotech/)
 - **What could I do?** → [Career Pathways](/biobridge/career-pathways/)
 - **Want to learn more?** → [Resource Hub](/biobridge/resources/)
+ 
