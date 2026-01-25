@@ -11,7 +11,7 @@ url: "https://jean-biotech.github.io"
 repository: "jean-biotech/biobridge"
 
 # Logo
-logo: "/biobridge/assets/images/biobridge-logo.png"
+logo: "/biobridge/assets/images/BioBridge.png"
 
 # Theme
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
@@ -21,7 +21,7 @@ minimal_mistakes_skin: "default"
 author:
   name: "BioBridge"
   bio: "Making biotech accessible to everyone"
-  avatar: "/biobridge/assets/images/biobridge-logo.png"
+  avatar: "/biobridge/assets/images/BioBridge.png"
   location: "Philadelphia, PA"
 
 # Reading Files
