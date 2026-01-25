@@ -1,14 +1,15 @@
-# Site Settings
 title: BioBridge
-title_separator: "|"
-subtitle: "Making biotech accessible to everyone"
 email: contact@biobridge.org
-description: >-
-  A student-led biotech access initiative helping students who are curious about 
-  biotechnology but don't know where to begin.
+description: A student-led biotech access initiative
 baseurl: "/biobridge"
 url: "https://jean-biotech.github.io"
-repository: "jean-biotech/biobridge"
+
+# Logo
+logo: "https://raw.githubusercontent.com/jean-biotech/biobridge/main/assets/images/BioBridge.png"
+
+# Theme
+remote_theme: mmistakes/minimal-mistakes@4.26.2
+minimal_mistakes_skin: default
 
 # Navigation
 main:
@@ -29,84 +30,25 @@ main:
   - title: "Products"
     url: /biobridge/products/
 
-# Logo
-logo: "https://raw.githubusercontent.com/jean-biotech/biobridge/main/assets/images/BioBridge.png"
-
-# Theme
-remote_theme: "mmistakes/minimal-mistakes@4.26.2"
-minimal_mistakes_skin: "default"
-
 # Site Author
 author:
   name: "BioBridge"
   bio: "Making biotech accessible to everyone"
   avatar: "https://raw.githubusercontent.com/jean-biotech/biobridge/main/assets/images/BioBridge.png"
-  location: "Philadelphia, PA"
 
-# Reading Files
-include:
-  - _pages
-
-# Exclude from processing
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor
-
-# Outputting
-permalink: /:categories/:title/
-timezone: America/New_York
-
-# Plugins
+# Build settings
+markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-paginate
 
-# Archives
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
+include:
+  - _pages
 
-# HTML Compression
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
-
-# Defaults
 defaults:
-  # _posts
   - scope:
       path: ""
-      type: posts
     values:
       layout: single
       author_profile: false
-      read_time: false
-      comments: false
-      share: false
-      related: false
-  # _pages
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: single
-      author_profile: false
-
-# Site Footer
-footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/jean-biotech/biobridge"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope"
-      url: "mailto:contact@biobridge.org"
