@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "What is Biotech?"
-permalink: /what-is-biotech/
+permalink: /biobridge/what-is-biotech/
 toc: true
 toc_label: "On This Page"
 ---
