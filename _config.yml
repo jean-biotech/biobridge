@@ -16,7 +16,7 @@ main:
     url: /biobridge/get-involved/
   - title: "Products"
     url: /biobridge/products/
-
+    
 # Logo
 logo: "https://raw.githubusercontent.com/jean-biotech/biobridge/main/assets/images/BioBridge.png"
 
