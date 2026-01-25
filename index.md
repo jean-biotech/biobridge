@@ -1,11 +1,9 @@
 ---
-layout: splash
+layout: single
 title: "BioBridge"
-header:
-  overlay_color: "#7a9b76"
-  overlay_filter: "0.3"
-excerpt: "Making biotechnology accessible to everyone"
 ---
+
+# Making Biotechnology Accessible to Everyone
 
 ## Your Bridge to Biotech Starts Here
 
