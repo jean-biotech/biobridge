@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "FAQ - Getting Started"
-permalink: /biobridge/faq/
+permalink: /faq/
 toc: true
 toc_label: "Questions"
 ---
