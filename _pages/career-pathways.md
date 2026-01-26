@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Career Pathways"
-permalink: /biobridge/career-pathways/
+permalink: /career-pathways/
 toc: true
 toc_label: "Pathways"
 ---
