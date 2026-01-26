@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Get Involved"
-permalink: /biobridge/get-involved/
+permalink: /get-involved/
 ---
 
 # Get Involved with BioBridge
