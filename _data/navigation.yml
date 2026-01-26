@@ -2,16 +2,16 @@ main:
   - title: "Home"
     url: /
   - title: "What is Biotech?"
-    url: /biobridge/what-is-biotech/
+    url: /what-is-biotech/
   - title: "Career Pathways"
-    url: /biobridge/career-pathways/
+    url: /career-pathways/
   - title: "Resources"
-    url: /biobridge/resources/
+    url: /resources/
   - title: "Your Story"
-    url: /biobridge/your-story/
+    url: /your-story/
   - title: "Get Involved"
-    url: /biobridge/get-involved/
+    url: /get-involved/
   - title: "Products"
-    url: /biobridge/products/
+    url: /products/
   - title: "FAQ"
-    url: /biobridge/faq/
+    url: /faq/
