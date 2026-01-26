@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Your Story"
-permalink: /biobridge/your-story/
+permalink: /your-story/
 ---
 
 # Why BioBridge Exists
