@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Products"
-permalink: /biobridge/products/
+permalink: /products/
 ---
 
 # BioBridge Guides
