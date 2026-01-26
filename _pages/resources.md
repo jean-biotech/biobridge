@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Resource Hub"
-permalink: /biobridge/resources/
+permalink: /resources/
 toc: true
 toc_label: "Categories"
 ---
