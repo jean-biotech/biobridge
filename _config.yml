@@ -2,8 +2,8 @@ title: BioBridge
 subtitle: "Making biotech accessible to everyone"
 email: contact@biobridge.org
 description: A student-led biotech access initiative
-baseurl: "/biobridge"
-url: "https://jean-biotech.github.io"
+url: "https://biotechbridge.org"
+baseurl: ""
 
 # Logo
 logo: "https://raw.githubusercontent.com/jean-biotech/biobridge/main/assets/images/BioBridge.png"
