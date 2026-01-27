@@ -4,6 +4,7 @@ title: "Career Pathways"
 permalink: /career-pathways/
 toc: true
 toc_label: "Pathways"
+classes: wide
 ---
 
 # Careers in Biotechnology
