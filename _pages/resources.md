@@ -4,6 +4,7 @@ title: "Resource Hub"
 permalink: /resources/
 toc: true
 toc_label: "Categories"
+classes: wide
 ---
 
 # Curated Resources for Biotech Beginners
