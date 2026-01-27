@@ -2,6 +2,7 @@
 layout: single
 title: "Your Story"
 permalink: /your-story/
+classes: wide
 ---
 
 # Why BioBridge Exists
