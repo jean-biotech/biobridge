@@ -4,6 +4,7 @@ title: "FAQ - Getting Started"
 permalink: /faq/
 toc: true
 toc_label: "Questions"
+classes: wide
 ---
 
 # Frequently Asked Questions
