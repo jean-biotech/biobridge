@@ -1,12 +1,7 @@
 ---
 layout: single
-title: "BioBridge"
 classes: wide
 ---
-
-<div style="text-align: center; margin-bottom: 3rem;">
-  <a href="/what-is-biotech/" class="btn btn--primary btn--large">Get Started</a>
-</div>
 
 # Making Biotechnology Accessible to Everyone
 
@@ -29,5 +24,5 @@ I started documenting what I was learning on social media, and the audience grew
 ---
 
 <div style="text-align: center; margin-top: 3rem;">
-  <a href="/what-is-biotech/" class="btn btn--success btn--x-large">Start Learning</a>
+  <a href="/what-is-biotech/" class="btn btn--primary btn--x-large">Get Started</a>
 </div>
