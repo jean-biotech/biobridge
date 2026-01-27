@@ -4,7 +4,6 @@ title: "What is Biotech?"
 permalink: /what-is-biotech/
 toc: true
 toc_label: "On This Page"
-classes: wide
 ---
 
 # What is Biotechnology, Really?
