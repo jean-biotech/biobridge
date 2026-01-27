@@ -2,7 +2,6 @@
 layout: single
 title: "Get Involved"
 permalink: /get-involved/
-classes: wide
 ---
 
 # Get Involved with BioBridge
