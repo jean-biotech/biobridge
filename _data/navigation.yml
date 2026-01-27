@@ -1,17 +1,31 @@
 main:
   - title: "Home"
     url: /
-  - title: "What is Biotech?"
-    url: /what-is-biotech/
-  - title: "Career Pathways"
-    url: /career-pathways/
+    
+  - title: "About"
+    children:
+      - title: "What is Biotech?"
+        url: /what-is-biotech/
+      - title: "Your Story"
+        url: /your-story/
+      - title: "FAQ"
+        url: /faq/
+        
+  - title: "Career Paths"
+    children:
+      - title: "Explore Pathways"
+        url: /career-pathways/
+      # Uncomment these when ready:
+      # - title: "Take the Quiz"
+      #   url: /quiz/
+      # - title: "Read Stories"
+      #   url: /stories/
+        
   - title: "Resources"
     url: /resources/
-  - title: "Your Story"
-    url: /your-story/
+    
   - title: "Get Involved"
     url: /get-involved/
+    
   - title: "Products"
     url: /products/
-  - title: "FAQ"
-    url: /faq/
