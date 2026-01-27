@@ -4,11 +4,12 @@ title: "What is Biotech?"
 permalink: /what-is-biotech/
 toc: true
 toc_label: "On This Page"
+classes: wide
 ---
 
 # What is Biotechnology, Really?
 
-Biotechnology is using living systems — cells, bacteria, proteins, DNA — to create useful products or solve problems.
+Biotechnology is using living systems—cells, bacteria, proteins, DNA—to create useful products or solve problems.
 
 If that sounds vague, it's because biotech is **incredibly broad**. It touches medicine, agriculture, environmental science, manufacturing, and more.
 
@@ -74,7 +75,7 @@ Every major biotech breakthrough follows this pattern. Science is step one and e
 
 ---
 
-## Let's Clear Some Things Up
+## Common Misconceptions
 
 **"You need to be good at biology to be in the industry."**  
 Not necessarily. If you can explain complex ideas simply, you could do science communication. If you're good with numbers and logistics, there's operations. Biotech hosts a range of humanities majors, business students, and engineers just as much as biology PhDs.
