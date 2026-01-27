@@ -2,6 +2,7 @@
 layout: single
 title: "Products"
 permalink: /products/
+classes: wide
 ---
 
 # BioBridge Guides
