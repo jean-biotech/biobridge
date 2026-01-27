@@ -2,7 +2,8 @@ main:
   - title: "Home"
     url: /
     
-  - title: "About"
+  - title: About
+    url: "#"
     children:
       - title: "What is Biotech?"
         url: /what-is-biotech/
@@ -11,15 +12,11 @@ main:
       - title: "FAQ"
         url: /faq/
         
-  - title: "Career Paths"
+  - title: Career Paths
+    url: "#"
     children:
       - title: "Explore Pathways"
         url: /career-pathways/
-      # Uncomment these when ready:
-      # - title: "Take the Quiz"
-      #   url: /quiz/
-      # - title: "Read Stories"
-      #   url: /stories/
         
   - title: "Resources"
     url: /resources/
