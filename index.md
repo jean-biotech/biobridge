@@ -48,7 +48,7 @@ header:
       <p style="margin-top: 2rem; font-size: 1.1rem;">
         <strong>📸 Follow the journey:</strong><br>
 <a href="https://instagram.com/jeans.scenes" target="_blank" style="color: #7a9b76;">Instagram</a> •
-<a href="https://linkedin.com/in/jeantrann" target="_blank" style="color: #7a9b76;">LinkedIn</a> • 
+<a href="https://linkedin.com/in/jeantrann" target="_blank" style="color: #7a9b76;">LinkedIn</a> 
       </p>
     </div>
     
