@@ -1,5 +1,6 @@
 ---
 layout: splash
+title: " "
 classes: wide
 header:
   overlay_color: "#7a9b76"
