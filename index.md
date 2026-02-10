@@ -45,11 +45,15 @@ header:
       
       <p>I started documenting what I was learning on social media, and the audience grew fast. Tens of thousands of people, and my DMs turned into a constant stream of the same questions: What is biotech? How do I break in? Do I need a PhD? People were curious, but lacked a practical starting point. So, I built BioBridge as the resource I wish had existed when I was trying to figure it out.</p>
       
-      <p style="margin-top: 2rem; font-size: 1.1rem;">
-        <strong>📸 Follow the journey:</strong><br>
-<a href="https://instagram.com/jeans.scenes" target="_blank" style="color: #7a9b76;">Instagram</a> •
-<a href="https://linkedin.com/in/jeantrann" target="_blank" style="color: #7a9b76;">LinkedIn</a> 
-      </p>
+<p style="margin-top: 2rem; font-size: 1.1rem;">
+  <strong>Follow the journey:</strong><br>
+  <a href="https://instagram.com/jeans.scenes" target="_blank" style="color: #7a9b76; text-decoration: none; font-size: 1.2rem;">
+    <i class="fab fa-instagram"></i> Instagram
+  </a> • 
+  <a href="https://linkedin.com/in/jeantrann" target="_blank" style="color: #7a9b76; text-decoration: none; font-size: 1.2rem;">
+    <i class="fab fa-linkedin"></i> LinkedIn
+  </a>
+</p>
     </div>
     
   </div>
