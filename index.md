@@ -47,11 +47,11 @@ header:
       
 <p style="margin-top: 2rem; font-size: 1.1rem;">
   <strong>Follow the journey:</strong><br>
-  <a href="https://instagram.com/jeans.scenes" target="_blank" style="color: #7a9b76; text-decoration: none; font-size: 1.2rem;">
-    <i class="fab fa-instagram"></i> Instagram
+  <a href="https://instagram.com/jeans.scenes" target="_blank" style="text-decoration: none; font-size: 1.2rem;">
+    <span style="color: #E4405F;"><i class="fab fa-instagram"></i></span> <span style="color: #333;">Instagram</span>
   </a> • 
-  <a href="https://linkedin.com/in/jeantrann" target="_blank" style="color: #7a9b76; text-decoration: none; font-size: 1.2rem;">
-    <i class="fab fa-linkedin"></i> LinkedIn
+  <a href="https://linkedin.com/in/jeantrann" target="_blank" style="text-decoration: none; font-size: 1.2rem;">
+    <span style="color: #0A66C2;"><i class="fab fa-linkedin"></i></span> <span style="color: #333;">LinkedIn</span>
   </a>
 </p>
     </div>
