@@ -8,7 +8,7 @@ header:
 ---
 
 <div style="text-align: center; padding: 4rem 2rem; background: linear-gradient(135deg, #7a9b76 0%, #5a7a56 100%); color: white; margin-bottom: 3rem;">
-  <h1 style="font-size: 3rem; margin-bottom: 1rem; color: white;">MAKING BIOTECHNOLOGY<br>ACCESSIBLE TO EVERYONE</h1>
+  <h1>Making Biotechnology Accessible to Everyone</h1>
   <p style="font-size: 1.5rem; margin-bottom: 2rem; color: white;">Your bridge into biotechnology starts here.</p>
 <a href="/what-is-biotech/" class="btn btn--primary btn--x-large" style="background: white !important; color: #7a9b76 !important; font-weight: bold;">Get Started</a>
 </div>
