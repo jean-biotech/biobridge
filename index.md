@@ -29,7 +29,7 @@ header:
 
 ---
 
-<div style="max-width: 1000px; margin: 1.5rem auto; padding: 2rem; background: #faf9f7; border-radius: 10px;">
+<div style="max-width: 1000px; margin: 0.5rem auto; padding: 2rem; background: #faf9f7; border-radius: 10px;">
   
   <h2 style="color: #7a9b76; margin-bottom: 2rem;">Why I Built This</h2>
   
