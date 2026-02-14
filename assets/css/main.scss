@@ -4,12 +4,17 @@
 
 @charset "utf-8";
 
-// Custom color variables for BioBridge
-$background-color: #faf9f7 !default;  // Off-white/soft ivory
-$text-color: #3a3a3a !default;  // Charcoal
-$primary-color: #7a9b76 !default;  // Sage green
-$link-color: #5a7a56 !default;  // Darker sage for links
-$link-color-hover: #4a6a46 !default;  // Even darker on hover
+// BioBridge Modern Color System — Green + Gold
+$background-color: #ffffff !default;
+$text-color: #0f172a !default;
+$primary-color: #064e3b !default;       // Deep emerald green
+$accent-color: #10b981 !default;        // Vibrant green
+$gold-color: #d97706 !default;          // Warm gold accent
+$link-color: #047857 !default;
+$link-color-hover: #065f46 !default;
+$muted-color: #64748b !default;
+$border-color: #e2e8f0 !default;
+$alt-bg: #f0fdf4 !default;             // Very light green tint
 $masthead-link-color: $text-color !default;
 $masthead-link-color-hover: $primary-color !default;
 
@@ -17,28 +22,50 @@ $masthead-link-color-hover: $primary-color !default;
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
-// Custom BioBridge styles
-.masthead {
-  background-color: $background-color;
-  border-bottom: 2px solid $primary-color;
+// Global
+html {
+  scroll-behavior: smooth;
 }
 
+body {
+  background: $background-color;
+  color: $text-color;
+}
+
+// Masthead — clean, professional
+.masthead {
+  background-color: #ffffff;
+  border-bottom: 1px solid $border-color;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+// Page titles
 .page__title {
   color: $primary-color;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
+// Buttons
 .btn--primary {
-  background-color: $primary-color !important;
-  
+  background-color: $gold-color !important;
+  color: #ffffff !important;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: all 0.2s ease;
+
   &:hover {
-    background-color: darken($primary-color, 10%) !important;
+    background-color: darken($gold-color, 8%) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba($gold-color, 0.3);
   }
 }
 
+// Links
 .archive__item-title a {
   color: $text-color;
-  
+
   &:hover {
     color: $primary-color;
   }
@@ -47,4 +74,16 @@ $masthead-link-color-hover: $primary-color !default;
 // Logo styling
 .site-logo img {
   max-height: 60px;
+}
+
+// TOC styling for content pages
+.toc {
+  border: 1px solid $border-color;
+  border-radius: 10px;
+  background: $alt-bg;
+
+  .nav__title {
+    background: $primary-color;
+    border-radius: 10px 10px 0 0;
+  }
 }
