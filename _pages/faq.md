@@ -164,7 +164,7 @@ Some roles value your previous experience more than a biotech background.
 
 Yes. Our entire site is designed for beginners.
 
-**Start here:**
+**Begin with these steps:**
 1. Read [What is Biotech?](/what-is-biotech/) -- no prerequisites needed
 2. Explore [Career Pathways](/career-pathways/) -- many do not require science degrees
 3. Check [Resources](/resources/) -- start with podcasts and YouTube channels
