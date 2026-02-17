@@ -12,13 +12,17 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
 h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
 :root {
-  --bb-navy: #0f2b3c;
-  --bb-teal: #0d7377;
-  --bb-teal-light: #14919b;
-  --bb-teal-dark: #094f52;
-  --bb-teal-bg: #f0f9fa;
+  --bb-green: #2D5F3F;
+  --bb-green-accent: #3A7D5C;
+  --bb-green-bright: #4CAF50;
+  --bb-green-hover: #66BB6A;
+  --bb-green-dark: #1A3A28;
+  --bb-green-bg: #E8F5E9;
+  --bb-green-bg-subtle: #F1F8F4;
+  --bb-navy: #1A1A2E;
+  --bb-charcoal: #2C3E50;
   --bb-white: #ffffff;
-  --bb-off-white: #f7f9fb;
+  --bb-off-white: #FAFAFA;
   --bb-text-secondary: #475569;
   --bb-gray: #64748b;
   --bb-border: #e2e8f0;
@@ -26,7 +30,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
 /* Page Header — Mobile First */
 .bb-page-hero {
-  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-teal-dark) 100%);
+  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
   color: var(--bb-white);
   padding: 2.5rem 1.5rem;
   border-radius: 10px;
@@ -38,7 +42,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(13,115,119,0.15) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 80% 20%, rgba(45,95,63,0.15) 0%, transparent 60%);
   pointer-events: none;
 }
 .bb-page-hero h1 {
@@ -76,7 +80,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--bb-teal), var(--bb-teal-light));
+  background: linear-gradient(90deg, var(--bb-green-accent), var(--bb-green-hover));
   border-radius: 8px 8px 0 0;
 }
 .bb-career-card:hover {
@@ -95,7 +99,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 }
 .bb-career-detail strong {
   font-family: 'Inter', sans-serif;
-  color: var(--bb-teal-dark);
+  color: var(--bb-green);
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -117,7 +121,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
 /* Next Steps */
 .bb-next-steps {
-  background: var(--bb-teal-bg);
+  background: var(--bb-green-bg);
   border: 1px solid var(--bb-border);
   border-radius: 8px;
   padding: 1.75rem 1.5rem;
@@ -141,7 +145,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   font-size: 0.92rem;
 }
 .bb-next-steps a {
-  color: var(--bb-teal);
+  color: var(--bb-green-accent);
   font-weight: 600;
 }
 

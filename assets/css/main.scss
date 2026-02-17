@@ -5,35 +5,38 @@
 @charset "utf-8";
 
 // ============================================================
-// BioBridge Design System — Teal / Navy / Clean Professional
-// Inspired by: Girls Who Invest, MIT Media Lab, Wharton
+// BioBridge Design System — Green Biotech / Professional
+// Scientific green palette with wide desktop layout
 // Mobile-first CSS approach
 // ============================================================
 
-// Color System
-$bb-navy: #0f2b3c;
-$bb-teal: #0d7377;
-$bb-teal-light: #14919b;
-$bb-teal-dark: #094f52;
-$bb-teal-bg: #f0f9fa;
+// Green Biotech Color System
+$bb-green: #2D5F3F;
+$bb-green-accent: #3A7D5C;
+$bb-green-bright: #4CAF50;
+$bb-green-hover: #66BB6A;
+$bb-green-dark: #1A3A28;
+$bb-green-bg: #E8F5E9;
+$bb-green-bg-subtle: #F1F8F4;
+$bb-navy: #1A1A2E;
+$bb-charcoal: #2C3E50;
 $bb-white: #ffffff;
-$bb-off-white: #f7f9fb;
-$bb-slate: #3d5a6e;
-$bb-gray: #64748b;
-$bb-gray-light: #94a3b8;
+$bb-off-white: #FAFAFA;
+$bb-gray: #757575;
+$bb-gray-light: #9E9E9E;
 $bb-border: #e2e8f0;
-$bb-accent: #c8553d;
-$bb-accent-hover: #a8432e;
+$bb-text: #1e293b;
 
 // Minimal Mistakes overrides
 $background-color: $bb-white !default;
-$text-color: #1e293b !default;
-$primary-color: $bb-teal !default;
-$link-color: $bb-teal !default;
-$link-color-hover: $bb-teal-dark !default;
+$text-color: $bb-text !default;
+$primary-color: $bb-green !default;
+$link-color: $bb-green-accent !default;
+$link-color-hover: $bb-green !default;
 $masthead-link-color: $bb-navy !default;
-$masthead-link-color-hover: $bb-teal !default;
+$masthead-link-color-hover: $bb-green !default;
 $border-color: $bb-border !default;
+$max-width: 1400px !default;
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
@@ -50,21 +53,122 @@ html {
 
 body {
   background: $bb-white;
-  color: #1e293b;
+  color: $bb-text;
 }
 
 // ============================================================
-// MASTHEAD / NAVIGATION — Clean, Professional
+// WIDE DESKTOP LAYOUT OVERRIDES
+// ============================================================
+
+// Force the main content area to use full width on desktop
+.page {
+  @media (min-width: 769px) {
+    max-width: 1400px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  @media (min-width: 1200px) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+// Splash layout should be full-width
+.layout--splash .page {
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// Override Minimal Mistakes narrow container
+.page__inner-wrap {
+  @media (min-width: 769px) {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+// Content area within pages with TOC sidebar
+.page__content {
+  @media (min-width: 769px) {
+    max-width: none;
+    p, li, blockquote {
+      max-width: 800px; // comfortable reading width
+    }
+  }
+}
+
+// Sidebar (TOC "On This Page") — position to the side on desktop
+.sidebar__right {
+  @media (min-width: 1024px) {
+    position: sticky;
+    top: 80px;
+    float: right;
+    width: 260px;
+    margin-right: 0;
+    padding-left: 1.5rem;
+    border-left: 2px solid $bb-green-bg;
+  }
+}
+
+// ============================================================
+// MASTHEAD / NAVIGATION — Professional, full-width
 // ============================================================
 
 .masthead {
   background-color: $bb-white;
   border-bottom: 1px solid $bb-border;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+  padding: 0;
+
+  .masthead__inner-wrap {
+    max-width: 1400px;
+    padding: 0 40px;
+
+    @media (min-width: 1200px) {
+      padding: 0 60px;
+    }
+  }
 }
 
+// Logo — large, prominent, professional
 .site-logo img {
-  max-height: 50px;
+  max-height: 48px;
+  width: auto;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  padding: 4px 0;
+
+  @media (min-width: 769px) {
+    max-height: 56px;
+    padding: 6px 0;
+  }
+}
+
+.site-title {
+  font-weight: 800 !important;
+  font-size: 1.35rem !important;
+  letter-spacing: -0.02em;
+  color: $bb-navy !important;
+  padding: 15px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  &:hover {
+    color: $bb-green !important;
+
+    img {
+      transform: scale(1.05);
+    }
+  }
+
+  @media (min-width: 769px) {
+    font-size: 1.5rem !important;
+    padding: 18px 0;
+    gap: 14px;
+  }
 }
 
 .greedy-nav {
@@ -73,29 +177,42 @@ body {
     letter-spacing: 0.01em;
     transition: color 0.2s ease;
   }
-  .visible-links a {
-    &:before {
-      background: $bb-teal;
+
+  .visible-links {
+    a {
+      color: $bb-charcoal;
+
+      &:hover {
+        color: $bb-green;
+      }
+
+      &:before {
+        background: $bb-green;
+      }
     }
   }
 }
 
 // ============================================================
-// PAGE TITLES & CONTENT
+// PAGE TITLES & CONTENT — Green headers
 // ============================================================
 
 .page__title {
-  color: $bb-navy;
+  color: $bb-green;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: $bb-green;
+}
+
 // ============================================================
-// BUTTONS
+// BUTTONS — Green
 // ============================================================
 
 .btn--primary {
-  background-color: $bb-teal !important;
+  background-color: $bb-green-bright !important;
   color: $bb-white !important;
   border-radius: 6px;
   font-weight: 600;
@@ -103,33 +220,60 @@ body {
   transition: all 0.2s ease;
 
   &:hover {
-    background-color: $bb-teal-dark !important;
+    background-color: $bb-green !important;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba($bb-teal, 0.25);
+    box-shadow: 0 4px 12px rgba($bb-green, 0.25);
   }
 }
 
 // ============================================================
-// TOC STYLING
+// TOC STYLING — Green theme
 // ============================================================
 
 .toc {
   border: 1px solid $bb-border;
   border-radius: 8px;
-  background: $bb-teal-bg;
+  background: $bb-green-bg-subtle;
 
   .nav__title {
-    background: $bb-navy;
+    background: $bb-green;
     border-radius: 8px 8px 0 0;
+  }
+
+  a {
+    color: $bb-charcoal;
+
+    &:hover {
+      color: $bb-green;
+    }
+  }
+
+  .active {
+    a {
+      color: $bb-green !important;
+      font-weight: 600;
+    }
   }
 }
 
 // ============================================================
-// FOOTER
+// LINKS — Green
+// ============================================================
+
+a {
+  color: $bb-green-accent;
+
+  &:hover {
+    color: $bb-green;
+  }
+}
+
+// ============================================================
+// FOOTER — Dark green
 // ============================================================
 
 .page__footer {
-  background: $bb-navy;
+  background: $bb-green-dark;
   color: rgba(255, 255, 255, 0.7);
 
   a {

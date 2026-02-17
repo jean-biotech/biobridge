@@ -12,13 +12,17 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
 h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
 :root {
-  --bb-navy: #0f2b3c;
-  --bb-teal: #0d7377;
-  --bb-teal-light: #14919b;
-  --bb-teal-dark: #094f52;
-  --bb-teal-bg: #f0f9fa;
+  --bb-green: #2D5F3F;
+  --bb-green-accent: #3A7D5C;
+  --bb-green-bright: #4CAF50;
+  --bb-green-hover: #66BB6A;
+  --bb-green-dark: #1A3A28;
+  --bb-green-bg: #E8F5E9;
+  --bb-green-bg-subtle: #F1F8F4;
+  --bb-navy: #1A1A2E;
+  --bb-charcoal: #2C3E50;
   --bb-white: #ffffff;
-  --bb-off-white: #f7f9fb;
+  --bb-off-white: #FAFAFA;
   --bb-text-secondary: #475569;
   --bb-gray: #64748b;
   --bb-border: #e2e8f0;
@@ -26,7 +30,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
 /* Page Header — Mobile First */
 .bb-page-hero {
-  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-teal-dark) 100%);
+  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
   color: var(--bb-white);
   padding: 2.5rem 1.5rem;
   border-radius: 10px;
@@ -38,7 +42,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(13,115,119,0.15) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 80% 20%, rgba(45,95,63,0.15) 0%, transparent 60%);
   pointer-events: none;
 }
 .bb-page-hero h1 {
@@ -66,7 +70,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   font-size: 1.15rem;
   font-weight: 700;
   padding-bottom: 0.75rem;
-  border-bottom: 2px solid var(--bb-teal);
+  border-bottom: 2px solid var(--bb-green-accent);
   margin-bottom: 1.25rem;
 }
 
@@ -100,7 +104,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   transition: color 0.2s ease;
 }
 .bb-resource-card h3 a:hover {
-  color: var(--bb-teal);
+  color: var(--bb-green-accent);
 }
 .bb-resource-card p {
   color: var(--bb-gray);
@@ -116,7 +120,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-cta-footer {
   text-align: center;
   padding: 1.75rem 1.5rem;
-  background: var(--bb-teal-bg);
+  background: var(--bb-green-bg);
   border-radius: 8px;
   border: 1px solid var(--bb-border);
 }
@@ -126,7 +130,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   margin: 0;
 }
 .bb-cta-footer a {
-  color: var(--bb-teal);
+  color: var(--bb-green-accent);
   font-weight: 600;
 }
 

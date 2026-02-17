@@ -12,21 +12,25 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
 h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
 :root {
-  --bb-navy: #0f2b3c;
-  --bb-teal: #0d7377;
-  --bb-teal-light: #14919b;
-  --bb-teal-dark: #094f52;
-  --bb-teal-bg: #f0f9fa;
+  --bb-green: #2D5F3F;
+  --bb-green-accent: #3A7D5C;
+  --bb-green-bright: #4CAF50;
+  --bb-green-hover: #66BB6A;
+  --bb-green-dark: #1A3A28;
+  --bb-green-bg: #E8F5E9;
+  --bb-green-bg-subtle: #F1F8F4;
+  --bb-navy: #1A1A2E;
+  --bb-charcoal: #2C3E50;
   --bb-white: #ffffff;
-  --bb-off-white: #f7f9fb;
+  --bb-off-white: #FAFAFA;
   --bb-text-secondary: #475569;
-  --bb-gray: #64748b;
+  --bb-gray: #757575;
   --bb-border: #e2e8f0;
 }
 
 /* Page Header — Mobile First */
 .bb-page-hero {
-  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-teal-dark) 100%);
+  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
   color: var(--bb-white);
   padding: 2.5rem 1.5rem;
   border-radius: 10px;
@@ -38,7 +42,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(13,115,119,0.15) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 80% 20%, rgba(45,95,63,0.15) 0%, transparent 60%);
   pointer-events: none;
 }
 .bb-page-hero h1 {
@@ -61,7 +65,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
 /* Image Placeholder */
 .bb-img-placeholder {
-  background: linear-gradient(135deg, var(--bb-teal-bg), #e8f4f5);
+  background: linear-gradient(135deg, var(--bb-green-bg), #e8f4f5);
   border: 2px dashed var(--bb-border);
   border-radius: 10px;
   padding: 2.5rem 1.5rem;
@@ -99,7 +103,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   font-size: 1.05rem;
   font-weight: 600;
   padding-bottom: 0.75rem;
-  border-bottom: 2px solid var(--bb-teal-bg);
+  border-bottom: 2px solid var(--bb-green-bg);
   margin-bottom: 0.75rem;
 }
 .bb-example-card p {
@@ -112,7 +116,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-misconception {
   background: var(--bb-off-white);
   border: 1px solid var(--bb-border);
-  border-left: 3px solid var(--bb-teal);
+  border-left: 3px solid var(--bb-green-accent);
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 1rem;
@@ -234,7 +238,7 @@ Every major biotech breakthrough follows this pattern. Science is step one, and 
 
 <div class="bb-misconception">
   <strong>"It is all lab work."</strong>
-  <p>Lab work is one part. There is also manufacturing, regulatory affairs, sales, policy, data analysis, and more. Check out <a href="/career-pathways/" style="color: #0d7377; font-weight: 600;">Career Pathways</a> for additional information.</p>
+  <p>Lab work is one part. There is also manufacturing, regulatory affairs, sales, policy, data analysis, and more. Check out <a href="/career-pathways/" style="color: #3A7D5C; font-weight: 600;">Career Pathways</a> for additional information.</p>
 </div>
 
 <div class="bb-misconception">
