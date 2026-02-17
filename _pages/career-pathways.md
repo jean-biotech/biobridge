@@ -7,45 +7,85 @@ toc_label: "Pathways"
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
-body { font-family: 'Inter', sans-serif; }
-h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
-.bb-page-header {
-  background: linear-gradient(135deg, #064e3b 0%, #047857 100%);
-  color: #ffffff;
-  padding: 3rem 2rem;
-  border-radius: 14px;
-  margin-bottom: 2.5rem;
+:root {
+  --bb-navy: #0f2b3c;
+  --bb-teal: #0d7377;
+  --bb-teal-light: #14919b;
+  --bb-teal-dark: #094f52;
+  --bb-teal-bg: #f0f9fa;
+  --bb-white: #ffffff;
+  --bb-off-white: #f7f9fb;
+  --bb-text-secondary: #475569;
+  --bb-gray: #64748b;
+  --bb-border: #e2e8f0;
 }
-.bb-page-header h1 {
-  font-size: 2.25rem;
+
+/* Page Header — Mobile First */
+.bb-page-hero {
+  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-teal-dark) 100%);
+  color: var(--bb-white);
+  padding: 2.5rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.bb-page-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: radial-gradient(ellipse at 80% 20%, rgba(13,115,119,0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+.bb-page-hero h1 {
+  font-size: 1.75rem;
   font-weight: 700;
   margin: 0 0 0.75rem;
-  color: #ffffff;
+  color: var(--bb-white);
   letter-spacing: -0.02em;
+  position: relative;
 }
-.bb-page-header p {
-  font-size: 1.1rem;
-  color: rgba(255,255,255,0.85);
+.bb-page-hero p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.8);
   margin: 0;
   font-weight: 300;
+  line-height: 1.6;
+  position: relative;
 }
+
+/* Career Cards — Mobile First */
 .bb-career-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-top: 4px solid #10b981;
-  border-radius: 10px;
-  padding: 2rem;
+  background: var(--bb-white);
+  border: 1px solid var(--bb-border);
+  border-radius: 8px;
+  padding: 1.75rem 1.5rem;
   margin-bottom: 1.5rem;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
+  position: relative;
+}
+.bb-career-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--bb-teal), var(--bb-teal-light));
+  border-radius: 8px 8px 0 0;
 }
 .bb-career-card:hover {
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
 .bb-career-card h2 {
-  color: #064e3b;
-  font-size: 1.35rem;
+  font-family: 'Inter', sans-serif;
+  color: var(--bb-navy);
+  font-size: 1.15rem;
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 1rem;
@@ -54,14 +94,16 @@ h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
   margin-bottom: 0.75rem;
 }
 .bb-career-detail strong {
-  color: #064e3b;
-  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+  color: var(--bb-teal-dark);
+  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.06em;
+  font-weight: 700;
 }
 .bb-career-detail p, .bb-career-detail ul {
-  color: #475569;
-  font-size: 0.95rem;
+  color: var(--bb-text-secondary);
+  font-size: 0.92rem;
   line-height: 1.7;
   margin: 0.25rem 0 0;
 }
@@ -72,16 +114,19 @@ h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
 .bb-career-detail li {
   margin-bottom: 0.25rem;
 }
+
+/* Next Steps */
 .bb-next-steps {
-  background: #f0fdf4;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 2rem;
+  background: var(--bb-teal-bg);
+  border: 1px solid var(--bb-border);
+  border-radius: 8px;
+  padding: 1.75rem 1.5rem;
   margin-top: 2rem;
 }
 .bb-next-steps h2 {
-  color: #064e3b;
-  font-size: 1.25rem;
+  font-family: 'Inter', sans-serif;
+  color: var(--bb-navy);
+  font-size: 1.1rem;
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 1rem;
@@ -92,23 +137,41 @@ h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
 }
 .bb-next-steps li {
   margin-bottom: 0.5rem;
-  color: #475569;
-  font-size: 0.95rem;
+  color: var(--bb-text-secondary);
+  font-size: 0.92rem;
 }
 .bb-next-steps a {
-  color: #d97706;
+  color: var(--bb-teal);
   font-weight: 600;
 }
-@media (max-width: 768px) {
-  .bb-page-header { padding: 2rem 1.5rem; border-radius: 10px; }
-  .bb-page-header h1 { font-size: 1.6rem; }
-  .bb-career-card { padding: 1.5rem; }
+
+/* Desktop */
+@media (min-width: 769px) {
+  .bb-page-hero {
+    padding: 3.5rem 3rem;
+    border-radius: 12px;
+  }
+  .bb-page-hero h1 {
+    font-size: 2.25rem;
+  }
+  .bb-page-hero p {
+    font-size: 1.1rem;
+  }
+  .bb-career-card {
+    padding: 2rem 2.25rem;
+  }
+  .bb-career-card h2 {
+    font-size: 1.35rem;
+  }
+  .bb-next-steps {
+    padding: 2rem 2.25rem;
+  }
 }
 </style>
 
-<div class="bb-page-header">
+<div class="bb-page-hero">
   <h1>Careers in Biotechnology</h1>
-  <p>There's no single path into biotech. Here are the major routes, with realistic entry points.</p>
+  <p>There is no single path into biotech. Here are the major routes, with realistic entry points for every background.</p>
 </div>
 
 <div class="bb-career-card">
@@ -136,7 +199,7 @@ h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
 </div>
 
 <div class="bb-career-card">
-<h2>Industry / Manufacturing</h2>
+<h2>Industry and Manufacturing</h2>
 <div class="bb-career-detail">
 <strong>What it is</strong>
 <p>Scaling up production, quality control, process optimization</p>
@@ -184,7 +247,7 @@ h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
 </div>
 
 <div class="bb-career-card">
-<h2>Regulatory / Policy</h2>
+<h2>Regulatory and Policy</h2>
 <div class="bb-career-detail">
 <strong>What it is</strong>
 <p>Navigating FDA approval, compliance, public health policy</p>
@@ -208,7 +271,7 @@ h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
 </div>
 
 <div class="bb-career-card">
-<h2>Business / Operations</h2>
+<h2>Business and Operations</h2>
 <div class="bb-career-detail">
 <strong>What it is</strong>
 <p>Strategy, sales, partnerships, operations, project management</p>

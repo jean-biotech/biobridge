@@ -1,7 +1,6 @@
 title: BioBridge
-# subtitle: "Your bridge to biotech"
 email: jeans.connects@gmail.com
-description: A student-led biotech access initiative
+description: A student-led biotech access initiative bridging the gap between curiosity and careers in biotechnology.
 url: "https://biotechbridge.org"
 baseurl: ""
 
@@ -21,7 +20,6 @@ author:
 # Build settings
 markdown: kramdown
 plugins:
-  # - jekyll-feed
   - jekyll-include-cache
   - jekyll-seo-tag
 
