@@ -1,15 +1,13 @@
 main:
-  - title: "Home"
-    url: /
   - title: "What is Biotech?"
     url: /what-is-biotech/
-  - title: "Career Pathways"
+  - title: "Careers"
     url: /career-pathways/
   - title: "Resources"
     url: /resources/
   - title: "Get Involved"
     url: /get-involved/
-  - title: "Products"
+  - title: "Guides"
     url: /products/
   - title: "FAQ"
     url: /faq/

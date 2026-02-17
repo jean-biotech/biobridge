@@ -5,401 +5,691 @@ classes: wide
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
 
-body { font-family: 'Inter', sans-serif; }
-h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
+/* ================================================================
+   BioBridge — Professional Design System
+   Color Palette: Navy (#0f2b3c) + Teal (#0d7377) + Warm Accent
+   Mobile-first approach with distinct mobile/desktop experiences
+   ================================================================ */
 
-/* ── Hero ── */
+:root {
+  --bb-navy: #0f2b3c;
+  --bb-navy-light: #1a3d52;
+  --bb-teal: #0d7377;
+  --bb-teal-light: #14919b;
+  --bb-teal-dark: #094f52;
+  --bb-teal-bg: #f0f9fa;
+  --bb-white: #ffffff;
+  --bb-off-white: #f7f9fb;
+  --bb-slate: #3d5a6e;
+  --bb-text: #1e293b;
+  --bb-text-secondary: #475569;
+  --bb-gray: #64748b;
+  --bb-border: #e2e8f0;
+  --bb-accent: #c8553d;
+  --bb-accent-hover: #a8432e;
+  --bb-shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --bb-shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+  --bb-shadow-lg: 0 12px 32px rgba(0,0,0,0.1);
+  --bb-radius: 8px;
+  --bb-radius-lg: 12px;
+}
+
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
+
+/* ================================================================
+   HERO SECTION — Mobile First
+   ================================================================ */
+
 .bb-hero {
-  background: linear-gradient(135deg, #064e3b 0%, #047857 50%, #065f46 100%);
-  color: #ffffff;
+  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-navy-light) 40%, var(--bb-teal-dark) 100%);
+  color: var(--bb-white);
   text-align: center;
-  padding: 5rem 2rem 4.5rem;
+  padding: 3.5rem 1.5rem 3rem;
   position: relative;
   overflow: hidden;
 }
+
 .bb-hero::before {
   content: '';
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at 30% 70%, rgba(16,185,129,0.15) 0%, transparent 50%),
-              radial-gradient(circle at 70% 30%, rgba(217,119,6,0.08) 0%, transparent 50%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(13,115,119,0.2) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(13,115,119,0.1) 0%, transparent 60%);
   pointer-events: none;
 }
+
+.bb-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(13,115,119,0.4), transparent);
+}
+
 .bb-hero-inner {
-  max-width: 800px;
+  max-width: 820px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
-.bb-hero h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  line-height: 1.15;
-  margin: 0 0 1.25rem;
-  letter-spacing: -0.03em;
-  color: #ffffff;
-}
-.bb-hero p {
-  font-size: 1.25rem;
-  font-weight: 300;
-  color: rgba(255,255,255,0.85);
-  margin: 0 0 2.5rem;
-  line-height: 1.6;
-}
-.bb-hero-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.bb-btn-gold {
+
+.bb-hero-label {
   display: inline-block;
-  background: #d97706;
-  color: #ffffff !important;
-  padding: 0.875rem 2.25rem;
-  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
   font-weight: 600;
-  font-size: 1.05rem;
-  text-decoration: none !important;
-  transition: all 0.2s ease;
-  border: 2px solid #d97706;
-}
-.bb-btn-gold:hover {
-  background: #b45309;
-  border-color: #b45309;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(217,119,6,0.35);
-  color: #ffffff !important;
-}
-.bb-btn-outline {
-  display: inline-block;
-  background: transparent;
-  color: #ffffff !important;
-  padding: 0.875rem 2.25rem;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1.05rem;
-  text-decoration: none !important;
-  transition: all 0.2s ease;
-  border: 2px solid rgba(255,255,255,0.4);
-}
-.bb-btn-outline:hover {
-  background: rgba(255,255,255,0.1);
-  border-color: rgba(255,255,255,0.7);
-  color: #ffffff !important;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bb-teal-light);
+  margin-bottom: 1.25rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(20,145,155,0.3);
+  border-radius: 100px;
 }
 
-/* ── Social Proof ── */
-.bb-proof {
-  background: #f0fdf4;
-  padding: 1.5rem 2rem;
-  text-align: center;
-  border-bottom: 1px solid #e2e8f0;
+.bb-hero h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.02em;
+  color: var(--bb-white);
 }
-.bb-proof-inner {
+
+.bb-hero-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.75);
+  margin: 0 0 2rem;
+  line-height: 1.65;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bb-hero-buttons {
+  display: flex;
+  gap: 0.875rem;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bb-btn-primary {
+  display: inline-block;
+  background: var(--bb-teal);
+  color: var(--bb-white) !important;
+  padding: 0.875rem 2rem;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+  border: 2px solid var(--bb-teal);
+  width: 100%;
+  max-width: 260px;
+  text-align: center;
+}
+
+.bb-btn-primary:hover {
+  background: var(--bb-teal-dark);
+  border-color: var(--bb-teal-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(13,115,119,0.3);
+  color: var(--bb-white) !important;
+}
+
+.bb-btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: rgba(255,255,255,0.9) !important;
+  padding: 0.875rem 2rem;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+  border: 1.5px solid rgba(255,255,255,0.25);
+  width: 100%;
+  max-width: 260px;
+  text-align: center;
+}
+
+.bb-btn-secondary:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.45);
+  color: var(--bb-white) !important;
+}
+
+/* ================================================================
+   METRICS BAR
+   ================================================================ */
+
+.bb-metrics {
+  background: var(--bb-off-white);
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--bb-border);
+}
+
+.bb-metrics-inner {
   max-width: 900px;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
-  flex-wrap: wrap;
-}
-.bb-proof-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.95rem;
-  color: #064e3b;
-  font-weight: 500;
-}
-.bb-proof-item .num {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 1.15rem;
-  color: #047857;
+  gap: 1rem;
 }
 
-/* ── Pillars / Features ── */
-.bb-pillars {
-  padding: 4.5rem 2rem;
+.bb-metric {
+  text-align: center;
+}
+
+.bb-metric-num {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--bb-teal);
+  display: block;
+  line-height: 1.2;
+}
+
+.bb-metric-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: var(--bb-gray);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* ================================================================
+   IMAGE PLACEHOLDER
+   ================================================================ */
+
+.bb-image-placeholder {
+  background: linear-gradient(135deg, var(--bb-teal-bg), #e8f4f5);
+  border: 2px dashed var(--bb-border);
+  border-radius: var(--bb-radius-lg);
+  padding: 3rem 2rem;
+  text-align: center;
+  color: var(--bb-gray);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 2rem 1.5rem;
+}
+
+/* ================================================================
+   SECTION — WHAT WE OFFER (PILLARS)
+   ================================================================ */
+
+.bb-section {
+  padding: 3.5rem 1.5rem;
   max-width: 1100px;
   margin: 0 auto;
 }
-.bb-pillars-header {
+
+.bb-section-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
-.bb-pillars-header h2 {
-  color: #064e3b;
-  font-size: 2rem;
+
+.bb-section-header h2 {
+  color: var(--bb-navy);
+  font-size: 1.75rem;
   font-weight: 700;
   margin: 0 0 0.75rem;
   letter-spacing: -0.02em;
 }
-.bb-pillars-header p {
-  color: #64748b;
-  font-size: 1.05rem;
+
+.bb-section-header p {
+  color: var(--bb-gray);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
   margin: 0;
+  line-height: 1.6;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.bb-pillars-grid {
+
+.bb-card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
 }
-.bb-pillar-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-left: 4px solid #10b981;
-  border-radius: 10px;
-  padding: 2rem 1.75rem;
-  transition: all 0.2s ease;
+
+.bb-card {
+  background: var(--bb-white);
+  border: 1px solid var(--bb-border);
+  border-radius: var(--bb-radius);
+  padding: 1.75rem 1.5rem;
+  transition: all 0.25s ease;
+  position: relative;
 }
-.bb-pillar-card:hover {
-  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+
+.bb-card:hover {
+  box-shadow: var(--bb-shadow-md);
   transform: translateY(-2px);
 }
-.bb-pillar-card .card-num {
-  display: inline-block;
-  background: #f0fdf4;
-  color: #047857;
-  font-family: 'Poppins', sans-serif;
+
+.bb-card-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--bb-teal-bg);
+  color: var(--bb-teal);
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 0.85rem;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
-  text-align: center;
   border-radius: 8px;
   margin-bottom: 1rem;
 }
-.bb-pillar-card h3 {
-  color: #064e3b;
-  font-size: 1.25rem;
+
+.bb-card h3 {
+  font-family: 'Inter', sans-serif;
+  color: var(--bb-navy);
+  font-size: 1.1rem;
   font-weight: 600;
   margin: 0 0 0.75rem;
 }
-.bb-pillar-card p {
-  color: #475569;
-  font-size: 0.95rem;
+
+.bb-card p {
+  color: var(--bb-text-secondary);
+  font-size: 0.92rem;
   line-height: 1.7;
   margin: 0 0 1rem;
 }
-.bb-pillar-card a {
-  color: #d97706;
+
+.bb-card-link {
+  font-family: 'Inter', sans-serif;
+  color: var(--bb-teal) !important;
   font-weight: 600;
-  font-size: 0.9rem;
-  text-decoration: none;
-}
-.bb-pillar-card a:hover {
-  color: #b45309;
-  text-decoration: underline;
+  font-size: 0.875rem;
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.2s ease;
 }
 
-/* ── Problem / Solution ── */
+.bb-card-link:hover {
+  color: var(--bb-teal-dark) !important;
+}
+
+/* ================================================================
+   SPLIT SECTION — PROBLEM / SOLUTION
+   ================================================================ */
+
 .bb-split {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   max-width: 1100px;
-  margin: 0 auto 4rem;
-  border-radius: 14px;
+  margin: 0 auto 3rem;
+  border-radius: var(--bb-radius-lg);
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  box-shadow: var(--bb-shadow-md);
 }
-.bb-split-problem {
-  background: #064e3b;
-  color: #ffffff;
-  padding: 3rem 2.5rem;
+
+.bb-split-left {
+  background: var(--bb-navy);
+  color: var(--bb-white);
+  padding: 2.5rem 1.5rem;
 }
-.bb-split-solution {
-  background: #ffffff;
-  padding: 3rem 2.5rem;
-  border: 1px solid #e2e8f0;
-  border-left: none;
+
+.bb-split-right {
+  background: var(--bb-white);
+  padding: 2.5rem 1.5rem;
+  border: 1px solid var(--bb-border);
+  border-top: none;
 }
+
 .bb-split h2 {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 700;
-  margin: 0 0 1.25rem;
+  margin: 0 0 1rem;
   letter-spacing: -0.01em;
 }
-.bb-split-problem h2 {
-  color: #fcd34d;
+
+.bb-split-left h2 {
+  color: var(--bb-teal-light);
 }
-.bb-split-solution h2 {
-  color: #064e3b;
+
+.bb-split-right h2 {
+  color: var(--bb-navy);
 }
+
 .bb-split p {
-  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
   line-height: 1.8;
   margin: 0;
 }
-.bb-split-problem p {
-  color: rgba(255,255,255,0.88);
-}
-.bb-split-solution p {
-  color: #475569;
+
+.bb-split-left p {
+  color: rgba(255,255,255,0.8);
 }
 
-/* ── Founder Story ── */
-.bb-story {
-  background: #f8fafc;
-  padding: 4.5rem 2rem;
-  border-top: 1px solid #e2e8f0;
-  border-bottom: 1px solid #e2e8f0;
+.bb-split-right p {
+  color: var(--bb-text-secondary);
 }
+
+/* ================================================================
+   FOUNDER STORY SECTION
+   ================================================================ */
+
+.bb-story {
+  background: var(--bb-off-white);
+  padding: 3.5rem 1.5rem;
+  border-top: 1px solid var(--bb-border);
+  border-bottom: 1px solid var(--bb-border);
+}
+
 .bb-story-inner {
-  max-width: 1000px;
+  max-width: 960px;
   margin: 0 auto;
 }
+
 .bb-story h2 {
-  color: #064e3b;
-  font-size: 2rem;
+  color: var(--bb-navy);
+  font-size: 1.75rem;
   font-weight: 700;
-  margin: 0 0 2.5rem;
+  margin: 0 0 2rem;
   letter-spacing: -0.02em;
 }
-.bb-story-grid {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 2.5rem;
-  align-items: start;
+
+.bb-story-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
 }
+
+.bb-story-photo-wrap {
+  flex-shrink: 0;
+}
+
 .bb-story-photo {
-  width: 100%;
-  border-radius: 14px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--bb-shadow-md);
+  border: 4px solid var(--bb-white);
 }
-.bb-story-text p {
-  font-size: 1rem;
+
+.bb-story-content p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
   line-height: 1.85;
-  color: #334155;
-  margin: 0 0 1.25rem;
+  color: var(--bb-text-secondary);
+  margin: 0 0 1rem;
 }
-.bb-social-links {
+
+.bb-story-content p:last-of-type {
+  margin-bottom: 0;
+}
+
+.bb-connect {
   margin-top: 1.75rem;
-  padding-top: 1.75rem;
-  border-top: 1px solid #e2e8f0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--bb-border);
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
-.bb-social-links strong {
-  color: #0f172a;
-  font-size: 0.95rem;
+
+.bb-connect-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--bb-navy);
 }
-.bb-social-link {
+
+.bb-connect-link {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   text-decoration: none !important;
-  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
   font-weight: 500;
-  color: #475569 !important;
-  padding: 0.4rem 0.75rem;
+  color: var(--bb-slate) !important;
+  padding: 0.4rem 0.85rem;
   border-radius: 6px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--bb-border);
   transition: all 0.2s ease;
-}
-.bb-social-link:hover {
-  background: #f0fdf4;
-  border-color: #10b981;
-  color: #064e3b !important;
+  background: var(--bb-white);
 }
 
-/* ── Bottom CTA ── */
-.bb-cta-banner {
-  background: linear-gradient(135deg, #064e3b 0%, #047857 100%);
-  color: #ffffff;
-  text-align: center;
-  padding: 4rem 2rem;
+.bb-connect-link:hover {
+  border-color: var(--bb-teal);
+  color: var(--bb-teal) !important;
+  box-shadow: var(--bb-shadow-sm);
 }
-.bb-cta-banner h2 {
-  font-size: 2.25rem;
+
+/* ================================================================
+   BOTTOM CTA
+   ================================================================ */
+
+.bb-cta {
+  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-teal-dark) 100%);
+  color: var(--bb-white);
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+  position: relative;
+}
+
+.bb-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(13,115,119,0.3), transparent);
+}
+
+.bb-cta h2 {
+  font-size: 1.75rem;
   font-weight: 700;
-  margin: 0 0 1rem;
-  color: #ffffff;
+  margin: 0 0 0.75rem;
+  color: var(--bb-white);
   letter-spacing: -0.02em;
 }
-.bb-cta-banner p {
-  font-size: 1.1rem;
-  color: rgba(255,255,255,0.8);
+
+.bb-cta p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.7);
   margin: 0 0 2rem;
   font-weight: 300;
+  line-height: 1.6;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
 }
 
-/* ── Mobile Responsive ── */
-@media (max-width: 768px) {
+.bb-btn-cta {
+  display: inline-block;
+  background: var(--bb-teal);
+  color: var(--bb-white) !important;
+  padding: 0.875rem 2.25rem;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+  border: 2px solid var(--bb-teal);
+}
+
+.bb-btn-cta:hover {
+  background: var(--bb-teal-light);
+  border-color: var(--bb-teal-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(13,115,119,0.3);
+  color: var(--bb-white) !important;
+}
+
+/* ================================================================
+   DESKTOP BREAKPOINT (769px and up)
+   ================================================================ */
+
+@media (min-width: 769px) {
+
+  /* Hero — Desktop */
   .bb-hero {
-    padding: 3rem 1.5rem 2.5rem;
+    padding: 6rem 2rem 5.5rem;
   }
+
   .bb-hero h1 {
-    font-size: 2rem;
+    font-size: 3.5rem;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
   }
-  .bb-hero p {
-    font-size: 1.05rem;
+
+  .bb-hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
   }
+
   .bb-hero-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  .bb-btn-gold, .bb-btn-outline {
-    width: 100%;
-    max-width: 280px;
-    text-align: center;
+    flex-direction: row;
   }
 
-  .bb-proof-inner {
-    flex-direction: column;
-    gap: 0.75rem;
+  .bb-btn-primary,
+  .bb-btn-secondary {
+    width: auto;
+    max-width: none;
   }
 
-  .bb-pillars {
-    padding: 3rem 1.25rem;
-  }
-  .bb-pillars-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+  /* Metrics — Desktop */
+  .bb-metrics {
+    padding: 1.75rem 2rem;
   }
 
+  .bb-metrics-inner {
+    flex-direction: row;
+    justify-content: center;
+    gap: 3.5rem;
+  }
+
+  /* Image placeholder — Desktop */
+  .bb-image-placeholder {
+    padding: 4.5rem 3rem;
+    margin: 3rem auto;
+    max-width: 1100px;
+  }
+
+  /* Section — Desktop */
+  .bb-section {
+    padding: 5rem 2rem;
+  }
+
+  .bb-section-header {
+    margin-bottom: 3.5rem;
+  }
+
+  .bb-section-header h2 {
+    font-size: 2.25rem;
+  }
+
+  .bb-card-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+
+  .bb-card {
+    padding: 2rem;
+  }
+
+  /* Split — Desktop */
   .bb-split {
-    grid-template-columns: 1fr;
-    margin: 0 1rem 3rem;
-  }
-  .bb-split-problem, .bb-split-solution {
-    padding: 2rem 1.5rem;
-  }
-  .bb-split-solution {
-    border-left: 1px solid #e2e8f0;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 0;
   }
 
+  .bb-split-left {
+    padding: 3.5rem 3rem;
+  }
+
+  .bb-split-right {
+    padding: 3.5rem 3rem;
+    border-top: 1px solid var(--bb-border);
+    border-left: none;
+  }
+
+  .bb-split h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Story — Desktop */
   .bb-story {
-    padding: 3rem 1.25rem;
-  }
-  .bb-story-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  .bb-story-photo {
-    width: 160px;
-    margin: 0 auto;
-    display: block;
-  }
-  .bb-story-text p {
-    font-size: 0.95rem;
+    padding: 5rem 2rem;
   }
 
-  .bb-cta-banner {
-    padding: 3rem 1.5rem;
+  .bb-story h2 {
+    font-size: 2.25rem;
+    margin-bottom: 2.5rem;
   }
-  .bb-cta-banner h2 {
-    font-size: 1.6rem;
+
+  .bb-story-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .bb-story-photo {
+    width: 180px;
+    height: 180px;
+  }
+
+  .bb-story-content p {
+    font-size: 1rem;
+  }
+
+  /* CTA — Desktop */
+  .bb-cta {
+    padding: 5rem 2rem;
+  }
+
+  .bb-cta h2 {
+    font-size: 2.5rem;
+  }
+
+  .bb-cta p {
+    font-size: 1.1rem;
+  }
+}
+
+/* ================================================================
+   LARGE DESKTOP (1200px+)
+   ================================================================ */
+
+@media (min-width: 1200px) {
+  .bb-hero {
+    padding: 7rem 2rem 6.5rem;
+  }
+
+  .bb-hero h1 {
+    font-size: 3.75rem;
   }
 }
 </style>
@@ -407,89 +697,98 @@ h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
 <!-- Hero Section -->
 <div class="bb-hero">
   <div class="bb-hero-inner">
-    <h1>Making Biotechnology Accessible to Everyone</h1>
-    <p>Your bridge into biotechnology starts here.</p>
+    <div class="bb-hero-label">Student-Led Biotech Initiative</div>
+    <h1>Bridging the Gap Between Curiosity and Careers in Biotechnology</h1>
+    <p class="bb-hero-subtitle">Clear explanations, curated resources, and practical guidance for anyone exploring the world of biotech.</p>
     <div class="bb-hero-buttons">
-      <a href="/what-is-biotech/" class="bb-btn-gold">Get Started</a>
-      <a href="/career-pathways/" class="bb-btn-outline">Explore Careers</a>
+      <a href="/what-is-biotech/" class="bb-btn-primary">Learn More</a>
+      <a href="/career-pathways/" class="bb-btn-secondary">Explore Careers</a>
     </div>
   </div>
 </div>
 
-<!-- Social Proof Bar -->
-<div class="bb-proof">
-  <div class="bb-proof-inner">
-    <div class="bb-proof-item">
-      <span class="num">10,000+</span> students reached
+<!-- Metrics Bar -->
+<div class="bb-metrics">
+  <div class="bb-metrics-inner">
+    <div class="bb-metric">
+      <span class="bb-metric-num">10,000+</span>
+      <span class="bb-metric-label">Students Reached</span>
     </div>
-    <div class="bb-proof-item">
-      <span class="num">6</span> career pathways mapped
+    <div class="bb-metric">
+      <span class="bb-metric-num">6</span>
+      <span class="bb-metric-label">Career Pathways</span>
     </div>
-    <div class="bb-proof-item">
-      <span class="num">100%</span> free core resources
+    <div class="bb-metric">
+      <span class="bb-metric-num">100%</span>
+      <span class="bb-metric-label">Free Core Resources</span>
     </div>
   </div>
 </div>
 
-<!-- Three Pillars Section -->
-<div class="bb-pillars">
-  <div class="bb-pillars-header">
+<!-- Hero Image Placeholder -->
+<div class="bb-image-placeholder">
+  [PLACEHOLDER: Header Image - Biotechnology research visualization, such as a wide-angle photo of a modern biotech lab, DNA helix visualization, or students engaged in scientific work]
+</div>
+
+<!-- What BioBridge Offers -->
+<div class="bb-section">
+  <div class="bb-section-header">
     <h2>What BioBridge Offers</h2>
-    <p>Clear explanations, curated resources, and honest guidance into biotech.</p>
+    <p>Clear explanations, curated resources, and honest guidance to help you navigate the world of biotechnology.</p>
   </div>
-  <div class="bb-pillars-grid">
-    <div class="bb-pillar-card">
-      <div class="card-num">01</div>
-      <h3>Learn Biotech</h3>
-      <p>Understand what biotechnology really is through real-world examples and plain-language explanations.</p>
-      <a href="/what-is-biotech/">Learn more &rarr;</a>
+  <div class="bb-card-grid">
+    <div class="bb-card">
+      <div class="bb-card-number">01</div>
+      <h3>Understand Biotech</h3>
+      <p>Learn what biotechnology really is through real-world examples and plain-language explanations that make the science accessible.</p>
+      <a href="/what-is-biotech/" class="bb-card-link">Explore the basics &rarr;</a>
     </div>
-    <div class="bb-pillar-card">
-      <div class="card-num">02</div>
-      <h3>Explore Careers</h3>
-      <p>Discover the major career pathways in biotech with realistic entry points for every background.</p>
-      <a href="/career-pathways/">Learn more &rarr;</a>
+    <div class="bb-card">
+      <div class="bb-card-number">02</div>
+      <h3>Discover Careers</h3>
+      <p>Explore the major career pathways in biotech with realistic entry points, salary expectations, and guidance for every background.</p>
+      <a href="/career-pathways/" class="bb-card-link">View pathways &rarr;</a>
     </div>
-    <div class="bb-pillar-card">
-      <div class="card-num">03</div>
-      <h3>Get Resources</h3>
-      <p>Access curated newsletters, podcasts, courses, and books that are all beginner-friendly.</p>
-      <a href="/resources/">Learn more &rarr;</a>
+    <div class="bb-card">
+      <div class="bb-card-number">03</div>
+      <h3>Access Resources</h3>
+      <p>Browse curated newsletters, podcasts, courses, and books that are all free, beginner-friendly, and hand-picked for quality.</p>
+      <a href="/resources/" class="bb-card-link">Browse resources &rarr;</a>
     </div>
   </div>
 </div>
 
 <!-- Problem / Solution Split -->
 <div class="bb-split">
-  <div class="bb-split-problem">
-    <h2>The Problem</h2>
-    <p>Biotechnology plays a growing role in how we treat disease, produce food, and respond to global challenges, but learning about it can feel overwhelming at first. Many students are interested in biotech but don't know what it actually is, what jobs exist, or whether they belong in the field.</p>
+  <div class="bb-split-left">
+    <h2>The Challenge</h2>
+    <p>Biotechnology plays a growing role in how we treat disease, produce food, and respond to global challenges. But learning about it can feel overwhelming. Many students are interested in biotech yet don't know what it actually is, what jobs exist, or whether they belong in the field.</p>
   </div>
-  <div class="bb-split-solution">
-    <h2>What is BioBridge?</h2>
-    <p>BioBridge is a student-led platform designed to make biotech more understandable and accessible through clear explanations, curated resources, and honest guidance. If you're curious but unsure where to begin, you're in the right place.</p>
+  <div class="bb-split-right">
+    <h2>Our Approach</h2>
+    <p>BioBridge is a student-led platform designed to make biotech more understandable and accessible through clear explanations, curated resources, and practical guidance. If you are curious but unsure where to begin, you are in the right place.</p>
   </div>
 </div>
 
 <!-- Founder Story -->
 <div class="bb-story">
   <div class="bb-story-inner">
-    <h2>Why I Built This</h2>
-    <div class="bb-story-grid">
-      <div>
-        <img class="bb-story-photo" src="/assets/images/profile-photo.jpg" alt="Profile Photo">
+    <h2>The Story Behind BioBridge</h2>
+    <div class="bb-story-layout">
+      <div class="bb-story-photo-wrap">
+        <img class="bb-story-photo" src="/assets/images/profile-photo.jpg" alt="Jean Tran, Founder of BioBridge">
       </div>
-      <div class="bb-story-text">
-        <p>I was certain I'd become a doctor. In college, I even completed the shadowing hours, prerequisites, and extracurriculars. But the closer I pushed myself to a future in clinical work, the more I questioned whether it was actually right for me and I realized I needed a different direction.</p>
-        <p>While anxiously searching for alternatives, I discovered my school offered a combined BS/MS in biotechnology that I could complete in four years. I knew almost nothing about biotech when I applied, but the program revealed just how expansive the field actually is—not just lab work, but business strategy, regulatory policy, manufacturing operations, and more.</p>
-        <p>I started documenting what I was learning on social media, and the audience grew fast. Tens of thousands of people, and my DMs turned into a constant stream of the same questions: What is biotech? How do I break in? Do I need a PhD? People were curious, but lacked a practical starting point. So, I built BioBridge as the resource I wish had existed when I was trying to figure it out.</p>
-        <div class="bb-social-links">
-          <strong>Follow the journey:</strong>
-          <a href="https://instagram.com/jeans.scenes" target="_blank" class="bb-social-link">
-            <span style="color: #E4405F;"><i class="fab fa-instagram"></i></span> Instagram
+      <div class="bb-story-content">
+        <p>I was certain I would become a doctor. In college, I completed the shadowing hours, prerequisites, and extracurriculars. But the closer I pushed myself toward a future in clinical work, the more I questioned whether it was actually right for me. I realized I needed a different direction.</p>
+        <p>While searching for alternatives, I discovered my school offered a combined BS/MS in biotechnology that I could complete in four years. I knew almost nothing about biotech when I applied, but the program revealed just how expansive the field actually is: not just lab work, but business strategy, regulatory policy, manufacturing operations, and more.</p>
+        <p>I started documenting what I was learning on social media, and the audience grew quickly. Tens of thousands of people followed along, and my messages became a constant stream of the same questions: What is biotech? How do I get in? Do I need a PhD? People were curious, but lacked a practical starting point. BioBridge is the resource I wish had existed when I was trying to figure it out.</p>
+        <div class="bb-connect">
+          <span class="bb-connect-label">Follow the journey:</span>
+          <a href="https://instagram.com/jeans.scenes" target="_blank" class="bb-connect-link">
+            <i class="fab fa-instagram"></i> Instagram
           </a>
-          <a href="https://linkedin.com/in/jeantrann" target="_blank" class="bb-social-link">
-            <span style="color: #0A66C2;"><i class="fab fa-linkedin"></i></span> LinkedIn
+          <a href="https://linkedin.com/in/jeantrann" target="_blank" class="bb-connect-link">
+            <i class="fab fa-linkedin"></i> LinkedIn
           </a>
         </div>
       </div>
@@ -497,9 +796,14 @@ h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
   </div>
 </div>
 
-<!-- Bottom CTA Banner -->
-<div class="bb-cta-banner">
-  <h2>Ready to start your biotech journey?</h2>
-  <p>Explore career pathways, free resources, and real guidance from someone who's been there.</p>
-  <a href="/what-is-biotech/" class="bb-btn-gold">Get Started Now</a>
+<!-- Team Image Placeholder -->
+<div class="bb-image-placeholder">
+  [PLACEHOLDER: Team Photo - Group of diverse students in a lab setting, or a candid photo from a BioBridge event, workshop, or community gathering]
+</div>
+
+<!-- Bottom CTA -->
+<div class="bb-cta">
+  <h2>Ready to explore biotechnology?</h2>
+  <p>Discover career pathways, free resources, and real guidance from someone who has been there.</p>
+  <a href="/what-is-biotech/" class="bb-btn-cta">Learn More</a>
 </div>
