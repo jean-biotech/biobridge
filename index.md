@@ -5,30 +5,32 @@ classes: wide
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
 
 /* ================================================================
-   BioBridge — Professional Design System
-   Color Palette: Navy (#0f2b3c) + Teal (#0d7377) + Warm Accent
-   Mobile-first approach with distinct mobile/desktop experiences
+   BioBridge — Green Biotech Design System
+   Color Palette: Forest Green (#2D5F3F) + Navy (#1A1A2E)
+   Mobile-first with spacious desktop layout
    ================================================================ */
 
 :root {
-  --bb-navy: #0f2b3c;
-  --bb-navy-light: #1a3d52;
-  --bb-teal: #0d7377;
-  --bb-teal-light: #14919b;
-  --bb-teal-dark: #094f52;
-  --bb-teal-bg: #f0f9fa;
+  --bb-green: #2D5F3F;
+  --bb-green-accent: #3A7D5C;
+  --bb-green-bright: #4CAF50;
+  --bb-green-hover: #66BB6A;
+  --bb-green-dark: #1A3A28;
+  --bb-green-bg: #E8F5E9;
+  --bb-green-bg-subtle: #F1F8F4;
+  --bb-teal-accent: #26A69A;
+  --bb-navy: #1A1A2E;
+  --bb-charcoal: #2C3E50;
   --bb-white: #ffffff;
-  --bb-off-white: #f7f9fb;
-  --bb-slate: #3d5a6e;
+  --bb-off-white: #FAFAFA;
   --bb-text: #1e293b;
   --bb-text-secondary: #475569;
-  --bb-gray: #64748b;
+  --bb-gray: #757575;
+  --bb-gray-light: #9E9E9E;
   --bb-border: #e2e8f0;
-  --bb-accent: #c8553d;
-  --bb-accent-hover: #a8432e;
   --bb-shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
   --bb-shadow-md: 0 4px 16px rgba(0,0,0,0.08);
   --bb-shadow-lg: 0 12px 32px rgba(0,0,0,0.1);
@@ -40,11 +42,11 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
 h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
 /* ================================================================
-   HERO SECTION — Mobile First
+   HERO SECTION — Full-width, green gradient
    ================================================================ */
 
 .bb-hero {
-  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-navy-light) 40%, var(--bb-teal-dark) 100%);
+  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 40%, var(--bb-green) 100%);
   color: var(--bb-white);
   text-align: center;
   padding: 3.5rem 1.5rem 3rem;
@@ -55,24 +57,18 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-hero::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0; width: 100%; height: 100%;
   background:
-    radial-gradient(ellipse at 20% 80%, rgba(13,115,119,0.2) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(13,115,119,0.1) 0%, transparent 60%);
+    radial-gradient(ellipse at 20% 80%, rgba(45,95,63,0.25) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(76,175,80,0.1) 0%, transparent 60%);
   pointer-events: none;
 }
 
 .bb-hero::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(13,115,119,0.4), transparent);
+  bottom: 0; left: 0; width: 100%; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(76,175,80,0.4), transparent);
 }
 
 .bb-hero-inner {
@@ -89,10 +85,10 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--bb-teal-light);
+  color: var(--bb-green-hover);
   margin-bottom: 1.25rem;
   padding: 0.4rem 1rem;
-  border: 1px solid rgba(20,145,155,0.3);
+  border: 1px solid rgba(102,187,106,0.3);
   border-radius: 100px;
 }
 
@@ -127,7 +123,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
 .bb-btn-primary {
   display: inline-block;
-  background: var(--bb-teal);
+  background: var(--bb-green-bright);
   color: var(--bb-white) !important;
   padding: 0.875rem 2rem;
   border-radius: 6px;
@@ -136,17 +132,17 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   font-size: 0.95rem;
   text-decoration: none !important;
   transition: all 0.25s ease;
-  border: 2px solid var(--bb-teal);
+  border: 2px solid var(--bb-green-bright);
   width: 100%;
   max-width: 260px;
   text-align: center;
 }
 
 .bb-btn-primary:hover {
-  background: var(--bb-teal-dark);
-  border-color: var(--bb-teal-dark);
+  background: var(--bb-green);
+  border-color: var(--bb-green);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(13,115,119,0.3);
+  box-shadow: 0 6px 20px rgba(45,95,63,0.35);
   color: var(--bb-white) !important;
 }
 
@@ -178,13 +174,13 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
    ================================================================ */
 
 .bb-metrics {
-  background: var(--bb-off-white);
+  background: var(--bb-green-bg-subtle);
   padding: 1.5rem;
   border-bottom: 1px solid var(--bb-border);
 }
 
 .bb-metrics-inner {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -200,7 +196,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 1.35rem;
-  color: var(--bb-teal);
+  color: var(--bb-green);
   display: block;
   line-height: 1.2;
 }
@@ -218,7 +214,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
    ================================================================ */
 
 .bb-image-placeholder {
-  background: linear-gradient(135deg, var(--bb-teal-bg), #e8f4f5);
+  background: linear-gradient(135deg, var(--bb-green-bg), var(--bb-green-bg-subtle));
   border: 2px dashed var(--bb-border);
   border-radius: var(--bb-radius-lg);
   padding: 3rem 2rem;
@@ -237,7 +233,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
 .bb-section {
   padding: 3.5rem 1.5rem;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -247,7 +243,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 }
 
 .bb-section-header h2 {
-  color: var(--bb-navy);
+  color: var(--bb-green);
   font-size: 1.75rem;
   font-weight: 700;
   margin: 0 0 0.75rem;
@@ -283,6 +279,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-card:hover {
   box-shadow: var(--bb-shadow-md);
   transform: translateY(-2px);
+  border-color: rgba(45,95,63,0.2);
 }
 
 .bb-card-number {
@@ -291,8 +288,8 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   justify-content: center;
   width: 36px;
   height: 36px;
-  background: var(--bb-teal-bg);
-  color: var(--bb-teal);
+  background: var(--bb-green-bg);
+  color: var(--bb-green);
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 0.85rem;
@@ -302,7 +299,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
 .bb-card h3 {
   font-family: 'Inter', sans-serif;
-  color: var(--bb-navy);
+  color: var(--bb-green);
   font-size: 1.1rem;
   font-weight: 600;
   margin: 0 0 0.75rem;
@@ -317,7 +314,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
 .bb-card-link {
   font-family: 'Inter', sans-serif;
-  color: var(--bb-teal) !important;
+  color: var(--bb-green-accent) !important;
   font-weight: 600;
   font-size: 0.875rem;
   text-decoration: none !important;
@@ -328,7 +325,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 }
 
 .bb-card-link:hover {
-  color: var(--bb-teal-dark) !important;
+  color: var(--bb-green) !important;
 }
 
 /* ================================================================
@@ -338,7 +335,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-split {
   display: grid;
   grid-template-columns: 1fr;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto 3rem;
   border-radius: var(--bb-radius-lg);
   overflow: hidden;
@@ -366,11 +363,11 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 }
 
 .bb-split-left h2 {
-  color: var(--bb-teal-light);
+  color: var(--bb-green-hover);
 }
 
 .bb-split-right h2 {
-  color: var(--bb-navy);
+  color: var(--bb-green);
 }
 
 .bb-split p {
@@ -393,19 +390,19 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
    ================================================================ */
 
 .bb-story {
-  background: var(--bb-off-white);
+  background: var(--bb-green-bg-subtle);
   padding: 3.5rem 1.5rem;
   border-top: 1px solid var(--bb-border);
   border-bottom: 1px solid var(--bb-border);
 }
 
 .bb-story-inner {
-  max-width: 960px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 .bb-story h2 {
-  color: var(--bb-navy);
+  color: var(--bb-green);
   font-size: 1.75rem;
   font-weight: 700;
   margin: 0 0 2rem;
@@ -458,7 +455,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 0.875rem;
-  color: var(--bb-navy);
+  color: var(--bb-green);
 }
 
 .bb-connect-link {
@@ -469,7 +466,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--bb-slate) !important;
+  color: var(--bb-charcoal) !important;
   padding: 0.4rem 0.85rem;
   border-radius: 6px;
   border: 1px solid var(--bb-border);
@@ -478,8 +475,8 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 }
 
 .bb-connect-link:hover {
-  border-color: var(--bb-teal);
-  color: var(--bb-teal) !important;
+  border-color: var(--bb-green-accent);
+  color: var(--bb-green-accent) !important;
   box-shadow: var(--bb-shadow-sm);
 }
 
@@ -488,7 +485,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
    ================================================================ */
 
 .bb-cta {
-  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-teal-dark) 100%);
+  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
   color: var(--bb-white);
   text-align: center;
   padding: 3.5rem 1.5rem;
@@ -498,11 +495,8 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-cta::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(13,115,119,0.3), transparent);
+  top: 0; left: 0; width: 100%; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(76,175,80,0.3), transparent);
 }
 
 .bb-cta h2 {
@@ -528,7 +522,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
 .bb-btn-cta {
   display: inline-block;
-  background: var(--bb-teal);
+  background: var(--bb-green-bright);
   color: var(--bb-white) !important;
   padding: 0.875rem 2.25rem;
   border-radius: 6px;
@@ -537,14 +531,14 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   font-size: 0.95rem;
   text-decoration: none !important;
   transition: all 0.25s ease;
-  border: 2px solid var(--bb-teal);
+  border: 2px solid var(--bb-green-bright);
 }
 
 .bb-btn-cta:hover {
-  background: var(--bb-teal-light);
-  border-color: var(--bb-teal-light);
+  background: var(--bb-green-hover);
+  border-color: var(--bb-green-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(13,115,119,0.3);
+  box-shadow: 0 6px 20px rgba(45,95,63,0.35);
   color: var(--bb-white) !important;
 }
 
@@ -554,9 +548,13 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
 @media (min-width: 769px) {
 
-  /* Hero — Desktop */
+  /* Hero — Desktop: wide, spacious */
   .bb-hero {
     padding: 6rem 2rem 5.5rem;
+  }
+
+  .bb-hero-inner {
+    max-width: 900px;
   }
 
   .bb-hero h1 {
@@ -568,6 +566,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   .bb-hero-subtitle {
     font-size: 1.2rem;
     margin-bottom: 2.5rem;
+    max-width: 640px;
   }
 
   .bb-hero-buttons {
@@ -591,16 +590,16 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
     gap: 3.5rem;
   }
 
-  /* Image placeholder — Desktop */
+  /* Image placeholder — Desktop: much wider */
   .bb-image-placeholder {
-    padding: 4.5rem 3rem;
+    padding: 5rem 3rem;
     margin: 3rem auto;
-    max-width: 1100px;
+    max-width: 1200px;
   }
 
-  /* Section — Desktop */
+  /* Section — Desktop: wider container */
   .bb-section {
-    padding: 5rem 2rem;
+    padding: 5rem 3rem;
   }
 
   .bb-section-header {
@@ -620,10 +619,11 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
     padding: 2rem;
   }
 
-  /* Split — Desktop */
+  /* Split — Desktop: side by side */
   .bb-split {
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 0;
+    margin: 0 auto 0;
+    max-width: 1200px;
   }
 
   .bb-split-left {
@@ -640,9 +640,9 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
     font-size: 1.5rem;
   }
 
-  /* Story — Desktop */
+  /* Story — Desktop: wider, side-by-side layout */
   .bb-story {
-    padding: 5rem 2rem;
+    padding: 5rem 3rem;
   }
 
   .bb-story h2 {
@@ -657,8 +657,8 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   }
 
   .bb-story-photo {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
   }
 
   .bb-story-content p {
@@ -690,6 +690,10 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
   .bb-hero h1 {
     font-size: 3.75rem;
+  }
+
+  .bb-hero-inner {
+    max-width: 960px;
   }
 }
 </style>
