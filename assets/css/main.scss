@@ -171,10 +171,10 @@ p {
 
 .site-title {
   font-weight: 700 !important;
-  font-size: 1.1rem !important;
+  font-size: 1.2rem !important;
   letter-spacing: -0.01em;
   color: $bb-navy !important;
-  padding: 14px 0;
+  padding: 17px 0;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -187,15 +187,15 @@ p {
   }
 
   @media (min-width: 769px) {
-    font-size: 1.2rem !important;
-    padding: 16px 0;
+    font-size: 1.3rem !important;
+    padding: 19px 0;
     gap: 12px;
   }
 }
 
 .greedy-nav {
   a {
-    font-size: 0.84rem;
+    font-size: 1rem; // ~15px at 15px base
     font-weight: 500;
     letter-spacing: 0.01em;
     transition: color 0.2s ease;
@@ -204,7 +204,7 @@ p {
   .visible-links {
     a {
       color: $bb-charcoal;
-      padding: 0.5rem 0.75rem;
+      padding: 0.6rem 0.85rem;
 
       &:hover {
         color: $bb-green;
@@ -318,6 +318,63 @@ a {
 
   &:hover {
     color: $bb-green;
+  }
+}
+
+// ============================================================
+// STATS STRIP — Shared across non-homepage pages
+// ============================================================
+
+.bb-stats-strip {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 2rem;
+  border: 1px solid $bb-border;
+  border-radius: 8px;
+  background: $bb-white;
+  overflow: hidden;
+}
+
+.bb-stat {
+  flex: 1;
+  text-align: center;
+  padding: 0.85rem 1rem;
+  border-right: 1px solid $bb-border;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.bb-stat-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: $bb-green;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.bb-stat-label {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: $bb-gray;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 0.2rem;
+}
+
+@media (min-width: 769px) {
+  .bb-stats-strip {
+    gap: 0;
+  }
+  .bb-stat {
+    padding: 1rem 2rem;
+  }
+  .bb-stat-num {
+    font-size: 1.45rem;
   }
 }
 

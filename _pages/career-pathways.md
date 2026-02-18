@@ -312,7 +312,22 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
 <div class="bb-page-hero">
   <h1>Careers in Biotechnology</h1>
-  <p>There is no single path into biotech. Explore the major routes — one card at a time — with realistic entry points for every background.</p>
+  <p>There is no single path into biotech. Explore the major routes, one card at a time, with realistic entry points for every background.</p>
+</div>
+
+<div class="bb-stats-strip">
+  <div class="bb-stat">
+    <div class="bb-stat-num">10,000+</div>
+    <div class="bb-stat-label">Students Reached</div>
+  </div>
+  <div class="bb-stat">
+    <div class="bb-stat-num">55K+</div>
+    <div class="bb-stat-label">Community Members</div>
+  </div>
+  <div class="bb-stat">
+    <div class="bb-stat-num">Open to All</div>
+    <div class="bb-stat-label">Backgrounds &amp; Disciplines</div>
+  </div>
 </div>
 
 <!-- CAROUSEL -->
@@ -325,7 +340,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <!-- CARD 1: Research -->
       <div class="bb-career-slide">
         <div class="bb-card-img">
-          <div class="bb-card-img-label">Research Lab — Image Placeholder</div>
+          <div class="bb-card-img-label">Research Lab Image Placeholder</div>
         </div>
         <div class="bb-card-body">
           <h2>Research</h2>
@@ -364,13 +379,13 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <!-- CARD 2: Industry & Manufacturing -->
       <div class="bb-career-slide">
         <div class="bb-card-img">
-          <div class="bb-card-img-label">Manufacturing Floor — Image Placeholder</div>
+          <div class="bb-card-img-label">Manufacturing Floor Image Placeholder</div>
         </div>
         <div class="bb-card-body">
           <h2>Industry &amp; Manufacturing</h2>
           <div class="bb-detail">
             <div class="bb-detail-label">What it is</div>
-            <p class="bb-detail-value">Scaling up production, quality control, process optimization — turning lab discoveries into real-world products.</p>
+            <p class="bb-detail-value">Scaling up production, quality control, and process optimization: turning lab discoveries into real-world products.</p>
           </div>
           <div class="bb-detail">
             <div class="bb-detail-label">Where you'll work</div>
@@ -403,7 +418,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <!-- CARD 3: Clinical -->
       <div class="bb-career-slide">
         <div class="bb-card-img">
-          <div class="bb-card-img-label">Clinical Trial — Image Placeholder</div>
+          <div class="bb-card-img-label">Clinical Trial Image Placeholder</div>
         </div>
         <div class="bb-card-body">
           <h2>Clinical</h2>
@@ -442,13 +457,13 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <!-- CARD 4: Regulatory & Policy -->
       <div class="bb-career-slide">
         <div class="bb-card-img">
-          <div class="bb-card-img-label">Regulatory &amp; Policy — Image Placeholder</div>
+          <div class="bb-card-img-label">Regulatory &amp; Policy Image Placeholder</div>
         </div>
         <div class="bb-card-body">
           <h2>Regulatory &amp; Policy</h2>
           <div class="bb-detail">
             <div class="bb-detail-label">What it is</div>
-            <p class="bb-detail-value">Navigating FDA approval, ensuring compliance, and shaping public health policy — the bridge between science and government.</p>
+            <p class="bb-detail-value">Navigating FDA approval, ensuring compliance, and shaping public health policy at the bridge between science and government.</p>
           </div>
           <div class="bb-detail">
             <div class="bb-detail-label">Where you'll work</div>
@@ -481,13 +496,13 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <!-- CARD 5: Business & Operations -->
       <div class="bb-career-slide">
         <div class="bb-card-img">
-          <div class="bb-card-img-label">Business &amp; Strategy — Image Placeholder</div>
+          <div class="bb-card-img-label">Business &amp; Strategy Image Placeholder</div>
         </div>
         <div class="bb-card-body">
           <h2>Business &amp; Operations</h2>
           <div class="bb-detail">
             <div class="bb-detail-label">What it is</div>
-            <p class="bb-detail-value">Strategy, partnerships, operations, and project management — the business side of bringing biotech innovations to market.</p>
+            <p class="bb-detail-value">Strategy, partnerships, operations, and project management: the business side of bringing biotech innovations to market.</p>
           </div>
           <div class="bb-detail">
             <div class="bb-detail-label">Where you'll work</div>
@@ -520,13 +535,13 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <!-- CARD 6: Science Communication -->
       <div class="bb-career-slide">
         <div class="bb-card-img">
-          <div class="bb-card-img-label">Science Media &amp; Communication — Image Placeholder</div>
+          <div class="bb-card-img-label">Science Media &amp; Communication Image Placeholder</div>
         </div>
         <div class="bb-card-body">
           <h2>Science Communication</h2>
           <div class="bb-detail">
             <div class="bb-detail-label">What it is</div>
-            <p class="bb-detail-value">Translating complex science for public audiences — through journalism, education, content creation, and advocacy.</p>
+            <p class="bb-detail-value">Translating complex science for public audiences through journalism, education, content creation, and advocacy.</p>
           </div>
           <div class="bb-detail">
             <div class="bb-detail-label">Where you'll work</div>
@@ -572,7 +587,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   <h2>Ready to go deeper?</h2>
   <ul>
     <li>Browse <a href="/resources/">The Learning Lab</a> for career-specific media and resources</li>
-    <li>Check out <a href="/products/">The Biotech Blueprint</a> — a step-by-step guide built for your starting point</li>
+    <li>Check out <a href="/products/">The Biotech Blueprint</a>, a step-by-step guide built for your starting point</li>
     <li>Learn what biotech actually is on the <a href="/what-is-biotech/">What is Biotech?</a> page</li>
   </ul>
 </div>

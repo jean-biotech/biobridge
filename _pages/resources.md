@@ -227,7 +227,22 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 <div class="bb-page-hero">
   <span class="bb-hero-sub">Curated Science Media</span>
   <h1>The Learning Lab</h1>
-  <p>Media and resources for exploring biotech — newsletters, podcasts, videos, courses, and books, all hand-picked for quality and accessibility.</p>
+  <p>Media and resources for exploring biotech: newsletters, podcasts, videos, courses, and books, all hand-picked for quality and accessibility.</p>
+</div>
+
+<div class="bb-stats-strip">
+  <div class="bb-stat">
+    <div class="bb-stat-num">10,000+</div>
+    <div class="bb-stat-label">Students Reached</div>
+  </div>
+  <div class="bb-stat">
+    <div class="bb-stat-num">55K+</div>
+    <div class="bb-stat-label">Community Members</div>
+  </div>
+  <div class="bb-stat">
+    <div class="bb-stat-num">Open to All</div>
+    <div class="bb-stat-label">Backgrounds &amp; Disciplines</div>
+  </div>
 </div>
 
 <!-- NEWSLETTERS -->
@@ -242,7 +257,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.statnews.com/newsletters/" target="_blank">The Readout</a></h3>
-        <p>STAT News weekly biotech &amp; pharma roundup — the industry's go-to briefing.</p>
+        <p>STAT News weekly biotech &amp; pharma roundup, the industry's go-to briefing.</p>
       </div>
     </div>
     <div class="bb-resource-card">
@@ -260,7 +275,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.nature.com/briefing" target="_blank">Nature Briefing</a></h3>
-        <p>Daily science news from the journal Nature — broad coverage, high signal.</p>
+        <p>Daily science news from the journal Nature, with broad coverage and high signal.</p>
       </div>
     </div>
   </div>
@@ -278,7 +293,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.npr.org/podcasts/510351/short-wave" target="_blank">Shortwave (NPR)</a></h3>
-        <p>Short daily science stories from NPR — accessible, lively, and great for beginners.</p>
+        <p>Short daily science stories from NPR, accessible, lively, and great for beginners.</p>
       </div>
     </div>
     <div class="bb-resource-card">
@@ -287,7 +302,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.wnycstudios.org/podcasts/radiolab" target="_blank">Radiolab</a></h3>
-        <p>Deep-dive storytelling on science and the human experience — episodes on genetics, ethics, and life itself.</p>
+        <p>Deep-dive storytelling on science and the human experience, covering genetics, ethics, and life itself.</p>
       </div>
     </div>
     <div class="bb-resource-card">
@@ -323,7 +338,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://learn.genetics.utah.edu/" target="_blank">Learn.Genetics</a></h3>
-        <p>Interactive genetics tutorials from the University of Utah — thorough and freely available.</p>
+        <p>Interactive genetics tutorials from the University of Utah, thorough and freely available.</p>
       </div>
     </div>
     <div class="bb-resource-card">
@@ -350,7 +365,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.youtube.com/c/inanutshell" target="_blank">Kurzgesagt</a></h3>
-        <p>Animated science explainers — their episodes on genetic engineering and CRISPR are essential viewing.</p>
+        <p>Animated science explainers; their episodes on genetic engineering and CRISPR are essential viewing.</p>
       </div>
     </div>
     <div class="bb-resource-card">
@@ -368,7 +383,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.youtube.com/c/veritasium" target="_blank">Veritasium</a></h3>
-        <p>Science and engineering deep dives — thoughtful, well-produced, and always surprising.</p>
+        <p>Science and engineering deep dives, thoughtful, well-produced, and always surprising.</p>
       </div>
     </div>
   </div>
@@ -385,7 +400,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
         <div class="bb-resource-thumb-label">Logo</div>
       </div>
       <div class="bb-resource-info">
-        <h3><a href="https://ocw.mit.edu/courses/biology/" target="_blank">MIT OpenCourseWare — Biology</a></h3>
+        <h3><a href="https://ocw.mit.edu/courses/biology/" target="_blank">MIT OpenCourseWare: Biology</a></h3>
         <p>Full MIT courses, completely free. Challenging, comprehensive, and the real thing.</p>
       </div>
     </div>
@@ -394,7 +409,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
         <div class="bb-resource-thumb-label">Logo</div>
       </div>
       <div class="bb-resource-info">
-        <h3><a href="https://www.khanacademy.org/science/biology" target="_blank">Khan Academy — Biology</a></h3>
+        <h3><a href="https://www.khanacademy.org/science/biology" target="_blank">Khan Academy: Biology</a></h3>
         <p>Self-paced, beginner-friendly, and covers everything from cells to evolution.</p>
       </div>
     </div>
@@ -404,7 +419,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.ibiology.org/" target="_blank">iBiology</a></h3>
-        <p>Video talks by leading researchers — a window into how real scientists think and work.</p>
+        <p>Video talks by leading researchers, offering a window into how real scientists think and work.</p>
       </div>
     </div>
   </div>
@@ -431,7 +446,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       </div>
       <div class="bb-resource-info">
         <h3>"The Immortal Life of Henrietta Lacks"</h3>
-        <p>Science, ethics, and race — an essential read on how cell biology intersects with human dignity.</p>
+        <p>Science, ethics, and race: an essential read on how cell biology intersects with human dignity.</p>
       </div>
     </div>
     <div class="bb-resource-card bb-book-card">
@@ -440,7 +455,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       </div>
       <div class="bb-resource-info">
         <h3>"Spillover" by David Quammen</h3>
-        <p>How infectious diseases jump from animals to humans — prescient, terrifying, and beautifully written.</p>
+        <p>How infectious diseases jump from animals to humans. Prescient, terrifying, and beautifully written.</p>
       </div>
     </div>
   </div>
