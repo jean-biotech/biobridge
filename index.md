@@ -452,6 +452,25 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   border: 4px solid var(--bb-white);
 }
 
+.bb-story-caption {
+  text-align: center;
+  margin-top: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: var(--bb-text-secondary);
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+}
+
+.bb-story-caption strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--bb-green);
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
 .bb-story-content p {
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
@@ -806,6 +825,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
     <div class="bb-story-layout">
       <div class="bb-story-photo-wrap">
         <img class="bb-story-photo" src="/assets/images/profile-photo.jpg" alt="Jean Tran, Founder of BioBridge">
+        <p class="bb-story-caption"><strong>Jean Tran</strong>Founder, BioBridge&nbsp;|&nbsp;BS/MS Biotechnology</p>
       </div>
       <div class="bb-story-content">
         <p>I was certain I would become a doctor. In college, I completed the shadowing hours, prerequisites, and extracurriculars. But the closer I pushed myself toward a future in clinical work, the more I questioned whether it was actually right for me. I realized I needed a different direction.</p>
