@@ -144,6 +144,16 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.bb-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 .bb-card-img-label {
   display: inline-block;
@@ -340,7 +350,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <!-- CARD 1: Research -->
       <div class="bb-career-slide">
         <div class="bb-card-img">
-          <div class="bb-card-img-label">Research Lab Image Placeholder</div>
+          <img src="/assets/images/career-research.jpg" alt="Research scientist working in a biotechnology lab">
         </div>
         <div class="bb-card-body">
           <h2>Research</h2>
