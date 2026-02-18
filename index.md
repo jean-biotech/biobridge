@@ -441,6 +441,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
 .bb-story-photo-wrap {
   flex-shrink: 0;
+  text-align: center;
 }
 
 .bb-story-photo {
@@ -454,21 +455,43 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
 .bb-story-caption {
   text-align: center;
-  margin-top: 0.75rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.8rem;
-  color: var(--bb-text-secondary);
-  font-weight: 400;
-  line-height: 1.55;
-  letter-spacing: 0.01em;
+  margin-top: 1rem;
 }
 
-.bb-story-caption strong {
-  display: block;
-  font-size: 0.92rem;
-  color: var(--bb-green);
-  font-weight: 600;
-  margin-bottom: 0.15rem;
+.bb-caption-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--bb-navy);
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+
+.bb-caption-divider {
+  width: 32px;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, var(--bb-green-accent), transparent);
+  margin: 0.6rem auto;
+}
+
+.bb-caption-role {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--bb-text-secondary);
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+.bb-caption-degree {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--bb-gray);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.5;
+  margin-top: 0.1rem;
 }
 
 .bb-story-content p {
@@ -704,6 +727,10 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
     height: 200px;
   }
 
+  .bb-caption-name {
+    font-size: 1.3rem;
+  }
+
   .bb-story-content p {
     font-size: 1rem;
   }
@@ -825,7 +852,12 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
     <div class="bb-story-layout">
       <div class="bb-story-photo-wrap">
         <img class="bb-story-photo" src="/assets/images/profile-photo.jpg" alt="Jean Tran, Founder of BioBridge">
-        <p class="bb-story-caption"><strong>Jean Tran</strong>Founder, BioBridge&nbsp;|&nbsp;BS/MS Biotechnology</p>
+        <div class="bb-story-caption">
+          <div class="bb-caption-name">Jean Tran</div>
+          <div class="bb-caption-divider"></div>
+          <div class="bb-caption-role">Founder, BioBridge</div>
+          <div class="bb-caption-degree">BS/MS Biotechnology</div>
+        </div>
       </div>
       <div class="bb-story-content">
         <p>I was certain I would become a doctor. In college, I completed the shadowing hours, prerequisites, and extracurriculars. But the closer I pushed myself toward a future in clinical work, the more I questioned whether it was actually right for me. I realized I needed a different direction.</p>
