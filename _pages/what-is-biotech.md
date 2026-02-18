@@ -334,10 +334,25 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
 <div class="bb-page-hero">
   <h1>What is Biotechnology, Really?</h1>
-  <p>Understanding the science shaping our future — in plain language, no prerequisites required.</p>
+  <p>Understanding the science shaping our future, in plain language, no prerequisites required.</p>
 </div>
 
-<p class="bb-intro-text">Biotechnology is using living systems — cells, bacteria, proteins, DNA — to create useful products or solve real problems.</p>
+<div class="bb-stats-strip">
+  <div class="bb-stat">
+    <div class="bb-stat-num">10,000+</div>
+    <div class="bb-stat-label">Students Reached</div>
+  </div>
+  <div class="bb-stat">
+    <div class="bb-stat-num">55K+</div>
+    <div class="bb-stat-label">Community Members</div>
+  </div>
+  <div class="bb-stat">
+    <div class="bb-stat-num">Open to All</div>
+    <div class="bb-stat-label">Backgrounds &amp; Disciplines</div>
+  </div>
+</div>
+
+<p class="bb-intro-text">Biotechnology is using living systems (cells, bacteria, proteins, DNA) to create useful products or solve real problems.</p>
 
 <div class="bb-callout">
   <p>"Biotech = biology + technology to solve real problems."</p>
@@ -358,10 +373,10 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
 <div class="bb-flip-grid">
 
-  <div class="bb-flip-card" role="button" tabindex="0" aria-label="Medicine example — click to flip">
+  <div class="bb-flip-card" role="button" tabindex="0" aria-label="Medicine example: click to flip">
     <div class="bb-flip-card-inner">
       <div class="bb-flip-front">
-        <div class="bb-flip-front-img"><span>Medicine — Image Placeholder</span></div>
+        <div class="bb-flip-front-img"><span>Medicine Image Placeholder</span></div>
         <div class="bb-flip-front-body">
           <h3>Medicine</h3>
           <p class="bb-flip-hint">Hover to learn more</p>
@@ -375,10 +390,10 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
   </div>
 
-  <div class="bb-flip-card" role="button" tabindex="0" aria-label="Agriculture example — click to flip">
+  <div class="bb-flip-card" role="button" tabindex="0" aria-label="Agriculture example: click to flip">
     <div class="bb-flip-card-inner">
       <div class="bb-flip-front">
-        <div class="bb-flip-front-img"><span>Agriculture — Image Placeholder</span></div>
+        <div class="bb-flip-front-img"><span>Agriculture Image Placeholder</span></div>
         <div class="bb-flip-front-body">
           <h3>Agriculture</h3>
           <p class="bb-flip-hint">Hover to learn more</p>
@@ -386,16 +401,16 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       </div>
       <div class="bb-flip-back">
         <h3>Agriculture</h3>
-        <p>Drought-resistant crops can survive on 30% less water. Plant-based meat uses heme — a protein from engineered yeast — to replicate the taste and texture of beef.</p>
+        <p>Drought-resistant crops can survive on 30% less water. Plant-based meat uses heme (a protein from engineered yeast) to replicate the taste and texture of beef.</p>
         <div class="bb-flip-back-img">Company logo placeholder</div>
       </div>
     </div>
   </div>
 
-  <div class="bb-flip-card" role="button" tabindex="0" aria-label="Environment example — click to flip">
+  <div class="bb-flip-card" role="button" tabindex="0" aria-label="Environment example: click to flip">
     <div class="bb-flip-card-inner">
       <div class="bb-flip-front">
-        <div class="bb-flip-front-img"><span>Environment — Image Placeholder</span></div>
+        <div class="bb-flip-front-img"><span>Environment Image Placeholder</span></div>
         <div class="bb-flip-front-body">
           <h3>Environment</h3>
           <p class="bb-flip-hint">Hover to learn more</p>
@@ -409,10 +424,10 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
   </div>
 
-  <div class="bb-flip-card" role="button" tabindex="0" aria-label="Cutting Edge example — click to flip">
+  <div class="bb-flip-card" role="button" tabindex="0" aria-label="Cutting Edge example: click to flip">
     <div class="bb-flip-card-inner">
       <div class="bb-flip-front">
-        <div class="bb-flip-front-img"><span>Cutting Edge — Image Placeholder</span></div>
+        <div class="bb-flip-front-img"><span>Cutting Edge Image Placeholder</span></div>
         <div class="bb-flip-front-body">
           <h3>The Cutting Edge</h3>
           <p class="bb-flip-hint">Hover to learn more</p>
@@ -438,14 +453,14 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
 <div class="bb-two-col">
   <div class="bb-two-col-text">
-    <p>A breakthrough in the lab is just the beginning. Getting from concept to the real world takes an entire team — and most of them aren't scientists.</p>
+    <p>A breakthrough in the lab is just the beginning. Getting from concept to the real world takes an entire team, and most of them aren't scientists.</p>
     <p>Take mRNA vaccines. The underlying science existed for decades. Turning it into something that reached billions of people took business strategists, regulatory experts, manufacturing engineers, ethicists, and communicators working in parallel.</p>
     <p>Someone had to decide what was worth pursuing and who would pay for it. Someone had to design safe trials and navigate the FDA. Someone had to figure out how to manufacture at scale without losing efficacy. Someone had to explain a brand-new technology to a skeptical public.</p>
     <p>That's why biotech needs business people, engineers, lawyers, writers, and project managers just as much as it needs scientists.</p>
   </div>
   <div>
     <div class="bb-img-placeholder">
-      [PLACEHOLDER: Illustration — cross-functional team behind a biotech breakthrough]
+      [PLACEHOLDER: Illustration, cross-functional team behind a biotech breakthrough]
     </div>
   </div>
 </div>

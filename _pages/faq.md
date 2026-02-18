@@ -177,6 +177,21 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <p>Common questions from people exploring biotechnology. Click any question to expand the answer.</p>
 </div>
 
+<div class="bb-stats-strip">
+  <div class="bb-stat">
+    <div class="bb-stat-num">10,000+</div>
+    <div class="bb-stat-label">Students Reached</div>
+  </div>
+  <div class="bb-stat">
+    <div class="bb-stat-num">55K+</div>
+    <div class="bb-stat-label">Community Members</div>
+  </div>
+  <div class="bb-stat">
+    <div class="bb-stat-num">Open to All</div>
+    <div class="bb-stat-label">Backgrounds &amp; Disciplines</div>
+  </div>
+</div>
+
 <div class="bb-accordion" id="bb-accordion">
 
   <div class="bb-accordion-item">
@@ -186,8 +201,8 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </button>
     <div class="bb-accordion-panel">
       <div class="bb-accordion-body">
-        <p>The most reliable route is applying directly on company career pages — most biotech companies, even large ones, post entry-level and internship roles on their websites. Apply through the official posting. Tailor your resume to each role, even slightly.</p>
-        <p>Cold outreach can be a useful supplement — not a replacement for applying — and works best when it's specific and brief. If you have no lab experience, highlight transferable skills: attention to detail, data handling, relevant coursework. University research labs are often more accessible than industry for a first experience and are worth pursuing at the same time.</p>
+        <p>The most reliable route is applying directly on company career pages. Most biotech companies, even large ones, post entry-level and internship roles on their websites. Apply through the official posting and tailor your resume to each role, even slightly.</p>
+        <p>Cold outreach can be a useful supplement, not a replacement for applying, and it works best when it's specific and brief. If you have no lab experience, highlight transferable skills: attention to detail, data handling, relevant coursework. University research labs are often more accessible than industry for a first experience and are worth pursuing at the same time.</p>
       </div>
     </div>
   </div>
@@ -199,8 +214,8 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </button>
     <div class="bb-accordion-panel">
       <div class="bb-accordion-body">
-        <p>The skills that matter most depend on the path you're aiming for, but a few are broadly valuable across almost every biotech role. Data fluency — even at a basic level, with Excel or Python — is increasingly expected. Clear writing and communication are rare and consistently valued. Understanding the regulatory landscape (FDA, GMP, GLP basics) is relevant to far more roles than just regulatory affairs.</p>
-        <p>Scientific literacy — the ability to read a paper, follow a technical argument, and understand what a study is actually claiming — is the underlying skill that compounds over time regardless of your specific role.</p>
+        <p>The skills that matter most depend on the path you're aiming for, but a few are broadly valuable across almost every biotech role. Data fluency (even at a basic level, with Excel or Python) is increasingly expected. Clear writing and communication are rare and consistently valued. Understanding the regulatory landscape (FDA, GMP, GLP basics) is relevant to far more roles than just regulatory affairs.</p>
+        <p>Scientific literacy: the ability to read a paper, follow a technical argument, and understand what a study is actually claiming. That's the underlying skill that compounds over time regardless of your specific role.</p>
       </div>
     </div>
   </div>
@@ -213,7 +228,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     <div class="bb-accordion-panel">
       <div class="bb-accordion-body">
         <p>Yes, and it happens more often than people expect. The path looks different depending on where you're starting. Non-science backgrounds have clear entry points in business development, regulatory, operations, communications, and project management.</p>
-        <p>If you want a lab-based role without a science background, you'll likely need to get one — or start with a certificate program. The most important thing is being specific about which kind of role you're actually targeting and building toward that, rather than trying to enter biotech in the abstract.</p>
+        <p>If you want a lab-based role without a science background, you'll likely need to get one, or start with a certificate program. The most important thing is being specific about which kind of role you're actually targeting and building toward that, rather than trying to enter biotech in the abstract.</p>
       </div>
     </div>
   </div>
@@ -225,7 +240,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </button>
     <div class="bb-accordion-panel">
       <div class="bb-accordion-body">
-        <p>Start by getting a clear picture of what the field actually is. Read broadly — biotech industry news, popular science books, YouTube channels like Kurzgesagt. Take AP Biology or chemistry if your school offers it, and look into summer research programs or science competitions in your area.</p>
+        <p>Start by getting a clear picture of what the field actually is. Read broadly: biotech industry news, popular science books, YouTube channels like Kurzgesagt. Take AP Biology or chemistry if your school offers it, and look into summer research programs or science competitions in your area.</p>
         <p>You have more time than you think. The most useful thing you can do right now is stay curious and explore widely, rather than locking onto a single path too early.</p>
       </div>
     </div>
@@ -238,7 +253,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </button>
     <div class="bb-accordion-panel">
       <div class="bb-accordion-body">
-        <p>Absolutely — biotech needs engineers for process development and manufacturing, computer scientists for bioinformatics and data analysis, business majors for operations and strategy, and communications people for science writing and marketing. A biology degree is one path in, not the only one.</p>
+        <p>Absolutely. Biotech needs engineers for process development and manufacturing, computer scientists for bioinformatics and data analysis, business majors for operations and strategy, and communications people for science writing and marketing. A biology degree is one path in, not the only one.</p>
         <p>The key is connecting whatever you're studying to a specific role. Look at actual job postings in the area you're interested in, see what they ask for, and build toward that.</p>
       </div>
     </div>
@@ -251,7 +266,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </button>
     <div class="bb-accordion-panel">
       <div class="bb-accordion-body">
-        <p>Not at all. People enter biotech in their 30s, 40s, and beyond — often in roles where their previous experience is exactly what's needed. Someone with a legal background is well-positioned for regulatory affairs. A project manager from any industry can move into clinical operations or manufacturing. Someone with sales experience can transition into biotech sales or business development without starting from scratch.</p>
+        <p>Not at all. People enter biotech in their 30s, 40s, and beyond, often in roles where their previous experience is exactly what's needed. Someone with a legal background is well-positioned for regulatory affairs. A project manager from any industry can move into clinical operations or manufacturing. Someone with sales experience can transition into biotech sales or business development without starting from scratch.</p>
         <p>What matters most is demonstrating that you understand the context and are committed to building the specific knowledge gaps. Online courses and industry certifications can close those gaps faster than you'd expect.</p>
       </div>
     </div>
@@ -264,7 +279,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </button>
     <div class="bb-accordion-panel">
       <div class="bb-accordion-body">
-        <p>Biotech is much broader than most people realize. You don't need a science degree to work in the industry — roles in regulatory affairs, business development, communications, project management, and operations are filled by people from law, business, engineering, and the humanities.</p>
+        <p>Biotech is much broader than most people realize. You don't need a science degree to work in the industry. Roles in regulatory affairs, business development, communications, project management, and operations are filled by people from law, business, engineering, and the humanities.</p>
         <p>What usually matters is scientific literacy, not a science degree. That means being able to read a summary, understand what a clinical trial is, and follow along in a meeting. You can build that over time by reading industry news, taking a free online course, and staying curious.</p>
       </div>
     </div>
@@ -277,7 +292,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </button>
     <div class="bb-accordion-panel">
       <div class="bb-accordion-body">
-        <p>Entry-level salaries in lab or operations roles typically start around $50–60k, but with a few years of experience can reach $90–100k+. Data, computational, and engineering roles in hubs like Boston or the Bay Area often pay more. The industry goes through cycles — layoffs happen, especially at smaller biotechs after funding rounds — but core functions like manufacturing, quality control, and regulatory affairs have historically remained more stable.</p>
+        <p>Entry-level salaries in lab or operations roles typically start around $50–60k, but with a few years of experience can reach $90–100k+. Data, computational, and engineering roles in hubs like Boston or the Bay Area often pay more. The industry goes through cycles. Layoffs happen, especially at smaller biotechs after funding rounds, but core functions like manufacturing, quality control, and regulatory affairs have historically remained more stable.</p>
         <p>Overall it's a growing field, and it rewards people who keep building expertise over time.</p>
       </div>
     </div>
@@ -290,7 +305,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </button>
     <div class="bb-accordion-panel">
       <div class="bb-accordion-body">
-        <p>It helps, especially early in your career when proximity to other people in the industry accelerates learning and networking. The major hubs — Boston/Cambridge, the San Francisco Bay Area, San Diego, Research Triangle in North Carolina, and Seattle — have the highest concentration of companies and therefore the most entry-level opportunities.</p>
+        <p>It helps, especially early in your career when proximity to other people in the industry accelerates learning and networking. The major hubs (Boston/Cambridge, the Bay Area, San Diego, Research Triangle, and Seattle) have the highest concentration of companies and therefore the most entry-level opportunities.</p>
         <p>That said, biotech companies exist in most mid-to-large cities, and remote work is increasingly common for non-lab roles like regulatory affairs, business development, and project management. If relocating isn't possible, identify what's local and be strategic about which roles allow more flexibility.</p>
       </div>
     </div>

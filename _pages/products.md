@@ -325,41 +325,56 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <p>Structured, experience-backed guidance for anyone figuring out their path into biotech.</p>
 </div>
 
+<div class="bb-stats-strip">
+  <div class="bb-stat">
+    <div class="bb-stat-num">10,000+</div>
+    <div class="bb-stat-label">Students Reached</div>
+  </div>
+  <div class="bb-stat">
+    <div class="bb-stat-num">55K+</div>
+    <div class="bb-stat-label">Community Members</div>
+  </div>
+  <div class="bb-stat">
+    <div class="bb-stat-num">Open to All</div>
+    <div class="bb-stat-label">Backgrounds &amp; Disciplines</div>
+  </div>
+</div>
+
 <!-- MAIN PRODUCT LAYOUT -->
 <div class="bb-product-layout">
 
   <!-- Product image -->
   <div class="bb-product-img">
     <div class="bb-product-img-label">Blueprint Cover / Preview</div>
-    <div style="font-size:0.72rem; color: var(--bb-gray); margin-top:0.2rem;">Placeholder — final mockup coming</div>
+    <div style="font-size:0.72rem; color: var(--bb-gray); margin-top:0.2rem;">Placeholder. Final mockup coming.</div>
   </div>
 
   <!-- Product details -->
   <div class="bb-product-card">
     <p class="bb-product-eyebrow">BioBridge Guide</p>
     <h2>The Biotech Blueprint</h2>
-    <p class="bb-product-tagline">A comprehensive, practical guide for anyone taking their first steps into biotechnology. Not a textbook — a roadmap, built from real experience.</p>
+    <p class="bb-product-tagline">A comprehensive, practical guide for anyone taking their first steps into biotechnology. Real materials, annotated and explained, with roadmaps developed from direct experience navigating this field as a student.</p>
 
     <p class="bb-section-label">What's Included</p>
     <ul class="bb-feature-list">
-      <li>A real resume that landed a biotech internship — annotated line by line so you understand every choice, not just what it looks like.</li>
+      <li>A real resume that landed a biotech internship: annotated line by line so you understand every choice, not just what it looks like.</li>
       <li>An interview prep guide with actual questions asked at biotech companies, organized by role, with guidance on how to approach each one.</li>
-      <li>Cold email templates for reaching out to researchers and hiring managers — the versions that actually get responses.</li>
+      <li>Cold email templates for reaching out to researchers and hiring managers.</li>
       <li>A curated list of biotech-friendly professors and labs organized by research area, for students trying to get into research without existing connections.</li>
-      <li>A beginner's guide to reading a scientific paper, step by step — no science background assumed.</li>
+      <li>A beginner's guide to reading a scientific paper, step by step, with no science background assumed.</li>
       <li>Four roadmaps for four starting points: high school student, non-biology college major, career changer, and graduate student.</li>
-      <li>The most common mistakes people make applying to biotech roles — and exactly how to fix them.</li>
+      <li>The most common mistakes people make applying to biotech roles, with fixes for each.</li>
     </ul>
 
     <p class="bb-section-label">Who It's For</p>
-    <p class="bb-who-prose">The Blueprint is for anyone who wants more than a list of tips. If you're in high school trying to get ahead before college applications or summer programs, it maps out where to start. If you're a college student — any major — wondering how to connect what you're studying to a real biotech career, it gives you a framework. Recent grads who need to translate their degree into actual next steps will find it useful, and so will career changers who've spent too much time wading through generic advice that doesn't account for where they're actually starting from. Anyone who learns better from real examples and experience-backed reasoning, rather than scattered internet searches or generic listicles, is exactly who this was written for.</p>
+    <p class="bb-who-prose">The Blueprint is for anyone who wants more than a list of tips. If you're in high school trying to get ahead before college applications or summer programs, it maps out where to start. If you're a college student (any major) wondering how to connect what you're studying to a real biotech career, it gives you a framework. Recent grads who need to translate their degree into actual next steps will find it useful, and so will career changers who've spent too much time wading through generic advice that doesn't account for where they're actually starting from. Anyone who learns better from real examples and experience-backed reasoning, rather than scattered internet searches or generic listicles, is exactly who this was written for.</p>
 
     <p class="bb-section-label">Get the Guide</p>
     <div class="bb-price-row">
       <span class="bb-price-tag">$22</span>
     </div>
     <a href="#" class="bb-buy-btn">Purchase on Gumroad</a>
-    <p class="bb-coming-soon-note">Link coming soon — guide in final review.</p>
+    <p class="bb-coming-soon-note">Link coming soon; guide in final review.</p>
   </div>
 
 </div>
@@ -367,8 +382,8 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 <!-- WHY A PAID GUIDE -->
 <div class="bb-why-paid">
   <h2>Why a Paid Guide?</h2>
-  <p>I spent months figuring out what no one explains clearly — which resume format actually gets interviews, how to cold email a professor and hear back, what to say in your first biotech internship application. A lot of it was trial and error. The Blueprint is what came out of that process: my actual materials, annotated and explained, alongside roadmaps I developed from my own experience as a student navigating this field.</p>
-  <p>Everything on this website — the career pages, the resource library, the FAQ — is free and always will be. The Blueprint is for people who want everything in one place, with more depth, in a format they can save and return to. If you want experience-backed guidance rather than another generic article, this is it.</p>
+  <p>I spent months figuring out what no one explains clearly: which resume format actually gets interviews, how to cold email a professor and hear back, what to say in your first biotech internship application. A lot of it was trial and error. The Blueprint is what came out of that process: my actual materials, annotated and explained, alongside roadmaps I developed from my own experience as a student navigating this field.</p>
+  <p>Everything on this website (the career pages, the resource library, the FAQ) is free and always will be. The Blueprint is for people who want everything in one place, with more depth, in a format they can save and return to. If you want experience-backed guidance rather than another generic article, this is it.</p>
 </div>
 
 <!-- COMING SOON -->
