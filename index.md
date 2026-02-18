@@ -445,18 +445,28 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 }
 
 .bb-photo-caption {
-  margin-top: 0.6rem;
+  margin-top: 0.65rem;
   font-family: 'Inter', sans-serif;
-  font-size: 0.78rem;
-  color: var(--bb-gray);
-  line-height: 1.4;
+  line-height: 1.45;
+  text-align: center;
 }
 
-.bb-photo-caption strong {
+.bb-caption-name {
   display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
   font-weight: 600;
-  color: var(--bb-charcoal);
-  font-size: 0.82rem;
+  color: #2C3E50;
+  letter-spacing: -0.01em;
+}
+
+.bb-caption-role {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #757575;
+  margin-top: 0.1rem;
 }
 
 .bb-story-photo {
@@ -822,10 +832,10 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
     <div class="bb-story-layout">
       <div class="bb-story-photo-wrap">
         <img class="bb-story-photo" src="/assets/images/profile-photo.jpg" alt="Jean Tran, Founder of BioBridge">
-        <p class="bb-photo-caption">
-          <strong>Jean Tran</strong>
-          Founder, BioBridge&nbsp;|&nbsp;BS/MS Biotechnology
-        </p>
+        <div class="bb-photo-caption">
+          <span class="bb-caption-name">Jean Tran</span>
+          <span class="bb-caption-role">Founder, BioBridge&nbsp;|&nbsp;BS/MS Biotechnology</span>
+        </div>
       </div>
       <div class="bb-story-content">
         <p>I was certain I would become a doctor. In college, I completed the shadowing hours, prerequisites, and extracurriculars. But the closer I pushed myself toward a future in clinical work, the more I questioned whether it was actually right for me. I realized I needed a different direction.</p>
