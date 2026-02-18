@@ -30,9 +30,9 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-page-hero {
   background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
   color: var(--bb-white);
-  padding: 2.5rem 1.5rem;
-  border-radius: 10px;
-  margin-bottom: 2.5rem;
+  padding: 2rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
   position: relative;
   overflow: hidden;
 }
@@ -44,16 +44,16 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   pointer-events: none;
 }
 .bb-page-hero h1 {
-  font-size: 1.75rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.4rem;
   color: var(--bb-white);
   letter-spacing: -0.02em;
   position: relative;
 }
 .bb-page-hero p {
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
+  font-size: 0.88rem;
   color: rgba(255,255,255,0.8);
   margin: 0;
   font-weight: 300;
@@ -63,21 +63,20 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
 /* Accordion container */
 .bb-accordion {
-  max-width: 760px;
-  margin: 0 auto;
+  max-width: 100%;
 }
 
 /* Individual accordion item */
 .bb-accordion-item {
   border: 1px solid var(--bb-border);
-  border-radius: 8px;
-  margin-bottom: 0.75rem;
+  border-radius: 7px;
+  margin-bottom: 0.6rem;
   background: var(--bb-white);
   overflow: hidden;
   transition: box-shadow 0.2s ease;
 }
 .bb-accordion-item.open {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  box-shadow: 0 3px 14px rgba(0,0,0,0.06);
 }
 
 /* Question button */
@@ -86,14 +85,14 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   text-align: left;
   background: none;
   border: none;
-  padding: 1.1rem 1.25rem;
+  padding: 0.9rem 1.1rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.85rem;
   font-family: 'Inter', sans-serif;
-  font-size: 0.97rem;
+  font-size: 0.88rem;
   font-weight: 600;
   color: var(--bb-navy);
   line-height: 1.45;
@@ -110,16 +109,16 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 /* Chevron icon */
 .bb-chevron {
   flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-  border: 1.5px solid var(--bb-border);
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--bb-border);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.25s ease;
   color: var(--bb-gray);
-  font-size: 0.75rem;
+  font-size: 0.68rem;
 }
 .bb-accordion-item.open .bb-chevron {
   background: var(--bb-green-accent);
@@ -140,17 +139,17 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
 /* Answer content */
 .bb-accordion-body {
-  padding: 0 1.25rem 1.25rem;
+  padding: 0 1.1rem 1.1rem;
   border-top: 1px solid var(--bb-border);
 }
 .bb-accordion-body p {
   color: var(--bb-text-secondary);
-  font-size: 0.93rem;
-  line-height: 1.85;
-  margin: 0.85rem 0 0;
+  font-size: 0.87rem;
+  line-height: 1.8;
+  margin: 0.75rem 0 0;
 }
 .bb-accordion-body p + p {
-  margin-top: 0.75rem;
+  margin-top: 0.65rem;
 }
 .bb-accordion-body a {
   color: var(--bb-green-accent);
@@ -165,98 +164,20 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
 /* Desktop */
 @media (min-width: 769px) {
-  .bb-page-hero { padding: 3.5rem 3rem; border-radius: 12px; }
-  .bb-page-hero h1 { font-size: 2.25rem; }
-  .bb-page-hero p { font-size: 1.1rem; }
-  .bb-accordion-btn { font-size: 1rem; padding: 1.2rem 1.5rem; }
-  .bb-accordion-body { padding: 0 1.5rem 1.5rem; }
+  .bb-page-hero { padding: 2.5rem 2.5rem; border-radius: 10px; }
+  .bb-page-hero h1 { font-size: 1.65rem; }
+  .bb-page-hero p { font-size: 0.93rem; }
+  .bb-accordion-btn { font-size: 0.92rem; padding: 1rem 1.25rem; }
+  .bb-accordion-body { padding: 0 1.25rem 1.25rem; }
 }
 </style>
 
 <div class="bb-page-hero">
   <h1>Frequently Asked Questions</h1>
-  <p>Common questions from people just starting to explore biotechnology. Click any question to expand the answer.</p>
+  <p>Common questions from people exploring biotechnology. Click any question to expand the answer.</p>
 </div>
 
 <div class="bb-accordion" id="bb-accordion">
-
-  <div class="bb-accordion-item">
-    <button class="bb-accordion-btn" aria-expanded="false">
-      <span>I'm in high school. Where do I start?</span>
-      <span class="bb-chevron">&#9660;</span>
-    </button>
-    <div class="bb-accordion-panel">
-      <div class="bb-accordion-body">
-        <p>Start by building a picture of what the field actually is — the <a href="/what-is-biotech/">What is Biotech?</a> page is a good first stop. From there, browse the <a href="/career-pathways/">Career Pathways</a> to see the kinds of roles that exist, because knowing where you might land helps you figure out what to pursue now.</p>
-        <p>Beyond that: follow biotech news to stay curious (our <a href="/resources/">Learning Lab</a> has good podcast and newsletter picks for beginners), take AP Biology or chemistry if your school offers it, and look into summer programs or science competitions in your area. You have more time than you think, and the most useful thing you can do right now is stay engaged and explore widely.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="bb-accordion-item">
-    <button class="bb-accordion-btn" aria-expanded="false">
-      <span>I'm in college but not majoring in biology. Can I still get into biotech?</span>
-      <span class="bb-chevron">&#9660;</span>
-    </button>
-    <div class="bb-accordion-panel">
-      <div class="bb-accordion-body">
-        <p>Absolutely — and this is one of the most important things to understand about biotech. The industry needs engineers for process development and manufacturing, computer scientists for bioinformatics and data analysis, business majors for operations and strategy, and communications people for science writing and marketing. A biology degree is one path in, not the only one.</p>
-        <p>The key is connecting whatever you're studying to a real role. Check out the <a href="/career-pathways/">Career Pathways</a> page to see the non-research tracks — you'll likely find something that maps naturally to your current major.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="bb-accordion-item">
-    <button class="bb-accordion-btn" aria-expanded="false">
-      <span>I'm changing careers. Is it too late?</span>
-      <span class="bb-chevron">&#9660;</span>
-    </button>
-    <div class="bb-accordion-panel">
-      <div class="bb-accordion-body">
-        <p>Not at all. People enter biotech in their 30s, 40s, and beyond — often in roles where their previous experience is exactly what's needed. Someone with a legal background is well-positioned for regulatory affairs. A project manager from any industry can move into clinical operations or manufacturing. Someone with sales experience can transition into biotech sales or business development without starting from scratch.</p>
-        <p>The honest truth is that most biotech employers value problem-solving ability and relevant transferable skills more than a specific degree. What matters is being able to demonstrate that you understand the context and that you're committed to building the specific knowledge gaps. Online courses and industry certifications can help close those gaps faster than you'd expect.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="bb-accordion-item">
-    <button class="bb-accordion-btn" aria-expanded="false">
-      <span>I don't have a science background. Can I still learn?</span>
-      <span class="bb-chevron">&#9660;</span>
-    </button>
-    <div class="bb-accordion-panel">
-      <div class="bb-accordion-body">
-        <p>Yes — and this entire website is built with you in mind. You don't need prior science knowledge to explore what biotech is or to understand the career landscape. The <a href="/what-is-biotech/">What is Biotech?</a> page starts from zero, and the <a href="/resources/">Learning Lab</a> has podcasts and YouTube channels designed for curious non-specialists.</p>
-        <p>You also don't need to become a scientist to work in biotech. Many of the people keeping this industry running have backgrounds in law, business, communications, or engineering. The field is much broader than most people realize, and scientific literacy — not a science degree — is usually what's required for most of those roles.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="bb-accordion-item">
-    <button class="bb-accordion-btn" aria-expanded="false">
-      <span>What is the job market like?</span>
-      <span class="bb-chevron">&#9660;</span>
-    </button>
-    <div class="bb-accordion-panel">
-      <div class="bb-accordion-body">
-        <p>Biotech is one of the faster-growing sectors in the economy, though like any industry it goes through cycles. Manufacturing and quality roles have remained consistently in demand. The growth of computational biology has created strong need for people with data and programming skills. Regulatory and compliance positions have grown alongside the increasing complexity of the approval process.</p>
-        <p>Entry-level salaries generally range from $50k–$80k depending on role and location, with significant variation. Lab-based roles in lower cost-of-living areas often sit at the lower end; data and engineering roles in Boston or the Bay Area tend to sit higher. The important thing to know is that there are entry points at nearly every education level, and the field rewards people who stay curious and keep building expertise.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="bb-accordion-item">
-    <button class="bb-accordion-btn" aria-expanded="false">
-      <span>Do I need to live in a biotech hub?</span>
-      <span class="bb-chevron">&#9660;</span>
-    </button>
-    <div class="bb-accordion-panel">
-      <div class="bb-accordion-body">
-        <p>It helps, especially early in your career when proximity to other people in the industry accelerates learning and networking. The major hubs — Boston/Cambridge, the San Francisco Bay Area, San Diego, Research Triangle in North Carolina, and Seattle — have the highest concentration of companies and therefore the most entry-level opportunities.</p>
-        <p>That said, biotech companies exist in most mid-to-large cities, and remote work is increasingly common for non-lab roles like regulatory affairs, business development, and project management. If relocating isn't possible, it's worth identifying what's local and being strategic about which roles allow more flexibility.</p>
-      </div>
-    </div>
-  </div>
 
   <div class="bb-accordion-item">
     <button class="bb-accordion-btn" aria-expanded="false">
@@ -265,8 +186,8 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </button>
     <div class="bb-accordion-panel">
       <div class="bb-accordion-body">
-        <p>For students, the most underused path is cold outreach — sending a short, specific email to a professor or researcher asking if there's an opportunity to get involved with their lab. Most people don't do this, which means the ones who do stand out. Summer research programs (REUs for undergrads, company internships for anyone) are also worth applying to broadly, since rejection rates are high but so are the payoffs. Joining biotech-focused student groups at your school helps too, mostly because it puts you in rooms with people who share the goal.</p>
-        <p>For career changers, the path usually runs through LinkedIn networking and contract or temp positions. A contract role at a biotech company — even one that isn't your dream job — gives you the industry experience on your resume that opens the next door. Highlighting transferable skills clearly and honestly, and taking a free or low-cost online course to show genuine interest in the specific area, goes a long way.</p>
+        <p>The most reliable route is applying directly on company career pages — most biotech companies, even large ones, post entry-level and internship roles on their websites. Apply through the official posting. Tailor your resume to each role, even slightly.</p>
+        <p>Cold outreach can be a useful supplement — not a replacement for applying — and works best when it's specific and brief. If you have no lab experience, highlight transferable skills: attention to detail, data handling, relevant coursework. University research labs are often more accessible than industry for a first experience and are worth pursuing at the same time.</p>
       </div>
     </div>
   </div>
@@ -279,7 +200,98 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     <div class="bb-accordion-panel">
       <div class="bb-accordion-body">
         <p>The skills that matter most depend on the path you're aiming for, but a few are broadly valuable across almost every biotech role. Data fluency — even at a basic level, with Excel or Python — is increasingly expected. Clear writing and communication are rare and consistently valued. Understanding the regulatory landscape (FDA, GMP, GLP basics) is relevant to far more roles than just regulatory affairs.</p>
-        <p>Scientific literacy — the ability to read a paper, follow a technical argument, and understand what a study is actually claiming — is the underlying skill that compounds over time regardless of your specific role. The <a href="/resources/">Learning Lab</a> has resources to help build all of these, most of them free.</p>
+        <p>Scientific literacy — the ability to read a paper, follow a technical argument, and understand what a study is actually claiming — is the underlying skill that compounds over time regardless of your specific role.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bb-accordion-item">
+    <button class="bb-accordion-btn" aria-expanded="false">
+      <span>Can I pivot into biotech from any background? Do I need a science degree?</span>
+      <span class="bb-chevron">&#9660;</span>
+    </button>
+    <div class="bb-accordion-panel">
+      <div class="bb-accordion-body">
+        <p>Yes, and it happens more often than people expect. The path looks different depending on where you're starting. Non-science backgrounds have clear entry points in business development, regulatory, operations, communications, and project management.</p>
+        <p>If you want a lab-based role without a science background, you'll likely need to get one — or start with a certificate program. The most important thing is being specific about which kind of role you're actually targeting and building toward that, rather than trying to enter biotech in the abstract.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bb-accordion-item">
+    <button class="bb-accordion-btn" aria-expanded="false">
+      <span>I'm in high school. Where do I start?</span>
+      <span class="bb-chevron">&#9660;</span>
+    </button>
+    <div class="bb-accordion-panel">
+      <div class="bb-accordion-body">
+        <p>Start by getting a clear picture of what the field actually is. Read broadly — biotech industry news, popular science books, YouTube channels like Kurzgesagt. Take AP Biology or chemistry if your school offers it, and look into summer research programs or science competitions in your area.</p>
+        <p>You have more time than you think. The most useful thing you can do right now is stay curious and explore widely, rather than locking onto a single path too early.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bb-accordion-item">
+    <button class="bb-accordion-btn" aria-expanded="false">
+      <span>I'm in college but not majoring in biology. Can I still get into biotech?</span>
+      <span class="bb-chevron">&#9660;</span>
+    </button>
+    <div class="bb-accordion-panel">
+      <div class="bb-accordion-body">
+        <p>Absolutely — biotech needs engineers for process development and manufacturing, computer scientists for bioinformatics and data analysis, business majors for operations and strategy, and communications people for science writing and marketing. A biology degree is one path in, not the only one.</p>
+        <p>The key is connecting whatever you're studying to a specific role. Look at actual job postings in the area you're interested in, see what they ask for, and build toward that.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bb-accordion-item">
+    <button class="bb-accordion-btn" aria-expanded="false">
+      <span>I'm changing careers. Is it too late?</span>
+      <span class="bb-chevron">&#9660;</span>
+    </button>
+    <div class="bb-accordion-panel">
+      <div class="bb-accordion-body">
+        <p>Not at all. People enter biotech in their 30s, 40s, and beyond — often in roles where their previous experience is exactly what's needed. Someone with a legal background is well-positioned for regulatory affairs. A project manager from any industry can move into clinical operations or manufacturing. Someone with sales experience can transition into biotech sales or business development without starting from scratch.</p>
+        <p>What matters most is demonstrating that you understand the context and are committed to building the specific knowledge gaps. Online courses and industry certifications can close those gaps faster than you'd expect.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bb-accordion-item">
+    <button class="bb-accordion-btn" aria-expanded="false">
+      <span>I don't have a science background. Can I still learn?</span>
+      <span class="bb-chevron">&#9660;</span>
+    </button>
+    <div class="bb-accordion-panel">
+      <div class="bb-accordion-body">
+        <p>Biotech is much broader than most people realize. You don't need a science degree to work in the industry — roles in regulatory affairs, business development, communications, project management, and operations are filled by people from law, business, engineering, and the humanities.</p>
+        <p>What usually matters is scientific literacy, not a science degree. That means being able to read a summary, understand what a clinical trial is, and follow along in a meeting. You can build that over time by reading industry news, taking a free online course, and staying curious.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bb-accordion-item">
+    <button class="bb-accordion-btn" aria-expanded="false">
+      <span>What is the job market like?</span>
+      <span class="bb-chevron">&#9660;</span>
+    </button>
+    <div class="bb-accordion-panel">
+      <div class="bb-accordion-body">
+        <p>Entry-level salaries in lab or operations roles typically start around $50–60k, but with a few years of experience can reach $90–100k+. Data, computational, and engineering roles in hubs like Boston or the Bay Area often pay more. The industry goes through cycles — layoffs happen, especially at smaller biotechs after funding rounds — but core functions like manufacturing, quality control, and regulatory affairs have historically remained more stable.</p>
+        <p>Overall it's a growing field, and it rewards people who keep building expertise over time.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bb-accordion-item">
+    <button class="bb-accordion-btn" aria-expanded="false">
+      <span>Do I need to live in a biotech hub?</span>
+      <span class="bb-chevron">&#9660;</span>
+    </button>
+    <div class="bb-accordion-panel">
+      <div class="bb-accordion-body">
+        <p>It helps, especially early in your career when proximity to other people in the industry accelerates learning and networking. The major hubs — Boston/Cambridge, the San Francisco Bay Area, San Diego, Research Triangle in North Carolina, and Seattle — have the highest concentration of companies and therefore the most entry-level opportunities.</p>
+        <p>That said, biotech companies exist in most mid-to-large cities, and remote work is increasingly common for non-lab roles like regulatory affairs, business development, and project management. If relocating isn't possible, identify what's local and be strategic about which roles allow more flexibility.</p>
       </div>
     </div>
   </div>
@@ -291,7 +303,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </button>
     <div class="bb-accordion-panel">
       <div class="bb-accordion-body">
-        <p><a href="/get-involved/">Get in touch</a> — we're building a mentorship program and are happy to point you toward the right resources for your specific situation. You can also email us directly at <a href="mailto:contact@biobridge.org">contact@biobridge.org</a>.</p>
+        <p>You can reach out directly at <a href="mailto:jeans.connects@gmail.com">jeans.connects@gmail.com</a>. A mentorship program is in development for people who want more structured, one-on-one guidance.</p>
       </div>
     </div>
   </div>
@@ -305,7 +317,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     var btn = item.querySelector('.bb-accordion-btn');
     btn.addEventListener('click', function() {
       var isOpen = item.classList.contains('open');
-      // Toggle this item (allow multiple open simultaneously)
+      // Toggle this item (multiple can be open simultaneously)
       item.classList.toggle('open');
       btn.setAttribute('aria-expanded', !isOpen);
     });
