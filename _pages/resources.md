@@ -30,9 +30,9 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-page-hero {
   background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
   color: var(--bb-white);
-  padding: 2.5rem 1.5rem;
-  border-radius: 10px;
-  margin-bottom: 2.5rem;
+  padding: 2rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
   position: relative;
   overflow: hidden;
 }
@@ -44,27 +44,27 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   pointer-events: none;
 }
 .bb-page-hero h1 {
-  font-size: 1.75rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.4rem;
   color: var(--bb-white);
   letter-spacing: -0.02em;
   position: relative;
 }
 .bb-page-hero .bb-hero-sub {
   font-family: 'Inter', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--bb-green-hover);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   display: block;
   position: relative;
 }
 .bb-page-hero p {
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
+  font-size: 0.88rem;
   color: rgba(255,255,255,0.8);
   margin: 0;
   font-weight: 300;
@@ -76,32 +76,31 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-section-head {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1.25rem;
-  padding-bottom: 0.75rem;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
   border-bottom: 2px solid var(--bb-green-accent);
 }
 .bb-section-head h2 {
   font-family: 'Inter', sans-serif;
   color: var(--bb-navy);
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   font-weight: 700;
   margin: 0;
-}
-.bb-section-head .bb-section-icon {
-  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /* Resource section wrapper */
 .bb-resource-section {
-  margin-bottom: 2.75rem;
+  margin-bottom: 2.25rem;
 }
 
 /* Grid */
 .bb-resource-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 0.85rem;
   margin-bottom: 0;
 }
 
@@ -109,54 +108,47 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-resource-card {
   background: var(--bb-white);
   border: 1px solid var(--bb-border);
-  border-radius: 8px;
-  padding: 1rem 1.25rem;
-  transition: all 0.25s ease;
+  border-radius: 7px;
+  padding: 0.85rem 1rem;
+  transition: all 0.22s ease;
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 0.85rem;
 }
 .bb-resource-card:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 3px 14px rgba(0,0,0,0.07);
   transform: translateY(-1px);
 }
 .bb-resource-thumb {
-  width: 48px;
-  height: 48px;
-  min-width: 48px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
   background: linear-gradient(135deg, #d1e8d8, #c8dfe0);
-  border-radius: 6px;
+  border-radius: 5px;
   border: 1px solid var(--bb-border);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
-  color: var(--bb-gray);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.6rem;
-  font-weight: 600;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--bb-green);
   flex-direction: column;
   gap: 2px;
 }
-.bb-resource-thumb-icon {
-  font-size: 1.25rem;
-}
 .bb-resource-thumb-label {
-  font-size: 0.55rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.52rem;
   color: var(--bb-gray);
   font-weight: 500;
+  text-align: center;
+  line-height: 1.2;
+  padding: 0 3px;
 }
 .bb-resource-info {
   flex: 1;
   min-width: 0;
 }
 .bb-resource-card h3 {
-  margin: 0 0 0.3rem;
+  margin: 0 0 0.2rem;
   font-family: 'Inter', sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-weight: 600;
 }
 .bb-resource-card h3 a {
@@ -167,26 +159,50 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-resource-card h3 a:hover { color: var(--bb-green-accent); }
 .bb-resource-card p {
   color: var(--bb-gray);
-  font-size: 0.84rem;
+  font-size: 0.8rem;
   line-height: 1.5;
   margin: 0;
 }
 
-/* Book cards (italic title, no thumb layout) */
-.bb-book-card { flex-direction: column; }
+/* Book cards — with thumbnail like other cards */
 .bb-book-card h3 { font-style: italic; }
+
+/* Book cover thumbnail — taller ratio for books */
+.bb-book-thumb {
+  width: 44px;
+  height: 60px;
+  min-width: 44px;
+  background: linear-gradient(160deg, #c8dac4, #b8d0cc);
+  border-radius: 3px;
+  border: 1px solid var(--bb-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.bb-book-thumb-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.5rem;
+  color: var(--bb-green);
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+  padding: 0 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
 
 /* CTA Footer */
 .bb-cta-footer {
   text-align: center;
-  padding: 1.75rem 1.5rem;
-  background: var(--bb-green-bg);
-  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  background: var(--bb-green-bg-subtle);
+  border-radius: 7px;
   border: 1px solid var(--bb-border);
 }
 .bb-cta-footer p {
   color: var(--bb-text-secondary);
-  font-size: 0.95rem;
+  font-size: 0.87rem;
   margin: 0;
 }
 .bb-cta-footer a {
@@ -196,12 +212,12 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
 /* Desktop */
 @media (min-width: 769px) {
-  .bb-page-hero { padding: 3.5rem 3rem; border-radius: 12px; }
-  .bb-page-hero h1 { font-size: 2.1rem; }
-  .bb-page-hero p { font-size: 1.05rem; }
-  .bb-resource-grid { grid-template-columns: repeat(2, 1fr); gap: 1.1rem; }
-  .bb-section-head h2 { font-size: 1.3rem; }
-  .bb-cta-footer { padding: 2rem 2.5rem; }
+  .bb-page-hero { padding: 2.5rem 2.5rem; border-radius: 10px; }
+  .bb-page-hero h1 { font-size: 1.65rem; }
+  .bb-page-hero p { font-size: 0.93rem; }
+  .bb-resource-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .bb-section-head h2 { font-size: 1rem; }
+  .bb-cta-footer { padding: 1.5rem 2rem; }
 }
 @media (min-width: 1024px) {
   .bb-resource-grid { grid-template-columns: repeat(3, 1fr); }
@@ -217,13 +233,11 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 <!-- NEWSLETTERS -->
 <div class="bb-resource-section">
   <div class="bb-section-head">
-    <span class="bb-section-icon">📬</span>
     <h2>Newsletters</h2>
   </div>
   <div class="bb-resource-grid">
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-icon">📰</div>
         <div class="bb-resource-thumb-label">Logo</div>
       </div>
       <div class="bb-resource-info">
@@ -233,7 +247,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-icon">📰</div>
         <div class="bb-resource-thumb-label">Logo</div>
       </div>
       <div class="bb-resource-info">
@@ -243,7 +256,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-icon">📰</div>
         <div class="bb-resource-thumb-label">Logo</div>
       </div>
       <div class="bb-resource-info">
@@ -257,13 +269,11 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 <!-- PODCASTS -->
 <div class="bb-resource-section">
   <div class="bb-section-head">
-    <span class="bb-section-icon">🎙</span>
     <h2>Podcasts</h2>
   </div>
   <div class="bb-resource-grid">
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-icon">🎧</div>
         <div class="bb-resource-thumb-label">Logo</div>
       </div>
       <div class="bb-resource-info">
@@ -273,7 +283,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-icon">🎧</div>
         <div class="bb-resource-thumb-label">Logo</div>
       </div>
       <div class="bb-resource-info">
@@ -283,7 +292,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-icon">🎧</div>
         <div class="bb-resource-thumb-label">Logo</div>
       </div>
       <div class="bb-resource-info">
@@ -297,13 +305,11 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 <!-- BEGINNER READS -->
 <div class="bb-resource-section">
   <div class="bb-section-head">
-    <span class="bb-section-icon">🌐</span>
     <h2>Beginner-Friendly Reads</h2>
   </div>
   <div class="bb-resource-grid">
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-icon">🔗</div>
         <div class="bb-resource-thumb-label">Logo</div>
       </div>
       <div class="bb-resource-info">
@@ -313,7 +319,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-icon">🔗</div>
         <div class="bb-resource-thumb-label">Logo</div>
       </div>
       <div class="bb-resource-info">
@@ -323,7 +328,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-icon">🔗</div>
         <div class="bb-resource-thumb-label">Logo</div>
       </div>
       <div class="bb-resource-info">
@@ -337,13 +341,11 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 <!-- YOUTUBE -->
 <div class="bb-resource-section">
   <div class="bb-section-head">
-    <span class="bb-section-icon">▶</span>
     <h2>YouTube Channels</h2>
   </div>
   <div class="bb-resource-grid">
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-icon">📺</div>
         <div class="bb-resource-thumb-label">Logo</div>
       </div>
       <div class="bb-resource-info">
@@ -353,7 +355,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-icon">📺</div>
         <div class="bb-resource-thumb-label">Logo</div>
       </div>
       <div class="bb-resource-info">
@@ -363,7 +364,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-icon">📺</div>
         <div class="bb-resource-thumb-label">Logo</div>
       </div>
       <div class="bb-resource-info">
@@ -377,13 +377,11 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 <!-- COURSES -->
 <div class="bb-resource-section">
   <div class="bb-section-head">
-    <span class="bb-section-icon">🎓</span>
     <h2>Online Courses (Free)</h2>
   </div>
   <div class="bb-resource-grid">
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-icon">🏛</div>
         <div class="bb-resource-thumb-label">Logo</div>
       </div>
       <div class="bb-resource-info">
@@ -393,7 +391,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-icon">📚</div>
         <div class="bb-resource-thumb-label">Logo</div>
       </div>
       <div class="bb-resource-info">
@@ -403,7 +400,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-icon">🎬</div>
         <div class="bb-resource-thumb-label">Logo</div>
       </div>
       <div class="bb-resource-info">
@@ -417,21 +413,35 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 <!-- BOOKS -->
 <div class="bb-resource-section">
   <div class="bb-section-head">
-    <span class="bb-section-icon">📖</span>
     <h2>Books Worth Reading</h2>
   </div>
   <div class="bb-resource-grid">
     <div class="bb-resource-card bb-book-card">
-      <h3>"The Gene" by Siddhartha Mukherjee</h3>
-      <p>A sweeping history of genetics, written for a general audience by a Pulitzer-winning author and oncologist.</p>
+      <div class="bb-book-thumb">
+        <div class="bb-book-thumb-label">Cover</div>
+      </div>
+      <div class="bb-resource-info">
+        <h3>"The Gene" by Siddhartha Mukherjee</h3>
+        <p>A sweeping history of genetics, written for a general audience by a Pulitzer-winning author and oncologist.</p>
+      </div>
     </div>
     <div class="bb-resource-card bb-book-card">
-      <h3>"The Immortal Life of Henrietta Lacks"</h3>
-      <p>Science, ethics, and race — an essential read on how cell biology intersects with human dignity.</p>
+      <div class="bb-book-thumb">
+        <div class="bb-book-thumb-label">Cover</div>
+      </div>
+      <div class="bb-resource-info">
+        <h3>"The Immortal Life of Henrietta Lacks"</h3>
+        <p>Science, ethics, and race — an essential read on how cell biology intersects with human dignity.</p>
+      </div>
     </div>
     <div class="bb-resource-card bb-book-card">
-      <h3>"Spillover" by David Quammen</h3>
-      <p>How infectious diseases jump from animals to humans — prescient, terrifying, and beautifully written.</p>
+      <div class="bb-book-thumb">
+        <div class="bb-book-thumb-label">Cover</div>
+      </div>
+      <div class="bb-resource-info">
+        <h3>"Spillover" by David Quammen</h3>
+        <p>How infectious diseases jump from animals to humans — prescient, terrifying, and beautifully written.</p>
+      </div>
     </div>
   </div>
 </div>

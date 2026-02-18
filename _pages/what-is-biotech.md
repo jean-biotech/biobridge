@@ -32,9 +32,9 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-page-hero {
   background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
   color: var(--bb-white);
-  padding: 2.5rem 1.5rem;
-  border-radius: 10px;
-  margin-bottom: 2.5rem;
+  padding: 2rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
   position: relative;
   overflow: hidden;
 }
@@ -46,16 +46,16 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   pointer-events: none;
 }
 .bb-page-hero h1 {
-  font-size: 1.75rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.4rem;
   color: var(--bb-white);
   letter-spacing: -0.02em;
   position: relative;
 }
 .bb-page-hero p {
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
+  font-size: 0.88rem;
   color: rgba(255,255,255,0.8);
   margin: 0;
   font-weight: 300;
@@ -66,68 +66,72 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 /* Image Placeholder */
 .bb-img-placeholder {
   background: linear-gradient(135deg, var(--bb-green-bg), #e8f4f5);
-  border: 2px dashed var(--bb-border);
-  border-radius: 10px;
-  padding: 2rem 1.5rem;
+  border: 1px dashed var(--bb-border);
+  border-radius: 8px;
+  padding: 1.5rem 1rem;
   text-align: center;
   color: var(--bb-gray);
   font-family: 'Inter', sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   font-weight: 500;
   line-height: 1.5;
 }
 
-/* Pull quote / callout box */
+/* Reduced callout box */
 .bb-callout {
   background: var(--bb-navy);
-  border-radius: 10px;
-  padding: 1.5rem 1.75rem;
-  margin: 2rem 0;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
   position: relative;
   overflow: hidden;
+  display: inline-block;
+  width: 100%;
 }
 .bb-callout::before {
   content: '';
   position: absolute;
   top: 0; left: 0;
-  width: 4px; height: 100%;
+  width: 3px; height: 100%;
   background: linear-gradient(180deg, var(--bb-green-bright), var(--bb-green-accent));
 }
 .bb-callout p {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--bb-white);
   margin: 0;
-  line-height: 1.55;
+  line-height: 1.5;
   letter-spacing: -0.01em;
+  padding-left: 0.75rem;
 }
 .bb-callout span {
   display: block;
   font-family: 'Inter', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.68rem;
   font-weight: 400;
-  color: rgba(255,255,255,0.55);
-  margin-top: 0.6rem;
+  color: rgba(255,255,255,0.5);
+  margin-top: 0.35rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  padding-left: 0.75rem;
 }
 
 /* Section intro text */
 .bb-intro-text {
   font-family: 'Inter', sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #334155;
-  line-height: 1.85;
-  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
 }
 
 /* Visual divider with label */
 .bb-divider {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin: 2.25rem 0;
+  gap: 0.85rem;
+  margin: 1.75rem 0;
 }
 .bb-divider-line {
   flex: 1;
@@ -136,7 +140,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 }
 .bb-divider-label {
   font-family: 'Inter', sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.67rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -144,56 +148,148 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   white-space: nowrap;
 }
 
-/* Example Cards Grid */
-.bb-example-grid {
+/* ============================================
+   FLIP CARDS — Real-World Examples
+   ============================================ */
+.bb-flip-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.25rem;
-  margin: 1.5rem 0;
+  gap: 1rem;
+  margin: 1.25rem 0;
 }
-.bb-example-card {
-  background: var(--bb-white);
-  border: 1px solid var(--bb-border);
+
+.bb-flip-card {
+  perspective: 1000px;
+  height: 220px;
+  cursor: pointer;
+}
+
+.bb-flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.bb-flip-card.flipped .bb-flip-card-inner,
+.bb-flip-card:hover .bb-flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.bb-flip-front,
+.bb-flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   border-radius: 8px;
-  padding: 1.5rem;
-  transition: all 0.25s ease;
+  border: 1px solid var(--bb-border);
+  overflow: hidden;
 }
-.bb-example-card:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-  transform: translateY(-1px);
+
+/* Front of card */
+.bb-flip-front {
+  background: var(--bb-white);
+  display: flex;
+  flex-direction: column;
 }
-.bb-example-card h3 {
+.bb-flip-front-img {
+  background: linear-gradient(135deg, #d1e8d8, #e8f4ea);
+  height: 110px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--bb-border);
+}
+.bb-flip-front-img span {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--bb-green);
+  background: rgba(45,95,63,0.1);
+  border: 1px dashed rgba(45,95,63,0.3);
+  border-radius: 4px;
+  padding: 0.25rem 0.6rem;
+}
+.bb-flip-front-body {
+  padding: 0.85rem 1rem;
+  flex: 1;
+}
+.bb-flip-front-body h3 {
   font-family: 'Inter', sans-serif;
   color: var(--bb-navy);
-  margin-top: 0;
-  font-size: 1rem;
+  font-size: 0.92rem;
   font-weight: 700;
-  padding-bottom: 0.65rem;
-  border-bottom: 2px solid var(--bb-green-bg);
-  margin-bottom: 0.75rem;
+  margin: 0 0 0.25rem;
 }
-.bb-example-card p {
-  color: var(--bb-text-secondary);
-  font-size: 0.9rem;
-  line-height: 1.75;
-  margin: 0 0 0.6rem;
+.bb-flip-front-body p {
+  color: var(--bb-gray);
+  font-size: 0.75rem;
+  margin: 0;
 }
-.bb-example-card p:last-child { margin-bottom: 0; }
+.bb-flip-hint {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  color: var(--bb-gray);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
 
-/* Two-column split for Beyond the Science */
+/* Back of card */
+.bb-flip-back {
+  background: var(--bb-navy);
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  padding: 1.1rem 1.25rem;
+  justify-content: center;
+}
+.bb-flip-back h3 {
+  font-family: 'Inter', sans-serif;
+  color: var(--bb-green-hover);
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.bb-flip-back p {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.82rem;
+  line-height: 1.65;
+  margin: 0 0 0.5rem;
+}
+.bb-flip-back p:last-child { margin-bottom: 0; }
+.bb-flip-back-img {
+  background: rgba(255,255,255,0.08);
+  border: 1px dashed rgba(255,255,255,0.2);
+  border-radius: 4px;
+  padding: 0.3rem 0.6rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  margin-top: 0.65rem;
+}
+
+/* Two-column split */
 .bb-two-col {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.75rem;
-  margin: 1.5rem 0;
+  gap: 1.5rem;
+  margin: 1.25rem 0;
   align-items: start;
 }
 .bb-two-col-text p {
   font-family: 'Inter', sans-serif;
   color: #334155;
-  font-size: 0.93rem;
-  line-height: 1.85;
-  margin: 0 0 0.9rem;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin: 0 0 0.85rem;
 }
 .bb-two-col-text p:last-child { margin-bottom: 0; }
 
@@ -202,32 +298,37 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   background: var(--bb-off-white);
   border: 1px solid var(--bb-border);
   border-left: 3px solid var(--bb-green-accent);
-  border-radius: 8px;
-  padding: 1.25rem 1.5rem;
-  margin-bottom: 0.85rem;
+  border-radius: 7px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
 }
 .bb-misconception strong {
   color: var(--bb-navy);
   font-family: 'Inter', sans-serif;
-  font-size: 0.93rem;
+  font-size: 0.88rem;
   font-weight: 600;
 }
 .bb-misconception p {
   color: var(--bb-text-secondary);
-  margin: 0.45rem 0 0;
-  font-size: 0.9rem;
-  line-height: 1.75;
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  line-height: 1.7;
 }
 
 /* Desktop */
 @media (min-width: 769px) {
-  .bb-page-hero { padding: 3.5rem 3rem; border-radius: 12px; }
-  .bb-page-hero h1 { font-size: 2.25rem; }
-  .bb-page-hero p { font-size: 1.1rem; }
-  .bb-example-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-  .bb-two-col { grid-template-columns: 3fr 2fr; gap: 2.5rem; }
-  .bb-callout p { font-size: 1.2rem; }
-  .bb-img-placeholder { padding: 3rem 2rem; font-size: 0.88rem; }
+  .bb-page-hero { padding: 2.5rem 2.5rem; border-radius: 10px; }
+  .bb-page-hero h1 { font-size: 1.65rem; }
+  .bb-page-hero p { font-size: 0.93rem; }
+  .bb-flip-grid { grid-template-columns: repeat(2, 1fr); gap: 1.1rem; }
+  .bb-flip-card { height: 240px; }
+  .bb-flip-front-img { height: 120px; }
+  .bb-two-col { grid-template-columns: 3fr 2fr; gap: 2.25rem; }
+  .bb-callout p { font-size: 1rem; }
+  .bb-img-placeholder { padding: 2.25rem 1.5rem; font-size: 0.8rem; }
+}
+@media (min-width: 1024px) {
+  .bb-flip-grid { grid-template-columns: repeat(4, 1fr); }
 }
 </style>
 
@@ -253,30 +354,76 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
 ## Real-World Examples
 
-<div class="bb-example-grid">
+<p class="bb-intro-text" style="font-size:0.82rem; color: var(--bb-gray);">Hover over each card (or tap on mobile) to see more.</p>
 
-  <div class="bb-example-card">
-    <h3>Medicine</h3>
-    <p>The insulin keeping millions of diabetics alive is made by bacteria. Scientists insert the human insulin gene into E. coli, turning microbes into living medicine factories.</p>
-    <p>CAR-T therapy goes further: doctors extract your immune cells, genetically reprogram them to recognize cancer, and inject them back. Your own cells become trained to fight tumors.</p>
+<div class="bb-flip-grid">
+
+  <div class="bb-flip-card" role="button" tabindex="0" aria-label="Medicine example — click to flip">
+    <div class="bb-flip-card-inner">
+      <div class="bb-flip-front">
+        <div class="bb-flip-front-img"><span>Medicine — Image Placeholder</span></div>
+        <div class="bb-flip-front-body">
+          <h3>Medicine</h3>
+          <p class="bb-flip-hint">Hover to learn more</p>
+        </div>
+      </div>
+      <div class="bb-flip-back">
+        <h3>Medicine</h3>
+        <p>Insulin for diabetics is made by bacteria engineered to carry the human insulin gene. CAR-T therapy takes your own immune cells, genetically reprograms them to recognize cancer, and injects them back.</p>
+        <div class="bb-flip-back-img">Company logo placeholder</div>
+      </div>
+    </div>
   </div>
 
-  <div class="bb-example-card">
-    <h3>Agriculture</h3>
-    <p>Drought-resistant crops can survive on 30% less water. In regions facing water scarcity, that's not just innovation — it's survival.</p>
-    <p>The plant-based meat revolution relies on heme, a protein made by engineered yeast. It's what makes Impossible meat taste remarkably close to beef.</p>
+  <div class="bb-flip-card" role="button" tabindex="0" aria-label="Agriculture example — click to flip">
+    <div class="bb-flip-card-inner">
+      <div class="bb-flip-front">
+        <div class="bb-flip-front-img"><span>Agriculture — Image Placeholder</span></div>
+        <div class="bb-flip-front-body">
+          <h3>Agriculture</h3>
+          <p class="bb-flip-hint">Hover to learn more</p>
+        </div>
+      </div>
+      <div class="bb-flip-back">
+        <h3>Agriculture</h3>
+        <p>Drought-resistant crops can survive on 30% less water. Plant-based meat uses heme — a protein from engineered yeast — to replicate the taste and texture of beef.</p>
+        <div class="bb-flip-back-img">Company logo placeholder</div>
+      </div>
+    </div>
   </div>
 
-  <div class="bb-example-card">
-    <h3>Environment</h3>
-    <p>Bioremediation uses bacteria that break down petroleum into harmless compounds — turning oil spill disasters into manageable cleanups.</p>
-    <p>Bioplastics made from plants instead of petroleum decompose in months, not centuries — and are already being used in packaging and utensils.</p>
+  <div class="bb-flip-card" role="button" tabindex="0" aria-label="Environment example — click to flip">
+    <div class="bb-flip-card-inner">
+      <div class="bb-flip-front">
+        <div class="bb-flip-front-img"><span>Environment — Image Placeholder</span></div>
+        <div class="bb-flip-front-body">
+          <h3>Environment</h3>
+          <p class="bb-flip-hint">Hover to learn more</p>
+        </div>
+      </div>
+      <div class="bb-flip-back">
+        <h3>Environment</h3>
+        <p>Bioremediation uses bacteria that break down petroleum into harmless compounds. Bioplastics made from plants instead of petroleum decompose in months, not centuries.</p>
+        <div class="bb-flip-back-img">Company logo placeholder</div>
+      </div>
+    </div>
   </div>
 
-  <div class="bb-example-card">
-    <h3>The Cutting Edge</h3>
-    <p>Bioprinting is happening now — researchers use 3D printers loaded with living cells to build skin grafts, cartilage, and blood vessels.</p>
-    <p>Brain organoids (mini-brains grown from stem cells) are helping scientists study Alzheimer's, test drugs, and understand brain development without human trials.</p>
+  <div class="bb-flip-card" role="button" tabindex="0" aria-label="Cutting Edge example — click to flip">
+    <div class="bb-flip-card-inner">
+      <div class="bb-flip-front">
+        <div class="bb-flip-front-img"><span>Cutting Edge — Image Placeholder</span></div>
+        <div class="bb-flip-front-body">
+          <h3>The Cutting Edge</h3>
+          <p class="bb-flip-hint">Hover to learn more</p>
+        </div>
+      </div>
+      <div class="bb-flip-back">
+        <h3>The Cutting Edge</h3>
+        <p>Bioprinting uses 3D printers loaded with living cells to build skin grafts, cartilage, and blood vessels. Mini-brains grown from stem cells are helping scientists study Alzheimer's without human trials.</p>
+        <div class="bb-flip-back-img">Company logo placeholder</div>
+      </div>
+    </div>
   </div>
 
 </div>
@@ -294,11 +441,11 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     <p>A breakthrough in the lab is just the beginning. Getting from concept to the real world takes an entire team — and most of them aren't scientists.</p>
     <p>Take mRNA vaccines. The underlying science existed for decades. Turning it into something that reached billions of people took business strategists, regulatory experts, manufacturing engineers, ethicists, and communicators working in parallel.</p>
     <p>Someone had to decide what was worth pursuing and who would pay for it. Someone had to design safe trials and navigate the FDA. Someone had to figure out how to manufacture at scale without losing efficacy. Someone had to explain a brand-new technology to a skeptical public.</p>
-    <p>That's why biotech needs business people, engineers, lawyers, writers, and project managers just as much as it needs scientists. The science is step one — everything else is steps two through twenty.</p>
+    <p>That's why biotech needs business people, engineers, lawyers, writers, and project managers just as much as it needs scientists.</p>
   </div>
   <div>
     <div class="bb-img-placeholder">
-      [PLACEHOLDER: Illustration — showing the cross-functional team behind a biotech breakthrough: researcher, engineer, regulatory specialist, communicator]
+      [PLACEHOLDER: Illustration — cross-functional team behind a biotech breakthrough]
     </div>
   </div>
 </div>
@@ -313,7 +460,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
 <div class="bb-misconception">
   <strong>"You need to be good at biology to work in the industry."</strong>
-  <p>Not necessarily. If you can explain complex ideas simply, science communication is an option. If you're organized and analytical, there's operations. Biotech employs humanities majors, business students, and engineers just as readily as biology PhDs.</p>
+  <p>Not necessarily. Biotech employs humanities majors, business students, and engineers just as readily as biology PhDs. Science communication, operations, and regulatory affairs are all viable without a lab background.</p>
 </div>
 
 <div class="bb-misconception">
@@ -323,5 +470,23 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
 <div class="bb-misconception">
   <strong>"You need a PhD."</strong>
-  <p>Only if you want to lead independent research. Most biotech jobs in regulatory, manufacturing, business, and operations require a bachelor's degree or less — and some only require a high school diploma and on-the-job training. Certificate programs can get you there in months. There are entry points at every level.</p>
+  <p>Only if you want to lead independent research. Most biotech jobs in regulatory, manufacturing, business, and operations require a bachelor's degree or less. Certificate programs can get you there in months, and there are entry points at every level.</p>
 </div>
+
+<script>
+// Click-to-flip support for mobile/keyboard
+(function() {
+  var cards = document.querySelectorAll('.bb-flip-card');
+  cards.forEach(function(card) {
+    card.addEventListener('click', function() {
+      card.classList.toggle('flipped');
+    });
+    card.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        card.classList.toggle('flipped');
+      }
+    });
+  });
+})();
+</script>

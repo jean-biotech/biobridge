@@ -24,15 +24,16 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   --bb-text-secondary: #475569;
   --bb-gray: #64748b;
   --bb-border: #e2e8f0;
+  --bb-teal: #0E7490;
 }
 
 /* Page Header */
 .bb-page-hero {
   background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
   color: var(--bb-white);
-  padding: 2.5rem 1.5rem;
-  border-radius: 10px;
-  margin-bottom: 2.5rem;
+  padding: 2rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
   position: relative;
   overflow: hidden;
 }
@@ -44,16 +45,16 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   pointer-events: none;
 }
 .bb-page-hero h1 {
-  font-size: 1.75rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.5rem;
   color: var(--bb-white);
   letter-spacing: -0.02em;
   position: relative;
 }
 .bb-page-hero p {
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
+  font-size: 0.88rem;
   color: rgba(255,255,255,0.8);
   margin: 0;
   font-weight: 300;
@@ -62,46 +63,48 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 }
 
 /* ============================================
-   CAROUSEL WRAPPER
+   CAROUSEL WRAPPER — Full width
    ============================================ */
 .bb-carousel-wrap {
   position: relative;
-  max-width: 780px;
-  margin: 0 auto 2.5rem;
-  padding: 0 2.5rem;
+  width: 100%;
+  margin: 0 0 1.5rem;
+  padding: 0 3rem;
+  box-sizing: border-box;
 }
 
-/* Navigation arrows */
+/* Navigation arrows — circular, Penn style */
 .bb-carousel-btn {
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   background: var(--bb-white);
-  border: 2px solid var(--bb-border);
+  border: 1.5px solid var(--bb-border);
   border-radius: 50%;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: var(--bb-navy);
   transition: all 0.2s ease;
   z-index: 10;
   line-height: 1;
   font-family: Georgia, serif;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 0;
 }
 .bb-carousel-btn:hover {
   border-color: var(--bb-green-accent);
   color: var(--bb-green-accent);
-  box-shadow: 0 4px 16px rgba(45,95,63,0.18);
+  box-shadow: 0 4px 14px rgba(45,95,63,0.2);
 }
 .bb-carousel-btn.prev { left: 0; }
 .bb-carousel-btn.next { right: 0; }
 .bb-carousel-btn:disabled {
-  opacity: 0.35;
+  opacity: 0.3;
   cursor: default;
   box-shadow: none;
 }
@@ -109,7 +112,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 /* Carousel viewport */
 .bb-carousel-viewport {
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 /* Cards track */
@@ -119,184 +122,176 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   will-change: transform;
 }
 
-/* Individual card */
+/* Individual card — viewport height constrained */
 .bb-career-slide {
   min-width: 100%;
   background: var(--bb-white);
   border: 1px solid var(--bb-border);
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 3px 18px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
 }
 
-/* Card top accent bar */
-.bb-career-slide::before {
-  content: '';
-  display: block;
-  height: 4px;
-  background: linear-gradient(90deg, var(--bb-green-accent), var(--bb-green-hover));
-}
-
-/* Card image placeholder */
+/* Card image — fills width, fixed height */
 .bb-card-img {
   background: linear-gradient(135deg, #d1e8d8, #e8f4ea);
   border-bottom: 1px solid var(--bb-border);
-  padding: 1.75rem 1.5rem;
-  text-align: center;
-  color: var(--bb-gray);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.82rem;
-  font-weight: 500;
-  min-height: 120px;
+  width: 100%;
+  height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-.bb-card-img-icon {
-  font-size: 2.25rem;
-  opacity: 0.5;
+  flex-shrink: 0;
 }
 .bb-card-img-label {
   display: inline-block;
-  background: rgba(45,95,63,0.12);
-  border: 1.5px dashed rgba(45,95,63,0.3);
-  border-radius: 6px;
-  padding: 0.35rem 0.85rem;
+  background: rgba(45,95,63,0.1);
+  border: 1px dashed rgba(45,95,63,0.3);
+  border-radius: 4px;
+  padding: 0.3rem 0.85rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--bb-green);
   letter-spacing: 0.02em;
 }
 
 /* Card body */
 .bb-card-body {
-  padding: 1.75rem 1.5rem;
+  padding: 1.25rem 1.5rem;
+  overflow-y: auto;
+  flex: 1;
 }
 .bb-card-body h2 {
   font-family: 'Inter', sans-serif;
   color: var(--bb-navy);
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  margin: 0 0 1.25rem;
+  margin: 0 0 1rem;
+  letter-spacing: -0.01em;
 }
 
 /* Detail rows */
 .bb-detail {
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.75rem;
 }
 .bb-detail-label {
   font-family: 'Inter', sans-serif;
   color: var(--bb-green);
-  font-size: 0.72rem;
+  font-size: 0.67rem;
   text-transform: uppercase;
   letter-spacing: 0.07em;
   font-weight: 700;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
 }
 .bb-detail-value {
   color: var(--bb-text-secondary);
-  font-size: 0.9rem;
-  line-height: 1.7;
+  font-size: 0.84rem;
+  line-height: 1.6;
   margin: 0;
 }
 .bb-detail-value ul {
   margin: 0;
-  padding-left: 1.2rem;
+  padding-left: 1.1rem;
 }
 .bb-detail-value li {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
+  font-size: 0.84rem;
 }
 
 /* Company logos section */
 .bb-companies {
-  margin-top: 1.25rem;
-  padding-top: 1.25rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
   border-top: 1px solid var(--bb-border);
 }
 .bb-companies-label {
   font-family: 'Inter', sans-serif;
   color: var(--bb-gray);
-  font-size: 0.72rem;
+  font-size: 0.67rem;
   text-transform: uppercase;
   letter-spacing: 0.07em;
   font-weight: 600;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
 }
 .bb-logo-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
+/* Distinct teal accent for org badges — not the same muted green */
 .bb-logo-badge {
   display: inline-block;
-  background: var(--bb-green-bg);
-  border: 1px solid rgba(45,95,63,0.2);
+  background: rgba(14,116,144,0.1);
+  border: 1px solid rgba(14,116,144,0.25);
   border-radius: 4px;
-  padding: 0.3rem 0.75rem;
+  padding: 0.25rem 0.65rem;
   font-family: 'Inter', sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.73rem;
   font-weight: 600;
-  color: var(--bb-green);
+  color: var(--bb-teal);
   letter-spacing: 0.01em;
 }
 
-/* Carousel progress / indicators */
+/* Dots + counter */
 .bb-carousel-footer {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-top: 1.25rem;
+  margin-top: 1rem;
 }
 .bb-carousel-dots {
   display: flex;
-  gap: 0.45rem;
+  gap: 0.4rem;
 }
 .bb-dot {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: var(--bb-border);
   transition: all 0.2s ease;
   cursor: pointer;
+  border: none;
+  padding: 0;
 }
 .bb-dot.active {
   background: var(--bb-green-accent);
-  transform: scale(1.2);
+  transform: scale(1.25);
 }
 .bb-carousel-counter {
   font-family: 'Inter', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--bb-gray);
   font-weight: 500;
 }
 
 /* Next Steps */
 .bb-next-steps {
-  background: var(--bb-green-bg);
+  background: var(--bb-green-bg-subtle);
   border: 1px solid var(--bb-border);
   border-radius: 8px;
-  padding: 1.75rem 1.5rem;
+  padding: 1.25rem 1.5rem;
   margin-top: 0.5rem;
-  max-width: 780px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .bb-next-steps h2 {
   font-family: 'Inter', sans-serif;
   color: var(--bb-navy);
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   font-weight: 700;
   margin-top: 0;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.65rem;
 }
 .bb-next-steps ul {
-  padding-left: 1.25rem;
+  padding-left: 1.1rem;
   margin: 0;
 }
 .bb-next-steps li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   color: var(--bb-text-secondary);
-  font-size: 0.92rem;
+  font-size: 0.85rem;
 }
 .bb-next-steps a {
   color: var(--bb-green-accent);
@@ -305,24 +300,13 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
 /* Desktop enhancements */
 @media (min-width: 769px) {
-  .bb-page-hero {
-    padding: 3.5rem 3rem;
-    border-radius: 12px;
-  }
-  .bb-page-hero h1 { font-size: 2.25rem; }
-  .bb-page-hero p { font-size: 1.1rem; }
-  .bb-card-img {
-    min-height: 160px;
-    font-size: 0.88rem;
-  }
-  .bb-card-body {
-    padding: 2rem 2.25rem;
-  }
-  .bb-carousel-btn {
-    width: 48px;
-    height: 48px;
-    font-size: 1.4rem;
-  }
+  .bb-page-hero { padding: 2.5rem 2.5rem; border-radius: 10px; }
+  .bb-page-hero h1 { font-size: 1.65rem; }
+  .bb-page-hero p { font-size: 0.93rem; }
+  .bb-card-img { height: 180px; }
+  .bb-card-body { padding: 1.5rem 2rem; }
+  .bb-carousel-wrap { padding: 0 3.5rem; }
+  .bb-carousel-btn { width: 44px; height: 44px; font-size: 1.2rem; }
 }
 </style>
 
@@ -341,8 +325,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <!-- CARD 1: Research -->
       <div class="bb-career-slide">
         <div class="bb-card-img">
-          <div class="bb-card-img-icon">🔬</div>
-          <div class="bb-card-img-label">Research Lab Image</div>
+          <div class="bb-card-img-label">Research Lab — Image Placeholder</div>
         </div>
         <div class="bb-card-body">
           <h2>Research</h2>
@@ -367,7 +350,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
             <p class="bb-detail-value">Experimental design, data analysis, patience, intellectual curiosity.</p>
           </div>
           <div class="bb-companies">
-            <div class="bb-companies-label">Example organizations</div>
+            <div class="bb-companies-label">Example Organizations</div>
             <div class="bb-logo-badges">
               <span class="bb-logo-badge">Genentech</span>
               <span class="bb-logo-badge">NIH</span>
@@ -381,8 +364,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <!-- CARD 2: Industry & Manufacturing -->
       <div class="bb-career-slide">
         <div class="bb-card-img">
-          <div class="bb-card-img-icon">🏭</div>
-          <div class="bb-card-img-label">Manufacturing Floor Image</div>
+          <div class="bb-card-img-label">Manufacturing Floor — Image Placeholder</div>
         </div>
         <div class="bb-card-body">
           <h2>Industry &amp; Manufacturing</h2>
@@ -407,7 +389,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
             <p class="bb-detail-value">Attention to detail, problem-solving, regulatory knowledge (GMP, GLP).</p>
           </div>
           <div class="bb-companies">
-            <div class="bb-companies-label">Example organizations</div>
+            <div class="bb-companies-label">Example Organizations</div>
             <div class="bb-logo-badges">
               <span class="bb-logo-badge">Lonza</span>
               <span class="bb-logo-badge">Thermo Fisher</span>
@@ -421,8 +403,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <!-- CARD 3: Clinical -->
       <div class="bb-career-slide">
         <div class="bb-card-img">
-          <div class="bb-card-img-icon">🏥</div>
-          <div class="bb-card-img-label">Clinical Trial Image</div>
+          <div class="bb-card-img-label">Clinical Trial — Image Placeholder</div>
         </div>
         <div class="bb-card-body">
           <h2>Clinical</h2>
@@ -447,7 +428,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
             <p class="bb-detail-value">Organization, communication, ethics, regulatory compliance (FDA, ICH guidelines).</p>
           </div>
           <div class="bb-companies">
-            <div class="bb-companies-label">Example organizations</div>
+            <div class="bb-companies-label">Example Organizations</div>
             <div class="bb-logo-badges">
               <span class="bb-logo-badge">IQVIA</span>
               <span class="bb-logo-badge">Covance</span>
@@ -461,8 +442,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <!-- CARD 4: Regulatory & Policy -->
       <div class="bb-career-slide">
         <div class="bb-card-img">
-          <div class="bb-card-img-icon">📋</div>
-          <div class="bb-card-img-label">Policy &amp; Regulatory Office Image</div>
+          <div class="bb-card-img-label">Regulatory &amp; Policy — Image Placeholder</div>
         </div>
         <div class="bb-card-body">
           <h2>Regulatory &amp; Policy</h2>
@@ -487,7 +467,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
             <p class="bb-detail-value">Writing, attention to detail, deep understanding of regulations and policy processes.</p>
           </div>
           <div class="bb-companies">
-            <div class="bb-companies-label">Example organizations</div>
+            <div class="bb-companies-label">Example Organizations</div>
             <div class="bb-logo-badges">
               <span class="bb-logo-badge">FDA</span>
               <span class="bb-logo-badge">Roche</span>
@@ -501,8 +481,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <!-- CARD 5: Business & Operations -->
       <div class="bb-career-slide">
         <div class="bb-card-img">
-          <div class="bb-card-img-icon">📈</div>
-          <div class="bb-card-img-label">Business &amp; Strategy Image</div>
+          <div class="bb-card-img-label">Business &amp; Strategy — Image Placeholder</div>
         </div>
         <div class="bb-card-body">
           <h2>Business &amp; Operations</h2>
@@ -527,7 +506,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
             <p class="bb-detail-value">Communication, business acumen, strategic thinking, networking.</p>
           </div>
           <div class="bb-companies">
-            <div class="bb-companies-label">Example organizations</div>
+            <div class="bb-companies-label">Example Organizations</div>
             <div class="bb-logo-badges">
               <span class="bb-logo-badge">Gilead</span>
               <span class="bb-logo-badge">BCG</span>
@@ -541,8 +520,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <!-- CARD 6: Science Communication -->
       <div class="bb-career-slide">
         <div class="bb-card-img">
-          <div class="bb-card-img-icon">✍️</div>
-          <div class="bb-card-img-label">Science Media &amp; Communication Image</div>
+          <div class="bb-card-img-label">Science Media &amp; Communication — Image Placeholder</div>
         </div>
         <div class="bb-card-body">
           <h2>Science Communication</h2>
@@ -567,10 +545,10 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
             <p class="bb-detail-value">Writing, storytelling, scientific literacy, ability to simplify complexity without losing accuracy.</p>
           </div>
           <div class="bb-companies">
-            <div class="bb-companies-label">Example organizations</div>
+            <div class="bb-companies-label">Example Organizations</div>
             <div class="bb-logo-badges">
               <span class="bb-logo-badge">STAT News</span>
-              <span class="bb-logo-badge">NIH Office of Communications</span>
+              <span class="bb-logo-badge">NIH Communications</span>
               <span class="bb-logo-badge">Ology</span>
               <span class="bb-logo-badge">Science Friday</span>
             </div>
@@ -619,7 +597,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
     dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
     dot.dataset.index = i;
     dot.addEventListener('click', function(e) {
-      goTo(parseInt(e.target.dataset.index));
+      goTo(parseInt(e.currentTarget.dataset.index));
     });
     dotsWrap.appendChild(dot);
   }
@@ -627,13 +605,10 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   function goTo(index) {
     current = index;
     track.style.transform = 'translateX(-' + (current * 100) + '%)';
-    // Update dots
     dotsWrap.querySelectorAll('.bb-dot').forEach(function(d, i) {
       d.classList.toggle('active', i === current);
     });
-    // Update counter
     counter.textContent = (current + 1) + ' of ' + total;
-    // Update buttons
     prev.disabled = current === 0;
     next.disabled = current === total - 1;
   }
