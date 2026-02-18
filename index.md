@@ -744,12 +744,12 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <span class="bb-metric-label">Students Reached</span>
     </div>
     <div class="bb-metric">
-      <span class="bb-metric-num">6</span>
-      <span class="bb-metric-label">Career Pathways</span>
+      <span class="bb-metric-num">Open to All</span>
+      <span class="bb-metric-label">Backgrounds &amp; Disciplines</span>
     </div>
     <div class="bb-metric">
-      <span class="bb-metric-num">100%</span>
-      <span class="bb-metric-label">Free Core Resources</span>
+      <span class="bb-metric-num">55K+</span>
+      <span class="bb-metric-label">Community Members</span>
     </div>
   </div>
 </div>

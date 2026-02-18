@@ -337,25 +337,10 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <p>Understanding the science shaping our future, in plain language, no prerequisites required.</p>
 </div>
 
-<div class="bb-stats-strip">
-  <div class="bb-stat">
-    <div class="bb-stat-num">10,000+</div>
-    <div class="bb-stat-label">Students Reached</div>
-  </div>
-  <div class="bb-stat">
-    <div class="bb-stat-num">55K+</div>
-    <div class="bb-stat-label">Community Members</div>
-  </div>
-  <div class="bb-stat">
-    <div class="bb-stat-num">Open to All</div>
-    <div class="bb-stat-label">Backgrounds &amp; Disciplines</div>
-  </div>
-</div>
-
 <p class="bb-intro-text">Biotechnology is using living systems (cells, bacteria, proteins, DNA) to create useful products or solve real problems.</p>
 
 <div class="bb-callout">
-  <p>"Biotech = biology + technology to solve real problems."</p>
+  <p>Biotech = biology + technology to solve real problems.</p>
   <span>The simplest definition that actually holds up</span>
 </div>
 
