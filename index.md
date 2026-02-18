@@ -441,6 +441,10 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
 .bb-story-photo-wrap {
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .bb-story-photo {
@@ -453,22 +457,39 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 }
 
 .bb-story-caption {
+  margin-top: 1rem;
   text-align: center;
-  margin-top: 0.75rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.8rem;
-  color: var(--bb-text-secondary);
-  font-weight: 400;
-  line-height: 1.55;
-  letter-spacing: 0.01em;
 }
 
-.bb-story-caption strong {
+.bb-story-caption-name {
   display: block;
-  font-size: 0.92rem;
-  color: var(--bb-green);
-  font-weight: 600;
-  margin-bottom: 0.15rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--bb-green-dark);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+
+.bb-story-caption-divider {
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: var(--bb-green-bright);
+  border-radius: 2px;
+  margin: 0 auto 0.6rem;
+}
+
+.bb-story-caption-role {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--bb-text-secondary);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  line-height: 1.8;
 }
 
 .bb-story-content p {
@@ -825,7 +846,11 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
     <div class="bb-story-layout">
       <div class="bb-story-photo-wrap">
         <img class="bb-story-photo" src="/assets/images/profile-photo.jpg" alt="Jean Tran, Founder of BioBridge">
-        <p class="bb-story-caption"><strong>Jean Tran</strong>Founder, BioBridge&nbsp;|&nbsp;BS/MS Biotechnology</p>
+        <div class="bb-story-caption">
+          <span class="bb-story-caption-name">Jean Tran</span>
+          <span class="bb-story-caption-divider"></span>
+          <span class="bb-story-caption-role">Founder, BioBridge<br>BS/MS Biotechnology</span>
+        </div>
       </div>
       <div class="bb-story-content">
         <p>I was certain I would become a doctor. In college, I completed the shadowing hours, prerequisites, and extracurriculars. But the closer I pushed myself toward a future in clinical work, the more I questioned whether it was actually right for me. I realized I needed a different direction.</p>
