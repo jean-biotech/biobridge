@@ -3,11 +3,11 @@ main:
     url: /what-is-biotech/
   - title: "Careers"
     url: /career-pathways/
-  - title: "Resources"
-    url: /resources/
-  - title: "Get Involved"
-    url: /get-involved/
   - title: "Guides"
     url: /products/
+  - title: "Resources"
+    url: /resources/
   - title: "FAQ"
     url: /faq/
+  - title: "Get Involved"
+    url: /get-involved/

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Products"
+title: "Guides"
 permalink: /products/
 ---
 
@@ -26,7 +26,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   --bb-border: #e2e8f0;
 }
 
-/* Page Header — Mobile First */
+/* Page Header */
 .bb-page-hero {
   background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
   color: var(--bb-white);
@@ -61,38 +61,97 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   position: relative;
 }
 
-/* Product Card */
+/* Main product layout */
+.bb-product-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Product image placeholder */
+.bb-product-img {
+  background: linear-gradient(145deg, #e8f0ea, #d4e8d9);
+  border: 2px dashed rgba(45,95,63,0.25);
+  border-radius: 10px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  color: var(--bb-gray);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: 200px;
+}
+.bb-product-img-icon {
+  font-size: 2.5rem;
+  opacity: 0.45;
+}
+.bb-product-img-label {
+  display: inline-block;
+  background: rgba(45,95,63,0.1);
+  border: 1px dashed rgba(45,95,63,0.3);
+  border-radius: 6px;
+  padding: 0.4rem 1rem;
+  letter-spacing: 0.02em;
+}
+
+/* Product card */
 .bb-product-card {
   background: var(--bb-white);
   border: 1px solid var(--bb-border);
   border-radius: 10px;
   padding: 2rem 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+.bb-product-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bb-green-accent);
+  margin: 0 0 0.5rem;
 }
 .bb-product-card h2 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Playfair Display', Georgia, serif;
   color: var(--bb-navy);
-  font-size: 1.35rem;
+  font-size: 1.65rem;
   font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
-.bb-product-card h3 {
-  font-family: 'Inter', sans-serif;
-  color: var(--bb-navy);
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-}
-.bb-product-desc {
+.bb-product-tagline {
   color: var(--bb-text-secondary);
+  font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
   line-height: 1.7;
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem;
 }
 
-/* Feature List */
+/* Section headers inside card */
+.bb-section-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bb-green);
+  margin: 0 0 0.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--bb-border);
+}
+.bb-section-label:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+/* Feature list (What's Included) */
 .bb-feature-list {
   list-style: none;
   padding: 0;
@@ -100,11 +159,11 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 }
 .bb-feature-list li {
   position: relative;
-  padding-left: 1.75rem;
-  margin-bottom: 0.6rem;
+  padding-left: 1.85rem;
+  margin-bottom: 0.7rem;
   color: var(--bb-text-secondary);
   font-size: 0.92rem;
-  line-height: 1.7;
+  line-height: 1.65;
 }
 .bb-feature-list li::before {
   content: '\2713';
@@ -113,9 +172,17 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   color: var(--bb-green-accent);
   font-weight: 700;
   font-size: 1rem;
+  line-height: 1.65;
 }
 
 /* Price & CTA */
+.bb-price-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
 .bb-price-tag {
   display: inline-block;
   background: var(--bb-navy);
@@ -123,9 +190,9 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   padding: 0.5rem 1.5rem;
   border-radius: 6px;
   font-family: 'Inter', sans-serif;
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
 }
 .bb-buy-btn {
   display: inline-block;
@@ -139,7 +206,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   text-decoration: none !important;
   transition: all 0.25s ease;
   border: 2px solid var(--bb-green-accent);
-  margin-top: 0.5rem;
   min-height: 44px;
 }
 .bb-buy-btn:hover {
@@ -149,8 +215,14 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   box-shadow: 0 6px 20px rgba(45,95,63,0.3);
   color: var(--bb-white) !important;
 }
+.bb-coming-soon-note {
+  color: var(--bb-gray);
+  font-size: 0.83rem;
+  font-style: italic;
+  margin-top: 0.4rem;
+}
 
-/* Why Paid */
+/* Why a Paid Guide section */
 .bb-why-paid {
   background: var(--bb-green-bg);
   border: 1px solid var(--bb-border);
@@ -163,20 +235,17 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   color: var(--bb-navy);
   font-size: 1.1rem;
   font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
 }
 .bb-why-paid p {
   color: var(--bb-text-secondary);
-  font-size: 0.92rem;
-  line-height: 1.75;
-  margin-bottom: 0.75rem;
+  font-size: 0.93rem;
+  line-height: 1.8;
+  margin: 0 0 0.85rem;
 }
-.bb-why-paid p:last-child {
-  margin-bottom: 0;
-}
+.bb-why-paid p:last-child { margin-bottom: 0; }
 
-/* Roadmap */
+/* Coming Soon roadmap */
 .bb-roadmap {
   background: var(--bb-white);
   border: 1px solid var(--bb-border);
@@ -189,8 +258,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   color: var(--bb-navy);
   font-size: 1.1rem;
   font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 1.25rem;
+  margin: 0 0 1.25rem;
 }
 .bb-roadmap-item {
   display: flex;
@@ -211,23 +279,23 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   min-width: 10px;
   background: var(--bb-green-accent);
   border-radius: 50%;
-  margin-top: 0.5rem;
+  margin-top: 0.45rem;
 }
 .bb-roadmap-item p {
   color: var(--bb-text-secondary);
   font-size: 0.92rem;
-  line-height: 1.5;
+  line-height: 1.55;
   margin: 0;
 }
 .bb-roadmap-item strong {
   color: var(--bb-navy);
 }
 
-/* Contact Note */
+/* Contact note */
 .bb-contact-note {
   text-align: center;
   color: var(--bb-gray);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
 }
 .bb-contact-note a {
   color: var(--bb-green-accent);
@@ -236,85 +304,83 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
 /* Desktop */
 @media (min-width: 769px) {
-  .bb-page-hero {
-    padding: 3.5rem 3rem;
-    border-radius: 12px;
-  }
-  .bb-page-hero h1 {
-    font-size: 2.25rem;
-  }
-  .bb-page-hero p {
-    font-size: 1.1rem;
-  }
-  .bb-product-card {
-    padding: 2.5rem 3rem;
-    border-radius: 12px;
-  }
-  .bb-product-card h2 {
-    font-size: 1.6rem;
-  }
-  .bb-why-paid {
-    padding: 2rem 2.5rem;
-  }
-  .bb-roadmap {
-    padding: 2rem 2.5rem;
-  }
+  .bb-page-hero { padding: 3.5rem 3rem; border-radius: 12px; }
+  .bb-page-hero h1 { font-size: 2.25rem; }
+  .bb-page-hero p { font-size: 1.1rem; }
+  .bb-product-layout { grid-template-columns: 2fr 3fr; align-items: start; gap: 2.5rem; }
+  .bb-product-card { padding: 2.5rem 2.75rem; }
+  .bb-product-card h2 { font-size: 2rem; }
+  .bb-product-img { min-height: 280px; }
+  .bb-why-paid { padding: 2rem 2.5rem; }
+  .bb-roadmap { padding: 2rem 2.5rem; }
 }
 </style>
 
 <div class="bb-page-hero">
   <h1>BioBridge Guides</h1>
-  <p>Premium resources designed to accelerate your biotech journey.</p>
+  <p>Structured, experience-backed guidance for anyone figuring out their path into biotech.</p>
 </div>
 
-<div class="bb-product-card">
-  <h2>The Biotech Starter Guide</h2>
-  <p class="bb-product-desc">A comprehensive guide for anyone taking their first step into biotechnology. Everything you need in one place, organized for clarity and action.</p>
+<!-- MAIN PRODUCT LAYOUT -->
+<div class="bb-product-layout">
 
-  <h3>What is Included</h3>
-  <ul class="bb-feature-list">
-    <li>Detailed career pathway breakdowns with salary ranges and growth potential</li>
-    <li>Step-by-step roadmaps for different backgrounds (high school, college, career changers)</li>
-    <li>Resource recommendations with context and guidance on how to use them</li>
-    <li>Real-world case studies and profiles from people at different stages</li>
-    <li>Actionable next steps for each pathway</li>
-    <li>Common pitfalls and how to avoid them</li>
-  </ul>
+  <!-- Product image -->
+  <div class="bb-product-img">
+    <div class="bb-product-img-icon">📘</div>
+    <div class="bb-product-img-label">Guide Preview / Cover Image</div>
+    <div style="font-size:0.75rem; color: var(--bb-gray); margin-top:0.25rem;">Placeholder — final mockup coming</div>
+  </div>
 
-  <h3>Who It is For</h3>
-  <ul class="bb-feature-list">
-    <li>High school students exploring STEM careers</li>
-    <li>College students considering biotech majors or minors</li>
-    <li>Career changers curious about transitioning into biotech</li>
-    <li>Anyone who wants structured guidance instead of scattered information</li>
-  </ul>
+  <!-- Product details -->
+  <div class="bb-product-card">
+    <p class="bb-product-eyebrow">BioBridge Guide</p>
+    <h2>The Biotech Blueprint</h2>
+    <p class="bb-product-tagline">A comprehensive, practical guide for anyone taking their first steps into biotechnology. Not a textbook — a roadmap, built from real experience.</p>
 
-  <div class="bb-price-tag">$9.99</div>
-  <br>
-  <a href="#" class="bb-buy-btn">Purchase on Gumroad</a>
-  <p style="color: var(--bb-gray); font-size: 0.85rem; margin-top: 0.75rem;"><em>(Link coming soon)</em></p>
+    <p class="bb-section-label">What's Included</p>
+    <ul class="bb-feature-list">
+      <li>A real resume example that landed a biotech internship, with annotations explaining every choice.</li>
+      <li>An interview question prep guide with actual questions asked at biotech companies — and how to answer them.</li>
+      <li>Cold email templates for reaching out to researchers and hiring managers that actually get responses.</li>
+      <li>A curated contact list of biotech-friendly professors and labs, organized by research area.</li>
+      <li>A step-by-step breakdown of how to read a scientific paper as a beginner — no science background needed.</li>
+      <li>Roadmaps for four different starting points: high school, non-biology college major, career changer, and graduate student.</li>
+      <li>Common mistakes people make applying to biotech roles — and exactly how to fix them.</li>
+    </ul>
+
+    <p class="bb-section-label">Who It's For</p>
+    <ul class="bb-feature-list">
+      <li>High school students who want a head start before college applications or summer programs.</li>
+      <li>College students of any major — including those with no science background — who are curious about biotech careers.</li>
+      <li>Recent graduates figuring out how to translate their degree into a real job in the industry.</li>
+      <li>Career changers who want structured, honest guidance rather than scattered Google results.</li>
+      <li>Anyone who learns better from experience-backed advice than from a textbook or a generic listicle.</li>
+    </ul>
+
+    <p class="bb-section-label">Get the Guide</p>
+    <div class="bb-price-row">
+      <span class="bb-price-tag">$22</span>
+    </div>
+    <a href="#" class="bb-buy-btn">Purchase on Gumroad</a>
+    <p class="bb-coming-soon-note">Link coming soon — guide in final review.</p>
+  </div>
+
 </div>
 
+<!-- WHY A PAID GUIDE -->
 <div class="bb-why-paid">
   <h2>Why a Paid Guide?</h2>
-  <p>BioBridge's core resources -- this website, curated links, and basic guidance -- will always be free.</p>
-  <p>The Biotech Starter Guide is a <strong>premium resource</strong> for people who want everything in one place, deeper detail than the free content, a printable and save-able format, and to support BioBridge's mission.</p>
-  <p><strong>All proceeds go toward:</strong> hosting costs, expanding free resources, and building mentorship programs.</p>
+  <p>I spent months figuring out what no one explains clearly. This guide is what I wish I'd had — written from my own experience navigating biotech as a student, not from a textbook.</p>
+  <p>Everything on this website — the career pages, the resource library, the FAQ — will always be free. The Blueprint is for people who want everything in one place, with more depth, in a format they can save and return to.</p>
+  <p><strong>All proceeds go toward</strong> hosting costs, expanding free resources, and building the mentorship program.</p>
 </div>
 
+<!-- COMING SOON -->
 <div class="bb-roadmap">
   <h2>Coming Soon</h2>
   <div class="bb-roadmap-item">
     <div class="bb-roadmap-dot"></div>
-    <p><strong>Biotech Career Toolkit</strong> -- Templates for resumes, cold emails, informational interviews</p>
-  </div>
-  <div class="bb-roadmap-item">
-    <div class="bb-roadmap-dot"></div>
-    <p><strong>Industry-Specific Deep Dives</strong> -- Pharma vs. ag-bio vs. synthetic biology</p>
-  </div>
-  <div class="bb-roadmap-item">
-    <div class="bb-roadmap-dot"></div>
-    <p><strong>Mentorship Program Access</strong> -- Connect with biotech professionals directly</p>
+    <p><strong>Mentorship Program Access</strong> — Connect directly with biotech professionals who have been where you are and can help you figure out the next step.</p>
   </div>
 </div>
 

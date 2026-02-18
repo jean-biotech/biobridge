@@ -169,6 +169,29 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   color: var(--bb-white) !important;
 }
 
+.bb-btn-accent {
+  display: inline-block;
+  background: rgba(76,175,80,0.12);
+  color: var(--bb-green-hover) !important;
+  padding: 0.875rem 2rem;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+  border: 1.5px solid rgba(102,187,106,0.4);
+  width: 100%;
+  max-width: 260px;
+  text-align: center;
+}
+
+.bb-btn-accent:hover {
+  background: rgba(76,175,80,0.22);
+  border-color: var(--bb-green-hover);
+  color: var(--bb-white) !important;
+}
+
 /* ================================================================
    METRICS BAR
    ================================================================ */
@@ -574,7 +597,8 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   }
 
   .bb-btn-primary,
-  .bb-btn-secondary {
+  .bb-btn-secondary,
+  .bb-btn-accent {
     width: auto;
     max-width: none;
   }
@@ -707,6 +731,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
     <div class="bb-hero-buttons">
       <a href="/what-is-biotech/" class="bb-btn-primary">Learn More</a>
       <a href="/career-pathways/" class="bb-btn-secondary">Explore Careers</a>
+      <a href="/products/" class="bb-btn-accent">Start Here &rarr;</a>
     </div>
   </div>
 </div>
