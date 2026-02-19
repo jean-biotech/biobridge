@@ -571,6 +571,46 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
         </div>
       </div>
 
+
+      <!-- CARD 7: Bioinformatics & Computational Biology -->
+      <div class="bb-career-slide">
+        <div class="bb-card-img">
+          <div class="bb-card-img-label">Bioinformatics &amp; Data Science Image Placeholder</div>
+        </div>
+        <div class="bb-card-body">
+          <h2>Bioinformatics &amp; Computational Biology</h2>
+          <div class="bb-detail">
+            <div class="bb-detail-label">What it is</div>
+            <p class="bb-detail-value">Using coding, statistics, and algorithms to analyze biological data — genomics, proteomics, drug discovery, and more.</p>
+          </div>
+          <div class="bb-detail">
+            <div class="bb-detail-label">Where you'll work</div>
+            <p class="bb-detail-value">Biotech and pharma companies, academic research labs, hospitals, government agencies (NIH, FDA), and tech companies entering healthcare.</p>
+          </div>
+          <div class="bb-detail">
+            <div class="bb-detail-label">Entry points</div>
+            <div class="bb-detail-value"><ul>
+              <li>Bioinformatics analyst (Bachelor's in CS, biology, or bioinformatics)</li>
+              <li>Data scientist in biotech (Bachelor's + Python/R skills)</li>
+              <li>Computational biologist (Master's or PhD for research-focused roles)</li>
+            </ul></div>
+          </div>
+          <div class="bb-detail">
+            <div class="bb-detail-label">Skills needed</div>
+            <p class="bb-detail-value">Python, R, SQL, statistics, genomics tools (BLAST, Galaxy, GATK), and comfort with large datasets.</p>
+          </div>
+          <div class="bb-companies">
+            <div class="bb-companies-label">Example Organizations</div>
+            <div class="bb-logo-badges">
+              <span class="bb-logo-badge">23andMe</span>
+              <span class="bb-logo-badge">Illumina</span>
+              <span class="bb-logo-badge">Broad Institute</span>
+              <span class="bb-logo-badge">DNAnexus</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div><!-- /.bb-carousel-track -->
   </div><!-- /.bb-carousel-viewport -->
 
@@ -580,7 +620,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 <!-- Dots + counter -->
 <div class="bb-carousel-footer">
   <div class="bb-carousel-dots" id="bb-dots"></div>
-  <span class="bb-carousel-counter" id="bb-counter">1 of 6</span>
+  <span class="bb-carousel-counter" id="bb-counter">1 of 7</span>
 </div>
 
 <div class="bb-next-steps">
