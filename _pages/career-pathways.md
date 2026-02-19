@@ -389,7 +389,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <!-- CARD 2: Industry & Manufacturing -->
       <div class="bb-career-slide">
         <div class="bb-card-img">
-          <div class="bb-card-img-label">Manufacturing Floor Image Placeholder</div>
+          <img src="/assets/images/career-manufacturing.jpg" alt="Biotechnology manufacturing floor and bioreactor equipment">
         </div>
         <div class="bb-card-body">
           <h2>Industry &amp; Manufacturing</h2>
@@ -428,7 +428,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <!-- CARD 3: Clinical -->
       <div class="bb-career-slide">
         <div class="bb-card-img">
-          <div class="bb-card-img-label">Clinical Trial Image Placeholder</div>
+          <img src="/assets/images/career-clinical.jpg" alt="Clinical trial setting and patient care environment">
         </div>
         <div class="bb-card-body">
           <h2>Clinical</h2>
@@ -467,7 +467,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <!-- CARD 4: Regulatory & Policy -->
       <div class="bb-career-slide">
         <div class="bb-card-img">
-          <div class="bb-card-img-label">Regulatory &amp; Policy Image Placeholder</div>
+          <img src="/assets/images/career-regulatory.jpg" alt="Regulatory and policy work in biotechnology">
         </div>
         <div class="bb-card-body">
           <h2>Regulatory &amp; Policy</h2>
@@ -506,7 +506,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <!-- CARD 5: Business & Operations -->
       <div class="bb-career-slide">
         <div class="bb-card-img">
-          <div class="bb-card-img-label">Business &amp; Strategy Image Placeholder</div>
+          <img src="/assets/images/career-business.jpg" alt="Business strategy and operations in biotech">
         </div>
         <div class="bb-card-body">
           <h2>Business &amp; Operations</h2>
@@ -545,7 +545,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <!-- CARD 6: Science Communication -->
       <div class="bb-career-slide">
         <div class="bb-card-img">
-          <div class="bb-card-img-label">Science Media &amp; Communication Image Placeholder</div>
+          <img src="/assets/images/career-scicomm.jpg" alt="Science communication, media, and content creation">
         </div>
         <div class="bb-card-body">
           <h2>Science Communication</h2>
