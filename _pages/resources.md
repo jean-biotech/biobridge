@@ -265,8 +265,8 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
         <div class="bb-resource-thumb-label">Logo</div>
       </div>
       <div class="bb-resource-info">
-        <h3><a href="https://endpts.com/" target="_blank">Endpoints News</a></h3>
-        <p>Daily biotech industry news and analysis for people who follow the science closely.</p>
+        <h3><a href="https://www.sciencedaily.com/newsletters/" target="_blank">ScienceDaily</a></h3>
+        <p>Free daily digest of the latest science research across biology, health, medicine, and technology.</p>
       </div>
     </div>
     <div class="bb-resource-card">
@@ -274,8 +274,8 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
         <div class="bb-resource-thumb-label">Logo</div>
       </div>
       <div class="bb-resource-info">
-        <h3><a href="https://www.nature.com/briefing" target="_blank">Nature Briefing</a></h3>
-        <p>Daily science news from the journal Nature, with broad coverage and high signal.</p>
+        <h3><a href="https://www.fiercebiotech.com/newsletters" target="_blank">Fierce Biotech</a></h3>
+        <p>Industry-focused biotech news covering drug development, clinical trials, and company moves.</p>
       </div>
     </div>
   </div>
