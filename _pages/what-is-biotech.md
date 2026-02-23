@@ -330,6 +330,22 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   line-height: 1.7;
 }
 
+/* Flip card front image fill */
+.bb-flip-front-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* Beyond the Science image */
+.bb-beyond-img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
 /* Desktop */
 @media (min-width: 769px) {
   .bb-page-hero { padding: 2.5rem 2.5rem; border-radius: 10px; }
@@ -340,7 +356,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   .bb-flip-front-img { height: 120px; }
   .bb-two-col { grid-template-columns: 3fr 2fr; gap: 2.25rem; }
   .bb-callout p { font-size: 1rem; }
-  .bb-img-placeholder { padding: 2.25rem 1.5rem; font-size: 0.8rem; }
 }
 @media (min-width: 1024px) {
   .bb-flip-grid { grid-template-columns: repeat(4, 1fr); }
@@ -475,7 +490,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     <p>That's why biotech needs business people, engineers, lawyers, writers, and project managers just as much as it needs scientists.</p>
   </div>
   <div>
-    <img src="/assets/images/team-illustration.jpg" alt="Cross-functional team behind a biotech breakthrough" style="width:100%; border-radius:8px; display:block;">
+    <img src="/assets/images/team-illustration.jpg" alt="Cross-functional team behind a biotech breakthrough" class="bb-beyond-img">
   </div>
 </div>
 

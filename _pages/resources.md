@@ -129,8 +129,13 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: 2px;
+  overflow: hidden;
+}
+.bb-resource-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 .bb-resource-thumb-label {
   font-family: 'Inter', sans-serif;
@@ -253,7 +258,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <div class="bb-resource-grid">
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Logo</div>
+        <img src="/assets/images/logo-readout.png" alt="The Readout logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.statnews.com/newsletters/" target="_blank">The Readout</a></h3>
@@ -262,7 +267,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Logo</div>
+        <img src="/assets/images/logo-sciencedaily.png" alt="ScienceDaily logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.sciencedaily.com/newsletters/" target="_blank">ScienceDaily</a></h3>
@@ -271,7 +276,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Logo</div>
+        <img src="/assets/images/logo-fiercebiotech.png" alt="Fierce Biotech logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.fiercebiotech.com/newsletters" target="_blank">Fierce Biotech</a></h3>
