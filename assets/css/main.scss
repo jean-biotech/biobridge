@@ -158,24 +158,24 @@ p {
 
 // Logo — in Minimal Mistakes, .site-logo IS the <img> element (not a wrapper)
 .site-logo {
-  height: 30px;
+  height: 46px;
   width: auto;
   transition: transform 0.25s ease, opacity 0.25s ease;
 
   @media (min-width: 769px) {
-    height: 34px;
+    height: 54px;
   }
 }
 
 .site-title {
   font-weight: 700 !important;
-  font-size: 1.3rem !important;
+  font-size: 1.55rem !important;
   letter-spacing: -0.01em;
   color: $bb-navy !important;
-  padding: 17px 0;
+  padding: 14px 0;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 
   &:hover {
     color: $bb-green !important;
@@ -185,9 +185,9 @@ p {
   }
 
   @media (min-width: 769px) {
-    font-size: 1.45rem !important;
-    padding: 20px 0;
-    gap: 12px;
+    font-size: 1.75rem !important;
+    padding: 16px 0;
+    gap: 14px;
   }
 }
 

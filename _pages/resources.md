@@ -135,11 +135,10 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-resource-thumb img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  padding: 4px;
+  object-fit: cover;
+  padding: 0;
   border-radius: 5px;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
+  display: block;
 }
 .bb-resource-thumb-label {
   font-family: 'Inter', sans-serif;
