@@ -25,6 +25,7 @@ classes: wide
   --bb-navy: #1A1A2E;
   --bb-charcoal: #2C3E50;
   --bb-white: #ffffff;
+  --bb-cream: #FAF7F2;
   --bb-off-white: #FAFAFA;
   --bb-text: #1e293b;
   --bb-text-secondary: #475569;
@@ -254,8 +255,17 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
    SECTION — WHAT WE OFFER (PILLARS)
    ================================================================ */
 
+.bb-section-wrap {
+  background: var(--bb-white);
+}
+.bb-section-wrap.bb-cream {
+  background: var(--bb-cream);
+  border-top: 1px solid #ede8e0;
+  border-bottom: 1px solid #ede8e0;
+}
+
 .bb-section {
-  padding: 3.5rem 1.5rem;
+  padding: 4rem 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -359,7 +369,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   display: grid;
   grid-template-columns: 1fr;
   max-width: 1200px;
-  margin: 0 auto 3rem;
+  margin: 0 auto;
   border-radius: var(--bb-radius-lg);
   overflow: hidden;
   box-shadow: var(--bb-shadow-md);
@@ -694,7 +704,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
   /* Section — Desktop: wider container */
   .bb-section {
-    padding: 5rem 3rem;
+    padding: 5.5rem 3rem;
   }
 
   .bb-section-header {
@@ -804,9 +814,9 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
     <h1>Bridging the Gap Between Curiosity and Careers in Biotechnology</h1>
     <p class="bb-hero-subtitle">Clear explanations, curated resources, and practical guidance for anyone exploring the world of biotech.</p>
     <div class="bb-hero-buttons">
-      <a href="/what-is-biotech/" class="bb-btn-primary">Learn More</a>
+      <a href="/products/" class="bb-btn-primary">Start Here &rarr;</a>
       <a href="/career-pathways/" class="bb-btn-secondary">Explore Careers</a>
-      <a href="/products/" class="bb-btn-accent">Start Here &rarr;</a>
+      <a href="/what-is-biotech/" class="bb-btn-accent">Learn More</a>
     </div>
   </div>
 </div>
@@ -835,6 +845,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 </div>
 
 <!-- What BioBridge Offers -->
+<div class="bb-section-wrap">
 <div class="bb-section">
   <div class="bb-section-header">
     <h2>What BioBridge Offers</h2>
@@ -861,8 +872,11 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
   </div>
 </div>
+</div>
 
-<!-- Problem / Solution Split -->
+<!-- Problem / Solution Split — cream background -->
+<div class="bb-section-wrap bb-cream">
+<div class="bb-section" style="max-width:1200px;">
 <div class="bb-split">
   <div class="bb-split-left">
     <h2>The Challenge</h2>
@@ -872,6 +886,8 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
     <h2>Our Approach</h2>
     <p>BioBridge is a student-led platform designed to make biotech more understandable and accessible through clear explanations, curated resources, and practical guidance. If you are curious but unsure where to begin, you are in the right place.</p>
   </div>
+</div>
+</div>
 </div>
 
 <!-- Founder Story -->

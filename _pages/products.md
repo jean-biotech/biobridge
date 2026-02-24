@@ -306,6 +306,138 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   font-weight: 600;
 }
 
+/* Free Preview Card */
+.bb-preview-card {
+  background: linear-gradient(135deg, #FFF8EE 0%, #FFF3E0 100%);
+  border: 1.5px solid #F5A623;
+  border-radius: 10px;
+  padding: 1.75rem 1.5rem;
+  margin-bottom: 1.75rem;
+  position: relative;
+  overflow: hidden;
+}
+.bb-preview-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 4px;
+  background: linear-gradient(90deg, #F5A623, #E67E22);
+}
+.bb-preview-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #E67E22;
+  margin: 0 0 0.4rem;
+}
+.bb-preview-card h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #1A3A28;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 0.6rem;
+  letter-spacing: -0.02em;
+}
+.bb-preview-card p {
+  font-family: 'Inter', sans-serif;
+  color: #475569;
+  font-size: 0.87rem;
+  line-height: 1.75;
+  margin: 0 0 1.1rem;
+}
+.bb-preview-sample {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--bb-white);
+  border: 1px solid #F5A623;
+  border-radius: 7px;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.bb-preview-sample-icon {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+.bb-preview-sample-info {
+  flex: 1;
+  min-width: 0;
+}
+.bb-preview-sample-info strong {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1A3A28;
+  margin-bottom: 0.15rem;
+}
+.bb-preview-sample-info span {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  color: var(--bb-gray);
+}
+.bb-preview-btn {
+  display: inline-block;
+  background: #E67E22;
+  color: var(--bb-white) !important;
+  padding: 0.65rem 1.5rem;
+  border-radius: 5px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none !important;
+  transition: all 0.22s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.bb-preview-btn:hover {
+  background: #D35400;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(230,126,34,0.3);
+  color: var(--bb-white) !important;
+}
+.bb-preview-coming-soon {
+  display: inline-block;
+  background: rgba(230,126,34,0.1);
+  border: 1px solid rgba(230,126,34,0.35);
+  border-radius: 4px;
+  padding: 0.2rem 0.65rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #E67E22;
+}
+
+/* International callout */
+.bb-international-callout {
+  background: #FAF7F2;
+  border: 1px solid #e8dfd0;
+  border-left: 4px solid var(--bb-green-accent);
+  border-radius: 7px;
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+}
+.bb-international-callout .bb-intl-header {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--bb-green);
+  margin: 0 0 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.bb-international-callout p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--bb-text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
 /* Desktop */
 @media (min-width: 769px) {
   .bb-page-hero { padding: 2.5rem 2.5rem; border-radius: 10px; }
@@ -317,12 +449,36 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   .bb-product-img { min-height: 260px; }
   .bb-why-paid { padding: 1.75rem 2rem; }
   .bb-roadmap { padding: 1.75rem 2rem; }
+  .bb-preview-card { padding: 2rem 2.25rem; }
+  .bb-preview-card h2 { font-size: 1.4rem; }
 }
 </style>
 
 <div class="bb-page-hero">
   <h1>BioBridge Guides</h1>
   <p>Structured, experience-backed guidance for anyone figuring out their path into biotech.</p>
+</div>
+
+<!-- FREE PREVIEW CARD -->
+<div class="bb-preview-card">
+  <p class="bb-preview-eyebrow">Try Before You Buy</p>
+  <h2>Get a Free Preview &rarr;</h2>
+  <p>Not sure if the Blueprint is right for you? Download a free sample and see the level of detail, annotation, and practical guidance you can expect throughout the full guide.</p>
+  <div class="bb-preview-sample">
+    <div class="bb-preview-sample-icon">📧</div>
+    <div class="bb-preview-sample-info">
+      <strong>Free Sample: The Cold Email Template</strong>
+      <span>The exact email framework that got responses from senior people at major biotech and pharma companies — annotated line by line.</span>
+    </div>
+    <span class="bb-preview-coming-soon">Coming Soon</span>
+  </div>
+  <p style="margin:0; font-size:0.8rem; color: var(--bb-gray);">The free sample will be available here as a downloadable PDF once the guide launches. Check back soon or <a href="mailto:jeans.connects@gmail.com" style="color:#E67E22; font-weight:600;">email us</a> to be notified.</p>
+</div>
+
+<!-- International callout — resume/CV context -->
+<div class="bb-international-callout">
+  <div class="bb-intl-header">🌍 Outside the US?</div>
+  <p>Canada, the UK, and Australia typically use CVs (curriculum vitae) rather than resumes, and formatting expectations differ — CVs are often longer, include more detail on academic history, and may include a personal statement. The resume materials in the Biotech Blueprint are formatted for US applications. The frameworks and principles apply internationally, but you may want to adapt the formatting to match local conventions in your country.</p>
 </div>
 
 <!-- MAIN PRODUCT LAYOUT -->
