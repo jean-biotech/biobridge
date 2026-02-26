@@ -26,15 +26,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   --bb-border: #e2e8f0;
 }
 
-/* Hero logo */
-.bb-hero-logo {
-  display: block;
-  height: 52px;
-  width: auto;
-  margin-bottom: 1rem;
-  filter: brightness(0) saturate(100%) invert(79%) sepia(38%) saturate(475%) hue-rotate(2deg) brightness(0.98) contrast(0.92);
-}
-
 /* Page Header */
 .bb-page-hero {
   background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
@@ -467,7 +458,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 </style>
 
 <div class="bb-page-hero">
-  <img src="/assets/images/BioBridge.png" alt="BioBridge" class="bb-hero-logo" />
   <h1>BioBridge Guides</h1>
   <p>Structured, experience-backed guidance for anyone figuring out their path into biotech.</p>
 </div>
