@@ -456,9 +456,8 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       <strong>Free Sample: The Cold Email Template</strong>
       <span>The exact email framework that got responses from senior people at major biotech and pharma companies — annotated line by line.</span>
     </div>
-    <span class="bb-preview-coming-soon">Coming Soon</span>
+    <a href="/free-preview" class="bb-preview-btn">Get Free Preview &rarr;</a>
   </div>
-  <p style="margin:0; font-size:0.8rem; color: var(--bb-gray);">The free sample will be available here as a downloadable PDF once the guide launches. Check back soon or <a href="mailto:jeans.connects@gmail.com" style="color:#E67E22; font-weight:600;">email us</a> to be notified.</p>
 </div>
 
 <!-- International callout — resume/CV context -->
