@@ -13,8 +13,8 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
   --bb-green: #2F5E3F;
-  --bb-green-accent: #C56A3E;
-  --bb-green-bright: #C56A3E;
+  --bb-green-accent: #A8501F;
+  --bb-green-bright: #A8501F;
   --bb-green-hover: #2F5E3F;
   --bb-green-dark: #1B3B27;
   --bb-green-bg: #E4EBE2;
@@ -531,7 +531,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 <div class="bb-misconception">
   <strong>"It's all lab work."</strong>
-  <p>Lab work is one slice of a much bigger picture. There's also manufacturing, regulatory affairs, sales, policy, data analysis, and more. The <a href="/career-pathways/" style="color: #C56A3E; font-weight: 600;">Career Pathways</a> page shows the full range.</p>
+  <p>Lab work is one slice of a much bigger picture. There's also manufacturing, regulatory affairs, sales, policy, data analysis, and more. The <a href="/career-pathways/" style="color: #A8501F; font-weight: 600;">Career Pathways</a> page shows the full range.</p>
 </div>
 
 <div class="bb-misconception">

@@ -11,8 +11,8 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
   --bb-green: #2F5E3F;
-  --bb-green-accent: #C56A3E;
-  --bb-green-bright: #C56A3E;
+  --bb-green-accent: #A8501F;
+  --bb-green-bright: #A8501F;
   --bb-green-hover: #2F5E3F;
   --bb-green-dark: #1B3B27;
   --bb-green-bg: #E4EBE2;
@@ -25,7 +25,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   --bb-gray: #6B6255;
   --bb-border: #DDD3BE;
   --bb-teal: #D9A441;
-  --bb-amber: #C56A3E;
+  --bb-amber: #A8501F;
 }
 
 /* ============================================
@@ -247,7 +247,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 .bb-textarea:focus {
   outline: none;
   border-color: var(--bb-green-accent);
-  box-shadow: 0 0 0 3px rgba(197,106,62,0.1);
+  box-shadow: 0 0 0 3px rgba(168,80,31,0.1);
 }
 .bb-textarea::placeholder {
   color: #aab4c0;
@@ -556,7 +556,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   justify-content: center;
 }
 .bb-card-icon--green { background: rgba(47,94,63,0.13); }
-.bb-card-icon--amber { background: rgba(197,106,62,0.13); }
+.bb-card-icon--amber { background: rgba(168,80,31,0.13); }
 .bb-card-icon--teal  { background: rgba(217,164,65,0.13); }
 .bb-card-icon--navy  { background: rgba(42,33,24,0.10); }
 .bb-card-title {
@@ -643,8 +643,8 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   color: var(--bb-green);
 }
 .bb-kw-missing {
-  background: rgba(197,106,62,0.07);
-  border: 1px solid rgba(197,106,62,0.2);
+  background: rgba(168,80,31,0.07);
+  border: 1px solid rgba(168,80,31,0.2);
   color: var(--bb-amber);
 }
 
@@ -657,7 +657,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   gap: 0.4rem;
   background: transparent;
   color: var(--bb-green-accent);
-  border: 1px solid rgba(197,106,62,0.35);
+  border: 1px solid rgba(168,80,31,0.35);
   border-radius: 5px;
   padding: 0.45rem 0.9rem;
   font-family: 'Instrument Sans', sans-serif;
@@ -883,7 +883,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     <div class="bb-detail-card bb-detail-card--amber">
       <div class="bb-card-header">
         <div class="bb-card-icon bb-card-icon--amber">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C56A3E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A8501F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
         </div>
         <p class="bb-card-title">Gaps</p>
       </div>
@@ -993,7 +993,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
   function scoreColors(s) {
     if (s >= 76) return { stroke: '#2F5E3F', text: '#2F5E3F', bg: 'rgba(47,94,63,0.1)',    border: 'rgba(47,94,63,0.25)' };
     if (s >= 51) return { stroke: '#D9A441', text: '#8A6A1B', bg: 'rgba(217,164,65,0.12)',  border: 'rgba(217,164,65,0.3)' };
-    if (s >= 26) return { stroke: '#C56A3E', text: '#8A421F', bg: 'rgba(197,106,62,0.08)',   border: 'rgba(197,106,62,0.25)' };
+    if (s >= 26) return { stroke: '#A8501F', text: '#8A421F', bg: 'rgba(168,80,31,0.08)',   border: 'rgba(168,80,31,0.25)' };
     return         { stroke: '#dc2626', text: '#dc2626', bg: 'rgba(220,38,38,0.08)',   border: 'rgba(220,38,38,0.25)' };
   }
 

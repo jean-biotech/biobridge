@@ -11,8 +11,8 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
   --bb-green: #2F5E3F;
-  --bb-green-accent: #C56A3E;
-  --bb-green-bright: #C56A3E;
+  --bb-green-accent: #A8501F;
+  --bb-green-bright: #A8501F;
   --bb-green-hover: #2F5E3F;
   --bb-green-dark: #1B3B27;
   --bb-green-bg: #E4EBE2;
@@ -626,9 +626,9 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   color: #D9A441;
   font-weight: 600;
   text-decoration: none;
-  border-bottom: 1px solid rgba(197,106,62,0.4);
+  border-bottom: 1px solid rgba(168,80,31,0.4);
 }
-.bb-flip-back-link:hover { color: #DE8F63; }
+.bb-flip-back-link:hover { color: #E08052; }
 .bb-flip-close {
   display: block;
   font-size: 0.71rem;
