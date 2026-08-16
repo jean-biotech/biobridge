@@ -13,8 +13,8 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
   --bb-green: #2C2A20;
-  --bb-green-accent: #6A7145;
-  --bb-green-bright: #6A7145;
+  --bb-green-accent: #616736;
+  --bb-green-bright: #616736;
   --bb-green-hover: #525834;
   --bb-green-dark: #525834;
   --bb-green-bg: #E9DFC9;
@@ -42,7 +42,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(106,113,69,0.15) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 80% 20%, rgba(97,103,54,0.15) 0%, transparent 60%);
   pointer-events: none;
 }
 .bb-page-hero h1 {
@@ -210,8 +210,8 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   font-size: 0.68rem;
   font-weight: 500;
   color: var(--bb-green);
-  background: rgba(106,113,69,0.1);
-  border: 1px dashed rgba(106,113,69,0.3);
+  background: rgba(97,103,54,0.1);
+  border: 1px dashed rgba(97,103,54,0.3);
   border-radius: 4px;
   padding: 0.25rem 0.6rem;
 }
@@ -273,14 +273,14 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-flip-org-badge {
   display: inline-block;
-  background: rgba(138,144,97,0.18);
-  border: 1px solid rgba(138,144,97,0.38);
+  background: rgba(148,153,110,0.18);
+  border: 1px solid rgba(148,153,110,0.38);
   border-radius: 20px;
   padding: 0.18rem 0.6rem;
   font-family: 'Instrument Sans', sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #6A7145;
+  color: #616736;
   letter-spacing: 0.01em;
   white-space: nowrap;
 }
@@ -531,7 +531,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 <div class="bb-misconception">
   <strong>"It's all lab work."</strong>
-  <p>Lab work is one slice of a much bigger picture. There's also manufacturing, regulatory affairs, sales, policy, data analysis, and more. The <a href="/career-pathways/" style="color: #6A7145; font-weight: 600;">Career Pathways</a> page shows the full range.</p>
+  <p>Lab work is one slice of a much bigger picture. There's also manufacturing, regulatory affairs, sales, policy, data analysis, and more. The <a href="/career-pathways/" style="color: #616736; font-weight: 600;">Career Pathways</a> page shows the full range.</p>
 </div>
 
 <div class="bb-misconception">

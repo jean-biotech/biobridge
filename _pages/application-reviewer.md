@@ -11,8 +11,8 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
   --bb-green: #2C2A20;
-  --bb-green-accent: #6A7145;
-  --bb-green-bright: #6A7145;
+  --bb-green-accent: #616736;
+  --bb-green-bright: #616736;
   --bb-green-hover: #525834;
   --bb-green-dark: #525834;
   --bb-green-bg: #E9DFC9;
@@ -24,8 +24,8 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   --bb-text-secondary: #63604D;
   --bb-gray: #63604D;
   --bb-border: rgba(44,42,32,0.14);
-  --bb-teal: #8A9061;
-  --bb-amber: #6A7145;
+  --bb-teal: #94996E;
+  --bb-amber: #616736;
 }
 
 /* ============================================
@@ -44,7 +44,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(106,113,69,0.15) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 80% 20%, rgba(97,103,54,0.15) 0%, transparent 60%);
   pointer-events: none;
 }
 .bb-page-hero h1 {
@@ -247,7 +247,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 .bb-textarea:focus {
   outline: none;
   border-color: var(--bb-green-accent);
-  box-shadow: 0 0 0 3px rgba(106,113,69,0.1);
+  box-shadow: 0 0 0 3px rgba(97,103,54,0.1);
 }
 .bb-textarea::placeholder {
   color: #63604D;
@@ -316,7 +316,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 .bb-analyze-btn:hover:not(:disabled) {
   background: var(--bb-green);
   transform: translateY(-1px);
-  box-shadow: 0 5px 18px rgba(106,113,69,0.28);
+  box-shadow: 0 5px 18px rgba(97,103,54,0.28);
 }
 .bb-analyze-btn:active:not(:disabled) { transform: translateY(0); }
 .bb-analyze-btn:disabled {
@@ -499,8 +499,8 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 0.85rem;
-  background: rgba(138,144,97,0.1);
-  border: 1px solid rgba(138,144,97,0.25);
+  background: rgba(148,153,110,0.1);
+  border: 1px solid rgba(148,153,110,0.25);
   color: var(--bb-teal);
   transition: background 0.3s, border-color 0.3s, color 0.3s;
 }
@@ -555,9 +555,9 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   align-items: center;
   justify-content: center;
 }
-.bb-card-icon--green { background: rgba(106,113,69,0.13); }
-.bb-card-icon--amber { background: rgba(106,113,69,0.13); }
-.bb-card-icon--teal  { background: rgba(138,144,97,0.13); }
+.bb-card-icon--green { background: rgba(97,103,54,0.13); }
+.bb-card-icon--amber { background: rgba(97,103,54,0.13); }
+.bb-card-icon--teal  { background: rgba(148,153,110,0.13); }
 .bb-card-icon--navy  { background: rgba(44,42,32,0.10); }
 .bb-card-title {
   font-family: 'Instrument Sans', sans-serif;
@@ -638,13 +638,13 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   font-weight: 600;
 }
 .bb-kw-matched {
-  background: rgba(106,113,69,0.08);
-  border: 1px solid rgba(106,113,69,0.2);
+  background: rgba(97,103,54,0.08);
+  border: 1px solid rgba(97,103,54,0.2);
   color: var(--bb-green);
 }
 .bb-kw-missing {
-  background: rgba(106,113,69,0.07);
-  border: 1px solid rgba(106,113,69,0.2);
+  background: rgba(97,103,54,0.07);
+  border: 1px solid rgba(97,103,54,0.2);
   color: var(--bb-amber);
 }
 
@@ -657,7 +657,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   gap: 0.4rem;
   background: transparent;
   color: var(--bb-green-accent);
-  border: 1px solid rgba(106,113,69,0.35);
+  border: 1px solid rgba(97,103,54,0.35);
   border-radius: 5px;
   padding: 0.45rem 0.9rem;
   font-family: 'Instrument Sans', sans-serif;
@@ -712,7 +712,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 .bb-try-again-btn:hover {
   background: var(--bb-green-bg-subtle);
   transform: translateY(-1px);
-  box-shadow: 0 3px 10px rgba(106,113,69,0.15);
+  box-shadow: 0 3px 10px rgba(97,103,54,0.15);
 }
 </style>
 
@@ -883,7 +883,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     <div class="bb-detail-card bb-detail-card--amber">
       <div class="bb-card-header">
         <div class="bb-card-icon bb-card-icon--amber">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6A7145" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#616736" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
         </div>
         <p class="bb-card-title">Gaps</p>
       </div>
@@ -893,7 +893,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     <div class="bb-detail-card bb-detail-card--teal">
       <div class="bb-card-header">
         <div class="bb-card-icon bb-card-icon--teal">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8A9061" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94996E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
         </div>
         <p class="bb-card-title">Cover Letter Tips</p>
       </div>
@@ -991,9 +991,9 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
 
   // ---- Score colors ----
   function scoreColors(s) {
-    if (s >= 76) return { stroke: '#2C2A20', text: '#2C2A20', bg: 'rgba(106,113,69,0.1)',    border: 'rgba(106,113,69,0.25)' };
-    if (s >= 51) return { stroke: '#8A9061', text: '#525834', bg: 'rgba(138,144,97,0.12)',  border: 'rgba(138,144,97,0.3)' };
-    if (s >= 26) return { stroke: '#6A7145', text: '#525834', bg: 'rgba(106,113,69,0.08)',   border: 'rgba(106,113,69,0.25)' };
+    if (s >= 76) return { stroke: '#2C2A20', text: '#2C2A20', bg: 'rgba(97,103,54,0.1)',    border: 'rgba(97,103,54,0.25)' };
+    if (s >= 51) return { stroke: '#94996E', text: '#525834', bg: 'rgba(148,153,110,0.12)',  border: 'rgba(148,153,110,0.3)' };
+    if (s >= 26) return { stroke: '#616736', text: '#525834', bg: 'rgba(97,103,54,0.08)',   border: 'rgba(97,103,54,0.25)' };
     return         { stroke: '#dc2626', text: '#dc2626', bg: 'rgba(220,38,38,0.08)',   border: 'rgba(220,38,38,0.25)' };
   }
 

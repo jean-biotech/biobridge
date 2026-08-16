@@ -11,8 +11,8 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
   --bb-green: #2C2A20;
-  --bb-green-accent: #6A7145;
-  --bb-green-bright: #6A7145;
+  --bb-green-accent: #616736;
+  --bb-green-bright: #616736;
   --bb-green-hover: #525834;
   --bb-green-dark: #525834;
   --bb-green-bg: #E9DFC9;
@@ -49,7 +49,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(106,113,69,0.15) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 80% 20%, rgba(97,103,54,0.15) 0%, transparent 60%);
   pointer-events: none;
 }
 .bb-page-hero h1 {
@@ -211,7 +211,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   background: var(--bb-green);
   border-color: var(--bb-green);
   transform: translateY(-1px);
-  box-shadow: 0 5px 16px rgba(106,113,69,0.25);
+  box-shadow: 0 5px 16px rgba(97,103,54,0.25);
   color: var(--bb-white) !important;
 }
 .bb-coming-soon-note {
@@ -304,7 +304,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 /* Free Preview Card */
 .bb-preview-card {
   background: linear-gradient(135deg, #F0E8D6 0%, #E9DFC9 100%);
-  border: 1.5px solid #6A7145;
+  border: 1.5px solid #616736;
   border-radius: 10px;
   padding: 1.75rem 1.5rem;
   margin-bottom: 1.75rem;
@@ -315,7 +315,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 4px;
-  background: linear-gradient(90deg, #6A7145, #525834);
+  background: linear-gradient(90deg, #616736, #525834);
 }
 .bb-preview-eyebrow {
   font-family: 'Instrument Sans', sans-serif;
@@ -346,7 +346,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   align-items: center;
   gap: 1rem;
   background: var(--bb-white);
-  border: 1px solid #6A7145;
+  border: 1px solid #616736;
   border-radius: 7px;
   padding: 0.85rem 1rem;
   margin-bottom: 1rem;

@@ -11,8 +11,8 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
   --bb-green: #2C2A20;
-  --bb-green-accent: #6A7145;
-  --bb-green-bright: #6A7145;
+  --bb-green-accent: #616736;
+  --bb-green-bright: #616736;
   --bb-green-hover: #525834;
   --bb-green-dark: #525834;
   --bb-green-bg: #E9DFC9;
@@ -24,7 +24,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   --bb-text-secondary: #63604D;
   --bb-gray: #63604D;
   --bb-border: rgba(44,42,32,0.14);
-  --bb-teal: #8A9061;
+  --bb-teal: #94996E;
 }
 
 /* Page Header */
@@ -41,7 +41,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(106,113,69,0.15) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 80% 20%, rgba(97,103,54,0.15) 0%, transparent 60%);
   pointer-events: none;
 }
 .bb-page-hero h1 {
@@ -99,7 +99,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 .bb-carousel-btn:hover {
   border-color: var(--bb-green-accent);
   color: var(--bb-green-accent);
-  box-shadow: 0 4px 14px rgba(106,113,69,0.2);
+  box-shadow: 0 4px 14px rgba(97,103,54,0.2);
 }
 .bb-carousel-btn.prev { left: 0; }
 .bb-carousel-btn.next { right: 0; }
@@ -154,8 +154,8 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-card-img-label {
   display: inline-block;
-  background: rgba(106,113,69,0.1);
-  border: 1px dashed rgba(106,113,69,0.3);
+  background: rgba(97,103,54,0.1);
+  border: 1px dashed rgba(97,103,54,0.3);
   border-radius: 4px;
   padding: 0.3rem 0.85rem;
   font-family: 'Instrument Sans', sans-serif;
@@ -231,8 +231,8 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 /* Distinct teal accent for org badges — not the same muted green */
 .bb-logo-badge {
   display: inline-block;
-  background: rgba(138,144,97,0.1);
-  border: 1px solid rgba(138,144,97,0.25);
+  background: rgba(148,153,110,0.1);
+  border: 1px solid rgba(148,153,110,0.25);
   border-radius: 4px;
   padding: 0.25rem 0.65rem;
   font-family: 'Instrument Sans', sans-serif;
@@ -435,8 +435,8 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-program-badge {
   display: inline-block;
-  background: rgba(106,113,69,0.08);
-  border: 1px solid rgba(106,113,69,0.2);
+  background: rgba(97,103,54,0.08);
+  border: 1px solid rgba(97,103,54,0.2);
   border-radius: 4px;
   padding: 0.22rem 0.6rem;
   font-family: 'Instrument Sans', sans-serif;
@@ -550,7 +550,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   list-style: none;
   display: flex;
   align-items: center;
-  background: rgba(106,113,69,0.04);
+  background: rgba(97,103,54,0.04);
   user-select: none;
 }
 .bb-program-category summary::-webkit-details-marker { display: none; }
@@ -576,7 +576,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 .bb-flip-card:hover {
-  box-shadow: 0 4px 18px rgba(106,113,69,0.15);
+  box-shadow: 0 4px 18px rgba(97,103,54,0.15);
   transform: translateY(-2px);
 }
 .bb-flip-icon {
@@ -623,12 +623,12 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 .bb-flip-back-link {
   display: inline-block;
   font-size: 0.73rem;
-  color: #8A9061;
+  color: #94996E;
   font-weight: 600;
   text-decoration: none;
-  border-bottom: 1px solid rgba(106,113,69,0.4);
+  border-bottom: 1px solid rgba(97,103,54,0.4);
 }
-.bb-flip-back-link:hover { color: #8A9061; }
+.bb-flip-back-link:hover { color: #94996E; }
 .bb-flip-close {
   display: block;
   font-size: 0.71rem;

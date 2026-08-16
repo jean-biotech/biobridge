@@ -11,8 +11,8 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
   --bb-green: #2C2A20;
-  --bb-green-accent: #6A7145;
-  --bb-green-bright: #6A7145;
+  --bb-green-accent: #616736;
+  --bb-green-bright: #616736;
   --bb-green-hover: #525834;
   --bb-green-dark: #525834;
   --bb-green-bg: #E9DFC9;
@@ -40,7 +40,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(106,113,69,0.15) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 80% 20%, rgba(97,103,54,0.15) 0%, transparent 60%);
   pointer-events: none;
 }
 .bb-page-hero h1 {
