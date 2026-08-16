@@ -5,25 +5,25 @@ permalink: /products/
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Instrument+Sans:wght@400;500;600;700&display=swap');
 body { font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
 h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
-  --bb-green: #2F5E3F;
-  --bb-green-accent: #A8501F;
-  --bb-green-bright: #A8501F;
-  --bb-green-hover: #2F5E3F;
-  --bb-green-dark: #1B3B27;
-  --bb-green-bg: #E4EBE2;
-  --bb-green-bg-subtle: #F1E9D8;
-  --bb-navy: #2A2118;
-  --bb-charcoal: #1E2A22;
-  --bb-white: #F7F1E6;
-  --bb-off-white: #F1E9D8;
-  --bb-text-secondary: #48584C;
-  --bb-gray: #6B6255;
-  --bb-border: #DDD3BE;
+  --bb-green: #2C2A20;
+  --bb-green-accent: #6A7145;
+  --bb-green-bright: #6A7145;
+  --bb-green-hover: #525834;
+  --bb-green-dark: #525834;
+  --bb-green-bg: #E9DFC9;
+  --bb-green-bg-subtle: #E3D8BF;
+  --bb-navy: #2C2A20;
+  --bb-charcoal: #2C2A20;
+  --bb-white: #F0E8D6;
+  --bb-off-white: #E9DFC9;
+  --bb-text-secondary: #63604D;
+  --bb-gray: #63604D;
+  --bb-border: rgba(44,42,32,0.14);
 }
 
 /* Hero logo */
@@ -49,7 +49,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(47,94,63,0.15) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 80% 20%, rgba(106,113,69,0.15) 0%, transparent 60%);
   pointer-events: none;
 }
 .bb-page-hero h1 {
@@ -101,7 +101,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   box-shadow: 0 3px 16px rgba(0,0,0,0.05);
 }
 .bb-product-eyebrow {
-  font-family: 'Spline Sans Mono', monospace;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -128,7 +128,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 /* Section headers inside card */
 .bb-section-label {
-  font-family: 'Spline Sans Mono', monospace;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -211,7 +211,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   background: var(--bb-green);
   border-color: var(--bb-green);
   transform: translateY(-1px);
-  box-shadow: 0 5px 16px rgba(47,94,63,0.25);
+  box-shadow: 0 5px 16px rgba(106,113,69,0.25);
   color: var(--bb-white) !important;
 }
 .bb-coming-soon-note {
@@ -265,7 +265,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   gap: 0.85rem;
   margin-bottom: 0.85rem;
   padding-bottom: 0.85rem;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid #E3D8BF;
 }
 .bb-roadmap-item:last-child {
   border-bottom: none;
@@ -303,8 +303,8 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 /* Free Preview Card */
 .bb-preview-card {
-  background: linear-gradient(135deg, #FFF8EE 0%, #FFF3E0 100%);
-  border: 1.5px solid #F5A623;
+  background: linear-gradient(135deg, #F0E8D6 0%, #E9DFC9 100%);
+  border: 1.5px solid #6A7145;
   border-radius: 10px;
   padding: 1.75rem 1.5rem;
   margin-bottom: 1.75rem;
@@ -315,20 +315,20 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 4px;
-  background: linear-gradient(90deg, #F5A623, #E67E22);
+  background: linear-gradient(90deg, #6A7145, #525834);
 }
 .bb-preview-eyebrow {
-  font-family: 'Spline Sans Mono', monospace;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #E67E22;
+  color: #525834;
   margin: 0 0 0.4rem;
 }
 .bb-preview-card h2 {
   font-family: 'Fraunces', Georgia, serif;
-  color: #1B3B27;
+  color: #525834;
   font-size: 1.2rem;
   font-weight: 700;
   margin: 0 0 0.6rem;
@@ -336,7 +336,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-preview-card p {
   font-family: 'Instrument Sans', sans-serif;
-  color: #48584C;
+  color: #63604D;
   font-size: 0.87rem;
   line-height: 1.75;
   margin: 0 0 1.1rem;
@@ -346,7 +346,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   align-items: center;
   gap: 1rem;
   background: var(--bb-white);
-  border: 1px solid #F5A623;
+  border: 1px solid #6A7145;
   border-radius: 7px;
   padding: 0.85rem 1rem;
   margin-bottom: 1rem;
@@ -365,7 +365,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   font-family: 'Instrument Sans', sans-serif;
   font-size: 0.9rem;
   font-weight: 600;
-  color: #1B3B27;
+  color: #525834;
   margin-bottom: 0.15rem;
 }
 .bb-preview-sample-info span {
@@ -375,7 +375,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-preview-btn {
   display: inline-block;
-  background: #E67E22;
+  background: #525834;
   color: var(--bb-white) !important;
   padding: 0.65rem 1.5rem;
   border-radius: 5px;
@@ -388,27 +388,27 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   flex-shrink: 0;
 }
 .bb-preview-btn:hover {
-  background: #D35400;
+  background: #525834;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(230,126,34,0.3);
+  box-shadow: 0 4px 12px rgba(82,88,52,0.3);
   color: var(--bb-white) !important;
 }
 .bb-preview-coming-soon {
   display: inline-block;
-  background: rgba(230,126,34,0.1);
-  border: 1px solid rgba(230,126,34,0.35);
+  background: rgba(82,88,52,0.1);
+  border: 1px solid rgba(82,88,52,0.35);
   border-radius: 4px;
   padding: 0.2rem 0.65rem;
   font-family: 'Instrument Sans', sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
-  color: #E67E22;
+  color: #525834;
 }
 
 /* International callout */
 .bb-international-callout {
   background: #FAF7F2;
-  border: 1px solid #e8dfd0;
+  border: 1px solid #E9DFC9;
   border-left: 4px solid var(--bb-green-accent);
   border-radius: 7px;
   padding: 1rem 1.25rem;

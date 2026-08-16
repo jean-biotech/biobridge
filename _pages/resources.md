@@ -5,25 +5,25 @@ permalink: /resources/
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Instrument+Sans:wght@400;500;600;700&display=swap');
 body { font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
 h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
-  --bb-green: #2F5E3F;
-  --bb-green-accent: #A8501F;
-  --bb-green-bright: #A8501F;
-  --bb-green-hover: #2F5E3F;
-  --bb-green-dark: #1B3B27;
-  --bb-green-bg: #E4EBE2;
-  --bb-green-bg-subtle: #F1E9D8;
-  --bb-navy: #2A2118;
-  --bb-charcoal: #1E2A22;
-  --bb-white: #F7F1E6;
-  --bb-off-white: #F1E9D8;
-  --bb-text-secondary: #48584C;
-  --bb-gray: #6B6255;
-  --bb-border: #DDD3BE;
+  --bb-green: #2C2A20;
+  --bb-green-accent: #6A7145;
+  --bb-green-bright: #6A7145;
+  --bb-green-hover: #525834;
+  --bb-green-dark: #525834;
+  --bb-green-bg: #E9DFC9;
+  --bb-green-bg-subtle: #E3D8BF;
+  --bb-navy: #2C2A20;
+  --bb-charcoal: #2C2A20;
+  --bb-white: #F0E8D6;
+  --bb-off-white: #E9DFC9;
+  --bb-text-secondary: #63604D;
+  --bb-gray: #63604D;
+  --bb-border: rgba(44,42,32,0.14);
 }
 
 /* Page Header */
@@ -40,7 +40,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(47,94,63,0.15) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 80% 20%, rgba(106,113,69,0.15) 0%, transparent 60%);
   pointer-events: none;
 }
 .bb-page-hero h1 {
@@ -52,7 +52,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   position: relative;
 }
 .bb-page-hero .bb-hero-sub {
-  font-family: 'Spline Sans Mono', monospace;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -123,7 +123,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   width: 44px;
   height: 44px;
   min-width: 44px;
-  background: linear-gradient(135deg, #d1e8d8, #c8dfe0);
+  background: linear-gradient(135deg, #E9DFC9, #E3D8BF);
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -141,7 +141,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   display: block;
 }
 .bb-resource-thumb-label {
-  font-family: 'Spline Sans Mono', monospace;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.52rem;
   color: var(--bb-gray);
   font-weight: 500;
@@ -180,7 +180,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   width: 44px;
   height: 60px;
   min-width: 44px;
-  background: linear-gradient(160deg, #c8dac4, #b8d0cc);
+  background: linear-gradient(160deg, #E3D8BF, #E9DFC9);
   border-radius: 3px;
   overflow: hidden;
   display: flex;
@@ -195,7 +195,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   display: block;
 }
 .bb-book-thumb-label {
-  font-family: 'Spline Sans Mono', monospace;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.5rem;
   color: var(--bb-green);
   font-weight: 600;

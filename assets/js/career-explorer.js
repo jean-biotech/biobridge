@@ -62,7 +62,7 @@
 
     if (!results.length) {
       resultsWrap.innerHTML =
-        '<p class="explorer-empty">No roles match that combination yet. Try clearing a filter — biotech is broader than most people expect.</p>';
+        '<p class="explorer-empty">No roles match that combination yet. Try clearing a filter, biotech is broader than most people expect.</p>';
       return;
     }
     resultsWrap.innerHTML = results.map(cardHtml).join("");

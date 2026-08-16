@@ -7,25 +7,25 @@ toc_label: "On This Page"
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Instrument+Sans:wght@400;500;600;700&display=swap');
 body { font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
 h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
-  --bb-green: #2F5E3F;
-  --bb-green-accent: #A8501F;
-  --bb-green-bright: #A8501F;
-  --bb-green-hover: #2F5E3F;
-  --bb-green-dark: #1B3B27;
-  --bb-green-bg: #E4EBE2;
-  --bb-green-bg-subtle: #F1E9D8;
-  --bb-navy: #2A2118;
-  --bb-charcoal: #1E2A22;
-  --bb-white: #F7F1E6;
-  --bb-off-white: #F1E9D8;
-  --bb-text-secondary: #48584C;
-  --bb-gray: #6B6255;
-  --bb-border: #DDD3BE;
+  --bb-green: #2C2A20;
+  --bb-green-accent: #6A7145;
+  --bb-green-bright: #6A7145;
+  --bb-green-hover: #525834;
+  --bb-green-dark: #525834;
+  --bb-green-bg: #E9DFC9;
+  --bb-green-bg-subtle: #E3D8BF;
+  --bb-navy: #2C2A20;
+  --bb-charcoal: #2C2A20;
+  --bb-white: #F0E8D6;
+  --bb-off-white: #E9DFC9;
+  --bb-text-secondary: #63604D;
+  --bb-gray: #63604D;
+  --bb-border: rgba(44,42,32,0.14);
 }
 
 /* Page Header */
@@ -42,7 +42,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(47,94,63,0.15) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 80% 20%, rgba(106,113,69,0.15) 0%, transparent 60%);
   pointer-events: none;
 }
 .bb-page-hero h1 {
@@ -65,7 +65,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 /* Image Placeholder */
 .bb-img-placeholder {
-  background: linear-gradient(135deg, var(--bb-green-bg), #e8f4f5);
+  background: linear-gradient(135deg, var(--bb-green-bg), #E9DFC9);
   border: 1px dashed var(--bb-border);
   border-radius: 8px;
   padding: 1.5rem 1rem;
@@ -121,7 +121,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 .bb-intro-text {
   font-family: 'Instrument Sans', sans-serif;
   font-size: 0.9rem;
-  color: #334155;
+  color: #2C2A20;
   line-height: 1.8;
   margin-bottom: 1.25rem;
 }
@@ -139,7 +139,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   background: var(--bb-border);
 }
 .bb-divider-label {
-  font-family: 'Spline Sans Mono', monospace;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.67rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -196,7 +196,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   flex-direction: column;
 }
 .bb-flip-front-img {
-  background: linear-gradient(135deg, #d1e8d8, #e8f4ea);
+  background: linear-gradient(135deg, #E9DFC9, #F0E8D6);
   height: 110px;
   width: 100%;
   display: flex;
@@ -210,8 +210,8 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   font-size: 0.68rem;
   font-weight: 500;
   color: var(--bb-green);
-  background: rgba(47,94,63,0.1);
-  border: 1px dashed rgba(47,94,63,0.3);
+  background: rgba(106,113,69,0.1);
+  border: 1px dashed rgba(106,113,69,0.3);
   border-radius: 4px;
   padding: 0.25rem 0.6rem;
 }
@@ -232,7 +232,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   margin: 0;
 }
 .bb-flip-hint {
-  font-family: 'Spline Sans Mono', monospace;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.62rem;
   color: var(--bb-gray);
   letter-spacing: 0.05em;
@@ -273,14 +273,14 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-flip-org-badge {
   display: inline-block;
-  background: rgba(217,164,65,0.18);
-  border: 1px solid rgba(217,164,65,0.38);
+  background: rgba(138,144,97,0.18);
+  border: 1px solid rgba(138,144,97,0.38);
   border-radius: 20px;
   padding: 0.18rem 0.6rem;
   font-family: 'Instrument Sans', sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #7ECFE0;
+  color: #6A7145;
   letter-spacing: 0.01em;
   white-space: nowrap;
 }
@@ -295,7 +295,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-two-col-text p {
   font-family: 'Instrument Sans', sans-serif;
-  color: #334155;
+  color: #2C2A20;
   font-size: 0.9rem;
   line-height: 1.8;
   margin: 0 0 0.85rem;
@@ -358,7 +358,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 /* International callout (shared style) */
 .bb-international-callout {
   background: #FAF7F2;
-  border: 1px solid #e8dfd0;
+  border: 1px solid #E9DFC9;
   border-left: 4px solid var(--bb-green-accent);
   border-radius: 7px;
   padding: 1rem 1.25rem;
@@ -531,7 +531,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 <div class="bb-misconception">
   <strong>"It's all lab work."</strong>
-  <p>Lab work is one slice of a much bigger picture. There's also manufacturing, regulatory affairs, sales, policy, data analysis, and more. The <a href="/career-pathways/" style="color: #A8501F; font-weight: 600;">Career Pathways</a> page shows the full range.</p>
+  <p>Lab work is one slice of a much bigger picture. There's also manufacturing, regulatory affairs, sales, policy, data analysis, and more. The <a href="/career-pathways/" style="color: #6A7145; font-weight: 600;">Career Pathways</a> page shows the full range.</p>
 </div>
 
 <div class="bb-misconception">

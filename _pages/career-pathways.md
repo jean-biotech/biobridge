@@ -5,26 +5,26 @@ permalink: /career-pathways/
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Instrument+Sans:wght@400;500;600;700&display=swap');
 body { font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
 h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
-  --bb-green: #2F5E3F;
-  --bb-green-accent: #A8501F;
-  --bb-green-bright: #A8501F;
-  --bb-green-hover: #2F5E3F;
-  --bb-green-dark: #1B3B27;
-  --bb-green-bg: #E4EBE2;
-  --bb-green-bg-subtle: #F1E9D8;
-  --bb-navy: #2A2118;
-  --bb-charcoal: #1E2A22;
-  --bb-white: #F7F1E6;
-  --bb-off-white: #F1E9D8;
-  --bb-text-secondary: #48584C;
-  --bb-gray: #6B6255;
-  --bb-border: #DDD3BE;
-  --bb-teal: #D9A441;
+  --bb-green: #2C2A20;
+  --bb-green-accent: #6A7145;
+  --bb-green-bright: #6A7145;
+  --bb-green-hover: #525834;
+  --bb-green-dark: #525834;
+  --bb-green-bg: #E9DFC9;
+  --bb-green-bg-subtle: #E3D8BF;
+  --bb-navy: #2C2A20;
+  --bb-charcoal: #2C2A20;
+  --bb-white: #F0E8D6;
+  --bb-off-white: #E9DFC9;
+  --bb-text-secondary: #63604D;
+  --bb-gray: #63604D;
+  --bb-border: rgba(44,42,32,0.14);
+  --bb-teal: #8A9061;
 }
 
 /* Page Header */
@@ -41,7 +41,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(47,94,63,0.15) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 80% 20%, rgba(106,113,69,0.15) 0%, transparent 60%);
   pointer-events: none;
 }
 .bb-page-hero h1 {
@@ -99,7 +99,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 .bb-carousel-btn:hover {
   border-color: var(--bb-green-accent);
   color: var(--bb-green-accent);
-  box-shadow: 0 4px 14px rgba(47,94,63,0.2);
+  box-shadow: 0 4px 14px rgba(106,113,69,0.2);
 }
 .bb-carousel-btn.prev { left: 0; }
 .bb-carousel-btn.next { right: 0; }
@@ -136,7 +136,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 
 /* Card image — fills width, fixed height */
 .bb-card-img {
-  background: linear-gradient(135deg, #d1e8d8, #e8f4ea);
+  background: linear-gradient(135deg, #E9DFC9, #F0E8D6);
   border-bottom: 1px solid var(--bb-border);
   width: 100%;
   height: 140px;
@@ -154,11 +154,11 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-card-img-label {
   display: inline-block;
-  background: rgba(47,94,63,0.1);
-  border: 1px dashed rgba(47,94,63,0.3);
+  background: rgba(106,113,69,0.1);
+  border: 1px dashed rgba(106,113,69,0.3);
   border-radius: 4px;
   padding: 0.3rem 0.85rem;
-  font-family: 'Spline Sans Mono', monospace;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.72rem;
   font-weight: 500;
   color: var(--bb-green);
@@ -185,7 +185,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   margin-bottom: 0.75rem;
 }
 .bb-detail-label {
-  font-family: 'Spline Sans Mono', monospace;
+  font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-green);
   font-size: 0.67rem;
   text-transform: uppercase;
@@ -215,7 +215,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   border-top: 1px solid var(--bb-border);
 }
 .bb-companies-label {
-  font-family: 'Spline Sans Mono', monospace;
+  font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-gray);
   font-size: 0.67rem;
   text-transform: uppercase;
@@ -231,8 +231,8 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 /* Distinct teal accent for org badges — not the same muted green */
 .bb-logo-badge {
   display: inline-block;
-  background: rgba(217,164,65,0.1);
-  border: 1px solid rgba(217,164,65,0.25);
+  background: rgba(138,144,97,0.1);
+  border: 1px solid rgba(138,144,97,0.25);
   border-radius: 4px;
   padding: 0.25rem 0.65rem;
   font-family: 'Instrument Sans', sans-serif;
@@ -321,8 +321,8 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
    ============================================ */
 .bb-cream-wrap {
   background: #FAF7F2;
-  border-top: 1px solid #ede8e0;
-  border-bottom: 1px solid #ede8e0;
+  border-top: 1px solid #E9DFC9;
+  border-bottom: 1px solid #E9DFC9;
   margin: 2rem -48px;
   padding: 2rem 48px;
 }
@@ -348,7 +348,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   background: var(--bb-border);
 }
 .bb-section-divider-label {
-  font-family: 'Spline Sans Mono', monospace;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.67rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -435,8 +435,8 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-program-badge {
   display: inline-block;
-  background: rgba(47,94,63,0.08);
-  border: 1px solid rgba(47,94,63,0.2);
+  background: rgba(106,113,69,0.08);
+  border: 1px solid rgba(106,113,69,0.2);
   border-radius: 4px;
   padding: 0.22rem 0.6rem;
   font-family: 'Instrument Sans', sans-serif;
@@ -506,7 +506,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
    ============================================ */
 .bb-international-callout {
   background: #FAF7F2;
-  border: 1px solid #e8dfd0;
+  border: 1px solid #E9DFC9;
   border-left: 4px solid var(--bb-green-accent);
   border-radius: 7px;
   padding: 1rem 1.25rem;
@@ -550,7 +550,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   list-style: none;
   display: flex;
   align-items: center;
-  background: rgba(47,94,63,0.04);
+  background: rgba(106,113,69,0.04);
   user-select: none;
 }
 .bb-program-category summary::-webkit-details-marker { display: none; }
@@ -576,7 +576,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 .bb-flip-card:hover {
-  box-shadow: 0 4px 18px rgba(47,94,63,0.15);
+  box-shadow: 0 4px 18px rgba(106,113,69,0.15);
   transform: translateY(-2px);
 }
 .bb-flip-icon {
@@ -623,12 +623,12 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 .bb-flip-back-link {
   display: inline-block;
   font-size: 0.73rem;
-  color: #D9A441;
+  color: #8A9061;
   font-weight: 600;
   text-decoration: none;
-  border-bottom: 1px solid rgba(168,80,31,0.4);
+  border-bottom: 1px solid rgba(106,113,69,0.4);
 }
-.bb-flip-back-link:hover { color: #E08052; }
+.bb-flip-back-link:hover { color: #8A9061; }
 .bb-flip-close {
   display: block;
   font-size: 0.71rem;
