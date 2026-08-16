@@ -5,25 +5,25 @@ permalink: /get-involved/
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
-body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
-h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap');
+body { font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
+h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
-  --bb-green: #2D5F3F;
-  --bb-green-accent: #3A7D5C;
-  --bb-green-bright: #4CAF50;
-  --bb-green-hover: #66BB6A;
-  --bb-green-dark: #1A3A28;
-  --bb-green-bg: #E8F5E9;
-  --bb-green-bg-subtle: #F1F8F4;
-  --bb-navy: #1A1A2E;
-  --bb-charcoal: #2C3E50;
-  --bb-white: #ffffff;
-  --bb-off-white: #FAFAFA;
-  --bb-text-secondary: #475569;
-  --bb-gray: #64748b;
-  --bb-border: #e2e8f0;
+  --bb-green: #2F5E3F;
+  --bb-green-accent: #A8501F;
+  --bb-green-bright: #A8501F;
+  --bb-green-hover: #2F5E3F;
+  --bb-green-dark: #1B3B27;
+  --bb-green-bg: #E4EBE2;
+  --bb-green-bg-subtle: #F1E9D8;
+  --bb-navy: #2A2118;
+  --bb-charcoal: #1E2A22;
+  --bb-white: #F7F1E6;
+  --bb-off-white: #F1E9D8;
+  --bb-text-secondary: #48584C;
+  --bb-gray: #6B6255;
+  --bb-border: #DDD3BE;
 }
 
 /* Page Header — Mobile First */
@@ -40,7 +40,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(45,95,63,0.15) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 80% 20%, rgba(47,94,63,0.15) 0%, transparent 60%);
   pointer-events: none;
 }
 .bb-page-hero h1 {
@@ -52,7 +52,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   position: relative;
 }
 .bb-page-hero p {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 1rem;
   color: rgba(255,255,255,0.8);
   margin: 0;
@@ -90,7 +90,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
 .bb-involve-card h2 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-navy);
   font-size: 1.1rem;
   font-weight: 700;
@@ -126,7 +126,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   margin-bottom: 2rem;
 }
 .bb-contact-section h2 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-navy);
   font-size: 1.25rem;
   font-weight: 700;
@@ -149,7 +149,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   background: var(--bb-white);
   color: var(--bb-navy) !important;
   text-decoration: none !important;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-weight: 500;
   font-size: 0.9rem;
   transition: all 0.2s ease;
@@ -162,7 +162,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 }
 .bb-feedback-note {
   color: var(--bb-gray);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.9rem;
   line-height: 1.7;
   max-width: 560px;

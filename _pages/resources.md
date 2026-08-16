@@ -5,25 +5,25 @@ permalink: /resources/
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
-body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
-h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap');
+body { font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
+h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
-  --bb-green: #2D5F3F;
-  --bb-green-accent: #3A7D5C;
-  --bb-green-bright: #4CAF50;
-  --bb-green-hover: #66BB6A;
-  --bb-green-dark: #1A3A28;
-  --bb-green-bg: #E8F5E9;
-  --bb-green-bg-subtle: #F1F8F4;
-  --bb-navy: #1A1A2E;
-  --bb-charcoal: #2C3E50;
-  --bb-white: #ffffff;
-  --bb-off-white: #FAFAFA;
-  --bb-text-secondary: #475569;
-  --bb-gray: #64748b;
-  --bb-border: #e2e8f0;
+  --bb-green: #2F5E3F;
+  --bb-green-accent: #A8501F;
+  --bb-green-bright: #A8501F;
+  --bb-green-hover: #2F5E3F;
+  --bb-green-dark: #1B3B27;
+  --bb-green-bg: #E4EBE2;
+  --bb-green-bg-subtle: #F1E9D8;
+  --bb-navy: #2A2118;
+  --bb-charcoal: #1E2A22;
+  --bb-white: #F7F1E6;
+  --bb-off-white: #F1E9D8;
+  --bb-text-secondary: #48584C;
+  --bb-gray: #6B6255;
+  --bb-border: #DDD3BE;
 }
 
 /* Page Header */
@@ -40,7 +40,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(45,95,63,0.15) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 80% 20%, rgba(47,94,63,0.15) 0%, transparent 60%);
   pointer-events: none;
 }
 .bb-page-hero h1 {
@@ -52,7 +52,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   position: relative;
 }
 .bb-page-hero .bb-hero-sub {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Spline Sans Mono', monospace;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -63,7 +63,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   position: relative;
 }
 .bb-page-hero p {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.88rem;
   color: rgba(255,255,255,0.8);
   margin: 0;
@@ -82,7 +82,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   border-bottom: 2px solid var(--bb-green-accent);
 }
 .bb-section-head h2 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-navy);
   font-size: 0.95rem;
   font-weight: 700;
@@ -141,7 +141,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   display: block;
 }
 .bb-resource-thumb-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Spline Sans Mono', monospace;
   font-size: 0.52rem;
   color: var(--bb-gray);
   font-weight: 500;
@@ -155,7 +155,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 }
 .bb-resource-card h3 {
   margin: 0 0 0.2rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.88rem;
   font-weight: 600;
 }
@@ -195,7 +195,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   display: block;
 }
 .bb-book-thumb-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Spline Sans Mono', monospace;
   font-size: 0.5rem;
   color: var(--bb-green);
   font-weight: 600;
@@ -501,7 +501,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <div class="bb-section-head">
     <h2>Online Courses (Free)</h2>
   </div>
-  <p style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--bb-text-secondary); margin-top: -0.5rem; margin-bottom: 1rem;">From lab fundamentals to data science, regulatory affairs, and industry business skills — all free.</p>
+  <p style="font-family: 'Instrument Sans', sans-serif; font-size: 0.85rem; color: var(--bb-text-secondary); margin-top: -0.5rem; margin-bottom: 1rem;">From lab fundamentals to data science, regulatory affairs, and industry business skills — all free.</p>
   <div class="bb-resource-grid">
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">

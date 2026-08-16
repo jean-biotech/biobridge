@@ -5,25 +5,25 @@ permalink: /products/
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
-body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
-h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap');
+body { font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
+h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
-  --bb-green: #2D5F3F;
-  --bb-green-accent: #3A7D5C;
-  --bb-green-bright: #4CAF50;
-  --bb-green-hover: #66BB6A;
-  --bb-green-dark: #1A3A28;
-  --bb-green-bg: #E8F5E9;
-  --bb-green-bg-subtle: #F1F8F4;
-  --bb-navy: #1A1A2E;
-  --bb-charcoal: #2C3E50;
-  --bb-white: #ffffff;
-  --bb-off-white: #FAFAFA;
-  --bb-text-secondary: #475569;
-  --bb-gray: #64748b;
-  --bb-border: #e2e8f0;
+  --bb-green: #2F5E3F;
+  --bb-green-accent: #A8501F;
+  --bb-green-bright: #A8501F;
+  --bb-green-hover: #2F5E3F;
+  --bb-green-dark: #1B3B27;
+  --bb-green-bg: #E4EBE2;
+  --bb-green-bg-subtle: #F1E9D8;
+  --bb-navy: #2A2118;
+  --bb-charcoal: #1E2A22;
+  --bb-white: #F7F1E6;
+  --bb-off-white: #F1E9D8;
+  --bb-text-secondary: #48584C;
+  --bb-gray: #6B6255;
+  --bb-border: #DDD3BE;
 }
 
 /* Hero logo */
@@ -49,7 +49,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(45,95,63,0.15) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 80% 20%, rgba(47,94,63,0.15) 0%, transparent 60%);
   pointer-events: none;
 }
 .bb-page-hero h1 {
@@ -61,7 +61,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   position: relative;
 }
 .bb-page-hero p {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.88rem;
   color: rgba(255,255,255,0.8);
   margin: 0;
@@ -101,7 +101,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   box-shadow: 0 3px 16px rgba(0,0,0,0.05);
 }
 .bb-product-eyebrow {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Spline Sans Mono', monospace;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -110,7 +110,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   margin: 0 0 0.4rem;
 }
 .bb-product-card h2 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   color: var(--bb-navy);
   font-size: 1.45rem;
   font-weight: 700;
@@ -120,7 +120,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 }
 .bb-product-tagline {
   color: var(--bb-text-secondary);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.88rem;
   line-height: 1.7;
   margin: 0 0 1.25rem;
@@ -128,7 +128,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
 /* Section headers inside card */
 .bb-section-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Spline Sans Mono', monospace;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -189,7 +189,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   color: var(--bb-white);
   padding: 0.4rem 1.25rem;
   border-radius: 5px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -200,7 +200,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   color: var(--bb-white) !important;
   padding: 0.75rem 2rem;
   border-radius: 5px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-weight: 600;
   font-size: 0.88rem;
   text-decoration: none !important;
@@ -211,7 +211,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   background: var(--bb-green);
   border-color: var(--bb-green);
   transform: translateY(-1px);
-  box-shadow: 0 5px 16px rgba(45,95,63,0.25);
+  box-shadow: 0 5px 16px rgba(47,94,63,0.25);
   color: var(--bb-white) !important;
 }
 .bb-coming-soon-note {
@@ -230,7 +230,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   margin-bottom: 1.5rem;
 }
 .bb-why-paid h2 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-navy);
   font-size: 0.95rem;
   font-weight: 700;
@@ -253,7 +253,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   margin-bottom: 1.5rem;
 }
 .bb-roadmap h2 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-navy);
   font-size: 0.95rem;
   font-weight: 700;
@@ -318,7 +318,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   background: linear-gradient(90deg, #F5A623, #E67E22);
 }
 .bb-preview-eyebrow {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Spline Sans Mono', monospace;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -327,16 +327,16 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   margin: 0 0 0.4rem;
 }
 .bb-preview-card h2 {
-  font-family: 'Playfair Display', Georgia, serif;
-  color: #1A3A28;
+  font-family: 'Fraunces', Georgia, serif;
+  color: #1B3B27;
   font-size: 1.2rem;
   font-weight: 700;
   margin: 0 0 0.6rem;
   letter-spacing: -0.02em;
 }
 .bb-preview-card p {
-  font-family: 'Inter', sans-serif;
-  color: #475569;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #48584C;
   font-size: 0.87rem;
   line-height: 1.75;
   margin: 0 0 1.1rem;
@@ -362,14 +362,14 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 }
 .bb-preview-sample-info strong {
   display: block;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.9rem;
   font-weight: 600;
-  color: #1A3A28;
+  color: #1B3B27;
   margin-bottom: 0.15rem;
 }
 .bb-preview-sample-info span {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.78rem;
   color: var(--bb-gray);
 }
@@ -379,7 +379,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   color: var(--bb-white) !important;
   padding: 0.65rem 1.5rem;
   border-radius: 5px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-weight: 600;
   font-size: 0.85rem;
   text-decoration: none !important;
@@ -399,7 +399,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   border: 1px solid rgba(230,126,34,0.35);
   border-radius: 4px;
   padding: 0.2rem 0.65rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   color: #E67E22;
@@ -415,7 +415,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   margin: 1.25rem 0;
 }
 .bb-international-callout .bb-intl-header {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.82rem;
   font-weight: 700;
   color: var(--bb-green);
@@ -425,7 +425,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   gap: 0.4rem;
 }
 .bb-international-callout p {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.82rem;
   font-style: italic;
   color: var(--bb-text-secondary);

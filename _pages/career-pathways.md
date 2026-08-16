@@ -5,26 +5,26 @@ permalink: /career-pathways/
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
-body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
-h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap');
+body { font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
+h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
-  --bb-green: #2D5F3F;
-  --bb-green-accent: #3A7D5C;
-  --bb-green-bright: #4CAF50;
-  --bb-green-hover: #66BB6A;
-  --bb-green-dark: #1A3A28;
-  --bb-green-bg: #E8F5E9;
-  --bb-green-bg-subtle: #F1F8F4;
-  --bb-navy: #1A1A2E;
-  --bb-charcoal: #2C3E50;
-  --bb-white: #ffffff;
-  --bb-off-white: #FAFAFA;
-  --bb-text-secondary: #475569;
-  --bb-gray: #64748b;
-  --bb-border: #e2e8f0;
-  --bb-teal: #0E7490;
+  --bb-green: #2F5E3F;
+  --bb-green-accent: #A8501F;
+  --bb-green-bright: #A8501F;
+  --bb-green-hover: #2F5E3F;
+  --bb-green-dark: #1B3B27;
+  --bb-green-bg: #E4EBE2;
+  --bb-green-bg-subtle: #F1E9D8;
+  --bb-navy: #2A2118;
+  --bb-charcoal: #1E2A22;
+  --bb-white: #F7F1E6;
+  --bb-off-white: #F1E9D8;
+  --bb-text-secondary: #48584C;
+  --bb-gray: #6B6255;
+  --bb-border: #DDD3BE;
+  --bb-teal: #D9A441;
 }
 
 /* Page Header */
@@ -41,7 +41,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(45,95,63,0.15) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 80% 20%, rgba(47,94,63,0.15) 0%, transparent 60%);
   pointer-events: none;
 }
 .bb-page-hero h1 {
@@ -53,7 +53,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   position: relative;
 }
 .bb-page-hero p {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.88rem;
   color: rgba(255,255,255,0.8);
   margin: 0;
@@ -99,7 +99,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-carousel-btn:hover {
   border-color: var(--bb-green-accent);
   color: var(--bb-green-accent);
-  box-shadow: 0 4px 14px rgba(45,95,63,0.2);
+  box-shadow: 0 4px 14px rgba(47,94,63,0.2);
 }
 .bb-carousel-btn.prev { left: 0; }
 .bb-carousel-btn.next { right: 0; }
@@ -154,11 +154,11 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 }
 .bb-card-img-label {
   display: inline-block;
-  background: rgba(45,95,63,0.1);
-  border: 1px dashed rgba(45,95,63,0.3);
+  background: rgba(47,94,63,0.1);
+  border: 1px dashed rgba(47,94,63,0.3);
   border-radius: 4px;
   padding: 0.3rem 0.85rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Spline Sans Mono', monospace;
   font-size: 0.72rem;
   font-weight: 500;
   color: var(--bb-green);
@@ -172,7 +172,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   flex: 1;
 }
 .bb-card-body h2 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-navy);
   font-size: 1.05rem;
   font-weight: 700;
@@ -185,7 +185,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   margin-bottom: 0.75rem;
 }
 .bb-detail-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Spline Sans Mono', monospace;
   color: var(--bb-green);
   font-size: 0.67rem;
   text-transform: uppercase;
@@ -215,7 +215,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   border-top: 1px solid var(--bb-border);
 }
 .bb-companies-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Spline Sans Mono', monospace;
   color: var(--bb-gray);
   font-size: 0.67rem;
   text-transform: uppercase;
@@ -231,11 +231,11 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 /* Distinct teal accent for org badges — not the same muted green */
 .bb-logo-badge {
   display: inline-block;
-  background: rgba(14,116,144,0.1);
-  border: 1px solid rgba(14,116,144,0.25);
+  background: rgba(217,164,65,0.1);
+  border: 1px solid rgba(217,164,65,0.25);
   border-radius: 4px;
   padding: 0.25rem 0.65rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.73rem;
   font-weight: 600;
   color: var(--bb-teal);
@@ -269,7 +269,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   transform: scale(1.25);
 }
 .bb-carousel-counter {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.75rem;
   color: var(--bb-gray);
   font-weight: 500;
@@ -284,7 +284,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   margin-top: 0.5rem;
 }
 .bb-next-steps h2 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-navy);
   font-size: 0.9rem;
   font-weight: 700;
@@ -348,7 +348,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   background: var(--bb-border);
 }
 .bb-section-divider-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Spline Sans Mono', monospace;
   font-size: 0.67rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -368,7 +368,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   margin-bottom: 1.5rem;
 }
 .bb-internship-section h2 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   color: var(--bb-green);
   font-size: 1.25rem;
   font-weight: 700;
@@ -376,7 +376,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   letter-spacing: -0.02em;
 }
 .bb-internship-section .bb-section-intro {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-text-secondary);
   font-size: 0.88rem;
   line-height: 1.75;
@@ -401,7 +401,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   padding: 1rem 1.1rem;
 }
 .bb-internship-block h3 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.82rem;
   font-weight: 700;
   color: var(--bb-green);
@@ -410,7 +410,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   margin: 0 0 0.5rem;
 }
 .bb-internship-block p {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.84rem;
   color: var(--bb-text-secondary);
   line-height: 1.7;
@@ -435,11 +435,11 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 }
 .bb-program-badge {
   display: inline-block;
-  background: rgba(45,95,63,0.08);
-  border: 1px solid rgba(45,95,63,0.2);
+  background: rgba(47,94,63,0.08);
+  border: 1px solid rgba(47,94,63,0.2);
   border-radius: 4px;
   padding: 0.22rem 0.6rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.73rem;
   font-weight: 600;
   color: var(--bb-green);
@@ -456,7 +456,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   margin-bottom: 1.5rem;
 }
 .bb-future-section h2 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   color: var(--bb-green);
   font-size: 1.25rem;
   font-weight: 700;
@@ -464,7 +464,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   letter-spacing: -0.02em;
 }
 .bb-future-section .bb-section-intro {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-text-secondary);
   font-size: 0.88rem;
   line-height: 1.75;
@@ -487,14 +487,14 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   padding: 1.1rem 1.25rem;
 }
 .bb-future-card h3 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.88rem;
   font-weight: 700;
   color: var(--bb-navy);
   margin: 0 0 0.6rem;
 }
 .bb-future-card p {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.84rem;
   color: var(--bb-text-secondary);
   line-height: 1.75;
@@ -513,7 +513,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   margin: 1.5rem 0;
 }
 .bb-international-callout .bb-intl-header {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.82rem;
   font-weight: 700;
   color: var(--bb-green);
@@ -523,7 +523,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   gap: 0.4rem;
 }
 .bb-international-callout p {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.82rem;
   font-style: italic;
   color: var(--bb-text-secondary);
@@ -542,7 +542,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 }
 .bb-program-category summary {
   padding: 0.45rem 0.75rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
   color: var(--bb-green);
@@ -550,7 +550,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   list-style: none;
   display: flex;
   align-items: center;
-  background: rgba(45,95,63,0.04);
+  background: rgba(47,94,63,0.04);
   user-select: none;
 }
 .bb-program-category summary::-webkit-details-marker { display: none; }
@@ -576,7 +576,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 .bb-flip-card:hover {
-  box-shadow: 0 4px 18px rgba(45,95,63,0.15);
+  box-shadow: 0 4px 18px rgba(47,94,63,0.15);
   transform: translateY(-2px);
 }
 .bb-flip-icon {
@@ -623,12 +623,12 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-flip-back-link {
   display: inline-block;
   font-size: 0.73rem;
-  color: #66BB6A;
+  color: #D9A441;
   font-weight: 600;
   text-decoration: none;
-  border-bottom: 1px solid rgba(76,175,80,0.4);
+  border-bottom: 1px solid rgba(168,80,31,0.4);
 }
-.bb-flip-back-link:hover { color: #81C784; }
+.bb-flip-back-link:hover { color: #E08052; }
 .bb-flip-close {
   display: block;
   font-size: 0.71rem;
@@ -1099,7 +1099,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   <h2>Where Biotech Is Heading</h2>
   <p class="bb-section-intro">The biotech industry is changing faster than most career guides acknowledge. These five areas are shaping where the jobs, funding, and scientific energy are flowing in the next decade—and what that means for you.</p>
 
-  <p style="font-size:0.78rem; color:var(--bb-gray); margin: -0.75rem 0 1.25rem; font-family:'Inter',sans-serif;">Click any card to expand the full picture.</p>
+  <p style="font-size:0.78rem; color:var(--bb-gray); margin: -0.75rem 0 1.25rem; font-family:'Instrument Sans',sans-serif;">Click any card to expand the full picture.</p>
 
   <div class="bb-future-grid">
 
