@@ -277,7 +277,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </button>
     <div class="bb-accordion-panel">
       <div class="bb-accordion-body">
-        <p>Entry-level salaries in lab or operations roles typically start around $50–60k, but with a few years of experience can reach $90–100k+. Data, computational, and engineering roles in hubs like Boston or the Bay Area often pay more. The industry goes through cycles. Layoffs happen, especially at smaller biotechs after funding rounds, but core functions like manufacturing, quality control, and regulatory affairs have historically remained more stable.</p>
+        <p>Entry-level salaries in lab or operations roles typically start around $50k to $60k, but with a few years of experience can reach $90k to $100k+. Data, computational, and engineering roles in hubs like Boston or the Bay Area often pay more. The industry goes through cycles. Layoffs happen, especially at smaller biotechs after funding rounds, but core functions like manufacturing, quality control, and regulatory affairs have historically remained more stable.</p>
         <p>Overall it's a growing field, and it rewards people who keep building expertise over time.</p>
       </div>
     </div>

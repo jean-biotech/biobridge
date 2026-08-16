@@ -480,7 +480,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     <div class="bb-preview-sample-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--bb-green-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
     <div class="bb-preview-sample-info">
       <strong>Free Sample: The Cold Email Template</strong>
-      <span>The exact email framework that got responses from senior people at major biotech and pharma companies—annotated line by line.</span>
+      <span>The exact email framework that got responses from senior people at major biotech and pharma companies, annotated line by line.</span>
     </div>
     <a href="/free-preview" class="bb-preview-btn">Get Free Preview &rarr;</a>
   </div>
@@ -534,7 +534,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 <!-- International callout — resume/CV context -->
 <div class="bb-international-callout">
   <div class="bb-intl-header"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;flex-shrink:0"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> Outside the US?</div>
-  <p>Canada, the UK, and Australia typically use CVs (curriculum vitae) rather than resumes, and formatting expectations differ—CVs are often longer, include more detail on academic history, and may include a personal statement. The resume materials in the Biotech Blueprint are formatted for US applications. The frameworks and principles apply internationally, but you may want to adapt the formatting to match local conventions in your country.</p>
+  <p>Canada, the UK, and Australia typically use CVs (curriculum vitae) rather than resumes, and formatting expectations differ: CVs are often longer, include more detail on academic history, and may include a personal statement. The resume materials in the Biotech Blueprint are formatted for US applications. The frameworks and principles apply internationally, but you may want to adapt the formatting to match local conventions in your country.</p>
 </div>
 
 <!-- COMING SOON -->
@@ -546,7 +546,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   </div>
   <div class="bb-roadmap-item">
     <div class="bb-roadmap-dot"></div>
-    <p><strong>BioBridge High School Program Initiative at Thomas Jefferson University:</strong> A structured educational program bringing biotech literacy directly into high school classrooms—modeled after initiatives like First Generation Investors, with the goal of giving students hands-on exposure to the industry before college.</p>
+    <p><strong>BioBridge High School Program Initiative at Thomas Jefferson University:</strong> A structured educational program bringing biotech literacy directly into high school classrooms, modeled after initiatives like First Generation Investors, with the goal of giving students hands-on exposure to the industry before college.</p>
   </div>
 </div>
 

@@ -722,7 +722,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
     Free Tool &middot; Powered by Claude
   </div>
   <h1>AI Application Reviewer</h1>
-  <p>Paste a biotech job description and your resume—Claude analyzes the match, surfaces your gaps, and tells you exactly how to strengthen your application before you submit.</p>
+  <p>Paste a biotech job description and your resume: Claude analyzes the match, surfaces your gaps, and tells you exactly how to strengthen your application before you submit.</p>
 </div>
 
 <div class="bb-steps">
@@ -737,7 +737,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
     <div class="bb-step-num">2</div>
     <div class="bb-step-text">
       <strong>Paste your resume</strong>
-      <span>Plain text works best—copy directly from your Word doc or PDF.</span>
+      <span>Plain text works best. Copy directly from your Word doc or PDF.</span>
     </div>
   </div>
   <div class="bb-step">
@@ -770,7 +770,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 
           <div class="bb-form-group">
             <label class="bb-field-label" for="bb-jd">Job Description</label>
-            <p class="bb-field-hint">Paste the full posting—include the requirements section and any preferred qualifications.</p>
+            <p class="bb-field-hint">Paste the full posting. Include the requirements section and any preferred qualifications.</p>
             <textarea
               id="bb-jd"
               class="bb-textarea"
@@ -818,7 +818,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
           </button>
           <span class="bb-btn-note">
             <span class="bb-btn-note-dot"></span>
-            Takes about 15–20 seconds &middot; Your text is not stored
+            Takes about 15 to 20 seconds &middot; Your text is not stored
           </span>
         </div>
 
@@ -1061,9 +1061,9 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     var co    = data.company   || null;
     var url   = 'biotechbridge.org/application-reviewer/';
     var base  = 'I got a ' + score + '/100 ' + label;
-    if (title && co) return base + ' for ' + title + ' at ' + co + '\u2014analyzed by BioBridge \u00b7 ' + url;
-    if (title)       return base + ' for ' + title + '\u2014analyzed by BioBridge \u00b7 ' + url;
-    return base + '\u2014analyzed by BioBridge \u00b7 ' + url;
+    if (title && co) return base + ' for ' + title + ' at ' + co + '. Analyzed by BioBridge \u00b7 ' + url;
+    if (title)       return base + ' for ' + title + '. Analyzed by BioBridge \u00b7 ' + url;
+    return base + '. Analyzed by BioBridge \u00b7 ' + url;
   }
 
   var CLIPBOARD_ICON = shareBtn.innerHTML;
@@ -1109,8 +1109,8 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     }
     if (!jd)     { jdEl.classList.add('bb-field-error');     showValidation('Please paste the job description.'); return; }
     if (!resume)  { resumeEl.classList.add('bb-field-error'); showValidation('Please paste your resume text.');    return; }
-    if (jd.length < 100)     { jdEl.classList.add('bb-field-error');     showValidation('The job description looks too short\u2014paste the full posting for accurate results.'); return; }
-    if (resume.length < 100) { resumeEl.classList.add('bb-field-error'); showValidation('The resume text looks too short\u2014paste your full resume for accurate results.');    return; }
+    if (jd.length < 100)     { jdEl.classList.add('bb-field-error');     showValidation('The job description looks too short. Paste the full posting for accurate results.'); return; }
+    if (resume.length < 100) { resumeEl.classList.add('bb-field-error'); showValidation('The resume text looks too short. Paste your full resume for accurate results.');    return; }
 
     hideValidation();
     showState('loading');

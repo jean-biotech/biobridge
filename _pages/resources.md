@@ -346,7 +346,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://hiddenbrain.org/" target="_blank">Hidden Brain</a></h3>
-        <p>Explores the unconscious patterns that drive human behavior — including how scientists think, make decisions, and navigate uncertainty. Surprisingly relevant for anyone in research.</p>
+        <p>Explores the unconscious patterns that drive human behavior, including how scientists think, make decisions, and navigate uncertainty. Surprisingly relevant for anyone in research.</p>
       </div>
     </div>
     <div class="bb-resource-card">
@@ -381,7 +381,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
         <img src="/assets/images/logo-pipeline.png" alt="In the Pipeline logo" width="44" height="44">
       </div>
       <div class="bb-resource-info">
-        <h3><a href="https://www.science.org/blogs/pipeline" target="_blank">In the Pipeline — Derek Lowe</a></h3>
+        <h3><a href="https://www.science.org/blogs/pipeline" target="_blank">In the Pipeline (Derek Lowe)</a></h3>
         <p>A medicinal chemist's honest take on drug discovery, lab failures, and what actually happens inside pharma.</p>
       </div>
     </div>
@@ -409,7 +409,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://fortune.com/2023/03/31/ai-cure-cancer-chatgpt-drug-discovery/" target="_blank">Fortune: "Will AI Cure Cancer?"</a></h3>
-        <p>A fascinating look at how artificial intelligence is transforming drug discovery and cancer research — a perfect window into where biotech is heading and why it matters beyond the lab.</p>
+        <p>A fascinating look at how artificial intelligence is transforming drug discovery and cancer research, a perfect window into where biotech is heading and why it matters beyond the lab.</p>
       </div>
     </div>
     <div class="bb-resource-card">
@@ -427,7 +427,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.wired.com/story/wired-guide-to-crispr/" target="_blank">The WIRED Guide to CRISPR</a></h3>
-        <p>WIRED's definitive guide to CRISPR gene editing — how it works, where it came from, and what it means for the future of medicine, agriculture, and life itself.</p>
+        <p>WIRED's definitive guide to CRISPR gene editing: how it works, where it came from, and what it means for the future of medicine, agriculture, and life itself.</p>
       </div>
     </div>
   </div>
@@ -481,7 +481,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.youtube.com/watch?v=naqbi_qVoVY" target="_blank">The Birth of Biotech | Recombinant DNA, Genentech, and Insulin Analogs</a></h3>
-        <p>The origin story of the modern biotech industry — how recombinant DNA technology and Genentech changed medicine forever. Essential history for any biotech student.</p>
+        <p>The origin story of the modern biotech industry: how recombinant DNA technology and Genentech changed medicine forever. Essential history for any biotech student.</p>
       </div>
     </div>
     <div class="bb-resource-card">
@@ -489,7 +489,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
         <img src="/assets/images/jared-friedman-video.png" alt="Jared Friedman video thumbnail" width="44" height="44">
       </div>
       <div class="bb-resource-info">
-        <h3><a href="https://www.youtube.com/watch?v=C1DlZWfI6rk" target="_blank">Jared Friedman — Advice for Hard-tech and Biotech Founders</a></h3>
+        <h3><a href="https://www.youtube.com/watch?v=C1DlZWfI6rk" target="_blank">Jared Friedman: Advice for Hard-tech and Biotech Founders</a></h3>
         <p>YC partner Jared Friedman shares honest advice for anyone building a hard-tech or biotech company. Great perspective on the startup side of the industry.</p>
       </div>
     </div>
@@ -501,7 +501,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   <div class="bb-section-head">
     <h2>Online Courses (Free)</h2>
   </div>
-  <p style="font-family: 'Instrument Sans', sans-serif; font-size: 0.85rem; color: var(--bb-text-secondary); margin-top: -0.5rem; margin-bottom: 1rem;">From lab fundamentals to data science, regulatory affairs, and industry business skills — all free.</p>
+  <p style="font-family: 'Instrument Sans', sans-serif; font-size: 0.85rem; color: var(--bb-text-secondary); margin-top: -0.5rem; margin-bottom: 1rem;">From lab fundamentals to data science, regulatory affairs, and industry business skills. All free.</p>
   <div class="bb-resource-grid">
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">

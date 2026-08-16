@@ -542,7 +542,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 <!-- Regulatory context callout -->
 <div class="bb-international-callout">
   <div class="bb-intl-header">🌍 Outside the US?</div>
-  <p>Regulatory terminology varies by country. FDA = United States Food and Drug Administration. EMA = European Medicines Agency (EU). Health Canada oversees drug approvals in Canada. PMDA (Pharmaceuticals and Medical Devices Agency) regulates in Japan. When you see terms like "IND filing" or "NDA" below, those are US-specific — equivalent processes exist in other jurisdictions under different names and timelines.</p>
+  <p>Regulatory terminology varies by country. FDA = United States Food and Drug Administration. EMA = European Medicines Agency (EU). Health Canada oversees drug approvals in Canada. PMDA (Pharmaceuticals and Medical Devices Agency) regulates in Japan. When you see terms like "IND filing" or "NDA" below, those are US-specific. Equivalent processes exist in other jurisdictions under different names and timelines.</p>
 </div>
 
 <script>

@@ -894,7 +894,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
           <h2>Bioinformatics &amp; Computational Biology</h2>
           <div class="bb-detail">
             <div class="bb-detail-label">What it is</div>
-            <p class="bb-detail-value">Using coding, statistics, and algorithms to analyze biological data—genomics, proteomics, drug discovery, and more.</p>
+            <p class="bb-detail-value">Using coding, statistics, and algorithms to analyze biological data: genomics, proteomics, drug discovery, and more.</p>
           </div>
           <div class="bb-detail">
             <div class="bb-detail-label">Where you'll work</div>
@@ -962,13 +962,13 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 <!-- FINDING YOUR FIRST INTERNSHIP -->
 <div class="bb-internship-section">
   <h2>Finding Your First Internship</h2>
-  <p class="bb-section-intro">Your first biotech internship doesn't need to be at Pfizer. It needs to get you in the room. Here's a practical guide to navigating the process—from well-known formal programs to cold outreach to academic labs.</p>
+  <p class="bb-section-intro">Your first biotech internship doesn't need to be at Pfizer. It needs to get you in the room. Here's a practical guide to navigating the process, from well-known formal programs to cold outreach to academic labs.</p>
 
   <div class="bb-internship-grid">
 
     <div class="bb-internship-block">
       <h3>Well-Known Programs to Apply To</h3>
-      <p>These are competitive but well worth applying—they're structured, paid, and recognized by hiring managers. Browse by sector:</p>
+      <p>These are competitive but well worth applying. They're structured, paid, and recognized by hiring managers. Browse by sector:</p>
 
       <details class="bb-program-category">
         <summary>🔬 Research, Pharma &amp; Biotech</summary>
@@ -1027,17 +1027,17 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
         </div>
       </details>
 
-      <p style="margin-top:0.65rem;">Check each company's careers page directly—most open applications between October and February for summer positions.</p>
+      <p style="margin-top:0.65rem;">Check each company's careers page directly. Most open applications between October and February for summer positions.</p>
     </div>
 
     <div class="bb-internship-block">
       <h3>Application Timeline</h3>
       <ul>
-        <li><strong>August–October (fall):</strong> Start researching programs. Update your resume. Identify 15–20 target programs and companies.</li>
-        <li><strong>October–December:</strong> Major pharma/biotech applications open. Apply early—most use rolling review.</li>
-        <li><strong>January–February:</strong> Academic lab programs (REU, NIH SIP) open, and startup internship postings spike on LinkedIn. This is also when you should start hearing back from fall applications to major pharma programs—responses typically take 8–12 weeks, so don't panic if your inbox is still quiet.</li>
-        <li><strong>March–April:</strong> Follow-up and interviews. Smaller companies often post well into spring.</li>
-        <li><strong>May–June:</strong> Last-minute opportunities—keep checking even if you haven't heard back from early applications.</li>
+        <li><strong>August to October (fall):</strong> Start researching programs. Update your resume. Identify 15 to 20 target programs and companies.</li>
+        <li><strong>October to December:</strong> Major pharma/biotech applications open. Apply early. Most use rolling review.</li>
+        <li><strong>January to February:</strong> Academic lab programs (REU, NIH SIP) open, and startup internship postings spike on LinkedIn. This is also when you should start hearing back from fall applications to major pharma programs: responses typically take 8 to 12 weeks, so don't panic if your inbox is still quiet.</li>
+        <li><strong>March to April:</strong> Follow-up and interviews. Smaller companies often post well into spring.</li>
+        <li><strong>May to June:</strong> Last-minute opportunities. Keep checking even if you haven't heard back from early applications.</li>
       </ul>
     </div>
 
@@ -1046,11 +1046,11 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
       <ul>
         <li><strong>Resume:</strong> 1 page, reverse chronological, tailored to each role. Lead with relevant coursework and skills if you don't yet have experience.</li>
         <li><strong>Cover letter:</strong> Short (3 paragraphs). Why this company, why this role, what you bring. Skip generic openers.</li>
-        <li><strong>Research statement (for academic labs):</strong> 1–2 paragraphs on your interests and what you hope to learn.</li>
-        <li><strong>References:</strong> Have 2–3 professors or supervisors ready. Ask them in advance.</li>
+        <li><strong>Research statement (for academic labs):</strong> 1 to 2 paragraphs on your interests and what you hope to learn.</li>
+        <li><strong>References:</strong> Have 2 to 3 professors or supervisors ready. Ask them in advance.</li>
         <li><strong>Writing sample (if requested):</strong> A lab report, class paper, or anything that demonstrates your ability to communicate science clearly.</li>
       </ul>
-      <p style="margin-top:0.75rem; font-size:0.82rem; color:var(--bb-text-secondary); font-style:italic;">Want real examples? <a href="/products/" style="font-style:normal; color:var(--bb-green-accent); font-weight:600;">The Biotech Blueprint</a> includes annotated resume samples, cover letter templates, and cold email scripts built specifically for biotech applications—if you want to see what a strong application actually looks like, start there.</p>
+      <p style="margin-top:0.75rem; font-size:0.82rem; color:var(--bb-text-secondary); font-style:italic;">Want real examples? <a href="/products/" style="font-style:normal; color:var(--bb-green-accent); font-weight:600;">The Biotech Blueprint</a> includes annotated resume samples, cover letter templates, and cold email scripts built specifically for biotech applications. If you want to see what a strong application actually looks like, start there.</p>
     </div>
 
     <div class="bb-internship-block">
@@ -1058,7 +1058,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
       <ul>
         <li><strong>LinkedIn:</strong> Filter by "Internship" and "Biotech" or "Pharmaceutical." Set alerts for new postings.</li>
         <li><strong>Handshake:</strong> Best for university-specific postings, especially for smaller regional biotech companies that recruit campus-to-campus.</li>
-        <li><strong>Company career pages:</strong> Always check directly—many roles aren't posted on aggregators. Bookmark 10–15 companies you'd want to work for.</li>
+        <li><strong>Company career pages:</strong> Always check directly. Many roles aren't posted on aggregators. Bookmark 10 to 15 companies you'd want to work for.</li>
         <li><strong>University career center:</strong> Often has exclusive postings from alumni-affiliated companies. Ask about biotech-specific fairs.</li>
         <li><strong>Cold outreach:</strong> Email professors with funded labs. A well-written cold email to a principal investigator can get you into a research lab even without a formal posting.</li>
       </ul>
@@ -1068,7 +1068,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
       <h3>What to Expect: Pharma vs. Startup vs. Gov/Academic</h3>
       <ul>
         <li><strong>Big Pharma (Pfizer, Merck, J&J):</strong> Structured programs, assigned mentors, formal presentations, intern cohort events. Slower-paced, process-heavy. Good for learning how large organizations operate and building a network.</li>
-        <li><strong>Biotech Startup:</strong> Less structure, broader responsibilities, often more hands-on from day one. You may be the only intern. Fast-paced and unpredictable—you'll learn a lot, but you'll need to drive your own experience.</li>
+        <li><strong>Biotech Startup:</strong> Less structure, broader responsibilities, often more hands-on from day one. You may be the only intern. Fast-paced and unpredictable: you'll learn a lot, but you'll need to drive your own experience.</li>
         <li><strong>Government/Academic Lab (NIH, university labs, REU):</strong> Research-focused, usually stipend-based. Excellent for students considering graduate school. Slower publication cycles but deep scientific exposure. Independent project work is common.</li>
       </ul>
     </div>
@@ -1077,9 +1077,9 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
       <h3>Quick Tips That Actually Help</h3>
       <ul>
         <li>Apply broadly early, then narrow your focus in February. Don't wait for your "dream" company to post before applying anywhere.</li>
-        <li>Tailor your resume keywords to match each job posting—many companies use ATS screening before a human sees your application.</li>
+        <li>Tailor your resume keywords to match each job posting. Many companies use ATS screening before a human sees your application.</li>
         <li>A warm introduction beats a cold application every time. LinkedIn alumni tools and professor connections are underutilized by most students.</li>
-        <li>Don't overlook smaller CROs, CDMOs, and regional biotech companies—they often offer more hands-on work than large programs.</li>
+        <li>Don't overlook smaller CROs, CDMOs, and regional biotech companies. They often offer more hands-on work than large programs.</li>
       </ul>
     </div>
 
@@ -1097,7 +1097,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 <!-- WHERE BIOTECH IS HEADING -->
 <div class="bb-future-section">
   <h2>Where Biotech Is Heading</h2>
-  <p class="bb-section-intro">The biotech industry is changing faster than most career guides acknowledge. These five areas are shaping where the jobs, funding, and scientific energy are flowing in the next decade—and what that means for you.</p>
+  <p class="bb-section-intro">The biotech industry is changing faster than most career guides acknowledge. These five areas are shaping where the jobs, funding, and scientific energy are flowing in the next decade, and what that means for you.</p>
 
   <p style="font-size:0.78rem; color:var(--bb-gray); margin: -0.75rem 0 1.25rem; font-family:'Instrument Sans',sans-serif;">Click any card to expand the full picture.</p>
 
@@ -1107,12 +1107,12 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
       <div class="bb-flip-front">
         <span class="bb-flip-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--bb-green-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></span>
         <h3>AI &amp; Drug Discovery</h3>
-        <p class="bb-flip-teaser">AlphaFold changed what computational biology teams can do in months. New career paths are emerging fast at the ML–biology intersection.</p>
+        <p class="bb-flip-teaser">AlphaFold changed what computational biology teams can do in months. New career paths are emerging fast at the intersection of ML and biology.</p>
         <span class="bb-flip-hint">Click to explore →</span>
       </div>
       <div class="bb-flip-back">
         <h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg> AI &amp; Drug Discovery</h3>
-        <p>AlphaFold's protein structure predictions changed what computational biology teams can accomplish in months rather than years. AI-assisted clinical trial design is reducing the time it takes to identify patient cohorts and predict drug responses. New roles are emerging at the intersection of machine learning and wet lab science—computational biologists, AI research scientists, and data engineers focused on genomics pipelines are among the fastest-growing positions in pharma and early-stage biotech. You don't need to be a programmer to contribute: biology domain expertise is increasingly what distinguishes useful AI tools from ones that fail in practice.</p>
+        <p>AlphaFold's protein structure predictions changed what computational biology teams can accomplish in months rather than years. AI-assisted clinical trial design is reducing the time it takes to identify patient cohorts and predict drug responses. New roles are emerging at the intersection of machine learning and wet lab science: computational biologists, AI research scientists, and data engineers focused on genomics pipelines are among the fastest-growing positions in pharma and early-stage biotech. You don't need to be a programmer to contribute: biology domain expertise is increasingly what distinguishes useful AI tools from ones that fail in practice.</p>
         <a href="https://www.statnews.com" class="bb-flip-back-link" target="_blank" rel="noopener">Explore on STAT News →</a>
         <span class="bb-flip-close">← Click to flip back</span>
       </div>
@@ -1127,7 +1127,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
       </div>
       <div class="bb-flip-back">
         <h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2"/><path d="M6.453 15h11.094"/><path d="M8.5 2h7"/></svg> Synthetic Biology</h3>
-        <p>Companies like Ginkgo Bioworks have built platform-level infrastructure for engineering organisms to produce everything from fragrances to industrial chemicals to therapeutic proteins. Biomanufacturing—using engineered microbes and cell lines to produce products that previously required petroleum chemistry or animal agriculture—is attracting significant investment. Roles range from metabolic engineering and strain development to process scale-up and fermentation operations. Synthetic biology also intersects with food, materials, and agriculture, making it one of the broader application areas for biology training outside traditional pharma.</p>
+        <p>Companies like Ginkgo Bioworks have built platform-level infrastructure for engineering organisms to produce everything from fragrances to industrial chemicals to therapeutic proteins. Biomanufacturing (using engineered microbes and cell lines to produce products that previously required petroleum chemistry or animal agriculture) is attracting significant investment. Roles range from metabolic engineering and strain development to process scale-up and fermentation operations. Synthetic biology also intersects with food, materials, and agriculture, making it one of the broader application areas for biology training outside traditional pharma.</p>
         <a href="https://www.nature.com" class="bb-flip-back-link" target="_blank" rel="noopener">Read on Nature →</a>
         <span class="bb-flip-close">← Click to flip back</span>
       </div>
@@ -1142,7 +1142,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
       </div>
       <div class="bb-flip-back">
         <h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg> Longevity &amp; Aging Biotech</h3>
-        <p>Venture capital interest in longevity science has grown substantially, with firms like Calico (backed by Alphabet) and Unity Biotechnology pursuing interventions targeting the biology of aging itself rather than individual diseases. The field remains scientifically early-stage, but it's generating roles in translational research, clinical development, and biomarker science. For students interested in this space, a strong foundation in cell biology, metabolism, or genetics—combined with an understanding of the long and uncertain clinical timelines involved—puts you ahead of most applicants entering this niche.</p>
+        <p>Venture capital interest in longevity science has grown substantially, with firms like Calico (backed by Alphabet) and Unity Biotechnology pursuing interventions targeting the biology of aging itself rather than individual diseases. The field remains scientifically early-stage, but it's generating roles in translational research, clinical development, and biomarker science. For students interested in this space, a strong foundation in cell biology, metabolism, or genetics (combined with an understanding of the long and uncertain clinical timelines involved) puts you ahead of most applicants entering this niche.</p>
         <a href="https://www.nia.nih.gov" class="bb-flip-back-link" target="_blank" rel="noopener">Explore at NIA (NIH) →</a>
         <span class="bb-flip-close">← Click to flip back</span>
       </div>
@@ -1157,7 +1157,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
       </div>
       <div class="bb-flip-back">
         <h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="m10 16 1.5 1.5"/><path d="m14 8-1.5-1.5"/><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"/><path d="m16.5 10.5 1 1"/><path d="m17 6-2.891-2.891"/><path d="M2 15c6.667-6 13.333 0 20-6"/><path d="m20 9 .891.891"/><path d="M3.109 14.109 4 15"/><path d="m6.5 12.5 1 1"/><path d="m7 18 2.891 2.891"/><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"/></svg> Personalized Medicine &amp; Diagnostics</h3>
-        <p>Genomic sequencing costs have dropped dramatically, making population-scale genomics programs feasible. Companion diagnostics—tests that determine whether a patient will respond to a specific therapy—are now required for many oncology drug approvals. Liquid biopsy, which detects cancer-related DNA fragments in blood rather than tissue, is reshaping early detection. Roles in this space include clinical genomics scientists, bioinformatics analysts, regulatory affairs specialists focused on IVD (in vitro diagnostics), and commercial teams that work with oncologists and hospital systems to implement these tools in clinical practice.</p>
+        <p>Genomic sequencing costs have dropped dramatically, making population-scale genomics programs feasible. Companion diagnostics (tests that determine whether a patient will respond to a specific therapy) are now required for many oncology drug approvals. Liquid biopsy, which detects cancer-related DNA fragments in blood rather than tissue, is reshaping early detection. Roles in this space include clinical genomics scientists, bioinformatics analysts, regulatory affairs specialists focused on IVD (in vitro diagnostics), and commercial teams that work with oncologists and hospital systems to implement these tools in clinical practice.</p>
         <a href="https://www.genome.gov" class="bb-flip-back-link" target="_blank" rel="noopener">Explore at genome.gov →</a>
         <span class="bb-flip-close">← Click to flip back</span>
       </div>
@@ -1167,12 +1167,12 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
       <div class="bb-flip-front">
         <span class="bb-flip-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--bb-green-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2v17.5c0 1.4-1.1 2.5-2.5 2.5c-1.4 0-2.5-1.1-2.5-2.5V2"/><path d="M8.5 2h7"/><path d="M14.5 16h-5"/></svg></span>
         <h3>How AI Is Changing (Not Eliminating) Wet Lab Roles</h3>
-        <p class="bb-flip-teaser">The most common student concern—addressed directly. AI accelerates hypothesis generation; it doesn't pipette, troubleshoot assays, or navigate biological unpredictability.</p>
+        <p class="bb-flip-teaser">The most common student concern, addressed directly: AI accelerates hypothesis generation; it doesn't pipette, troubleshoot assays, or navigate biological unpredictability.</p>
         <span class="bb-flip-hint">Click to explore →</span>
       </div>
       <div class="bb-flip-back">
         <h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M14.5 2v17.5c0 1.4-1.1 2.5-2.5 2.5c-1.4 0-2.5-1.1-2.5-2.5V2"/><path d="M8.5 2h7"/><path d="M14.5 16h-5"/></svg> How AI Is Changing (Not Eliminating) Wet Lab Roles</h3>
-        <p>A common concern among students is that AI will automate laboratory work and reduce the need for bench scientists. This misreads what AI actually does in a biotech context. AI accelerates hypothesis generation and data interpretation—it does not yet pipette, culture cells, troubleshoot failed assays, or navigate the physical unpredictability of biological systems. What is changing: scientists spend less time on routine data analysis and more time on experimental design, interpretation, and cross-functional communication. The human skills that remain essential are precisely the ones that are hardest to automate: deep domain intuition, the ability to recognize when something unexpected in your data is noise versus signal, and the judgment to know when to abandon a hypothesis and why. If anything, the growing role of AI in biotech increases the premium on scientists who can both run experiments and engage meaningfully with computational outputs—a combination that is currently rare and therefore valuable.</p>
+        <p>A common concern among students is that AI will automate laboratory work and reduce the need for bench scientists. This misreads what AI actually does in a biotech context. AI accelerates hypothesis generation and data interpretation; it does not yet pipette, culture cells, troubleshoot failed assays, or navigate the physical unpredictability of biological systems. What is changing: scientists spend less time on routine data analysis and more time on experimental design, interpretation, and cross-functional communication. The human skills that remain essential are precisely the ones that are hardest to automate: deep domain intuition, the ability to recognize when something unexpected in your data is noise versus signal, and the judgment to know when to abandon a hypothesis and why. If anything, the growing role of AI in biotech increases the premium on scientists who can both run experiments and engage meaningfully with computational outputs, a combination that is currently rare and therefore valuable.</p>
         <a href="https://www.nature.com" class="bb-flip-back-link" target="_blank" rel="noopener">Read on Nature →</a>
         <span class="bb-flip-close">← Click to flip back</span>
       </div>
