@@ -480,7 +480,10 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     <p>That's why biotech needs business people, engineers, lawyers, writers, and project managers just as much as it needs scientists.</p>
   </div>
   <div>
-    <img src="/assets/images/team-illustration.jpg?v=2" alt="Cross-functional team behind a biotech breakthrough" class="bb-beyond-img">
+    <div class="bb-photo-frame bb-photo-frame--tilt-left">
+      <img src="/assets/images/team-illustration.jpg?v=2" alt="Cross-functional team behind a biotech breakthrough">
+    </div>
+    <span class="bb-photo-frame__caption">not a single lab coat in sight</span>
   </div>
 </div>
 

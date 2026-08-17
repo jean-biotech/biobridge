@@ -909,9 +909,10 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   </ul>
 </div>
 
-<!-- International callout: career structure note -->
-<div class="bb-international-callout">
-  <div class="bb-intl-header">Outside the US?</div>
+<!-- International callout: styled like a card pulled from a file,
+     the one sticky-note/index-card moment on this page -->
+<div class="bb-index-card">
+  <span class="eyebrow">Outside the US?</span>
   <p>The biotech industry structure differs internationally. Europe and Asia have more publicly funded research conducted through universities and government institutes, with fewer venture-backed startups than you'd find in Boston or the Bay Area. In the UK, Germany, and the Netherlands, many biotech roles are embedded within academic medical centers or government research councils. If you're outside the US, look for roles with national research institutes (e.g., the Wellcome Sanger Institute, EMBL, or RIKEN in Japan) alongside commercial opportunities.</p>
 </div>
 
