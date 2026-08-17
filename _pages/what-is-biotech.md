@@ -34,6 +34,49 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   margin: -1rem 0 1.5rem;
 }
 
+/* Contents list as large graphic numerals with a handwritten note
+   beside each one, not the small-numeral hairline row used elsewhere. */
+.bb-contents-notes {
+  list-style: none;
+  margin: 0 0 2.5rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+.bb-contents-notes li {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: 0.9rem;
+  row-gap: 0.1rem;
+}
+.bb-contents-notes__num {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 2.6rem;
+  font-weight: 500;
+  color: var(--bb-green-accent);
+  line-height: 1;
+  min-width: 2.4rem;
+}
+.bb-contents-notes a {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--bb-navy);
+}
+.bb-contents-notes__hint {
+  font-family: var(--font-hand, cursive);
+  font-size: 1.2rem;
+  color: var(--bb-gray);
+  display: inline-block;
+  transform: rotate(-1deg);
+  margin-left: 0.15rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  .bb-contents-notes__hint { transform: none; }
+}
+
 /* Section intro text */
 .bb-intro-text {
   font-family: 'Instrument Sans', sans-serif;
@@ -298,11 +341,23 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   <p class="bb-page-header__deck">Understanding the science shaping our future, in plain language, no prerequisites required.</p>
 </header>
 
-<ol class="bb-contents">
-  <li><span class="bb-contents__num">01</span><a href="#real-world-examples">Real-World Examples</a></li>
-  <li><span class="bb-contents__num">02</span><a href="#beyond-the-science">Beyond the Science</a></li>
-  <li><span class="bb-contents__num">03</span><a href="#common-misconceptions">Common Misconceptions</a></li>
-</ol>
+<ul class="bb-contents-notes">
+  <li>
+    <span class="bb-contents-notes__num">01</span>
+    <a href="#real-world-examples">Real-World Examples</a>
+    <span class="bb-contents-notes__hint">skip to the good stuff</span>
+  </li>
+  <li>
+    <span class="bb-contents-notes__num">02</span>
+    <a href="#beyond-the-science">Beyond the Science</a>
+    <span class="bb-contents-notes__hint">more than lab coats, promise</span>
+  </li>
+  <li>
+    <span class="bb-contents-notes__num">03</span>
+    <a href="#common-misconceptions">Common Misconceptions</a>
+    <span class="bb-contents-notes__hint">read this if you're unsure you belong</span>
+  </li>
+</ul>
 
 <p class="bb-intro-text">Biotechnology is using living systems (cells, bacteria, proteins, DNA) to create useful products or solve real problems.</p>
 
@@ -425,7 +480,10 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     <p>That's why biotech needs business people, engineers, lawyers, writers, and project managers just as much as it needs scientists.</p>
   </div>
   <div>
-    <img src="/assets/images/team-illustration.jpg?v=2" alt="Cross-functional team behind a biotech breakthrough" class="bb-beyond-img">
+    <div class="bb-photo-frame bb-photo-frame--tilt-left">
+      <img src="/assets/images/team-illustration.jpg?v=2" alt="Cross-functional team behind a biotech breakthrough">
+    </div>
+    <span class="bb-photo-frame__caption">not a single lab coat in sight</span>
   </div>
 </div>
 
