@@ -25,20 +25,32 @@ classes: wide
 .hp .eyebrow { margin-bottom: 0.6rem; display: inline-block; }
 .hp h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin: 0; }
 
-/* ---------------- Hero ---------------- */
+/* The one big typographic quote moment on the page: larger scale,
+   slightly rotated, standing on its own like a clipped excerpt. */
+.pull-quote--feature {
+  font-size: clamp(1.9rem, 4.4vw, 2.9rem);
+  max-width: 34rem;
+  margin: 2.25rem 0 2.5rem;
+  transform: rotate(-0.8deg);
+}
+@media (prefers-reduced-motion: reduce) {
+  .pull-quote--feature { transform: none; }
+}
+
+/* ---------------- Hero: asymmetric, headline runs large and off-center ---------------- */
 .hero {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2.5rem;
-  align-items: center;
+  align-items: start;
   padding-top: 2rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
 }
-.hero-copy { max-width: 620px; }
+.hero-copy { max-width: 660px; }
 .hero-copy h1 {
-  font-size: clamp(2.1rem, 5vw, 3.1rem);
+  font-size: clamp(2.4rem, 6.2vw, 3.8rem);
   font-weight: 500;
-  line-height: 1.12;
+  line-height: 1.08;
   letter-spacing: -0.01em;
   margin: 0.9rem 0 1.1rem;
   color: var(--ink);
@@ -53,7 +65,7 @@ classes: wide
   margin: 0 0 1.5rem;
   max-width: 500px;
 }
-.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem; }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; margin-bottom: 1.75rem; }
 .btn-start {
   display: inline-flex;
   align-items: center;
@@ -66,7 +78,7 @@ classes: wide
   padding: 0.85rem 1.6rem;
   border-radius: 2px;
   text-decoration: none !important;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition: background 0.15s ease;
 }
 .btn-start:hover { background: var(--olive-deep); color: var(--paper) !important; }
 .hero-quiet-links { display: flex; flex-direction: column; gap: 0.4rem; }
@@ -79,39 +91,52 @@ classes: wide
   border-bottom: 1px solid var(--line);
   width: fit-content;
   padding-bottom: 1px;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 .hero-quiet-links a:hover { color: var(--olive-deep) !important; border-color: var(--olive); }
+
+/* Handwritten marginalia note, not a formal quote box */
 .hero-honest-line {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1.05rem;
-  color: var(--ink);
-  border-left: 2px solid var(--olive-soft);
-  padding-left: 0.9rem;
-  max-width: 440px;
+  font-family: var(--font-hand);
+  font-size: 1.4rem;
+  color: var(--ink-green);
+  max-width: 380px;
+  transform: rotate(-1deg);
+  margin-top: 0.25rem;
 }
-.hero-visual figure { margin: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-honest-line { transform: none; }
+}
+
+/* Photo overlaps into the text column rather than sitting in its
+   own separate box; framed like a print, not a clean flat image. */
+.hero-visual {
+  justify-self: center;
+  margin-top: 1.5rem;
+  max-width: 320px;
+}
+.hero-visual .bb-photo-frame {
+  width: 100%;
+}
 .hero-visual img {
   width: 100%;
   height: auto;
-  border-radius: 2px;
   display: block;
   object-fit: cover;
-  max-height: 460px;
-}
-.hero-visual figcaption {
-  font-family: var(--font-body);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-  margin-top: 0.6rem;
+  max-height: 380px;
 }
 
 @media (min-width: 900px) {
-  .hero { grid-template-columns: 1.05fr 0.95fr; padding-top: 3rem; padding-bottom: 2rem; }
+  .hero {
+    grid-template-columns: 1.5fr 0.9fr;
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
+  }
+  .hero-visual {
+    justify-self: end;
+    margin-top: 3.5rem;
+    margin-left: -3.5rem;
+  }
 }
 
 /* ---------------- How BioBridge works: numbered editorial list ---------------- */
@@ -300,7 +325,7 @@ classes: wide
   <div class="hero">
     <div class="hero-copy">
       <span class="eyebrow">Student-led biotech initiative</span>
-      <h1>Bridging the gap between <em>curiosity</em> and careers in biotechnology</h1>
+      <h1>Bridging the gap between <em><span class="bb-annotate bb-annotate--circle">curiosity</span></em> and careers in biotechnology</h1>
       <p class="hero-sub">Clear explanations, curated resources, and practical guidance for anyone exploring the world of biotech.</p>
       <div class="hero-actions">
         <a href="/what-is-biotech/" class="btn-start">Start here</a>
@@ -312,13 +337,15 @@ classes: wide
       <p class="hero-honest-line">"My messages became a constant stream of the same questions."</p>
     </div>
     <div class="hero-visual">
-      <figure>
+      <div class="bb-photo-frame bb-photo-frame--tilt-right">
         <img src="/assets/images/career-research.jpg" alt="A researcher looking through a microscope">
-        <figcaption>At the bench</figcaption>
-      </figure>
+      </div>
+      <span class="bb-photo-frame__caption">at the bench, most days</span>
     </div>
   </div>
 </div>
+
+<div class="bb-torn-edge" style="background: var(--paper-2);"></div>
 
 <!-- ============ HOW BIOBRIDGE WORKS: numbered editorial list ============ -->
 <div class="hp-band hp-band--tint">
@@ -374,7 +401,7 @@ classes: wide
         <p class="lede">I was certain I would become a doctor. In college, I completed the shadowing hours, prerequisites, and extracurriculars. But the closer I pushed myself toward a future in clinical work, the more I questioned whether it was actually right for me. I realized I needed a different direction.</p>
         <p>While searching for alternatives, I discovered my school offered a combined BS/MS in biotechnology that I could complete in four years. I knew almost nothing about biotech when I applied, but the program revealed just how expansive the field actually is, spanning lab work, business strategy, regulatory policy, manufacturing operations, and more.</p>
         <p>I started documenting what I was learning on social media, and the audience grew quickly. Tens of thousands of people followed along, and my messages became a constant stream of the same questions.</p>
-        <blockquote class="pull-quote">"What is biotech? How do I get in? Do I need a PhD?"</blockquote>
+        <blockquote class="pull-quote pull-quote--feature">"What is biotech? How do I get in? Do I need a PhD?"</blockquote>
         <p>People were curious, but lacked a practical starting point. BioBridge is the resource I wish had existed when I was trying to figure it out.</p>
         <div class="story-connect">
           <span class="story-connect-label">Follow the journey:</span>
@@ -383,6 +410,9 @@ classes: wide
         </div>
       </div>
     </div>
+  </div>
+  <div class="hp">
+    <div class="bb-rule--squiggle"></div>
   </div>
 </div>
 
