@@ -10,64 +10,20 @@ body { font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-s
 h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
-  --bb-green: #2C2A20;
-  --bb-green-accent: #616736;
-  --bb-green-bright: #616736;
-  --bb-green-hover: #525834;
-  --bb-green-dark: #525834;
-  --bb-green-bg: #E9DFC9;
-  --bb-green-bg-subtle: #E3D8BF;
-  --bb-navy: #2C2A20;
-  --bb-charcoal: #2C2A20;
-  --bb-white: #F0E8D6;
-  --bb-off-white: #E9DFC9;
-  --bb-text-secondary: #63604D;
-  --bb-gray: #63604D;
-  --bb-border: rgba(44,42,32,0.14);
-}
-
-/* Hero logo */
-.bb-hero-logo {
-  display: block;
-  height: 52px;
-  width: auto;
-  margin-bottom: 1rem;
-  filter: brightness(0) saturate(100%) invert(79%) sepia(38%) saturate(475%) hue-rotate(2deg) brightness(0.98) contrast(0.92);
-}
-
-/* Page Header */
-.bb-page-hero {
-  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
-  color: var(--bb-white);
-  padding: 2rem 2rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  position: relative;
-  overflow: hidden;
-}
-.bb-page-hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(97,103,54,0.15) 0%, transparent 60%);
-  pointer-events: none;
-}
-.bb-page-hero h1 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin: 0 0 0.4rem;
-  color: var(--bb-white);
-  letter-spacing: -0.02em;
-  position: relative;
-}
-.bb-page-hero p {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.88rem;
-  color: rgba(255,255,255,0.8);
-  margin: 0;
-  font-weight: 300;
-  line-height: 1.6;
-  position: relative;
+  --bb-green: #24221A;
+  --bb-green-accent: #5C6335;
+  --bb-green-bright: #5C6335;
+  --bb-green-hover: #3B4223;
+  --bb-green-dark: #3B4223;
+  --bb-green-bg: #E6DBC2;
+  --bb-green-bg-subtle: #E6DBC2;
+  --bb-navy: #24221A;
+  --bb-charcoal: #24221A;
+  --bb-white: #EFE6D2;
+  --bb-off-white: #E6DBC2;
+  --bb-text-secondary: #5B5745;
+  --bb-gray: #5B5745;
+  --bb-border: rgba(36,34,26,0.22);
 }
 
 /* Main product layout */
@@ -80,7 +36,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 /* Product image */
 .bb-product-img {
-  border-radius: 8px;
+  border-radius: 2px;
   overflow: hidden;
   min-height: 180px;
 }
@@ -89,16 +45,15 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   height: 100%;
   display: block;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 2px;
 }
 
 /* Product card */
 .bb-product-card {
   background: var(--bb-white);
   border: 1px solid var(--bb-border);
-  border-radius: 8px;
+  border-radius: 2px;
   padding: 1.75rem 1.5rem;
-  box-shadow: 0 3px 16px rgba(0,0,0,0.05);
 }
 .bb-product-eyebrow {
   font-family: 'Instrument Sans', sans-serif;
@@ -158,7 +113,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   line-height: 1.65;
 }
 .bb-feature-list li::before {
-  content: '\2713';
+  content: '-';
   position: absolute;
   left: 0;
   color: var(--bb-green-accent);
@@ -175,43 +130,23 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   margin: 0 0 1.25rem;
 }
 
-/* Price & CTA */
-.bb-price-row {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  margin-bottom: 0.85rem;
-  flex-wrap: wrap;
-}
-.bb-price-tag {
-  display: inline-block;
-  background: var(--bb-navy);
-  color: var(--bb-white);
-  padding: 0.4rem 1.25rem;
-  border-radius: 5px;
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 1.3rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
+/* CTA */
 .bb-buy-btn {
   display: inline-block;
   background: var(--bb-green-accent);
   color: var(--bb-white) !important;
   padding: 0.75rem 2rem;
-  border-radius: 5px;
+  border-radius: 2px;
   font-family: 'Instrument Sans', sans-serif;
   font-weight: 600;
   font-size: 0.88rem;
   text-decoration: none !important;
-  transition: all 0.22s ease;
+  transition: background-color 0.22s ease, border-color 0.22s ease;
   border: 1.5px solid var(--bb-green-accent);
 }
 .bb-buy-btn:hover {
   background: var(--bb-green);
   border-color: var(--bb-green);
-  transform: translateY(-1px);
-  box-shadow: 0 5px 16px rgba(97,103,54,0.25);
   color: var(--bb-white) !important;
 }
 .bb-coming-soon-note {
@@ -225,7 +160,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 .bb-why-paid {
   background: var(--bb-green-bg-subtle);
   border: 1px solid var(--bb-border);
-  border-radius: 8px;
+  border-radius: 2px;
   padding: 1.5rem 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -248,7 +183,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 .bb-roadmap {
   background: var(--bb-white);
   border: 1px solid var(--bb-border);
-  border-radius: 8px;
+  border-radius: 2px;
   padding: 1.5rem 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -265,7 +200,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   gap: 0.85rem;
   margin-bottom: 0.85rem;
   padding-bottom: 0.85rem;
-  border-bottom: 1px solid #E3D8BF;
+  border-bottom: 1px solid var(--bb-border);
 }
 .bb-roadmap-item:last-child {
   border-bottom: none;
@@ -277,7 +212,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   height: 8px;
   min-width: 8px;
   background: var(--bb-green-accent);
-  border-radius: 50%;
+  border-radius: 0;
   margin-top: 0.4rem;
 }
 .bb-roadmap-item p {
@@ -303,9 +238,9 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 /* Free Preview Card */
 .bb-preview-card {
-  background: linear-gradient(135deg, #F0E8D6 0%, #E9DFC9 100%);
-  border: 1.5px solid #616736;
-  border-radius: 10px;
+  background: var(--bb-off-white);
+  border: 1.5px solid var(--bb-green-accent);
+  border-radius: 2px;
   padding: 1.75rem 1.5rem;
   margin-bottom: 1.75rem;
   position: relative;
@@ -315,7 +250,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 4px;
-  background: linear-gradient(90deg, #616736, #525834);
+  background: var(--bb-green-accent);
 }
 .bb-preview-eyebrow {
   font-family: 'Instrument Sans', sans-serif;
@@ -323,12 +258,12 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #525834;
+  color: var(--bb-green-dark);
   margin: 0 0 0.4rem;
 }
 .bb-preview-card h2 {
   font-family: 'Fraunces', Georgia, serif;
-  color: #525834;
+  color: var(--bb-green-dark);
   font-size: 1.2rem;
   font-weight: 700;
   margin: 0 0 0.6rem;
@@ -336,7 +271,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-preview-card p {
   font-family: 'Instrument Sans', sans-serif;
-  color: #63604D;
+  color: var(--bb-text-secondary);
   font-size: 0.87rem;
   line-height: 1.75;
   margin: 0 0 1.1rem;
@@ -346,8 +281,8 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   align-items: center;
   gap: 1rem;
   background: var(--bb-white);
-  border: 1px solid #616736;
-  border-radius: 7px;
+  border: 1px solid var(--bb-green-accent);
+  border-radius: 2px;
   padding: 0.85rem 1rem;
   margin-bottom: 1rem;
   flex-wrap: wrap;
@@ -365,7 +300,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   font-family: 'Instrument Sans', sans-serif;
   font-size: 0.9rem;
   font-weight: 600;
-  color: #525834;
+  color: var(--bb-green-dark);
   margin-bottom: 0.15rem;
 }
 .bb-preview-sample-info span {
@@ -375,42 +310,40 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-preview-btn {
   display: inline-block;
-  background: #525834;
+  background: var(--bb-green-accent);
   color: var(--bb-white) !important;
   padding: 0.65rem 1.5rem;
-  border-radius: 5px;
+  border-radius: 2px;
   font-family: 'Instrument Sans', sans-serif;
   font-weight: 600;
   font-size: 0.85rem;
   text-decoration: none !important;
-  transition: all 0.22s ease;
+  transition: background-color 0.22s ease;
   white-space: nowrap;
   flex-shrink: 0;
 }
 .bb-preview-btn:hover {
-  background: #525834;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(82,88,52,0.3);
+  background: var(--bb-green-dark);
   color: var(--bb-white) !important;
 }
 .bb-preview-coming-soon {
   display: inline-block;
-  background: rgba(82,88,52,0.1);
-  border: 1px solid rgba(82,88,52,0.35);
-  border-radius: 4px;
+  background: rgba(92,99,53,0.12);
+  border: 1px solid rgba(92,99,53,0.4);
+  border-radius: 2px;
   padding: 0.2rem 0.65rem;
   font-family: 'Instrument Sans', sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
-  color: #525834;
+  color: var(--bb-green-dark);
 }
 
 /* International callout */
 .bb-international-callout {
-  background: #FAF7F2;
-  border: 1px solid #E9DFC9;
+  background: var(--bb-white);
+  border: 1px solid var(--bb-off-white);
   border-left: 4px solid var(--bb-green-accent);
-  border-radius: 7px;
+  border-radius: 2px;
   padding: 1rem 1.25rem;
   margin: 1.25rem 0;
 }
@@ -452,9 +385,6 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 /* Desktop */
 @media (min-width: 769px) {
-  .bb-page-hero { padding: 2.5rem 2.5rem; border-radius: 10px; }
-  .bb-page-hero h1 { font-size: 1.65rem; }
-  .bb-page-hero p { font-size: 0.93rem; }
   .bb-product-layout { grid-template-columns: 2fr 3fr; align-items: start; gap: 2.25rem; }
   .bb-product-card { padding: 2rem 2.25rem; }
   .bb-product-card h2 { font-size: 1.75rem; }
@@ -466,10 +396,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 </style>
 
-<div class="bb-page-hero">
-  <h1>BioBridge Guides</h1>
-  <p>Structured, experience-backed guidance for anyone figuring out their path into biotech.</p>
-</div>
+{% include page-header.html kicker="GUIDES" title="BioBridge Guides" deck="Structured, experience-backed guidance for anyone figuring out their path into biotech." %}
 
 <!-- FREE PREVIEW CARD -->
 <div class="bb-preview-card">
@@ -502,7 +429,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
     <p class="bb-section-label">What's Included</p>
     <ul class="bb-feature-list">
-      <li><strong>A personal resume that landed a biotech internship at a major pharma company:</strong> annotated line by line so you understand every formatting and content choice, not just what it looks like.</li>
+      <li><strong>A personal resume that landed a biotech internship at a major pharma company:</strong> annotated line by line so you understand every formatting and content choice behind it.</li>
       <li><strong>Cold email and outreach templates that got responses from partners at firms and senior people at major biotech and pharma companies:</strong> including the exact framing that works when you have no existing connections.</li>
       <li><strong>A pivot story roadmap based on a real transition from pre-dental to biotech:</strong> with the specific steps, reframing strategies, and application materials that made it work.</li>
       <li><strong>An interview prep guide with actual questions asked at biotech companies, organized by role type:</strong> with guidance on how to approach each one.</li>
@@ -516,10 +443,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     <p class="bb-who-prose">The Blueprint is for anyone who wants more than a list of tips. If you're in high school trying to get ahead before college applications or summer programs, it maps out where to start. If you're a college student (any major) wondering how to connect what you're studying to a real biotech career, it gives you a framework. Recent grads who need to translate their degree into actual next steps will find it useful, and so will career changers who've spent too much time wading through generic advice that doesn't account for where they're actually starting from. Anyone who learns better from real examples and experience-backed reasoning, rather than scattered internet searches or generic listicles, is exactly who this was written for.</p>
 
     <p class="bb-section-label">Get the Guide</p>
-    <div class="bb-price-row">
-      <span class="bb-price-tag">$22</span>
-    </div>
-    <a href="https://tranquility120.gumroad.com/l/the-biotech-blueprint" class="bb-buy-btn gumroad-button" data-gumroad-product-id="the-biotech-blueprint">Purchase on Gumroad</a>
+    <a href="https://tranquility120.gumroad.com/l/the-biotech-blueprint" class="bb-buy-btn gumroad-button" data-gumroad-product-id="the-biotech-blueprint">Get the Guide</a>
   </div>
 
 </div>
@@ -531,7 +455,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   <p>Everything on this website (the career pages, the resource library, the FAQ) is free and always will be. The Blueprint is for people who want everything in one place, with more depth, in a format they can save and return to. If you want experience-backed guidance rather than another generic article, this is it.</p>
 </div>
 
-<!-- International callout — resume/CV context -->
+<!-- International callout: resume/CV context -->
 <div class="bb-international-callout">
   <div class="bb-intl-header"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;flex-shrink:0"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> Outside the US?</div>
   <p>Canada, the UK, and Australia typically use CVs (curriculum vitae) rather than resumes, and formatting expectations differ: CVs are often longer, include more detail on academic history, and may include a personal statement. The resume materials in the Biotech Blueprint are formatted for US applications. The frameworks and principles apply internationally, but you may want to adapt the formatting to match local conventions in your country.</p>
