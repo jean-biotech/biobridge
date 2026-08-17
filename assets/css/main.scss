@@ -5,34 +5,30 @@
 @charset "utf-8";
 
 // ============================================================
-// BioBridge Design System — "The Bridge"
-// Warm editorial palette. Fraunces display / Instrument Sans body /
-// Spline Sans Mono for eyebrow labels + data. See assets/css/_tokens
-// notes below — everything is a CSS custom property so pages can
-// tune it without touching component logic.
+// BioBridge Design System — warm editorial, olive accent
+// Fraunces display / Instrument Sans body. No monospace, no
+// second accent color. Everything reads from :root custom
+// properties below so pages can tune without touching logic.
 // ============================================================
 
-// Bridge into the theme's Sass variables (compile-time only —
-// the real palette lives in :root as custom properties below).
-$bb-paper: #F7F1E6;
-$bb-ink: #1E2A22;
-$bb-pine: #2F5E3F;
-$bb-pine-dark: #1B3B27;
-$bb-terracotta: #A8501F;
-$bb-ochre: #D9A441;
-$bb-spark: #B8D94A;
-$bb-sage: #C9D6C0;
-$bb-border: #DDD3BE;
+$bb-paper: #F0E8D6;
+$bb-paper-2: #E9DFC9;
+$bb-taupe: #E3D8BF;
+$bb-ink: #2C2A20;
+$bb-ink-soft: #63604D;
+$bb-olive: #616736;
+$bb-olive-dark: #525834;
+$bb-olive-soft: #94996E;
 
 // Minimal Mistakes overrides
 $background-color: $bb-paper !default;
 $text-color: $bb-ink !default;
-$primary-color: $bb-pine !default;
-$link-color: $bb-terracotta !default;
-$link-color-hover: $bb-pine !default;
+$primary-color: $bb-olive !default;
+$link-color: $bb-olive-dark !default;
+$link-color-hover: $bb-olive !default;
 $masthead-link-color: $bb-ink !default;
-$masthead-link-color-hover: $bb-pine !default;
-$border-color: $bb-border !default;
+$masthead-link-color-hover: $bb-olive !default;
+$border-color: $bb-taupe !default;
 $max-width: 1400px !default;
 
 // Refined typography scale
@@ -50,47 +46,34 @@ $type-size-8: 0.65rem !default;
 
 // ============================================================
 // DESIGN TOKENS — the single source of truth for color/type/space.
-// Every page on the site should read from these custom properties
-// rather than redefining its own palette.
 // ============================================================
 
 :root {
-  // Paper & ink
-  --paper: #F7F1E6;
-  --paper-warm: #F1E9D8;
-  --ink: #1E2A22;
-  --ink-soft: #48584C;
+  --paper: #F0E8D6;
+  --paper-2: #E9DFC9;
+  --taupe: #E3D8BF;
+  --ink: #2C2A20;
+  --ink-soft: #63604D;
 
-  // Brand + accents
-  --pine: #2F5E3F;
-  --pine-dark: #1B3B27;
-  --pine-tint: #E4EBE2;
-  --terracotta: #A8501F;
-  --terracotta-tint: #F3E1D3;
-  --ochre: #D9A441;
-  --ochre-tint: #F5E7C8;
-  --spark: #B8D94A;
-  --sage: #C9D6C0;
-  --border: #DDD3BE;
-  --border-soft: #E9E1D0;
+  --olive: #616736;
+  --olive-dark: #525834;
+  --olive-soft: #94996E;
 
-  // Shadows
-  --shadow-sm: 0 1px 3px rgba(30, 42, 34, 0.08);
-  --shadow-md: 0 8px 24px rgba(30, 42, 34, 0.10);
-  --shadow-lg: 0 20px 48px rgba(30, 42, 34, 0.14);
+  // translucent-ink hairlines, per the brief: structure without heavy borders
+  --hairline: rgba(44, 42, 32, 0.14);
+  --hairline-soft: rgba(44, 42, 32, 0.08);
 
-  // Type
+  --shadow-sm: 0 1px 3px rgba(44, 42, 32, 0.08);
+  --shadow-md: 0 8px 20px rgba(44, 42, 32, 0.10);
+
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Instrument Sans", -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: "Spline Sans Mono", "SFMono-Regular", Menlo, monospace;
 
-  // Radii
   --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 22px;
+  --radius-md: 10px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Instrument+Sans:wght@400;500;600;700&display=swap');
 
 // ============================================================
 // GLOBAL RESETS & BASE STYLES
@@ -122,9 +105,9 @@ body {
   font-size: 1rem;
   line-height: 1.65;
 
-  // subtle paper grain so flat color fields don't feel flat
+  // very subtle paper grain, low opacity
   background-image:
-    radial-gradient(rgba(30, 42, 34, 0.028) 1px, transparent 1px);
+    radial-gradient(rgba(44, 42, 32, 0.025) 1px, transparent 1px);
   background-size: 3px 3px;
 }
 
@@ -138,34 +121,34 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
 }
 
-// mono "science notebook" accents — eyebrow labels, glossary terms,
-// captions, data. Used sparingly by design.
+// small uppercase labels: Instrument Sans, never monospace
 .eyebrow {
   display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--terracotta);
+  color: var(--olive);
 }
 
 .section-number {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
+  font-weight: 600;
   font-size: 0.85rem;
   color: var(--ink-soft);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
 }
 
 // Editorial drop cap — use on a lead paragraph via <p class="lede">
 .lede::first-letter {
   font-family: var(--font-display);
   font-size: 3.4em;
-  font-weight: 600;
+  font-weight: 500;
   float: left;
   line-height: 0.82;
   padding: 0.05em 0.09em 0 0;
-  color: var(--pine);
+  color: var(--olive-dark);
 }
 
 .pull-quote {
@@ -175,54 +158,10 @@ h1, h2, h3, h4, h5, h6 {
   font-style: italic;
   font-size: clamp(1.5rem, 3.4vw, 2.35rem);
   line-height: 1.32;
-  color: var(--pine-dark);
+  color: var(--ink);
   margin: 1.75rem 0;
   padding-left: 1.25rem;
-  border-left: 3px solid var(--spark);
-}
-
-// ============================================================
-// BRIDGE MOTIF — reusable drawn-line + node divider
-// ============================================================
-
-.bridge-divider {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  overflow: visible;
-}
-
-.bridge-line__path {
-  fill: none;
-  stroke: var(--pine);
-  stroke-width: 2.5;
-  stroke-linecap: round;
-  opacity: 0.55;
-}
-
-.bridge-line__node {
-  fill: var(--terracotta);
-}
-.bridge-line__node--spark {
-  fill: var(--spark);
-}
-.bridge-line__node--ochre {
-  fill: var(--ochre);
-}
-
-// Draw-on-scroll: assets/js/bridge.js sets stroke-dasharray/dashoffset
-// inline once it knows the path's real length, then animates it to 0
-// via this transition when the element scrolls into view. Unstyled
-// (no JS, or before JS runs) the path is simply fully visible — a
-// safe default that never leaves anything broken or invisible.
-.bridge-draw {
-  transition: stroke-dashoffset 1.4s cubic-bezier(0.22, 1, 0.36, 1);
-}
-@media (prefers-reduced-motion: reduce) {
-  .bridge-draw {
-    transition: none !important;
-  }
+  border-left: 3px solid var(--olive);
 }
 
 // ============================================================
@@ -282,7 +221,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 240px;
     margin-right: 0;
     padding-left: 1.5rem;
-    border-left: 2px solid var(--pine-tint);
+    border-left: 1px solid var(--hairline);
   }
 }
 
@@ -292,7 +231,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .masthead {
   background-color: var(--paper);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--hairline);
   box-shadow: none;
   padding: 0.5rem 0;
   position: sticky;
@@ -328,7 +267,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   &:hover img {
-    transform: scale(1.04) rotate(-1.5deg);
+    transform: scale(1.03);
   }
 }
 
@@ -345,7 +284,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 
   &:hover {
-    color: var(--pine) !important;
+    color: var(--olive) !important;
   }
 
   @media (min-width: 769px) {
@@ -372,11 +311,11 @@ h1, h2, h3, h4, h5, h6 {
       padding: 0.75rem 0.9rem;
 
       &:hover {
-        color: var(--terracotta);
+        color: var(--olive);
       }
 
       &:before {
-        background: var(--spark);
+        background: var(--olive);
         height: 2px;
       }
     }
@@ -393,7 +332,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .page__title {
   font-family: var(--font-display);
-  color: var(--pine-dark);
+  color: var(--ink);
   font-weight: 600;
   font-size: 1.6rem;
   letter-spacing: -0.01em;
@@ -401,7 +340,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-family: var(--font-display);
-  color: var(--pine-dark);
+  color: var(--ink);
   font-size: 1.75rem;
   font-weight: 600;
   letter-spacing: -0.01em;
@@ -410,7 +349,7 @@ h1 {
 
 h2 {
   font-family: var(--font-display);
-  color: var(--pine-dark);
+  color: var(--ink);
   font-size: 1.3rem;
   font-weight: 600;
   letter-spacing: -0.01em;
@@ -419,14 +358,14 @@ h2 {
 
 h3 {
   font-family: var(--font-display);
-  color: var(--pine-dark);
+  color: var(--ink);
   font-size: 1.1rem;
   font-weight: 600;
 }
 
 h4, h5, h6 {
   font-family: var(--font-body);
-  color: var(--pine-dark);
+  color: var(--ink);
   font-size: 0.95rem;
   font-weight: 600;
 }
@@ -436,19 +375,19 @@ h4, h5, h6 {
 // ============================================================
 
 .btn--primary {
-  background-color: var(--terracotta) !important;
+  background-color: var(--olive) !important;
   color: var(--paper) !important;
-  border-radius: 100px;
+  border-radius: 6px;
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 0.9rem;
   letter-spacing: 0.01em;
   transition: all 0.2s ease;
+  box-shadow: none;
 
   &:hover {
-    background-color: var(--pine) !important;
+    background-color: var(--olive-dark) !important;
     transform: translateY(-1px);
-    box-shadow: var(--shadow-md);
   }
 }
 
@@ -457,16 +396,16 @@ h4, h5, h6 {
 // ============================================================
 
 .toc {
-  border: 1px solid var(--border);
+  border: 1px solid var(--hairline);
   border-radius: var(--radius-sm);
-  background: var(--pine-tint);
+  background: var(--paper-2);
   font-size: 0.82rem;
 
   .nav__title {
-    background: var(--pine);
+    background: var(--olive-dark);
     border-radius: 6px 6px 0 0;
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
   }
@@ -476,13 +415,13 @@ h4, h5, h6 {
     font-size: 0.82rem;
 
     &:hover {
-      color: var(--terracotta);
+      color: var(--olive);
     }
   }
 
   .active {
     a {
-      color: var(--pine) !important;
+      color: var(--olive-dark) !important;
       font-weight: 600;
     }
   }
@@ -493,10 +432,10 @@ h4, h5, h6 {
 // ============================================================
 
 a {
-  color: var(--terracotta);
+  color: var(--olive-dark);
 
   &:hover {
-    color: var(--pine);
+    color: var(--olive);
   }
 }
 
@@ -508,7 +447,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 [tabindex]:focus-visible {
-  outline: 2.5px solid var(--spark);
+  outline: 2.5px solid var(--olive);
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -518,14 +457,14 @@ input:focus-visible,
 // ============================================================
 
 .page__footer {
-  background: var(--pine-dark);
-  color: rgba(247, 241, 230, 0.75);
+  background: var(--ink);
+  color: rgba(240, 232, 214, 0.75);
   font-size: 0.85rem;
 
   a {
-    color: rgba(247, 241, 230, 0.85);
+    color: rgba(240, 232, 214, 0.85);
     &:hover {
-      color: var(--spark);
+      color: var(--olive-soft);
     }
   }
 }

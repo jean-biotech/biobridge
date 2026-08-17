@@ -5,27 +5,27 @@ permalink: /application-reviewer/
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Instrument+Sans:wght@400;500;600;700&display=swap');
 body { font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
 h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
-  --bb-green: #2F5E3F;
-  --bb-green-accent: #A8501F;
-  --bb-green-bright: #A8501F;
-  --bb-green-hover: #2F5E3F;
-  --bb-green-dark: #1B3B27;
-  --bb-green-bg: #E4EBE2;
-  --bb-green-bg-subtle: #F1E9D8;
-  --bb-navy: #2A2118;
-  --bb-charcoal: #1E2A22;
-  --bb-white: #F7F1E6;
-  --bb-off-white: #F1E9D8;
-  --bb-text-secondary: #48584C;
-  --bb-gray: #6B6255;
-  --bb-border: #DDD3BE;
-  --bb-teal: #D9A441;
-  --bb-amber: #A8501F;
+  --bb-green: #2C2A20;
+  --bb-green-accent: #616736;
+  --bb-green-bright: #616736;
+  --bb-green-hover: #525834;
+  --bb-green-dark: #525834;
+  --bb-green-bg: #E9DFC9;
+  --bb-green-bg-subtle: #E3D8BF;
+  --bb-navy: #2C2A20;
+  --bb-charcoal: #2C2A20;
+  --bb-white: #F0E8D6;
+  --bb-off-white: #E9DFC9;
+  --bb-text-secondary: #63604D;
+  --bb-gray: #63604D;
+  --bb-border: rgba(44,42,32,0.14);
+  --bb-teal: #94996E;
+  --bb-amber: #616736;
 }
 
 /* ============================================
@@ -44,7 +44,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(47,94,63,0.15) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 80% 20%, rgba(97,103,54,0.15) 0%, transparent 60%);
   pointer-events: none;
 }
 .bb-page-hero h1 {
@@ -97,7 +97,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   background: var(--bb-border);
 }
 .bb-section-divider-label {
-  font-family: 'Spline Sans Mono', monospace;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.67rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -176,7 +176,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   padding: 1.75rem 1.5rem;
 }
 .bb-form-eyebrow {
-  font-family: 'Spline Sans Mono', monospace;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -214,7 +214,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 /* Individual form group */
 .bb-form-group { display: flex; flex-direction: column; }
 .bb-field-label {
-  font-family: 'Spline Sans Mono', monospace;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -247,10 +247,10 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 .bb-textarea:focus {
   outline: none;
   border-color: var(--bb-green-accent);
-  box-shadow: 0 0 0 3px rgba(168,80,31,0.1);
+  box-shadow: 0 0 0 3px rgba(97,103,54,0.1);
 }
 .bb-textarea::placeholder {
-  color: #aab4c0;
+  color: #63604D;
   font-size: 0.81rem;
   line-height: 1.55;
 }
@@ -316,7 +316,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 .bb-analyze-btn:hover:not(:disabled) {
   background: var(--bb-green);
   transform: translateY(-1px);
-  box-shadow: 0 5px 18px rgba(47,94,63,0.28);
+  box-shadow: 0 5px 18px rgba(97,103,54,0.28);
 }
 .bb-analyze-btn:active:not(:disabled) { transform: translateY(0); }
 .bb-analyze-btn:disabled {
@@ -493,14 +493,14 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   display: inline-block;
   padding: 0.28rem 0.85rem;
   border-radius: 4px;
-  font-family: 'Spline Sans Mono', monospace;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 0.85rem;
-  background: rgba(217,164,65,0.1);
-  border: 1px solid rgba(217,164,65,0.25);
+  background: rgba(148,153,110,0.1);
+  border: 1px solid rgba(148,153,110,0.25);
   color: var(--bb-teal);
   transition: background 0.3s, border-color 0.3s, color 0.3s;
 }
@@ -555,12 +555,12 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   align-items: center;
   justify-content: center;
 }
-.bb-card-icon--green { background: rgba(47,94,63,0.13); }
-.bb-card-icon--amber { background: rgba(168,80,31,0.13); }
-.bb-card-icon--teal  { background: rgba(217,164,65,0.13); }
-.bb-card-icon--navy  { background: rgba(42,33,24,0.10); }
+.bb-card-icon--green { background: rgba(97,103,54,0.13); }
+.bb-card-icon--amber { background: rgba(97,103,54,0.13); }
+.bb-card-icon--teal  { background: rgba(148,153,110,0.13); }
+.bb-card-icon--navy  { background: rgba(44,42,32,0.10); }
 .bb-card-title {
-  font-family: 'Spline Sans Mono', monospace;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.69rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -577,7 +577,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   display: flex;
   gap: 0.6rem;
   padding: 0.65rem 1.25rem;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid #E3D8BF;
   font-family: 'Instrument Sans', sans-serif;
   font-size: 0.84rem;
   color: var(--bb-charcoal);
@@ -619,7 +619,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   .bb-kw-body { grid-template-columns: 1fr 1fr; }
 }
 .bb-kw-col-label {
-  font-family: 'Spline Sans Mono', monospace;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -633,18 +633,18 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   display: inline-block;
   border-radius: 4px;
   padding: 0.22rem 0.65rem;
-  font-family: 'Spline Sans Mono', monospace;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.73rem;
   font-weight: 600;
 }
 .bb-kw-matched {
-  background: rgba(47,94,63,0.08);
-  border: 1px solid rgba(47,94,63,0.2);
+  background: rgba(97,103,54,0.08);
+  border: 1px solid rgba(97,103,54,0.2);
   color: var(--bb-green);
 }
 .bb-kw-missing {
-  background: rgba(168,80,31,0.07);
-  border: 1px solid rgba(168,80,31,0.2);
+  background: rgba(97,103,54,0.07);
+  border: 1px solid rgba(97,103,54,0.2);
   color: var(--bb-amber);
 }
 
@@ -657,7 +657,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   gap: 0.4rem;
   background: transparent;
   color: var(--bb-green-accent);
-  border: 1px solid rgba(168,80,31,0.35);
+  border: 1px solid rgba(97,103,54,0.35);
   border-radius: 5px;
   padding: 0.45rem 0.9rem;
   font-family: 'Instrument Sans', sans-serif;
@@ -712,7 +712,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 .bb-try-again-btn:hover {
   background: var(--bb-green-bg-subtle);
   transform: translateY(-1px);
-  box-shadow: 0 3px 10px rgba(47,94,63,0.15);
+  box-shadow: 0 3px 10px rgba(97,103,54,0.15);
 }
 </style>
 
@@ -722,7 +722,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
     Free Tool &middot; Powered by Claude
   </div>
   <h1>AI Application Reviewer</h1>
-  <p>Paste a biotech job description and your resume—Claude analyzes the match, surfaces your gaps, and tells you exactly how to strengthen your application before you submit.</p>
+  <p>Paste a biotech job description and your resume: Claude analyzes the match, surfaces your gaps, and tells you exactly how to strengthen your application before you submit.</p>
 </div>
 
 <div class="bb-steps">
@@ -737,7 +737,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
     <div class="bb-step-num">2</div>
     <div class="bb-step-text">
       <strong>Paste your resume</strong>
-      <span>Plain text works best—copy directly from your Word doc or PDF.</span>
+      <span>Plain text works best. Copy directly from your Word doc or PDF.</span>
     </div>
   </div>
   <div class="bb-step">
@@ -770,7 +770,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 
           <div class="bb-form-group">
             <label class="bb-field-label" for="bb-jd">Job Description</label>
-            <p class="bb-field-hint">Paste the full posting—include the requirements section and any preferred qualifications.</p>
+            <p class="bb-field-hint">Paste the full posting. Include the requirements section and any preferred qualifications.</p>
             <textarea
               id="bb-jd"
               class="bb-textarea"
@@ -818,7 +818,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
           </button>
           <span class="bb-btn-note">
             <span class="bb-btn-note-dot"></span>
-            Takes about 15–20 seconds &middot; Your text is not stored
+            Takes about 15 to 20 seconds &middot; Your text is not stored
           </span>
         </div>
 
@@ -873,7 +873,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     <div class="bb-detail-card bb-detail-card--green">
       <div class="bb-card-header">
         <div class="bb-card-icon bb-card-icon--green">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2F5E3F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2C2A20" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
         </div>
         <p class="bb-card-title">Strengths</p>
       </div>
@@ -883,7 +883,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     <div class="bb-detail-card bb-detail-card--amber">
       <div class="bb-card-header">
         <div class="bb-card-icon bb-card-icon--amber">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A8501F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#616736" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
         </div>
         <p class="bb-card-title">Gaps</p>
       </div>
@@ -893,7 +893,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     <div class="bb-detail-card bb-detail-card--teal">
       <div class="bb-card-header">
         <div class="bb-card-icon bb-card-icon--teal">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D9A441" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94996E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
         </div>
         <p class="bb-card-title">Cover Letter Tips</p>
       </div>
@@ -903,7 +903,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     <div class="bb-detail-card bb-detail-card--navy">
       <div class="bb-card-header">
         <div class="bb-card-icon bb-card-icon--navy">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2A2118" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2C2A20" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
         </div>
         <p class="bb-card-title">Action Items</p>
       </div>
@@ -915,7 +915,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
   <div class="bb-keywords-card">
     <div class="bb-card-header">
       <div class="bb-card-icon bb-card-icon--navy">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2A2118" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2C2A20" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       </div>
       <p class="bb-card-title">Keyword Match</p>
     </div>
@@ -991,9 +991,9 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
 
   // ---- Score colors ----
   function scoreColors(s) {
-    if (s >= 76) return { stroke: '#2F5E3F', text: '#2F5E3F', bg: 'rgba(47,94,63,0.1)',    border: 'rgba(47,94,63,0.25)' };
-    if (s >= 51) return { stroke: '#D9A441', text: '#8A6A1B', bg: 'rgba(217,164,65,0.12)',  border: 'rgba(217,164,65,0.3)' };
-    if (s >= 26) return { stroke: '#A8501F', text: '#8A421F', bg: 'rgba(168,80,31,0.08)',   border: 'rgba(168,80,31,0.25)' };
+    if (s >= 76) return { stroke: '#2C2A20', text: '#2C2A20', bg: 'rgba(97,103,54,0.1)',    border: 'rgba(97,103,54,0.25)' };
+    if (s >= 51) return { stroke: '#94996E', text: '#525834', bg: 'rgba(148,153,110,0.12)',  border: 'rgba(148,153,110,0.3)' };
+    if (s >= 26) return { stroke: '#616736', text: '#525834', bg: 'rgba(97,103,54,0.08)',   border: 'rgba(97,103,54,0.25)' };
     return         { stroke: '#dc2626', text: '#dc2626', bg: 'rgba(220,38,38,0.08)',   border: 'rgba(220,38,38,0.25)' };
   }
 
@@ -1061,9 +1061,9 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     var co    = data.company   || null;
     var url   = 'biotechbridge.org/application-reviewer/';
     var base  = 'I got a ' + score + '/100 ' + label;
-    if (title && co) return base + ' for ' + title + ' at ' + co + '\u2014analyzed by BioBridge \u00b7 ' + url;
-    if (title)       return base + ' for ' + title + '\u2014analyzed by BioBridge \u00b7 ' + url;
-    return base + '\u2014analyzed by BioBridge \u00b7 ' + url;
+    if (title && co) return base + ' for ' + title + ' at ' + co + '. Analyzed by BioBridge \u00b7 ' + url;
+    if (title)       return base + ' for ' + title + '. Analyzed by BioBridge \u00b7 ' + url;
+    return base + '. Analyzed by BioBridge \u00b7 ' + url;
   }
 
   var CLIPBOARD_ICON = shareBtn.innerHTML;
@@ -1109,8 +1109,8 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     }
     if (!jd)     { jdEl.classList.add('bb-field-error');     showValidation('Please paste the job description.'); return; }
     if (!resume)  { resumeEl.classList.add('bb-field-error'); showValidation('Please paste your resume text.');    return; }
-    if (jd.length < 100)     { jdEl.classList.add('bb-field-error');     showValidation('The job description looks too short\u2014paste the full posting for accurate results.'); return; }
-    if (resume.length < 100) { resumeEl.classList.add('bb-field-error'); showValidation('The resume text looks too short\u2014paste your full resume for accurate results.');    return; }
+    if (jd.length < 100)     { jdEl.classList.add('bb-field-error');     showValidation('The job description looks too short. Paste the full posting for accurate results.'); return; }
+    if (resume.length < 100) { resumeEl.classList.add('bb-field-error'); showValidation('The resume text looks too short. Paste your full resume for accurate results.');    return; }
 
     hideValidation();
     showState('loading');
