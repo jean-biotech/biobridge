@@ -10,58 +10,23 @@ body { font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-s
 h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
-  --bb-green: #2C2A20;
-  --bb-green-accent: #616736;
-  --bb-green-bright: #616736;
-  --bb-green-hover: #525834;
-  --bb-green-dark: #525834;
-  --bb-green-bg: #E9DFC9;
-  --bb-green-bg-subtle: #E3D8BF;
-  --bb-navy: #2C2A20;
-  --bb-charcoal: #2C2A20;
-  --bb-white: #F0E8D6;
-  --bb-off-white: #E9DFC9;
-  --bb-text-secondary: #63604D;
-  --bb-gray: #63604D;
-  --bb-border: rgba(44,42,32,0.14);
+  --bb-green: #24221A;
+  --bb-green-accent: #5C6335;
+  --bb-green-bright: #5C6335;
+  --bb-green-hover: #3B4223;
+  --bb-green-dark: #3B4223;
+  --bb-green-bg: #E6DBC2;
+  --bb-green-bg-subtle: #DED2B7;
+  --bb-navy: #24221A;
+  --bb-charcoal: #24221A;
+  --bb-white: #EFE6D2;
+  --bb-off-white: #E6DBC2;
+  --bb-text-secondary: #5B5745;
+  --bb-gray: #5B5745;
+  --bb-border: rgba(36,34,26,0.14);
 }
 
-/* Page Header — Mobile First */
-.bb-page-hero {
-  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
-  color: var(--bb-white);
-  padding: 2.5rem 1.5rem;
-  border-radius: 10px;
-  margin-bottom: 2.5rem;
-  position: relative;
-  overflow: hidden;
-}
-.bb-page-hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(97,103,54,0.15) 0%, transparent 60%);
-  pointer-events: none;
-}
-.bb-page-hero h1 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin: 0 0 0.75rem;
-  color: var(--bb-white);
-  letter-spacing: -0.02em;
-  position: relative;
-}
-.bb-page-hero p {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 1rem;
-  color: rgba(255,255,255,0.8);
-  margin: 0;
-  font-weight: 300;
-  line-height: 1.6;
-  position: relative;
-}
-
-/* Involvement Cards — Mobile First */
+/* Involvement list: stacked, numbered, not a 3-card row */
 .bb-involve-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -71,23 +36,13 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 .bb-involve-card {
   background: var(--bb-white);
   border: 1px solid var(--bb-border);
-  border-radius: 8px;
+  border-top: 3px solid var(--bb-green-accent);
+  border-radius: 2px;
   padding: 1.75rem 1.5rem;
-  transition: all 0.25s ease;
-  position: relative;
 }
-.bb-involve-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--bb-green-accent), var(--bb-green-hover));
-  border-radius: 8px 8px 0 0;
-}
-.bb-involve-card:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+.bb-involve-card .bb-section-num {
+  display: block;
+  margin-bottom: 0.5rem;
 }
 .bb-involve-card h2 {
   font-family: 'Instrument Sans', sans-serif;
@@ -120,7 +75,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 .bb-contact-section {
   background: var(--bb-green-bg);
   border: 1px solid var(--bb-border);
-  border-radius: 10px;
+  border-radius: 2px;
   padding: 2rem 1.5rem;
   text-align: center;
   margin-bottom: 2rem;
@@ -144,7 +99,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   align-items: center;
   gap: 0.5rem;
   padding: 0.6rem 1.25rem;
-  border-radius: 6px;
+  border-radius: 2px;
   border: 1px solid var(--bb-border);
   background: var(--bb-white);
   color: var(--bb-navy) !important;
@@ -157,7 +112,6 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-contact-link:hover {
   border-color: var(--bb-green-accent);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   color: var(--bb-green-accent) !important;
 }
 .bb-feedback-note {
@@ -171,20 +125,6 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 /* Desktop */
 @media (min-width: 769px) {
-  .bb-page-hero {
-    padding: 3.5rem 3rem;
-    border-radius: 12px;
-  }
-  .bb-page-hero h1 {
-    font-size: 2.25rem;
-  }
-  .bb-page-hero p {
-    font-size: 1.1rem;
-  }
-  .bb-involve-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
   .bb-involve-card {
     padding: 2rem;
   }
@@ -193,27 +133,29 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   }
   .bb-contact-section {
     padding: 2.5rem 3rem;
-    border-radius: 12px;
+    border-radius: 2px;
   }
 }
 </style>
 
-<div class="bb-page-hero">
+<header class="bb-page-header">
+  <span class="eyebrow">Join In</span>
   <h1>Get Involved with BioBridge</h1>
-  <p>BioBridge is a student-led initiative, and we are always looking for people who want to help make biotech more accessible.</p>
-</div>
-
+  <p class="bb-page-header__deck">BioBridge is a student-led initiative, and we are always looking for people who want to help make biotech more accessible.</p>
+</header>
 
 <div class="bb-involve-grid">
 
   <div class="bb-involve-card">
+    <span class="bb-section-num">01</span>
     <h2>For Students</h2>
     <p><strong>Email signup:</strong> Get updates on new resources, mentorship opportunities, and events.</p>
     <p><strong>Interest form:</strong> Tell us what you are looking for and we will help connect you with resources.</p>
-    <p><em>(Forms coming soon -- for now, email us directly)</em></p>
+    <p><em>Forms are coming soon. For now, email us directly.</em></p>
   </div>
 
   <div class="bb-involve-card">
+    <span class="bb-section-num">02</span>
     <h2>For Mentors</h2>
     <p>If you work in biotech and want to help students navigate the field, we would love to hear from you.</p>
     <p>We are building a mentorship program to connect curious students with professionals who remember what it was like to start.</p>
@@ -221,6 +163,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   </div>
 
   <div class="bb-involve-card">
+    <span class="bb-section-num">03</span>
     <h2>For Contributors</h2>
     <p>Have a resource, article, or story to share? Want to write a guest post about your biotech journey?</p>
     <p>We are always looking for:</p>
@@ -237,15 +180,9 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 <div class="bb-contact-section">
   <h2>Stay Connected</h2>
   <div class="bb-contact-links">
-    <a href="mailto:jeans.connects@gmail.com" class="bb-contact-link">
-      <i class="fas fa-envelope"></i> jeans.connects@gmail.com
-    </a>
-    <a href="https://github.com/jean-biotech/biobridge" target="_blank" class="bb-contact-link">
-      <i class="fab fa-github"></i> GitHub
-    </a>
-    <a href="https://linkedin.com/in/jeantrann" target="_blank" class="bb-contact-link">
-      <i class="fab fa-linkedin"></i> LinkedIn
-    </a>
+    <a href="mailto:jeans.connects@gmail.com" class="bb-contact-link">jeans.connects@gmail.com</a>
+    <a href="https://github.com/jean-biotech/biobridge" target="_blank" class="bb-contact-link">GitHub</a>
+    <a href="https://linkedin.com/in/jeantrann" target="_blank" class="bb-contact-link">LinkedIn</a>
   </div>
   <p class="bb-feedback-note">See something that could be better? Have an idea for a new resource or page? We are constantly improving BioBridge based on feedback from students and professionals. Let us know what would make this more useful for you.</p>
 </div>

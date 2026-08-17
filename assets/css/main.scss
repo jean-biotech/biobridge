@@ -5,20 +5,20 @@
 @charset "utf-8";
 
 // ============================================================
-// BioBridge Design System — warm editorial, olive accent
+// BioBridge Design System: warm editorial, olive accent
 // Fraunces display / Instrument Sans body. No monospace, no
 // second accent color. Everything reads from :root custom
 // properties below so pages can tune without touching logic.
 // ============================================================
 
-$bb-paper: #F0E8D6;
-$bb-paper-2: #E9DFC9;
-$bb-taupe: #E3D8BF;
-$bb-ink: #2C2A20;
-$bb-ink-soft: #63604D;
-$bb-olive: #616736;
-$bb-olive-dark: #525834;
-$bb-olive-soft: #94996E;
+$bb-paper: #EFE6D2;
+$bb-paper-2: #E6DBC2;
+$bb-taupe: #DED2B7;
+$bb-ink: #24221A;
+$bb-ink-soft: #5B5745;
+$bb-olive: #5C6335;
+$bb-olive-dark: #3B4223;
+$bb-olive-soft: #8E9469;
 
 // Minimal Mistakes overrides
 $background-color: $bb-paper !default;
@@ -45,32 +45,29 @@ $type-size-8: 0.65rem !default;
 @import "minimal-mistakes";
 
 // ============================================================
-// DESIGN TOKENS — the single source of truth for color/type/space.
+// DESIGN TOKENS: the single source of truth for color/type/space.
 // ============================================================
 
 :root {
-  --paper: #F0E8D6;
-  --paper-2: #E9DFC9;
-  --taupe: #E3D8BF;
-  --ink: #2C2A20;
-  --ink-soft: #63604D;
+  --paper: #EFE6D2;
+  --paper-2: #E6DBC2;
+  --taupe: #DED2B7;
+  --ink: #24221A;
+  --ink-soft: #5B5745;
 
-  --olive: #616736;
-  --olive-dark: #525834;
-  --olive-soft: #94996E;
+  --olive: #5C6335;
+  --olive-deep: #3B4223;
+  --olive-soft: #8E9469;
+  --mustard: #A9781F; // sparing use only: tiny marks like figure numbers, never backgrounds/buttons
 
-  // translucent-ink hairlines, per the brief: structure without heavy borders
-  --hairline: rgba(44, 42, 32, 0.14);
-  --hairline-soft: rgba(44, 42, 32, 0.08);
-
-  --shadow-sm: 0 1px 3px rgba(44, 42, 32, 0.08);
-  --shadow-md: 0 8px 20px rgba(44, 42, 32, 0.10);
+  // translucent-ink hairlines: structure without heavy borders, never a shadow
+  --line: rgba(36, 34, 26, 0.22);
+  --line-soft: rgba(36, 34, 26, 0.1);
 
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Instrument Sans", -apple-system, BlinkMacSystemFont, sans-serif;
 
-  --radius-sm: 6px;
-  --radius-md: 10px;
+  --radius: 2px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Instrument+Sans:wght@400;500;600;700&display=swap');
@@ -104,11 +101,6 @@ body {
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.65;
-
-  // very subtle paper grain, low opacity
-  background-image:
-    radial-gradient(rgba(44, 42, 32, 0.025) 1px, transparent 1px);
-  background-size: 3px 3px;
 }
 
 p {
@@ -140,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.02em;
 }
 
-// Editorial drop cap — use on a lead paragraph via <p class="lede">
+// Editorial drop cap: use on a lead paragraph via <p class="lede">
 .lede::first-letter {
   font-family: var(--font-display);
   font-size: 3.4em;
@@ -148,9 +140,11 @@ h1, h2, h3, h4, h5, h6 {
   float: left;
   line-height: 0.82;
   padding: 0.05em 0.09em 0 0;
-  color: var(--olive-dark);
+  color: var(--olive-deep);
 }
 
+// Large serif pull statement, standing directly in the page flow.
+// No stripe, no surrounding box.
 .pull-quote {
   font-family: var(--font-display);
   font-optical-sizing: auto;
@@ -160,12 +154,118 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.32;
   color: var(--ink);
   margin: 1.75rem 0;
-  padding-left: 1.25rem;
-  border-left: 3px solid var(--olive);
 }
 
 // ============================================================
-// WIDE DESKTOP LAYOUT OVERRIDES — Full viewport width
+// FIELD GUIDE PAGE HEADER: the one consistent opener every
+// interior page uses in place of a gradient banner box.
+// ============================================================
+
+.bb-page-header {
+  padding: 1.5rem 0 1.75rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--line);
+
+  .eyebrow {
+    margin-bottom: 0.85rem;
+  }
+
+  h1 {
+    margin: 0 0 0.6rem;
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+    line-height: 1.15;
+  }
+}
+
+.bb-page-header__deck {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  max-width: 42rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+// Numbered contents list, replacing any boxed "on this page" widget.
+.bb-contents {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+  border-top: 1px solid var(--line);
+
+  li {
+    display: flex;
+    gap: 0.85rem;
+    align-items: baseline;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .bb-contents__num {
+    font-family: var(--font-display);
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    width: 1.6rem;
+  }
+
+  a {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+  }
+}
+
+// Running section numbers, set in Fraunces, so long pages read
+// like chapters in a printed guide.
+.bb-section-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.4rem;
+}
+
+// A prominent image treated as a figure: squared, hairline frame,
+// short sentence-case caption beneath.
+.bb-figure {
+  margin: 1.75rem 0;
+
+  img {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--line);
+  }
+
+  figcaption {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin-top: 0.6rem;
+  }
+}
+
+// Flat warm color block used in place of a photo when no distinct,
+// appropriate image exists for a slot.
+.bb-color-block {
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--paper);
+  text-align: center;
+  padding: 1.5rem;
+
+  &.bb-color-block--olive { background: var(--olive); }
+  &.bb-color-block--olive-deep { background: var(--olive-deep); }
+  &.bb-color-block--paper-2 { background: var(--paper-2); color: var(--ink-soft); }
+}
+
+// ============================================================
+// WIDE DESKTOP LAYOUT OVERRIDES: full viewport width
 // ============================================================
 
 .page {
@@ -202,7 +302,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// Content area — comfortable reading width for prose
+// Content area: comfortable reading width for prose
 .page__content {
   @media (min-width: 769px) {
     max-width: none;
@@ -212,7 +312,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// Sidebar (TOC) — position to the side on desktop
+// Sidebar (TOC): position to the side on desktop
 .sidebar__right {
   @media (min-width: 1024px) {
     position: sticky;
@@ -221,7 +321,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 240px;
     margin-right: 0;
     padding-left: 1.5rem;
-    border-left: 1px solid var(--hairline);
+    border-left: 1px solid var(--line);
   }
 }
 
@@ -231,7 +331,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .masthead {
   background-color: var(--paper);
-  border-bottom: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--line);
   box-shadow: none;
   padding: 0.5rem 0;
   position: sticky;
@@ -259,15 +359,10 @@ h1, h2, h3, h4, h5, h6 {
     width: auto;
     display: block;
     margin: 0;
-    transition: transform 0.25s ease, opacity 0.25s ease;
 
     @media (min-width: 769px) {
       height: 58px;
     }
-  }
-
-  &:hover img {
-    transform: scale(1.03);
   }
 }
 
@@ -377,17 +472,16 @@ h4, h5, h6 {
 .btn--primary {
   background-color: var(--olive) !important;
   color: var(--paper) !important;
-  border-radius: 6px;
+  border-radius: var(--radius);
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 0.9rem;
   letter-spacing: 0.01em;
-  transition: all 0.2s ease;
+  transition: background-color 0.15s ease;
   box-shadow: none;
 
   &:hover {
-    background-color: var(--olive-dark) !important;
-    transform: translateY(-1px);
+    background-color: var(--olive-deep) !important;
   }
 }
 
@@ -396,14 +490,15 @@ h4, h5, h6 {
 // ============================================================
 
 .toc {
-  border: 1px solid var(--hairline);
-  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
   background: var(--paper-2);
   font-size: 0.82rem;
+  box-shadow: none;
 
   .nav__title {
-    background: var(--olive-dark);
-    border-radius: 6px 6px 0 0;
+    background: var(--olive-deep);
+    border-radius: 0;
     font-family: var(--font-body);
     font-size: 0.75rem;
     letter-spacing: 0.06em;
@@ -421,7 +516,7 @@ h4, h5, h6 {
 
   .active {
     a {
-      color: var(--olive-dark) !important;
+      color: var(--olive-deep) !important;
       font-weight: 600;
     }
   }
@@ -432,7 +527,7 @@ h4, h5, h6 {
 // ============================================================
 
 a {
-  color: var(--olive-dark);
+  color: var(--olive-deep);
 
   &:hover {
     color: var(--olive);
@@ -440,7 +535,7 @@ a {
 }
 
 // ============================================================
-// FOCUS STATES — accessible + on-brand
+// FOCUS STATES: accessible and on-brand
 // ============================================================
 
 a:focus-visible,
@@ -457,14 +552,81 @@ input:focus-visible,
 // ============================================================
 
 .page__footer {
-  background: var(--ink);
-  color: rgba(240, 232, 214, 0.75);
+  background: var(--olive-deep);
+  color: rgba(239, 230, 210, 0.75);
   font-size: 0.85rem;
+  box-shadow: none;
 
   a {
-    color: rgba(240, 232, 214, 0.85);
+    color: rgba(239, 230, 210, 0.85);
     &:hover {
       color: var(--olive-soft);
     }
   }
+
+  .page__footer-follow,
+  .page__footer-copyright {
+    display: none;
+  }
+}
+
+.bb-site-footer {
+  padding: 2.5rem 0 1.5rem;
+}
+
+.bb-site-footer__top {
+  display: grid;
+  gap: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(239, 230, 210, 0.18);
+
+  @media (min-width: 769px) {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+.bb-site-footer__title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--paper);
+  margin-bottom: 0.5rem;
+}
+
+.bb-site-footer__tagline {
+  color: rgba(239, 230, 210, 0.75);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 32rem;
+  margin: 0;
+}
+
+.bb-site-footer__nav,
+.bb-site-footer__connect {
+  .eyebrow {
+    color: var(--olive-soft);
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    font-size: 0.9rem;
+  }
+}
+
+.bb-site-footer__bottom {
+  padding-top: 1.25rem;
+  font-size: 0.78rem;
+  color: rgba(239, 230, 210, 0.6);
 }

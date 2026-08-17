@@ -2,8 +2,6 @@
 layout: single
 title: "What is Biotech?"
 permalink: /what-is-biotech/
-toc: true
-toc_label: "On This Page"
 ---
 
 <style>
@@ -12,116 +10,35 @@ body { font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-s
 h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
-  --bb-green: #2C2A20;
-  --bb-green-accent: #616736;
-  --bb-green-bright: #616736;
-  --bb-green-hover: #525834;
-  --bb-green-dark: #525834;
-  --bb-green-bg: #E9DFC9;
-  --bb-green-bg-subtle: #E3D8BF;
-  --bb-navy: #2C2A20;
-  --bb-charcoal: #2C2A20;
-  --bb-white: #F0E8D6;
-  --bb-off-white: #E9DFC9;
-  --bb-text-secondary: #63604D;
-  --bb-gray: #63604D;
-  --bb-border: rgba(44,42,32,0.14);
+  --bb-green: #24221A;
+  --bb-green-accent: #5C6335;
+  --bb-green-bright: #5C6335;
+  --bb-green-hover: #3B4223;
+  --bb-green-dark: #3B4223;
+  --bb-green-bg: #E6DBC2;
+  --bb-green-bg-subtle: #DED2B7;
+  --bb-navy: #24221A;
+  --bb-charcoal: #24221A;
+  --bb-white: #EFE6D2;
+  --bb-off-white: #E6DBC2;
+  --bb-text-secondary: #5B5745;
+  --bb-gray: #5B5745;
+  --bb-border: rgba(36,34,26,0.14);
 }
 
-/* Page Header */
-.bb-page-hero {
-  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
-  color: var(--bb-white);
-  padding: 2rem 2rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  position: relative;
-  overflow: hidden;
-}
-.bb-page-hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(97,103,54,0.15) 0%, transparent 60%);
-  pointer-events: none;
-}
-.bb-page-hero h1 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin: 0 0 0.4rem;
-  color: var(--bb-white);
-  letter-spacing: -0.02em;
-  position: relative;
-}
-.bb-page-hero p {
+/* Definition caption, set beneath the pull-quote statement */
+.bb-definition-caption {
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.88rem;
-  color: rgba(255,255,255,0.8);
-  margin: 0;
-  font-weight: 300;
-  line-height: 1.6;
-  position: relative;
-}
-
-/* Image Placeholder */
-.bb-img-placeholder {
-  background: linear-gradient(135deg, var(--bb-green-bg), #E9DFC9);
-  border: 1px dashed var(--bb-border);
-  border-radius: 8px;
-  padding: 1.5rem 1rem;
-  text-align: center;
+  font-size: 0.85rem;
   color: var(--bb-gray);
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 500;
-  line-height: 1.5;
-}
-
-/* Reduced callout box */
-.bb-callout {
-  background: var(--bb-navy);
-  border-radius: 8px;
-  padding: 1rem 1.25rem;
-  margin: 1.5rem 0;
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  width: 100%;
-}
-.bb-callout::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 3px; height: 100%;
-  background: linear-gradient(180deg, var(--bb-green-bright), var(--bb-green-accent));
-}
-.bb-callout p {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--bb-white);
-  margin: 0;
-  line-height: 1.5;
-  letter-spacing: -0.01em;
-  padding-left: 0.75rem;
-}
-.bb-callout span {
-  display: block;
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.68rem;
-  font-weight: 400;
-  color: rgba(255,255,255,0.5);
-  margin-top: 0.35rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding-left: 0.75rem;
+  margin: -1rem 0 1.5rem;
 }
 
 /* Section intro text */
 .bb-intro-text {
   font-family: 'Instrument Sans', sans-serif;
   font-size: 0.9rem;
-  color: #2C2A20;
+  color: #24221A;
   line-height: 1.8;
   margin-bottom: 1.25rem;
 }
@@ -147,9 +64,17 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   color: var(--bb-green-accent);
   white-space: nowrap;
 }
+.bb-divider-label .bb-num {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-right: 0.5em;
+  color: var(--bb-gray);
+}
 
 /* ============================================
-   FLIP CARDS — Real-World Examples
+   FLIP CARDS: Real-World Examples
    ============================================ */
 .bb-flip-grid {
   display: grid;
@@ -172,8 +97,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   transform-style: preserve-3d;
 }
 
-.bb-flip-card.flipped .bb-flip-card-inner,
-.bb-flip-card:hover .bb-flip-card-inner {
+.bb-flip-card.flipped .bb-flip-card-inner {
   transform: rotateY(180deg);
 }
 
@@ -184,7 +108,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   height: 100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  border-radius: 8px;
+  border-radius: 2px;
   border: 1px solid var(--bb-border);
   overflow: hidden;
 }
@@ -196,7 +120,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   flex-direction: column;
 }
 .bb-flip-front-img {
-  background: linear-gradient(135deg, #E9DFC9, #F0E8D6);
+  background: var(--bb-off-white);
   height: 110px;
   width: 100%;
   display: flex;
@@ -204,16 +128,6 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   justify-content: center;
   flex-shrink: 0;
   border-bottom: 1px solid var(--bb-border);
-}
-.bb-flip-front-img span {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.68rem;
-  font-weight: 500;
-  color: var(--bb-green);
-  background: rgba(97,103,54,0.1);
-  border: 1px dashed rgba(97,103,54,0.3);
-  border-radius: 4px;
-  padding: 0.25rem 0.6rem;
 }
 .bb-flip-front-body {
   padding: 0.85rem 1rem;
@@ -273,14 +187,14 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-flip-org-badge {
   display: inline-block;
-  background: rgba(148,153,110,0.18);
-  border: 1px solid rgba(148,153,110,0.38);
-  border-radius: 20px;
+  background: rgba(142,148,105,0.18);
+  border: 1px solid rgba(142,148,105,0.38);
+  border-radius: 2px;
   padding: 0.18rem 0.6rem;
   font-family: 'Instrument Sans', sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #616736;
+  color: #5C6335;
   letter-spacing: 0.01em;
   white-space: nowrap;
 }
@@ -295,7 +209,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-two-col-text p {
   font-family: 'Instrument Sans', sans-serif;
-  color: #2C2A20;
+  color: #24221A;
   font-size: 0.9rem;
   line-height: 1.8;
   margin: 0 0 0.85rem;
@@ -306,8 +220,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 .bb-misconception {
   background: var(--bb-off-white);
   border: 1px solid var(--bb-border);
-  border-left: 3px solid var(--bb-green-accent);
-  border-radius: 7px;
+  border-radius: 2px;
   padding: 1rem 1.25rem;
   margin-bottom: 0.75rem;
 }
@@ -336,20 +249,16 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 /* Beyond the Science image */
 .bb-beyond-img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 2px;
   display: block;
 }
 
 /* Desktop */
 @media (min-width: 769px) {
-  .bb-page-hero { padding: 2.5rem 2.5rem; border-radius: 10px; }
-  .bb-page-hero h1 { font-size: 1.65rem; }
-  .bb-page-hero p { font-size: 0.93rem; }
   .bb-flip-grid { grid-template-columns: repeat(2, 1fr); gap: 1.1rem; }
   .bb-flip-card { height: 240px; }
   .bb-flip-front-img { height: 120px; }
   .bb-two-col { grid-template-columns: 3fr 2fr; gap: 2.25rem; }
-  .bb-callout p { font-size: 1rem; }
 }
 @media (min-width: 1024px) {
   .bb-flip-grid { grid-template-columns: repeat(4, 1fr); }
@@ -357,10 +266,9 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 /* International callout (shared style) */
 .bb-international-callout {
-  background: #FAF7F2;
-  border: 1px solid #E9DFC9;
-  border-left: 4px solid var(--bb-green-accent);
-  border-radius: 7px;
+  background: #EFE6D2;
+  border: 1px solid #E6DBC2;
+  border-radius: 2px;
   padding: 1rem 1.25rem;
   margin: 1.75rem 0;
 }
@@ -384,29 +292,34 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 </style>
 
-<div class="bb-page-hero">
+<header class="bb-page-header">
+  <span class="eyebrow">The Basics</span>
   <h1>What is Biotechnology, Really?</h1>
-  <p>Understanding the science shaping our future, in plain language, no prerequisites required.</p>
-</div>
+  <p class="bb-page-header__deck">Understanding the science shaping our future, in plain language, no prerequisites required.</p>
+</header>
+
+<ol class="bb-contents">
+  <li><span class="bb-contents__num">01</span><a href="#real-world-examples">Real-World Examples</a></li>
+  <li><span class="bb-contents__num">02</span><a href="#beyond-the-science">Beyond the Science</a></li>
+  <li><span class="bb-contents__num">03</span><a href="#common-misconceptions">Common Misconceptions</a></li>
+</ol>
 
 <p class="bb-intro-text">Biotechnology is using living systems (cells, bacteria, proteins, DNA) to create useful products or solve real problems.</p>
 
-<div class="bb-callout">
-  <p>Biotech = biology + technology to solve real problems.</p>
-  <span>The simplest definition that actually holds up</span>
-</div>
+<p class="pull-quote">Biotech = biology + technology to solve real problems.</p>
+<p class="bb-definition-caption">The simplest definition that actually holds up</p>
 
 <p class="bb-intro-text">It sounds vague because biotech is <strong>incredibly broad</strong>. It touches medicine, agriculture, environmental science, manufacturing, and more. The best way to understand it is through examples.</p>
 
 <div class="bb-divider">
   <div class="bb-divider-line"></div>
-  <div class="bb-divider-label">Real-World Examples</div>
+  <div class="bb-divider-label"><span class="bb-num">01</span>Real-World Examples</div>
   <div class="bb-divider-line"></div>
 </div>
 
 ## Real-World Examples
 
-<p class="bb-intro-text" style="font-size:0.82rem; color: var(--bb-gray);">Hover over each card (or tap on mobile) to see more.</p>
+<p class="bb-intro-text" style="font-size:0.82rem; color: var(--bb-gray);">Click each card (or tap on mobile) to see more.</p>
 
 <div class="bb-flip-grid">
 
@@ -416,7 +329,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
         <div class="bb-flip-front-img"><img src="/assets/images/biotech-medicine.jpg" alt="Medicine"></div>
         <div class="bb-flip-front-body">
           <h3>Medicine</h3>
-          <p class="bb-flip-hint">Hover to learn more</p>
+          <p class="bb-flip-hint">Click to learn more</p>
         </div>
       </div>
       <div class="bb-flip-back">
@@ -437,7 +350,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
         <div class="bb-flip-front-img"><img src="/assets/images/biotech-agriculture.jpg" alt="Agriculture"></div>
         <div class="bb-flip-front-body">
           <h3>Agriculture</h3>
-          <p class="bb-flip-hint">Hover to learn more</p>
+          <p class="bb-flip-hint">Click to learn more</p>
         </div>
       </div>
       <div class="bb-flip-back">
@@ -458,7 +371,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
         <div class="bb-flip-front-img"><img src="/assets/images/biotech-environment.jpg" alt="Environment"></div>
         <div class="bb-flip-front-body">
           <h3>Environment</h3>
-          <p class="bb-flip-hint">Hover to learn more</p>
+          <p class="bb-flip-hint">Click to learn more</p>
         </div>
       </div>
       <div class="bb-flip-back">
@@ -479,7 +392,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
         <div class="bb-flip-front-img"><img src="/assets/images/biotech-cuttingedge.jpg" alt="The Cutting Edge"></div>
         <div class="bb-flip-front-body">
           <h3>The Cutting Edge</h3>
-          <p class="bb-flip-hint">Hover to learn more</p>
+          <p class="bb-flip-hint">Click to learn more</p>
         </div>
       </div>
       <div class="bb-flip-back">
@@ -498,7 +411,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 <div class="bb-divider">
   <div class="bb-divider-line"></div>
-  <div class="bb-divider-label">Beyond the Lab</div>
+  <div class="bb-divider-label"><span class="bb-num">02</span>Beyond the Lab</div>
   <div class="bb-divider-line"></div>
 </div>
 
@@ -518,7 +431,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 <div class="bb-divider">
   <div class="bb-divider-line"></div>
-  <div class="bb-divider-label">Common Misconceptions</div>
+  <div class="bb-divider-label"><span class="bb-num">03</span>Common Misconceptions</div>
   <div class="bb-divider-line"></div>
 </div>
 
@@ -531,7 +444,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 <div class="bb-misconception">
   <strong>"It's all lab work."</strong>
-  <p>Lab work is one slice of a much bigger picture. There's also manufacturing, regulatory affairs, sales, policy, data analysis, and more. The <a href="/career-pathways/" style="color: #616736; font-weight: 600;">Career Pathways</a> page shows the full range.</p>
+  <p>Lab work is one slice of a much bigger picture. There's also manufacturing, regulatory affairs, sales, policy, data analysis, and more. The <a href="/career-pathways/" style="color: #5C6335; font-weight: 600;">Career Pathways</a> page shows the full range.</p>
 </div>
 
 <div class="bb-misconception">
@@ -541,7 +454,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 <!-- Regulatory context callout -->
 <div class="bb-international-callout">
-  <div class="bb-intl-header">🌍 Outside the US?</div>
+  <div class="bb-intl-header">Outside the US?</div>
   <p>Regulatory terminology varies by country. FDA = United States Food and Drug Administration. EMA = European Medicines Agency (EU). Health Canada oversees drug approvals in Canada. PMDA (Pharmaceuticals and Medical Devices Agency) regulates in Japan. When you see terms like "IND filing" or "NDA" below, those are US-specific. Equivalent processes exist in other jurisdictions under different names and timelines.</p>
 </div>
 

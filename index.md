@@ -6,19 +6,19 @@ classes: wide
 
 <style>
 /* ================================================================
-   Homepage — editorial layout built on the global tokens in
+   Homepage: editorial layout built on the global tokens in
    assets/css/main.scss (--paper, --paper-2, --taupe, --ink,
-   --ink-soft, --olive, --olive-dark, --olive-soft, --hairline).
+   --ink-soft, --olive, --olive-deep, --olive-soft, --line).
    Olive is the only accent. No monospace anywhere.
    ================================================================ */
 
 .hp { max-width: 1160px; margin: 0 auto; padding: 0 1.25rem; }
 .hp-band { padding: 3.5rem 0; }
-.hp-band + .hp-band { border-top: 1px solid var(--hairline); }
+.hp-band + .hp-band { border-top: 1px solid var(--line); }
 .hp-band--tint { background: var(--paper-2); }
 .hp-band--deep {
   background: var(--ink);
-  color: rgba(240,232,214,0.92);
+  color: rgba(239,230,210,0.92);
 }
 .hp-band--deep .eyebrow { color: var(--olive-soft); }
 .hp-band--deep h2 { color: var(--paper); }
@@ -45,7 +45,6 @@ classes: wide
 }
 .hero-copy h1 em {
   font-style: italic;
-  color: var(--olive-dark);
 }
 .hero-copy .hero-sub {
   font-size: 1.1rem;
@@ -65,11 +64,11 @@ classes: wide
   font-weight: 600;
   font-size: 1rem;
   padding: 0.85rem 1.6rem;
-  border-radius: 6px;
+  border-radius: 2px;
   text-decoration: none !important;
   transition: background 0.2s ease, transform 0.2s ease;
 }
-.btn-start:hover { background: var(--olive-dark); transform: translateY(-1px); color: var(--paper) !important; }
+.btn-start:hover { background: var(--olive-deep); color: var(--paper) !important; }
 .hero-quiet-links { display: flex; flex-direction: column; gap: 0.4rem; }
 .hero-quiet-links a {
   font-family: var(--font-body);
@@ -77,12 +76,12 @@ classes: wide
   font-weight: 500;
   color: var(--ink-soft) !important;
   text-decoration: none !important;
-  border-bottom: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--line);
   width: fit-content;
   padding-bottom: 1px;
   transition: color 0.2s ease, border-color 0.2s ease;
 }
-.hero-quiet-links a:hover { color: var(--olive-dark) !important; border-color: var(--olive); }
+.hero-quiet-links a:hover { color: var(--olive-deep) !important; border-color: var(--olive); }
 .hero-honest-line {
   font-family: var(--font-display);
   font-style: italic;
@@ -96,7 +95,7 @@ classes: wide
 .hero-visual img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 2px;
   display: block;
   object-fit: cover;
   max-height: 460px;
@@ -117,14 +116,14 @@ classes: wide
 
 /* ---------------- How BioBridge works: numbered editorial list ---------------- */
 .works-head { max-width: 560px; margin-bottom: 2rem; }
-.works-list { border-top: 1px solid var(--hairline); }
+.works-list { border-top: 1px solid var(--line); }
 .works-row {
   display: grid;
   grid-template-columns: 3rem 1fr auto;
   align-items: center;
   gap: 1.25rem;
   padding: 1.6rem 1rem;
-  border-bottom: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--line);
   text-decoration: none !important;
   color: inherit !important;
   transition: background 0.2s ease;
@@ -133,12 +132,12 @@ classes: wide
 .works-row__num { font-family: var(--font-body); font-weight: 600; font-size: 1rem; color: var(--ink-soft); }
 .works-row__title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; margin: 0 0 0.3rem; color: var(--ink); }
 .works-row__desc { font-family: var(--font-body); font-size: 0.92rem; color: var(--ink-soft); margin: 0; max-width: 620px; }
-.works-row__arrow { font-size: 1.3rem; color: var(--ink-soft); transition: transform 0.2s ease; }
-.works-row:hover .works-row__arrow { transform: translateX(3px); color: var(--olive); }
+.works-row__arrow { font-size: 1.3rem; color: var(--ink-soft); }
+.works-row:hover .works-row__arrow { color: var(--olive); }
 
 .works-row--featured {
   background: var(--olive);
-  border-radius: 8px;
+  border-radius: 2px;
   border-bottom-color: transparent;
   margin: 0.25rem 0;
 }
@@ -146,7 +145,7 @@ classes: wide
 .works-row--featured .works-row__title,
 .works-row--featured .works-row__desc,
 .works-row--featured .works-row__arrow { color: var(--paper) !important; }
-.works-row--featured:hover { background: var(--olive-dark); }
+.works-row--featured:hover { background: var(--olive-deep); }
 
 @media (min-width: 700px) {
   .works-row { grid-template-columns: 4rem 1fr auto; padding: 1.85rem 1.25rem; }
@@ -158,7 +157,7 @@ classes: wide
 .story-photo {
   width: 220px;
   height: 220px;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius);
   object-fit: cover;
   display: block;
 }
@@ -173,12 +172,12 @@ classes: wide
   font-family: var(--font-body); font-weight: 600; font-size: 0.9rem;
   text-decoration: none !important;
   padding: 0.45rem 0.9rem;
-  border-radius: 100px;
-  border: 1px solid var(--hairline);
+  border-radius: 2px;
+  border: 1px solid var(--line);
   color: var(--ink) !important;
   transition: all 0.2s ease;
 }
-.story-connect a:hover { border-color: var(--olive); color: var(--olive-dark) !important; }
+.story-connect a:hover { border-color: var(--olive); color: var(--olive-deep) !important; }
 
 @media (min-width: 900px) {
   .story-grid { grid-template-columns: 240px 1fr; gap: 3.25rem; align-items: start; }
@@ -188,8 +187,8 @@ classes: wide
 .explorer-head { max-width: 640px; margin-bottom: 1.75rem; }
 .explorer-filters {
   background: var(--paper-2);
-  border: 1px solid var(--hairline);
-  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
   padding: 1.5rem;
   margin-bottom: 2rem;
 }
@@ -211,8 +210,8 @@ classes: wide
   font-size: 0.85rem;
   font-weight: 500;
   padding: 0.45rem 0.95rem;
-  border-radius: 100px;
-  border: 1px solid var(--hairline);
+  border-radius: 2px;
+  border: 1px solid var(--line);
   background: var(--paper);
   color: var(--ink-soft);
   cursor: pointer;
@@ -224,13 +223,13 @@ classes: wide
   border-color: var(--olive);
   color: var(--paper);
 }
-.explorer-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1.25rem; padding-top: 1.1rem; border-top: 1px solid var(--hairline); }
+.explorer-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1.25rem; padding-top: 1.1rem; border-top: 1px solid var(--line); }
 .explorer-count { font-family: var(--font-body); font-size: 0.8rem; color: var(--ink-soft); }
 .explorer-reset {
   font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--olive-dark);
+  color: var(--olive-deep);
   background: none;
   border: none;
   cursor: pointer;
@@ -241,12 +240,11 @@ classes: wide
 .explorer-empty { color: var(--ink-soft); font-style: italic; padding: 2rem 0; }
 .role-card {
   background: var(--paper);
-  border: 1px solid var(--hairline);
-  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
   padding: 1.25rem 1.4rem;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
-.role-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.role-card:hover { border-color: var(--olive); }
 .role-card__top { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.65rem; }
 .role-card__title { margin: 0; font-size: 1.05rem; color: var(--ink); }
 .badge {
@@ -256,27 +254,26 @@ classes: wide
   text-transform: uppercase;
   letter-spacing: 0.06em;
   padding: 0.3rem 0.55rem;
-  border-radius: 5px;
+  border-radius: 2px;
   white-space: nowrap;
   flex-shrink: 0;
 }
-.badge--go { background: var(--paper-2); color: var(--olive-dark); }
+.badge--go { background: var(--paper-2); color: var(--olive-deep); }
 .badge--maybe { background: var(--taupe); color: var(--ink); }
 .badge--later { background: var(--ink); color: var(--paper); }
 .role-card__salary { font-size: 0.85rem; color: var(--ink); margin: 0 0 0.65rem; line-height: 1.5; }
 .role-card__salary .eyebrow { color: var(--ink-soft); font-size: 0.66rem; }
 .role-card__step { font-size: 0.9rem; color: var(--ink-soft); line-height: 1.6; margin: 0 0 0.85rem; }
-.role-card__link { font-family: var(--font-body); font-weight: 600; font-size: 0.85rem; text-decoration: none !important; color: var(--olive-dark); }
+.role-card__link { font-family: var(--font-body); font-weight: 600; font-size: 0.85rem; text-decoration: none !important; color: var(--olive-deep); }
 
 @media (min-width: 700px) { .explorer-results { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1100px) { .explorer-results { grid-template-columns: repeat(3, 1fr); } }
 
 /* ---------------- Learning Lab ---------------- */
 .lab-grid { display: grid; grid-template-columns: 1fr; gap: 1.1rem; }
 .lab-card {
   background: var(--paper-2);
-  border: 1px solid var(--hairline);
-  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
   padding: 1.5rem;
 }
 .lab-card h3 { font-size: 1.05rem; margin: 0 0 0.3rem; color: var(--ink); }
@@ -285,9 +282,9 @@ classes: wide
 .lab-logos { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.25rem; }
 .lab-logos img { height: 26px; width: auto; max-width: 100px; object-fit: contain; }
 .lab-books-row { display: flex; gap: 0.6rem; }
-.lab-books-row img { width: 52px; height: 76px; object-fit: cover; border-radius: 3px; }
+.lab-books-row img { width: 52px; height: 76px; object-fit: cover; border-radius: 2px; }
 .lab-more { margin-top: 1.75rem; }
-.lab-more a { font-weight: 600; text-decoration: none !important; color: var(--olive-dark); }
+.lab-more a { font-weight: 600; text-decoration: none !important; color: var(--olive-deep); }
 
 @media (min-width: 900px) { .lab-grid { grid-template-columns: repeat(4, 1fr); } }
 
@@ -375,14 +372,14 @@ classes: wide
       </div>
       <div class="story-content">
         <p class="lede">I was certain I would become a doctor. In college, I completed the shadowing hours, prerequisites, and extracurriculars. But the closer I pushed myself toward a future in clinical work, the more I questioned whether it was actually right for me. I realized I needed a different direction.</p>
-        <p>While searching for alternatives, I discovered my school offered a combined BS/MS in biotechnology that I could complete in four years. I knew almost nothing about biotech when I applied, but the program revealed just how expansive the field actually is: not just lab work, but business strategy, regulatory policy, manufacturing operations, and more.</p>
+        <p>While searching for alternatives, I discovered my school offered a combined BS/MS in biotechnology that I could complete in four years. I knew almost nothing about biotech when I applied, but the program revealed just how expansive the field actually is, spanning lab work, business strategy, regulatory policy, manufacturing operations, and more.</p>
         <p>I started documenting what I was learning on social media, and the audience grew quickly. Tens of thousands of people followed along, and my messages became a constant stream of the same questions.</p>
         <blockquote class="pull-quote">"What is biotech? How do I get in? Do I need a PhD?"</blockquote>
         <p>People were curious, but lacked a practical starting point. BioBridge is the resource I wish had existed when I was trying to figure it out.</p>
         <div class="story-connect">
           <span class="story-connect-label">Follow the journey:</span>
-          <a href="https://instagram.com/jeans.scenes" target="_blank" rel="noopener"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a>
-          <a href="https://linkedin.com/in/jeantrann" target="_blank" rel="noopener"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+          <a href="https://instagram.com/jeans.scenes" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://linkedin.com/in/jeantrann" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
     </div>

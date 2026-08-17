@@ -1,0 +1,28 @@
+<div class="bb-site-footer">
+  <div class="bb-site-footer__top">
+    <div class="bb-site-footer__brand">
+      <span class="bb-site-footer__title">BioBridge</span>
+      <p class="bb-site-footer__tagline">{{ site.description }}</p>
+    </div>
+    <nav class="bb-site-footer__nav" aria-label="Footer">
+      <span class="eyebrow">Site</span>
+      <ul>
+        {% for item in site.data.navigation.main %}
+        <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <div class="bb-site-footer__connect">
+      <span class="eyebrow">Connect</span>
+      <ul>
+        {% for link in site.social_links %}
+        <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+        {% endfor %}
+        <li><a href="{{ '/privacy-policy/' | relative_url }}">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bb-site-footer__bottom">
+    <span>&copy; {{ site.time | date: '%Y' }} BioBridge</span>
+  </div>
+</div>
