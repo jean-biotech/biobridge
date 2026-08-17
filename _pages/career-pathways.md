@@ -10,60 +10,25 @@ body { font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-s
 h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
-  --bb-green: #2C2A20;
-  --bb-green-accent: #616736;
-  --bb-green-bright: #616736;
-  --bb-green-hover: #525834;
-  --bb-green-dark: #525834;
-  --bb-green-bg: #E9DFC9;
-  --bb-green-bg-subtle: #E3D8BF;
-  --bb-navy: #2C2A20;
-  --bb-charcoal: #2C2A20;
-  --bb-white: #F0E8D6;
-  --bb-off-white: #E9DFC9;
-  --bb-text-secondary: #63604D;
-  --bb-gray: #63604D;
-  --bb-border: rgba(44,42,32,0.14);
-  --bb-teal: #94996E;
-}
-
-/* Page Header */
-.bb-page-hero {
-  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
-  color: var(--bb-white);
-  padding: 2rem 2rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  position: relative;
-  overflow: hidden;
-}
-.bb-page-hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(97,103,54,0.15) 0%, transparent 60%);
-  pointer-events: none;
-}
-.bb-page-hero h1 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem;
-  color: var(--bb-white);
-  letter-spacing: -0.02em;
-  position: relative;
-}
-.bb-page-hero p {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.88rem;
-  color: rgba(255,255,255,0.8);
-  margin: 0;
-  font-weight: 300;
-  line-height: 1.6;
-  position: relative;
+  --bb-green: #24221A;
+  --bb-green-accent: #5C6335;
+  --bb-green-bright: #5C6335;
+  --bb-green-hover: #3B4223;
+  --bb-green-dark: #3B4223;
+  --bb-green-bg: #E6DBC2;
+  --bb-green-bg-subtle: #E6DBC2;
+  --bb-navy: #24221A;
+  --bb-charcoal: #24221A;
+  --bb-white: #EFE6D2;
+  --bb-off-white: #E6DBC2;
+  --bb-text-secondary: #5B5745;
+  --bb-gray: #5B5745;
+  --bb-border: rgba(36,34,26,0.22);
+  --bb-teal: #5C6335;
 }
 
 /* ============================================
-   CAROUSEL WRAPPER — Full width
+   CAROUSEL WRAPPER (full width)
    ============================================ */
 .bb-carousel-wrap {
   position: relative;
@@ -73,14 +38,14 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   box-sizing: border-box;
 }
 
-/* Navigation arrows — circular, Penn style */
+/* Navigation arrows, circular */
 .bb-carousel-btn {
   position: absolute;
   top: 40%;
   transform: translateY(-50%);
   background: var(--bb-white);
   border: 1.5px solid var(--bb-border);
-  border-radius: 50%;
+  border-radius: 0;
   width: 40px;
   height: 40px;
   display: flex;
@@ -89,30 +54,27 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   cursor: pointer;
   font-size: 1.1rem;
   color: var(--bb-navy);
-  transition: all 0.2s ease;
+  transition: border-color 0.2s ease, color 0.2s ease;
   z-index: 10;
   line-height: 1;
   font-family: Georgia, serif;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   padding: 0;
 }
 .bb-carousel-btn:hover {
   border-color: var(--bb-green-accent);
   color: var(--bb-green-accent);
-  box-shadow: 0 4px 14px rgba(97,103,54,0.2);
 }
 .bb-carousel-btn.prev { left: 0; }
 .bb-carousel-btn.next { right: 0; }
 .bb-carousel-btn:disabled {
   opacity: 0.3;
   cursor: default;
-  box-shadow: none;
 }
 
 /* Carousel viewport */
 .bb-carousel-viewport {
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 0;
 }
 
 /* Cards track */
@@ -122,21 +84,20 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   will-change: transform;
 }
 
-/* Individual card — viewport height constrained */
+/* Individual card (viewport height constrained) */
 .bb-career-slide {
   min-width: 100%;
   background: var(--bb-white);
   border: 1px solid var(--bb-border);
-  border-radius: 10px;
+  border-radius: 0;
   overflow: hidden;
-  box-shadow: 0 3px 18px rgba(0,0,0,0.07);
   display: flex;
   flex-direction: column;
 }
 
-/* Card image — fills width, fixed height */
+/* Card image (fills width, fixed height) */
 .bb-card-img {
-  background: linear-gradient(135deg, #E9DFC9, #F0E8D6);
+  background: var(--bb-off-white);
   border-bottom: 1px solid var(--bb-border);
   width: 100%;
   height: 140px;
@@ -154,9 +115,9 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-card-img-label {
   display: inline-block;
-  background: rgba(97,103,54,0.1);
-  border: 1px dashed rgba(97,103,54,0.3);
-  border-radius: 4px;
+  background: rgba(92,99,53,0.1);
+  border: 1px dashed rgba(92,99,53,0.3);
+  border-radius: 2px;
   padding: 0.3rem 0.85rem;
   font-family: 'Instrument Sans', sans-serif;
   font-size: 0.72rem;
@@ -228,12 +189,12 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   flex-wrap: wrap;
   gap: 0.4rem;
 }
-/* Distinct teal accent for org badges — not the same muted green */
+/* Org badges, olive accent */
 .bb-logo-badge {
   display: inline-block;
-  background: rgba(148,153,110,0.1);
-  border: 1px solid rgba(148,153,110,0.25);
-  border-radius: 4px;
+  background: rgba(92,99,53,0.1);
+  border: 1px solid rgba(92,99,53,0.25);
+  border-radius: 2px;
   padding: 0.25rem 0.65rem;
   font-family: 'Instrument Sans', sans-serif;
   font-size: 0.73rem;
@@ -257,16 +218,17 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 .bb-dot {
   width: 7px;
   height: 7px;
-  border-radius: 50%;
+  border-radius: 0;
   background: var(--bb-border);
-  transition: all 0.2s ease;
+  transition: background 0.2s ease, width 0.2s ease, height 0.2s ease;
   cursor: pointer;
   border: none;
   padding: 0;
 }
 .bb-dot.active {
   background: var(--bb-green-accent);
-  transform: scale(1.25);
+  width: 9px;
+  height: 9px;
 }
 .bb-carousel-counter {
   font-family: 'Instrument Sans', sans-serif;
@@ -279,7 +241,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 .bb-next-steps {
   background: var(--bb-green-bg-subtle);
   border: 1px solid var(--bb-border);
-  border-radius: 8px;
+  border-radius: 0;
   padding: 1.25rem 1.5rem;
   margin-top: 0.5rem;
 }
@@ -307,9 +269,6 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 
 /* Desktop enhancements */
 @media (min-width: 769px) {
-  .bb-page-hero { padding: 2.5rem 2.5rem; border-radius: 10px; }
-  .bb-page-hero h1 { font-size: 1.65rem; }
-  .bb-page-hero p { font-size: 0.93rem; }
   .bb-card-img { height: 180px; }
   .bb-card-body { padding: 1.5rem 2rem; }
   .bb-carousel-wrap { padding: 0 3.5rem; }
@@ -320,9 +279,9 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
    CREAM SECTION BACKGROUNDS
    ============================================ */
 .bb-cream-wrap {
-  background: #FAF7F2;
-  border-top: 1px solid #E9DFC9;
-  border-bottom: 1px solid #E9DFC9;
+  background: var(--bb-off-white);
+  border-top: 1px solid var(--bb-border);
+  border-bottom: 1px solid var(--bb-border);
   margin: 2rem -48px;
   padding: 2rem 48px;
 }
@@ -363,7 +322,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 .bb-internship-section {
   background: var(--bb-white);
   border: 1px solid var(--bb-border);
-  border-radius: 10px;
+  border-radius: 0;
   padding: 1.75rem 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -397,7 +356,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   background: var(--bb-green-bg-subtle);
   border: 1px solid var(--bb-border);
   border-left: 3px solid var(--bb-green-accent);
-  border-radius: 7px;
+  border-radius: 0;
   padding: 1rem 1.1rem;
 }
 .bb-internship-block h3 {
@@ -435,9 +394,9 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-program-badge {
   display: inline-block;
-  background: rgba(97,103,54,0.08);
-  border: 1px solid rgba(97,103,54,0.2);
-  border-radius: 4px;
+  background: rgba(92,99,53,0.08);
+  border: 1px solid rgba(92,99,53,0.2);
+  border-radius: 2px;
   padding: 0.22rem 0.6rem;
   font-family: 'Instrument Sans', sans-serif;
   font-size: 0.73rem;
@@ -451,7 +410,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 .bb-future-section {
   background: var(--bb-white);
   border: 1px solid var(--bb-border);
-  border-radius: 10px;
+  border-radius: 0;
   padding: 1.75rem 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -483,7 +442,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 .bb-future-card {
   background: var(--bb-green-bg-subtle);
   border: 1px solid var(--bb-border);
-  border-radius: 8px;
+  border-radius: 0;
   padding: 1.1rem 1.25rem;
 }
 .bb-future-card h3 {
@@ -505,10 +464,10 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
    INTERNATIONAL CALLOUT
    ============================================ */
 .bb-international-callout {
-  background: #FAF7F2;
-  border: 1px solid #E9DFC9;
+  background: var(--bb-off-white);
+  border: 1px solid var(--bb-border);
   border-left: 4px solid var(--bb-green-accent);
-  border-radius: 7px;
+  border-radius: 0;
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
 }
@@ -537,7 +496,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 .bb-program-category {
   margin-bottom: 0.45rem;
   border: 1px solid var(--bb-border);
-  border-radius: 5px;
+  border-radius: 0;
   overflow: hidden;
 }
 .bb-program-category summary {
@@ -550,7 +509,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   list-style: none;
   display: flex;
   align-items: center;
-  background: rgba(97,103,54,0.04);
+  background: rgba(92,99,53,0.04);
   user-select: none;
 }
 .bb-program-category summary::-webkit-details-marker { display: none; }
@@ -568,16 +527,11 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 }
 
 /* ============================================
-   FLIP CARDS — Industry Trends
+   FLIP CARDS: Industry Trends
    ============================================ */
 .bb-flip-card {
   cursor: pointer;
   position: relative;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-.bb-flip-card:hover {
-  box-shadow: 0 4px 18px rgba(97,103,54,0.15);
-  transform: translateY(-2px);
 }
 .bb-flip-icon {
   font-size: 1.9rem;
@@ -603,8 +557,8 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   letter-spacing: 0.02em;
 }
 .bb-flip-card.is-flipped {
-  background: var(--bb-navy);
-  border-color: var(--bb-navy);
+  background: var(--bb-green-dark);
+  border-color: var(--bb-green-dark);
 }
 .bb-flip-card.is-flipped .bb-flip-front { display: none; }
 .bb-flip-back { display: none; }
@@ -623,12 +577,12 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 .bb-flip-back-link {
   display: inline-block;
   font-size: 0.73rem;
-  color: #94996E;
+  color: #96A05A;
   font-weight: 600;
   text-decoration: none;
-  border-bottom: 1px solid rgba(97,103,54,0.4);
+  border-bottom: 1px solid rgba(150,160,90,0.4);
 }
-.bb-flip-back-link:hover { color: #94996E; }
+.bb-flip-back-link:hover { color: var(--bb-white); }
 .bb-flip-close {
   display: block;
   font-size: 0.71rem;
@@ -638,10 +592,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 }
 </style>
 
-<div class="bb-page-hero">
-  <h1>Careers in Biotechnology</h1>
-  <p>There is no single path into biotech. Explore the major routes, one card at a time, with realistic entry points for every background.</p>
-</div>
+{% include page-header.html kicker="CAREER PATHWAYS" title="Careers in Biotechnology" deck="There is no single path into biotech. Explore the major routes, one card at a time, with realistic entry points for every background." %}
 
 <!-- CAROUSEL -->
 <div class="bb-carousel-wrap">
@@ -945,7 +896,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   </ul>
 </div>
 
-<!-- International callout — career structure note -->
+<!-- International callout: career structure note -->
 <div class="bb-international-callout">
   <div class="bb-intl-header"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;flex-shrink:0"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> Outside the US?</div>
   <p>The biotech industry structure differs internationally. Europe and Asia have more publicly funded research conducted through universities and government institutes, with fewer venture-backed startups than you'd find in Boston or the Bay Area. In the UK, Germany, and the Netherlands, many biotech roles are embedded within academic medical centers or government research councils. If you're outside the US, look for roles with national research institutes (e.g., the Wellcome Sanger Institute, EMBL, or RIKEN in Japan) alongside commercial opportunities.</p>
@@ -961,6 +912,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 <div class="bb-cream-wrap">
 <!-- FINDING YOUR FIRST INTERNSHIP -->
 <div class="bb-internship-section">
+  <span class="section-number">01</span>
   <h2>Finding Your First Internship</h2>
   <p class="bb-section-intro">Your first biotech internship doesn't need to be at Pfizer. It needs to get you in the room. Here's a practical guide to navigating the process, from well-known formal programs to cold outreach to academic labs.</p>
 
@@ -1096,6 +1048,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 
 <!-- WHERE BIOTECH IS HEADING -->
 <div class="bb-future-section">
+  <span class="section-number">02</span>
   <h2>Where Biotech Is Heading</h2>
   <p class="bb-section-intro">The biotech industry is changing faster than most career guides acknowledge. These five areas are shaping where the jobs, funding, and scientific energy are flowing in the next decade, and what that means for you.</p>
 
@@ -1237,7 +1190,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   goTo(0);
 })();
 
-// Flip cards — industry trends
+// Flip cards: industry trends
 (function() {
   document.querySelectorAll('.bb-flip-card').forEach(function(card) {
     card.addEventListener('click', function(e) {
