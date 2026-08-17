@@ -10,66 +10,20 @@ body { font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-s
 h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
-  --bb-green: #2C2A20;
-  --bb-green-accent: #616736;
-  --bb-green-bright: #616736;
-  --bb-green-hover: #525834;
-  --bb-green-dark: #525834;
-  --bb-green-bg: #E9DFC9;
-  --bb-green-bg-subtle: #E3D8BF;
-  --bb-navy: #2C2A20;
-  --bb-charcoal: #2C2A20;
-  --bb-white: #F0E8D6;
-  --bb-off-white: #E9DFC9;
-  --bb-text-secondary: #63604D;
-  --bb-gray: #63604D;
-  --bb-border: rgba(44,42,32,0.14);
-}
-
-/* Page Header */
-.bb-page-hero {
-  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
-  color: var(--bb-white);
-  padding: 2rem 2rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  position: relative;
-  overflow: hidden;
-}
-.bb-page-hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(97,103,54,0.15) 0%, transparent 60%);
-  pointer-events: none;
-}
-.bb-page-hero h1 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin: 0 0 0.4rem;
-  color: var(--bb-white);
-  letter-spacing: -0.02em;
-  position: relative;
-}
-.bb-page-hero .bb-hero-sub {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--bb-green-hover);
-  margin-bottom: 0.5rem;
-  display: block;
-  position: relative;
-}
-.bb-page-hero p {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.88rem;
-  color: rgba(255,255,255,0.8);
-  margin: 0;
-  font-weight: 300;
-  line-height: 1.6;
-  position: relative;
+  --bb-green: #24221A;
+  --bb-green-accent: #5C6335;
+  --bb-green-bright: #5C6335;
+  --bb-green-hover: #3B4223;
+  --bb-green-dark: #3B4223;
+  --bb-green-bg: #E6DBC2;
+  --bb-green-bg-subtle: #E6DBC2;
+  --bb-navy: #24221A;
+  --bb-charcoal: #24221A;
+  --bb-white: #EFE6D2;
+  --bb-off-white: #E6DBC2;
+  --bb-text-secondary: #5B5745;
+  --bb-gray: #5B5745;
+  --bb-border: rgba(36,34,26,0.22);
 }
 
 /* Section header */
@@ -108,23 +62,22 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 .bb-resource-card {
   background: var(--bb-white);
   border: 1px solid var(--bb-border);
-  border-radius: 7px;
+  border-radius: 2px;
   padding: 0.85rem 1rem;
-  transition: all 0.22s ease;
+  transition: border-color 0.22s ease;
   display: flex;
   align-items: flex-start;
   gap: 0.85rem;
 }
 .bb-resource-card:hover {
-  box-shadow: 0 3px 14px rgba(0,0,0,0.07);
-  transform: translateY(-1px);
+  border-color: var(--bb-green-accent);
 }
 .bb-resource-thumb {
   width: 44px;
   height: 44px;
   min-width: 44px;
-  background: linear-gradient(135deg, #E9DFC9, #E3D8BF);
-  border-radius: 5px;
+  background: var(--bb-off-white);
+  border-radius: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,7 +90,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   height: 100%;
   object-fit: cover;
   padding: 0;
-  border-radius: 5px;
+  border-radius: 2px;
   display: block;
 }
 .bb-resource-thumb-label {
@@ -172,16 +125,16 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   margin: 0;
 }
 
-/* Book cards — with thumbnail like other cards */
+/* Book cards: with thumbnail like other cards */
 .bb-book-card h3 { font-style: italic; }
 
-/* Book cover thumbnail — taller ratio for books */
+/* Book cover thumbnail: taller ratio for books */
 .bb-book-thumb {
   width: 44px;
   height: 60px;
   min-width: 44px;
-  background: linear-gradient(160deg, #E3D8BF, #E9DFC9);
-  border-radius: 3px;
+  background: var(--bb-green-dark);
+  border-radius: 2px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -211,7 +164,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   text-align: center;
   padding: 1.25rem 1.5rem;
   background: var(--bb-green-bg-subtle);
-  border-radius: 7px;
+  border-radius: 2px;
   border: 1px solid var(--bb-border);
 }
 .bb-cta-footer p {
@@ -226,9 +179,6 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 /* Desktop */
 @media (min-width: 769px) {
-  .bb-page-hero { padding: 2.5rem 2.5rem; border-radius: 10px; }
-  .bb-page-hero h1 { font-size: 1.65rem; }
-  .bb-page-hero p { font-size: 0.93rem; }
   .bb-resource-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
   .bb-section-head h2 { font-size: 1rem; }
   .bb-cta-footer { padding: 1.5rem 2rem; }
@@ -238,15 +188,12 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 </style>
 
-<div class="bb-page-hero">
-  <span class="bb-hero-sub">Curated Science Media</span>
-  <h1>The Learning Lab</h1>
-  <p>Media and resources for exploring biotech: newsletters, podcasts, videos, courses, and books, all hand-picked for quality and accessibility.</p>
-</div>
+{% include page-header.html kicker="LEARNING LAB" title="The Learning Lab" deck="Media and resources for exploring biotech: newsletters, podcasts, videos, courses, and books, all hand-picked for quality and accessibility." %}
 
 <!-- NEWSLETTERS -->
 <div class="bb-resource-section">
   <div class="bb-section-head">
+    <span class="section-number">01</span>
     <h2>Newsletters</h2>
   </div>
   <div class="bb-resource-grid">
@@ -310,6 +257,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 <!-- PODCASTS -->
 <div class="bb-resource-section">
   <div class="bb-section-head">
+    <span class="section-number">02</span>
     <h2>Podcasts</h2>
   </div>
   <div class="bb-resource-grid">
@@ -373,6 +321,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 <!-- BEGINNER READS -->
 <div class="bb-resource-section">
   <div class="bb-section-head">
+    <span class="section-number">03</span>
     <h2>Beginner-Friendly Reads</h2>
   </div>
   <div class="bb-resource-grid">
@@ -436,6 +385,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 <!-- YOUTUBE -->
 <div class="bb-resource-section">
   <div class="bb-section-head">
+    <span class="section-number">04</span>
     <h2>YouTube Channels</h2>
   </div>
   <div class="bb-resource-grid">
@@ -499,6 +449,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 <!-- COURSES -->
 <div class="bb-resource-section">
   <div class="bb-section-head">
+    <span class="section-number">05</span>
     <h2>Online Courses (Free)</h2>
   </div>
   <p style="font-family: 'Instrument Sans', sans-serif; font-size: 0.85rem; color: var(--bb-text-secondary); margin-top: -0.5rem; margin-bottom: 1rem;">From lab fundamentals to data science, regulatory affairs, and industry business skills. All free.</p>
@@ -563,6 +514,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 <!-- BOOKS -->
 <div class="bb-resource-section">
   <div class="bb-section-head">
+    <span class="section-number">06</span>
     <h2>Books Worth Reading</h2>
   </div>
   <div class="bb-resource-grid">
