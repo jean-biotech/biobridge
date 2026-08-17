@@ -5,30 +5,29 @@
 @charset "utf-8";
 
 // ============================================================
-// BioBridge Design System — warm editorial, olive accent
+// BioBridge Design System — field guide edition
 // Fraunces display / Instrument Sans body. No monospace, no
-// second accent color. Everything reads from :root custom
-// properties below so pages can tune without touching logic.
+// gradients, no shadows, squared corners (0-2px), one flat
+// olive accent. Everything reads from :root custom properties
+// below so pages can tune without touching logic.
 // ============================================================
 
-$bb-paper: #F0E8D6;
-$bb-paper-2: #E9DFC9;
-$bb-taupe: #E3D8BF;
-$bb-ink: #2C2A20;
-$bb-ink-soft: #63604D;
-$bb-olive: #616736;
-$bb-olive-dark: #525834;
-$bb-olive-soft: #94996E;
+$bb-paper: #EFE6D2;
+$bb-paper-2: #E6DBC2;
+$bb-ink: #24221A;
+$bb-ink-soft: #5B5745;
+$bb-olive: #5C6335;
+$bb-olive-deep: #3B4223;
 
 // Minimal Mistakes overrides
 $background-color: $bb-paper !default;
 $text-color: $bb-ink !default;
 $primary-color: $bb-olive !default;
-$link-color: $bb-olive-dark !default;
-$link-color-hover: $bb-olive !default;
+$link-color: $bb-olive !default;
+$link-color-hover: $bb-olive-deep !default;
 $masthead-link-color: $bb-ink !default;
 $masthead-link-color-hover: $bb-olive !default;
-$border-color: $bb-taupe !default;
+$border-color: rgba(36, 34, 26, 0.22) !default;
 $max-width: 1400px !default;
 
 // Refined typography scale
@@ -49,28 +48,27 @@ $type-size-8: 0.65rem !default;
 // ============================================================
 
 :root {
-  --paper: #F0E8D6;
-  --paper-2: #E9DFC9;
-  --taupe: #E3D8BF;
-  --ink: #2C2A20;
-  --ink-soft: #63604D;
+  --paper: #EFE6D2;
+  --paper-2: #E6DBC2;
+  --ink: #24221A;
+  --ink-soft: #5B5745;
 
-  --olive: #616736;
-  --olive-dark: #525834;
-  --olive-soft: #94996E;
+  --olive: #5C6335;
+  --olive-deep: #3B4223;
+  // lighter olive derivative, used only where text needs to sit on
+  // a flat --olive-deep section and #5C6335 wouldn't have enough
+  // contrast (e.g. small labels on a dark flat block)
+  --olive-on-dark: #9CA476;
+  // rare secondary mark, figure numbers only — never backgrounds/buttons
+  --mustard: #A9781F;
 
-  // translucent-ink hairlines, per the brief: structure without heavy borders
-  --hairline: rgba(44, 42, 32, 0.14);
-  --hairline-soft: rgba(44, 42, 32, 0.08);
-
-  --shadow-sm: 0 1px 3px rgba(44, 42, 32, 0.08);
-  --shadow-md: 0 8px 20px rgba(44, 42, 32, 0.10);
+  --line: rgba(36, 34, 26, 0.22);
+  --line-soft: rgba(36, 34, 26, 0.12);
 
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Instrument Sans", -apple-system, BlinkMacSystemFont, sans-serif;
 
-  --radius-sm: 6px;
-  --radius-md: 10px;
+  --radius: 2px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Instrument+Sans:wght@400;500;600;700&display=swap');
@@ -104,11 +102,6 @@ body {
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.65;
-
-  // very subtle paper grain, low opacity
-  background-image:
-    radial-gradient(rgba(44, 42, 32, 0.025) 1px, transparent 1px);
-  background-size: 3px 3px;
 }
 
 p {
@@ -127,17 +120,19 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-body);
   font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--olive);
 }
 
 .section-number {
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 0.85rem;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1rem;
   color: var(--ink-soft);
   letter-spacing: 0.02em;
+  display: inline-block;
+  margin-bottom: 0.4rem;
 }
 
 // Editorial drop cap — use on a lead paragraph via <p class="lede">
@@ -148,9 +143,10 @@ h1, h2, h3, h4, h5, h6 {
   float: left;
   line-height: 0.82;
   padding: 0.05em 0.09em 0 0;
-  color: var(--olive-dark);
+  color: var(--olive-deep);
 }
 
+// Pull quotes: large serif editorial text, no stripe, no box
 .pull-quote {
   font-family: var(--font-display);
   font-optical-sizing: auto;
@@ -160,8 +156,71 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.32;
   color: var(--ink);
   margin: 1.75rem 0;
-  padding-left: 1.25rem;
-  border-left: 3px solid var(--olive);
+}
+
+// Large serif pull statement (used for in-flow definitions instead
+// of boxed/terminal-styled callouts)
+.pull-statement {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.3;
+  margin: 1.5rem 0 0.4rem;
+}
+.pull-caption {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin: 0 0 1.5rem;
+}
+
+// Figures: images with a short sentence-case caption underneath
+figure.pg-figure {
+  margin: 2rem 0;
+}
+figure.pg-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  display: block;
+}
+figure.pg-figure figcaption {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-top: 0.6rem;
+}
+
+// ============================================================
+// PAGE HEADER — replaces the old dark gradient banner on every
+// interior page. See _includes/page-header.html.
+// ============================================================
+
+.pg-header {
+  margin: 0 0 2.5rem;
+}
+.pg-header .eyebrow {
+  margin-bottom: 0.75rem;
+}
+.pg-header h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 0.75rem;
+  line-height: 1.15;
+}
+.pg-header__deck {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  margin: 0 0 1.5rem;
+  max-width: 640px;
+}
+.pg-header__rule {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 0;
 }
 
 // ============================================================
@@ -212,7 +271,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// Sidebar (TOC) — position to the side on desktop
+// Sidebar contents list — de-boxed, no icon, numbered feel
 .sidebar__right {
   @media (min-width: 1024px) {
     position: sticky;
@@ -221,7 +280,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 240px;
     margin-right: 0;
     padding-left: 1.5rem;
-    border-left: 1px solid var(--hairline);
+    border-left: 1px solid var(--line);
   }
 }
 
@@ -231,7 +290,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .masthead {
   background-color: var(--paper);
-  border-bottom: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--line);
   box-shadow: none;
   padding: 0.5rem 0;
   position: sticky;
@@ -259,15 +318,10 @@ h1, h2, h3, h4, h5, h6 {
     width: auto;
     display: block;
     margin: 0;
-    transition: transform 0.25s ease, opacity 0.25s ease;
 
     @media (min-width: 769px) {
       height: 58px;
     }
-  }
-
-  &:hover img {
-    transform: scale(1.03);
   }
 }
 
@@ -302,7 +356,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: 0.01em;
-    transition: color 0.2s ease;
+    transition: color 0.15s ease;
   }
 
   .visible-links {
@@ -330,12 +384,13 @@ h1, h2, h3, h4, h5, h6 {
 // PAGE TITLES & CONTENT
 // ============================================================
 
+// Every interior page now renders its own heading via
+// _includes/page-header.html, so the theme's automatic page__title
+// (which would otherwise duplicate it) is suppressed. page.title
+// itself is left untouched in front matter so <title>/SEO meta stay
+// correct — only the theme's visible, duplicate on-page heading is hidden.
 .page__title {
-  font-family: var(--font-display);
-  color: var(--ink);
-  font-weight: 600;
-  font-size: 1.6rem;
-  letter-spacing: -0.01em;
+  display: none;
 }
 
 h1 {
@@ -371,48 +426,57 @@ h4, h5, h6 {
 }
 
 // ============================================================
-// BUTTONS
+// BUTTONS — flat, squared, color-change-only on hover
 // ============================================================
 
 .btn--primary {
   background-color: var(--olive) !important;
   color: var(--paper) !important;
-  border-radius: 6px;
+  border-radius: var(--radius);
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 0.9rem;
   letter-spacing: 0.01em;
-  transition: all 0.2s ease;
   box-shadow: none;
+  transition: background-color 0.15s ease;
 
   &:hover {
-    background-color: var(--olive-dark) !important;
-    transform: translateY(-1px);
+    background-color: var(--olive-deep) !important;
   }
 }
 
 // ============================================================
-// TOC STYLING
+// CONTENTS LIST (theme TOC) — flat, numbered feel, no icon, no box
 // ============================================================
 
 .toc {
-  border: 1px solid var(--hairline);
-  border-radius: var(--radius-sm);
-  background: var(--paper-2);
-  font-size: 0.82rem;
+  border: none;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  font-size: 0.85rem;
+  box-shadow: none;
 
   .nav__title {
-    background: var(--olive-dark);
-    border-radius: 6px 6px 0 0;
+    background: transparent;
+    color: var(--ink);
     font-family: var(--font-body);
+    font-weight: 600;
     font-size: 0.75rem;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
+    padding: 0.85rem 0 0.6rem;
+    border-radius: 0;
+
+    // hide the theme's default list icon
+    i, svg {
+      display: none;
+    }
   }
 
   a {
     color: var(--ink-soft);
-    font-size: 0.82rem;
+    font-size: 0.85rem;
 
     &:hover {
       color: var(--olive);
@@ -421,7 +485,7 @@ h4, h5, h6 {
 
   .active {
     a {
-      color: var(--olive-dark) !important;
+      color: var(--olive) !important;
       font-weight: 600;
     }
   }
@@ -432,10 +496,11 @@ h4, h5, h6 {
 // ============================================================
 
 a {
-  color: var(--olive-dark);
+  color: var(--olive);
+  transition: color 0.15s ease;
 
   &:hover {
-    color: var(--olive);
+    color: var(--olive-deep);
   }
 }
 
@@ -449,22 +514,99 @@ input:focus-visible,
 [tabindex]:focus-visible {
   outline: 2.5px solid var(--olive);
   outline-offset: 2px;
-  border-radius: 2px;
+  border-radius: 0;
 }
 
 // ============================================================
-// FOOTER
+// SITE FOOTER
 // ============================================================
 
-.page__footer {
+.site-footer {
   background: var(--ink);
-  color: rgba(240, 232, 214, 0.75);
-  font-size: 0.85rem;
+  color: rgba(239, 230, 210, 0.78);
+  padding: 3rem 1.25rem 2rem;
+}
+.site-footer__inner {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+.site-footer__top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(239, 230, 210, 0.16);
+}
+.site-footer__brand {
+  max-width: 380px;
+}
+.site-footer__brand-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--paper);
+  margin: 0 0 0.6rem;
+}
+.site-footer__brand-line {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: rgba(239, 230, 210, 0.72);
+  line-height: 1.6;
+  margin: 0;
+}
+.site-footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+.site-footer__col h4 {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--olive-on-dark);
+  margin: 0 0 0.85rem;
+}
+.site-footer__col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-footer__col li {
+  margin-bottom: 0.55rem;
+}
+.site-footer__col a {
+  color: rgba(239, 230, 210, 0.82);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  text-decoration: none;
 
-  a {
-    color: rgba(240, 232, 214, 0.85);
-    &:hover {
-      color: var(--olive-soft);
-    }
+  &:hover {
+    color: var(--paper);
   }
+}
+.site-footer__bottom {
+  padding-top: 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: rgba(239, 230, 210, 0.55);
+}
+.site-footer__bottom a {
+  color: rgba(239, 230, 210, 0.72);
+  &:hover { color: var(--paper); }
+}
+
+// reset the theme's default footer chrome; our real footer content
+// lives in .site-footer, injected via _includes/footer/custom.html
+.page__footer {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.page__footer-copyright,
+.page__footer-follow {
+  display: none;
 }
