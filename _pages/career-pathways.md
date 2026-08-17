@@ -653,7 +653,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
       <!-- CARD 1: Research -->
       <div class="bb-career-slide">
         <div class="bb-card-img">
-          <img src="/assets/images/career-research.jpg" alt="Research lab">
+          <img src="/assets/images/hero-header.jpg" alt="Colored test tubes and a flask on a lab bench">
         </div>
         <div class="bb-card-body">
           <h2>Research</h2>
