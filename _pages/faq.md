@@ -10,55 +10,20 @@ body { font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-s
 h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
-  --bb-green: #2C2A20;
-  --bb-green-accent: #616736;
-  --bb-green-bright: #616736;
-  --bb-green-hover: #525834;
-  --bb-green-dark: #525834;
-  --bb-green-bg: #E9DFC9;
-  --bb-green-bg-subtle: #E3D8BF;
-  --bb-navy: #2C2A20;
-  --bb-charcoal: #2C2A20;
-  --bb-white: #F0E8D6;
-  --bb-off-white: #E9DFC9;
-  --bb-text-secondary: #63604D;
-  --bb-gray: #63604D;
-  --bb-border: rgba(44,42,32,0.14);
-}
-
-/* Page Header */
-.bb-page-hero {
-  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
-  color: var(--bb-white);
-  padding: 2rem 2rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  position: relative;
-  overflow: hidden;
-}
-.bb-page-hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(97,103,54,0.15) 0%, transparent 60%);
-  pointer-events: none;
-}
-.bb-page-hero h1 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin: 0 0 0.4rem;
-  color: var(--bb-white);
-  letter-spacing: -0.02em;
-  position: relative;
-}
-.bb-page-hero p {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.88rem;
-  color: rgba(255,255,255,0.8);
-  margin: 0;
-  font-weight: 300;
-  line-height: 1.6;
-  position: relative;
+  --bb-green: #24221A;
+  --bb-green-accent: #5C6335;
+  --bb-green-bright: #5C6335;
+  --bb-green-hover: #3B4223;
+  --bb-green-dark: #3B4223;
+  --bb-green-bg: #E6DBC2;
+  --bb-green-bg-subtle: #DED2B7;
+  --bb-navy: #24221A;
+  --bb-charcoal: #24221A;
+  --bb-white: #EFE6D2;
+  --bb-off-white: #E6DBC2;
+  --bb-text-secondary: #5B5745;
+  --bb-gray: #5B5745;
+  --bb-border: rgba(36,34,26,0.14);
 }
 
 /* Accordion container */
@@ -69,14 +34,10 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 /* Individual accordion item */
 .bb-accordion-item {
   border: 1px solid var(--bb-border);
-  border-radius: 7px;
+  border-radius: 2px;
   margin-bottom: 0.6rem;
   background: var(--bb-white);
   overflow: hidden;
-  transition: box-shadow 0.2s ease;
-}
-.bb-accordion-item.open {
-  box-shadow: 0 3px 14px rgba(0,0,0,0.06);
 }
 
 /* Question button */
@@ -112,7 +73,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   width: 18px;
   height: 18px;
   border: 1px solid var(--bb-border);
-  border-radius: 50%;
+  border-radius: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,18 +125,16 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 /* Desktop */
 @media (min-width: 769px) {
-  .bb-page-hero { padding: 2.5rem 2.5rem; border-radius: 10px; }
-  .bb-page-hero h1 { font-size: 1.65rem; }
-  .bb-page-hero p { font-size: 0.93rem; }
   .bb-accordion-btn { font-size: 0.92rem; padding: 1rem 1.25rem; }
   .bb-accordion-body { padding: 0 1.25rem 1.25rem; }
 }
 </style>
 
-<div class="bb-page-hero">
+<header class="bb-page-header">
+  <span class="eyebrow">Questions</span>
   <h1>Frequently Asked Questions</h1>
-  <p>Common questions from people exploring biotechnology. Click any question to expand the answer.</p>
-</div>
+  <p class="bb-page-header__deck">Common questions from people exploring biotechnology. Click any question to expand the answer.</p>
+</header>
 
 <div class="bb-accordion" id="bb-accordion">
 
@@ -187,7 +146,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     <div class="bb-accordion-panel">
       <div class="bb-accordion-body">
         <p>The most reliable route is applying directly on company career pages. Most biotech companies, even large ones, post entry-level and internship roles on their websites. Apply through the official posting and tailor your resume to each role, even slightly.</p>
-        <p>Cold outreach can be a useful supplement, not a replacement for applying, and it works best when it's specific and brief. If you have no lab experience, highlight transferable skills: attention to detail, data handling, relevant coursework. University research labs are often more accessible than industry for a first experience and are worth pursuing at the same time.</p>
+        <p>Cold outreach can be a useful supplement to applying directly, and it works best when it's specific and brief. If you have no lab experience, highlight transferable skills: attention to detail, data handling, relevant coursework. University research labs are often more accessible than industry for a first experience and are worth pursuing at the same time.</p>
       </div>
     </div>
   </div>
@@ -213,7 +172,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     <div class="bb-accordion-panel">
       <div class="bb-accordion-body">
         <p>Yes, and it happens more often than people expect. The path looks different depending on where you're starting. Non-science backgrounds have clear entry points in business development, regulatory, operations, communications, and project management.</p>
-        <p>If you want a lab-based role without a science background, you'll likely need to get one, or start with a certificate program. The most important thing is being specific about which kind of role you're actually targeting and building toward that, rather than trying to enter biotech in the abstract.</p>
+        <p>If you want a lab-based role without a science background, you'll likely need to get one, or start with a certificate program. The most important thing is being specific about which kind of role you're actually targeting and building toward it directly.</p>
       </div>
     </div>
   </div>
@@ -226,7 +185,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     <div class="bb-accordion-panel">
       <div class="bb-accordion-body">
         <p>Start by getting a clear picture of what the field actually is. Read broadly: biotech industry news, popular science books, YouTube channels like Kurzgesagt. Take AP Biology or chemistry if your school offers it, and look into summer research programs or science competitions in your area.</p>
-        <p>You have more time than you think. The most useful thing you can do right now is stay curious and explore widely, rather than locking onto a single path too early.</p>
+        <p>You have more time than you think. The most useful thing you can do right now is stay curious and explore widely before locking onto a single path.</p>
       </div>
     </div>
   </div>
@@ -238,7 +197,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </button>
     <div class="bb-accordion-panel">
       <div class="bb-accordion-body">
-        <p>Absolutely. Biotech needs engineers for process development and manufacturing, computer scientists for bioinformatics and data analysis, business majors for operations and strategy, and communications people for science writing and marketing. A biology degree is one path in, not the only one.</p>
+        <p>Absolutely. Biotech needs engineers for process development and manufacturing, computer scientists for bioinformatics and data analysis, business majors for operations and strategy, and communications people for science writing and marketing. A biology degree is one path in among several.</p>
         <p>The key is connecting whatever you're studying to a specific role. Look at actual job postings in the area you're interested in, see what they ask for, and build toward that.</p>
       </div>
     </div>
@@ -265,7 +224,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     <div class="bb-accordion-panel">
       <div class="bb-accordion-body">
         <p>Biotech is much broader than most people realize. You don't need a science degree to work in the industry. Roles in regulatory affairs, business development, communications, project management, and operations are filled by people from law, business, engineering, and the humanities.</p>
-        <p>What usually matters is scientific literacy, not a science degree. That means being able to read a summary, understand what a clinical trial is, and follow along in a meeting. You can build that over time by reading industry news, taking a free online course, and staying curious.</p>
+        <p>What usually matters most is scientific literacy: being able to read a summary, understand what a clinical trial is, and follow along in a meeting. You can build that over time by reading industry news, taking a free online course, and staying curious.</p>
       </div>
     </div>
   </div>
