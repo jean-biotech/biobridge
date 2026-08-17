@@ -33,16 +33,35 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   gap: 1.25rem;
   margin-bottom: 2.5rem;
 }
+/* Index-card metaphor: dashed edge, slight alternating tilt,
+   oversized numeral in the corner like a filed card, not the
+   hairline-divider numbering used on other pages. */
 .bb-involve-card {
+  position: relative;
   background: var(--bb-white);
-  border: 1px solid var(--bb-border);
-  border-top: 3px solid var(--bb-green-accent);
+  border: 1.5px dashed var(--bb-border);
   border-radius: 2px;
   padding: 1.75rem 1.5rem;
+  transform: rotate(-0.5deg);
 }
-.bb-involve-card .bb-section-num {
-  display: block;
-  margin-bottom: 0.5rem;
+.bb-involve-card:nth-child(2) { transform: rotate(0.4deg); }
+.bb-involve-card:nth-child(3) { transform: rotate(-0.3deg); }
+@media (prefers-reduced-motion: reduce) {
+  .bb-involve-card,
+  .bb-involve-card:nth-child(2),
+  .bb-involve-card:nth-child(3) { transform: none; }
+}
+.bb-involve-card .bb-card-num {
+  position: absolute;
+  top: -0.6rem;
+  right: 1rem;
+  background: var(--bb-white);
+  padding: 0 0.4rem;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--bb-green-accent);
+  line-height: 1;
 }
 .bb-involve-card h2 {
   font-family: 'Instrument Sans', sans-serif;
@@ -147,7 +166,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 <div class="bb-involve-grid">
 
   <div class="bb-involve-card">
-    <span class="bb-section-num">01</span>
+    <span class="bb-card-num">01</span>
     <h2>For Students</h2>
     <p><strong>Email signup:</strong> Get updates on new resources, mentorship opportunities, and events.</p>
     <p><strong>Interest form:</strong> Tell us what you are looking for and we will help connect you with resources.</p>
@@ -155,7 +174,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   </div>
 
   <div class="bb-involve-card">
-    <span class="bb-section-num">02</span>
+    <span class="bb-card-num">02</span>
     <h2>For Mentors</h2>
     <p>If you work in biotech and want to help students navigate the field, we would love to hear from you.</p>
     <p>We are building a mentorship program to connect curious students with professionals who remember what it was like to start.</p>
@@ -163,7 +182,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   </div>
 
   <div class="bb-involve-card">
-    <span class="bb-section-num">03</span>
+    <span class="bb-card-num">03</span>
     <h2>For Contributors</h2>
     <p>Have a resource, article, or story to share? Want to write a guest post about your biotech journey?</p>
     <p>We are always looking for:</p>

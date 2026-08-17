@@ -292,35 +292,33 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 }
 
 /* ============================================
-   SECTION DIVIDER
+   CHAPTER MARK: a filled numeral tag, not the
+   hairline+number row used on other pages.
    ============================================ */
-.bb-section-divider {
+.bb-chapter-mark {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
-  margin: 2.5rem 0 1.75rem;
+  gap: 1rem;
+  margin: 3rem 0 1.75rem;
 }
-.bb-section-divider-line {
-  flex: 1;
-  height: 1px;
-  background: var(--bb-border);
-}
-.bb-section-divider-label {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.67rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--bb-green-accent);
-  white-space: nowrap;
-}
-.bb-section-divider-label .bb-num {
+.bb-chapter-mark__num {
   font-family: 'Fraunces', Georgia, serif;
-  font-weight: 500;
-  text-transform: none;
-  letter-spacing: 0;
-  margin-right: 0.5em;
-  color: var(--bb-gray);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--bb-white);
+  background: var(--bb-green-accent);
+  width: 2.5rem;
+  height: 2.5rem;
+  min-width: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bb-chapter-mark__label {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--bb-navy);
 }
 
 /* ============================================
@@ -918,10 +916,9 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 </div>
 
 <!-- SECTION DIVIDER -->
-<div class="bb-section-divider">
-  <div class="bb-section-divider-line"></div>
-  <div class="bb-section-divider-label"><span class="bb-num">01</span>Getting Started</div>
-  <div class="bb-section-divider-line"></div>
+<div class="bb-chapter-mark">
+  <span class="bb-chapter-mark__num">01</span>
+  <span class="bb-chapter-mark__label">Getting Started</span>
 </div>
 
 <div class="bb-cream-wrap">
@@ -1054,10 +1051,9 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 </div><!-- /.bb-cream-wrap -->
 
 <!-- SECTION DIVIDER -->
-<div class="bb-section-divider">
-  <div class="bb-section-divider-line"></div>
-  <div class="bb-section-divider-label"><span class="bb-num">02</span>Industry Trends</div>
-  <div class="bb-section-divider-line"></div>
+<div class="bb-chapter-mark">
+  <span class="bb-chapter-mark__num">02</span>
+  <span class="bb-chapter-mark__label">Industry Trends</span>
 </div>
 
 <!-- WHERE BIOTECH IS HEADING -->
