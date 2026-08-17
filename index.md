@@ -267,7 +267,6 @@ classes: wide
 .role-card__link { font-family: var(--font-body); font-weight: 600; font-size: 0.85rem; text-decoration: none !important; color: var(--olive-deep); }
 
 @media (min-width: 700px) { .explorer-results { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1100px) { .explorer-results { grid-template-columns: repeat(3, 1fr); } }
 
 /* ---------------- Learning Lab ---------------- */
 .lab-grid { display: grid; grid-template-columns: 1fr; gap: 1.1rem; }

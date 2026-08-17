@@ -5,7 +5,7 @@
 @charset "utf-8";
 
 // ============================================================
-// BioBridge Design System — warm editorial, olive accent
+// BioBridge Design System: warm editorial, olive accent
 // Fraunces display / Instrument Sans body. No monospace, no
 // second accent color. Everything reads from :root custom
 // properties below so pages can tune without touching logic.
@@ -45,7 +45,7 @@ $type-size-8: 0.65rem !default;
 @import "minimal-mistakes";
 
 // ============================================================
-// DESIGN TOKENS — the single source of truth for color/type/space.
+// DESIGN TOKENS: the single source of truth for color/type/space.
 // ============================================================
 
 :root {
@@ -101,11 +101,6 @@ body {
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.65;
-
-  // very subtle paper grain, low opacity
-  background-image:
-    radial-gradient(rgba(36, 34, 26, 0.025) 1px, transparent 1px);
-  background-size: 3px 3px;
 }
 
 p {
@@ -137,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.02em;
 }
 
-// Editorial drop cap — use on a lead paragraph via <p class="lede">
+// Editorial drop cap: use on a lead paragraph via <p class="lede">
 .lede::first-letter {
   font-family: var(--font-display);
   font-size: 3.4em;
@@ -162,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // ============================================================
-// FIELD GUIDE PAGE HEADER — the one consistent opener every
+// FIELD GUIDE PAGE HEADER: the one consistent opener every
 // interior page uses in place of a gradient banner box.
 // ============================================================
 
@@ -270,7 +265,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // ============================================================
-// WIDE DESKTOP LAYOUT OVERRIDES — Full viewport width
+// WIDE DESKTOP LAYOUT OVERRIDES: full viewport width
 // ============================================================
 
 .page {
@@ -307,7 +302,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// Content area — comfortable reading width for prose
+// Content area: comfortable reading width for prose
 .page__content {
   @media (min-width: 769px) {
     max-width: none;
@@ -317,7 +312,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// Sidebar (TOC) — position to the side on desktop
+// Sidebar (TOC): position to the side on desktop
 .sidebar__right {
   @media (min-width: 1024px) {
     position: sticky;
@@ -540,7 +535,7 @@ a {
 }
 
 // ============================================================
-// FOCUS STATES — accessible + on-brand
+// FOCUS STATES: accessible and on-brand
 // ============================================================
 
 a:focus-visible,
