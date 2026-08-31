@@ -12,130 +12,101 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 :root {
   --bb-green: #24221A;
   --bb-green-accent: #5C6335;
-  --bb-green-bright: #5C6335;
-  --bb-green-hover: #3B4223;
-  --bb-green-dark: #3B4223;
-  --bb-green-bg: #E6DBC2;
-  --bb-green-bg-subtle: #DED2B7;
   --bb-navy: #24221A;
-  --bb-charcoal: #24221A;
   --bb-white: #EFE6D2;
   --bb-off-white: #E6DBC2;
   --bb-text-secondary: #5B5745;
   --bb-gray: #5B5745;
-  --bb-border: rgba(36,34,26,0.14);
+  --bb-border: rgba(36,34,26,0.12);
 }
 
-/* Section header */
+/* Section header: a label, not a filled bar */
 .bb-section-head {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.6rem;
-  border-bottom: 2px solid var(--bb-green-accent);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--bb-border);
 }
 .bb-section-head h2 {
   font-family: 'Instrument Sans', sans-serif;
-  color: var(--bb-navy);
-  font-size: 0.95rem;
-  font-weight: 700;
+  color: var(--bb-green-accent);
+  font-size: 11px;
+  font-weight: 600;
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.16em;
 }
 
-/* Resource section wrapper */
+/* Resource section wrapper: 160px between major sections */
 .bb-resource-section {
-  margin-bottom: 2.25rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--bb-border);
+}
+.bb-resource-section:last-of-type {
+  border-bottom: none;
 }
 
-/* Grid */
+/* Grid: rows separated by a hairline rule, no boxes */
 .bb-resource-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.85rem;
-  margin-bottom: 0;
+  gap: 0;
 }
 
-/* Resource card with thumbnail */
+/* Resource row */
 .bb-resource-card {
-  background: var(--bb-white);
-  border: 1px solid var(--bb-border);
-  border-radius: 2px;
-  padding: 0.85rem 1rem;
   display: flex;
   align-items: flex-start;
-  gap: 0.85rem;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--bb-border);
 }
 .bb-resource-thumb {
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  background: var(--bb-off-white);
-  border-radius: 2px;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: 2px;
   overflow: hidden;
+  margin-top: 0.15rem;
 }
 .bb-resource-thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  padding: 0;
-  border-radius: 2px;
+  object-fit: contain;
   display: block;
-}
-.bb-resource-thumb-label {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.52rem;
-  color: var(--bb-gray);
-  font-weight: 500;
-  text-align: center;
-  line-height: 1.2;
-  padding: 0 3px;
 }
 .bb-resource-info {
   flex: 1;
   min-width: 0;
 }
 .bb-resource-card h3 {
-  margin: 0 0 0.2rem;
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.88rem;
-  font-weight: 600;
+  margin: 0 0 0.25rem;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 17px;
+  font-weight: 500;
 }
 .bb-resource-card h3 a {
   color: var(--bb-navy);
-  text-decoration: none;
-  transition: color 0.2s ease;
 }
 .bb-resource-card h3 a:hover { color: var(--bb-green-accent); }
 .bb-resource-card p {
-  color: var(--bb-gray);
-  font-size: 0.8rem;
-  line-height: 1.5;
+  color: var(--bb-text-secondary);
+  opacity: 0.7;
+  font-size: 15px;
+  line-height: 1.6;
   margin: 0;
 }
 
-/* Book cards: with thumbnail like other cards */
+/* Book covers: taller ratio, still capped at the 28px logo width */
 .bb-book-card h3 { font-style: italic; }
-
-/* Book cover thumbnail: taller ratio for books */
 .bb-book-thumb {
-  width: 44px;
-  height: 60px;
-  min-width: 44px;
-  background: #DED2B7;
-  border-radius: 2px;
+  width: 28px;
+  height: 38px;
+  min-width: 28px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  display: block;
+  margin-top: 0.15rem;
 }
 .bb-book-thumb img {
   width: 100%;
@@ -143,29 +114,16 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   object-fit: cover;
   display: block;
 }
-.bb-book-thumb-label {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.5rem;
-  color: var(--bb-green);
-  font-weight: 600;
-  text-align: center;
-  line-height: 1.2;
-  padding: 0 4px;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-}
 
-/* CTA Footer */
+/* CTA footer: a rule, not a filled box */
 .bb-cta-footer {
-  text-align: center;
-  padding: 1.25rem 1.5rem;
-  background: var(--bb-green-bg-subtle);
-  border-radius: 2px;
-  border: 1px solid var(--bb-border);
+  padding: 2rem 0 0;
+  text-align: left;
 }
 .bb-cta-footer p {
   color: var(--bb-text-secondary);
-  font-size: 0.87rem;
+  opacity: 0.82;
+  font-size: 17px;
   margin: 0;
 }
 .bb-cta-footer a {
@@ -173,11 +131,9 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   font-weight: 600;
 }
 
-/* Desktop */
+/* Desktop: two columns, 64px gutter */
 @media (min-width: 769px) {
-  .bb-resource-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-  .bb-section-head h2 { font-size: 1rem; }
-  .bb-cta-footer { padding: 1.5rem 2rem; }
+  .bb-resource-grid { grid-template-columns: repeat(2, 1fr); column-gap: 64px; }
 }
 </style>
 
@@ -195,7 +151,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   <div class="bb-resource-grid">
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-readout.png" alt="The Readout logo" width="44" height="44">
+        <img src="/assets/images/logo-readout.png" alt="The Readout logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.statnews.com/newsletters/" target="_blank">The Readout</a></h3>
@@ -204,7 +160,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-sciencedaily.png" alt="ScienceDaily logo" width="44" height="44">
+        <img src="/assets/images/logo-sciencedaily.png" alt="ScienceDaily logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.sciencedaily.com/newsletters/" target="_blank">ScienceDaily</a></h3>
@@ -213,7 +169,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-fiercebiotech.png" alt="Fierce Biotech logo" width="44" height="44">
+        <img src="/assets/images/logo-fiercebiotech.png" alt="Fierce Biotech logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.fiercebiotech.com/newsletters" target="_blank">Fierce Biotech</a></h3>
@@ -222,7 +178,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-wsj.png" alt="Wall Street Journal logo" width="44" height="44">
+        <img src="/assets/images/logo-wsj.png" alt="Wall Street Journal logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.wsj.com/tech/biotech" target="_blank">Wall Street Journal: Biotech</a></h3>
@@ -231,7 +187,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-endpoints.png" alt="Endpoints News logo" width="44" height="44">
+        <img src="/assets/images/logo-endpoints.png" alt="Endpoints News logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://endpts.com/" target="_blank">Bio Newsletter by Endpoints News</a></h3>
@@ -240,7 +196,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-nature.png" alt="Nature logo" width="44" height="44">
+        <img src="/assets/images/logo-nature.png" alt="Nature logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.nature.com/briefing/signup/" target="_blank">Nature Briefing</a></h3>
@@ -258,7 +214,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   <div class="bb-resource-grid">
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-shortwave.png" alt="Shortwave logo" width="44" height="44">
+        <img src="/assets/images/logo-shortwave.png" alt="Shortwave logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.npr.org/podcasts/510351/short-wave" target="_blank">Shortwave (NPR)</a></h3>
@@ -267,7 +223,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-radiolab.png" alt="Radiolab logo" width="44" height="44">
+        <img src="/assets/images/logo-radiolab.png" alt="Radiolab logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.wnycstudios.org/podcasts/radiolab" target="_blank">Radiolab</a></h3>
@@ -276,7 +232,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-mindscape.png" alt="Mindscape logo" width="44" height="44">
+        <img src="/assets/images/logo-mindscape.png" alt="Mindscape logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://mindscapepodcast.com/" target="_blank">Mindscape</a></h3>
@@ -285,7 +241,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/hidden-brain.png" alt="Hidden Brain logo" width="44" height="44">
+        <img src="/assets/images/hidden-brain.png" alt="Hidden Brain logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://hiddenbrain.org/" target="_blank">Hidden Brain</a></h3>
@@ -294,7 +250,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/nature-podcast.png" alt="Nature Podcast logo" width="44" height="44">
+        <img src="/assets/images/nature-podcast.png" alt="Nature Podcast logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.nature.com/nature/articles?type=nature-podcast" target="_blank">Nature Podcast</a></h3>
@@ -303,7 +259,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-ologies.png" alt="Ologies logo" width="44" height="44">
+        <img src="/assets/images/logo-ologies.png" alt="Ologies logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.alieward.com/ologies" target="_blank">Ologies with Alie Ward</a></h3>
@@ -321,7 +277,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   <div class="bb-resource-grid">
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-pipeline.png" alt="In the Pipeline logo" width="44" height="44">
+        <img src="/assets/images/logo-pipeline.png" alt="In the Pipeline logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.science.org/blogs/pipeline" target="_blank">In the Pipeline (Derek Lowe)</a></h3>
@@ -348,7 +304,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-fortune.png" alt="Fortune logo" width="44" height="44">
+        <img src="/assets/images/logo-fortune.png" alt="Fortune logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://fortune.com/2023/03/31/ai-cure-cancer-chatgpt-drug-discovery/" target="_blank">Fortune: "Will AI Cure Cancer?"</a></h3>
@@ -357,7 +313,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-atlantic.png" alt="The Atlantic logo" width="44" height="44">
+        <img src="/assets/images/logo-atlantic.png" alt="The Atlantic logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.theatlantic.com/ideas/archive/2021/03/how-mrna-technology-could-change-world/618431/" target="_blank">The Atlantic: How mRNA Technology Could Change the World</a></h3>
@@ -366,7 +322,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-wired.png" alt="WIRED logo" width="44" height="44">
+        <img src="/assets/images/logo-wired.png" alt="WIRED logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.wired.com/story/wired-guide-to-crispr/" target="_blank">The WIRED Guide to CRISPR</a></h3>
@@ -384,7 +340,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   <div class="bb-resource-grid">
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-kurzgesagt.png" alt="Kurzgesagt logo" width="44" height="44">
+        <img src="/assets/images/logo-kurzgesagt.png" alt="Kurzgesagt logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.youtube.com/c/inanutshell" target="_blank">Kurzgesagt</a></h3>
@@ -393,7 +349,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-teded.png" alt="TED-Ed logo" width="44" height="44">
+        <img src="/assets/images/logo-teded.png" alt="TED-Ed logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.youtube.com/teded" target="_blank">TED-Ed</a></h3>
@@ -402,7 +358,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-veritasium.png" alt="Veritasium logo" width="44" height="44">
+        <img src="/assets/images/logo-veritasium.png" alt="Veritasium logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.youtube.com/c/veritasium" target="_blank">Veritasium</a></h3>
@@ -411,7 +367,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/nvidia-biotech-video.png" alt="Why Nvidia, Google and Microsoft Are Betting Billions on Biotech's AI Future thumbnail" width="44" height="44">
+        <img src="/assets/images/nvidia-biotech-video.png" alt="Why Nvidia, Google and Microsoft Are Betting Billions on Biotech's AI Future thumbnail">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://youtu.be/Xzw7TXdXYtk" target="_blank">Why Nvidia, Google and Microsoft Are Betting Billions on Biotech's AI Future</a></h3>
@@ -420,7 +376,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/birth-of-biotech-video.png" alt="The Birth of Biotech video thumbnail" width="44" height="44">
+        <img src="/assets/images/birth-of-biotech-video.png" alt="The Birth of Biotech video thumbnail">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.youtube.com/watch?v=naqbi_qVoVY" target="_blank">The Birth of Biotech | Recombinant DNA, Genentech, and Insulin Analogs</a></h3>
@@ -429,7 +385,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/jared-friedman-video.png" alt="Jared Friedman video thumbnail" width="44" height="44">
+        <img src="/assets/images/jared-friedman-video.png" alt="Jared Friedman video thumbnail">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.youtube.com/watch?v=C1DlZWfI6rk" target="_blank">Jared Friedman: Advice for Hard-tech and Biotech Founders</a></h3>
@@ -444,11 +400,11 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   <div class="bb-section-head">
     <h2>Online Courses (Free)</h2>
   </div>
-  <p style="font-family: 'Instrument Sans', sans-serif; font-size: 0.85rem; color: var(--bb-text-secondary); margin-top: -0.5rem; margin-bottom: 1rem;">From lab fundamentals to data science, regulatory affairs, and industry business skills. All free.</p>
+  <p style="font-family: 'Instrument Sans', sans-serif; font-size: 17px; color: var(--bb-text-secondary); opacity: 0.7; margin-top: -0.25rem; margin-bottom: 1.25rem;">From lab fundamentals to data science, regulatory affairs, and industry business skills. All free.</p>
   <div class="bb-resource-grid">
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-mitocw.png" alt="MIT OpenCourseWare logo" width="44" height="44">
+        <img src="/assets/images/logo-mitocw.png" alt="MIT OpenCourseWare logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://ocw.mit.edu/courses/biology/" target="_blank">MIT OpenCourseWare: Biology</a></h3>
@@ -457,7 +413,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-khanacademy.png" alt="Khan Academy logo" width="44" height="44">
+        <img src="/assets/images/logo-khanacademy.png" alt="Khan Academy logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.khanacademy.org/science/biology" target="_blank">Khan Academy: Biology</a></h3>
@@ -466,7 +422,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-ibiology.png" alt="iBiology logo" width="44" height="44">
+        <img src="/assets/images/logo-ibiology.png" alt="iBiology logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.ibiology.org/" target="_blank">iBiology</a></h3>
@@ -475,7 +431,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-coursera.png" alt="Coursera logo" width="44" height="44">
+        <img src="/assets/images/logo-coursera.png" alt="Coursera logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.coursera.org/specializations/bioinformatics" target="_blank">Coursera: Bioinformatics Specialization (UC San Diego)</a></h3>
@@ -484,7 +440,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-edx.png" alt="edX logo" width="44" height="44">
+        <img src="/assets/images/logo-edx.png" alt="edX logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.edx.org/" target="_blank">edX: Regulatory Affairs in the Pharmaceutical Industry</a></h3>
@@ -493,7 +449,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <img src="/assets/images/logo-mitocw.png" alt="MIT OpenCourseWare logo" width="44" height="44">
+        <img src="/assets/images/logo-mitocw.png" alt="MIT OpenCourseWare logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://ocw.mit.edu/courses/brain-and-cognitive-sciences/" target="_blank">MIT OpenCourseWare: Biology of Mental Health</a></h3>

@@ -12,81 +12,76 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 :root {
   --bb-green: #24221A;
   --bb-green-accent: #5C6335;
-  --bb-green-bright: #5C6335;
-  --bb-green-hover: #3B4223;
-  --bb-green-dark: #3B4223;
-  --bb-green-bg: #E6DBC2;
-  --bb-green-bg-subtle: #DED2B7;
   --bb-navy: #24221A;
-  --bb-charcoal: #24221A;
   --bb-white: #EFE6D2;
   --bb-off-white: #E6DBC2;
   --bb-text-secondary: #5B5745;
   --bb-gray: #5B5745;
-  --bb-border: rgba(36,34,26,0.14);
+  --bb-border: rgba(36,34,26,0.12);
 }
 
-/* Definition caption, set beneath the pull-quote statement */
+/* Definition caption, set beneath the pull-quote statement:
+   Fraunces italic, quiet, 60% opacity, no rotation. */
 .bb-definition-caption {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.85rem;
-  color: var(--bb-gray);
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--bb-navy);
+  opacity: 0.6;
   margin: -1rem 0 1.5rem;
 }
 
-/* Contents list as large graphic numerals with a handwritten note
-   beside each one, not the small-numeral hairline row used elsewhere. */
+/* Contents list: large graphic numerals, plain hairline rows. */
 .bb-contents-notes {
   list-style: none;
   margin: 0 0 2.5rem;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.15rem;
+  border-top: 1px solid var(--bb-border);
 }
 .bb-contents-notes li {
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
   column-gap: 0.9rem;
-  row-gap: 0.1rem;
+  row-gap: 0.15rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--bb-border);
 }
 .bb-contents-notes__num {
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 2.6rem;
+  font-size: 30px;
   font-weight: 500;
   color: var(--bb-green-accent);
   line-height: 1;
   min-width: 2.4rem;
 }
 .bb-contents-notes a {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 1.08rem;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 17px;
   font-weight: 600;
   color: var(--bb-navy);
 }
 .bb-contents-notes__hint {
-  font-family: var(--font-hand, cursive);
-  font-size: 1.2rem;
-  color: var(--bb-gray);
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--bb-navy);
+  opacity: 0.6;
   display: inline-block;
-  transform: rotate(-1deg);
-  margin-left: 0.15rem;
-}
-@media (prefers-reduced-motion: reduce) {
-  .bb-contents-notes__hint { transform: none; }
 }
 
 /* Section intro text */
 .bb-intro-text {
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.9rem;
+  font-size: 17px;
   color: #24221A;
-  line-height: 1.8;
+  opacity: 0.82;
+  line-height: 1.65;
   margin-bottom: 1.25rem;
+  max-width: 62ch;
 }
 
-/* Visual divider with label */
+/* Visual divider with label: a hairline rule and a label, no box */
 .bb-divider {
   display: flex;
   align-items: center;
@@ -100,9 +95,9 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-divider-label {
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.67rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--bb-green-accent);
   white-space: nowrap;
@@ -117,129 +112,67 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 
 /* ============================================
-   FLIP CARDS: Real-World Examples
+   REAL-WORLD EXAMPLES: rule-divided rows, not
+   flip cards with stock photography.
    ============================================ */
 .bb-flip-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
+  border-top: 1px solid var(--bb-border);
   margin: 1.25rem 0;
 }
-
 .bb-flip-card {
-  perspective: 1000px;
-  height: 220px;
+  border-bottom: 1px solid var(--bb-border);
+  padding: 1.5rem 0;
   cursor: pointer;
 }
-
-.bb-flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-style: preserve-3d;
-}
-
-.bb-flip-card.flipped .bb-flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.bb-flip-front,
-.bb-flip-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  border-radius: 2px;
-  border: 1px solid var(--bb-border);
-  overflow: hidden;
-}
-
-/* Front of card */
-.bb-flip-front {
-  background: var(--bb-white);
-  display: flex;
-  flex-direction: column;
-}
-.bb-flip-front-img {
-  background: var(--bb-off-white);
-  height: 110px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  border-bottom: 1px solid var(--bb-border);
-}
-.bb-flip-front-body {
-  padding: 0.85rem 1rem;
-  flex: 1;
-}
 .bb-flip-front-body h3 {
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: 'Fraunces', Georgia, serif;
   color: var(--bb-navy);
-  font-size: 0.92rem;
-  font-weight: 700;
-  margin: 0 0 0.25rem;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
 }
 .bb-flip-front-body p {
   color: var(--bb-gray);
-  font-size: 0.75rem;
+  opacity: 0.7;
+  font-size: 17px;
   margin: 0;
 }
 .bb-flip-hint {
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.62rem;
-  color: var(--bb-gray);
-  letter-spacing: 0.05em;
+  font-size: 11px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
+  color: var(--bb-green-accent);
 }
 
-/* Back of card */
-.bb-flip-back {
-  background: var(--bb-navy);
-  transform: rotateY(180deg);
-  display: flex;
-  flex-direction: column;
-  padding: 1.1rem 1.25rem;
-  justify-content: center;
-}
+.bb-flip-card.flipped .bb-flip-front { display: none; }
+.bb-flip-back { display: none; }
+.bb-flip-card.flipped .bb-flip-back { display: block; }
 .bb-flip-back h3 {
-  font-family: 'Instrument Sans', sans-serif;
-  color: var(--bb-green-hover);
-  font-size: 0.82rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-family: 'Fraunces', Georgia, serif;
+  color: var(--bb-navy);
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 0.6rem;
 }
 .bb-flip-back p {
-  color: rgba(255,255,255,0.85);
-  font-size: 0.82rem;
+  color: var(--bb-text-secondary);
+  opacity: 0.82;
+  font-size: 17px;
   line-height: 1.65;
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.65rem;
 }
 .bb-flip-back p:last-child { margin-bottom: 0; }
-/* Company name badges on flip card back */
 .bb-flip-org-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem;
-  margin-top: 0.65rem;
+  gap: 0.4rem 0.9rem;
+  margin-top: 0.75rem;
 }
 .bb-flip-org-badge {
-  display: inline-block;
-  background: rgba(142,148,105,0.18);
-  border: 1px solid rgba(142,148,105,0.38);
-  border-radius: 2px;
-  padding: 0.18rem 0.6rem;
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: #5C6335;
-  letter-spacing: 0.01em;
-  white-space: nowrap;
+  font-size: 15px;
+  color: var(--bb-green-accent);
 }
 
 /* Two-column split */
@@ -253,85 +186,90 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 .bb-two-col-text p {
   font-family: 'Instrument Sans', sans-serif;
   color: #24221A;
-  font-size: 0.9rem;
-  line-height: 1.8;
+  opacity: 0.82;
+  font-size: 17px;
+  line-height: 1.65;
   margin: 0 0 0.85rem;
+  max-width: 62ch;
 }
 .bb-two-col-text p:last-child { margin-bottom: 0; }
 
-/* Misconception Blocks */
-.bb-misconception {
-  background: var(--bb-off-white);
+/* The one remaining photo on this page: straight edge, no tilt,
+   no shadow. Caption sits where the handwritten Caveat mark used
+   to: Fraunces italic, quiet, 60% opacity. */
+.bb-photo-frame {
+  display: block;
+  max-width: 100%;
+}
+.bb-photo-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
   border: 1px solid var(--bb-border);
-  border-radius: 2px;
-  padding: 1rem 1.25rem;
-  margin-bottom: 0.75rem;
+}
+.bb-photo-frame__caption {
+  display: block;
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--bb-navy);
+  opacity: 0.6;
+  margin-top: 0.5rem;
+}
+
+/* Misconception rows: a rule, not a filled block */
+.bb-misconception {
+  border-top: 1px solid var(--bb-border);
+  padding: 1.1rem 0;
+}
+.bb-misconception:last-of-type {
+  border-bottom: 1px solid var(--bb-border);
 }
 .bb-misconception strong {
   color: var(--bb-navy);
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.88rem;
+  font-size: 17px;
   font-weight: 600;
 }
 .bb-misconception p {
   color: var(--bb-text-secondary);
-  margin: 0.35rem 0 0;
-  font-size: 0.85rem;
-  line-height: 1.7;
+  opacity: 0.82;
+  margin: 0.4rem 0 0;
+  font-size: 17px;
+  line-height: 1.65;
+  max-width: 62ch;
 }
 
-/* Flip card front image fill */
-.bb-flip-front-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+/* International callout (shared style): rules, no box */
+.bb-international-callout {
+  border-top: 1px solid var(--bb-border);
+  border-bottom: 1px solid var(--bb-border);
+  padding: 1.5rem 0;
+  margin: 1.75rem 0;
+  max-width: 62ch;
 }
-
-
-/* Beyond the Science image */
-.bb-beyond-img {
-  width: 100%;
-  border-radius: 2px;
-  display: block;
+.bb-international-callout .bb-intl-header {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--bb-green-accent);
+  margin: 0 0 0.5rem;
+}
+.bb-international-callout p {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 17px;
+  font-style: italic;
+  color: var(--bb-text-secondary);
+  opacity: 0.82;
+  line-height: 1.65;
+  margin: 0;
 }
 
 /* Desktop */
 @media (min-width: 769px) {
-  .bb-flip-grid { grid-template-columns: repeat(2, 1fr); gap: 1.1rem; }
-  .bb-flip-card { height: 240px; }
-  .bb-flip-front-img { height: 120px; }
   .bb-two-col { grid-template-columns: 3fr 2fr; gap: 2.25rem; }
-}
-@media (min-width: 1024px) {
-  .bb-flip-grid { grid-template-columns: repeat(4, 1fr); }
-}
-
-/* International callout (shared style) */
-.bb-international-callout {
-  background: #EFE6D2;
-  border: 1px solid #E6DBC2;
-  border-radius: 2px;
-  padding: 1rem 1.25rem;
-  margin: 1.75rem 0;
-}
-.bb-international-callout .bb-intl-header {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--bb-green);
-  margin: 0 0 0.4rem;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-.bb-international-callout p {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.82rem;
-  font-style: italic;
-  color: var(--bb-text-secondary);
-  line-height: 1.7;
-  margin: 0;
 }
 </style>
 
@@ -374,90 +312,78 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 ## Real-World Examples
 
-<p class="bb-intro-text" style="font-size:0.82rem; color: var(--bb-gray);">Click each card (or tap on mobile) to see more.</p>
+<p class="bb-intro-text" style="font-size:15px; color: var(--bb-gray); opacity: 0.7;">Click each row (or tap on mobile) to see more.</p>
 
 <div class="bb-flip-grid">
 
   <div class="bb-flip-card" role="button" tabindex="0" aria-label="Medicine example: click to flip">
-    <div class="bb-flip-card-inner">
-      <div class="bb-flip-front">
-        <div class="bb-flip-front-img"><img src="/assets/images/biotech-medicine.jpg" alt="Medicine"></div>
-        <div class="bb-flip-front-body">
-          <h3>Medicine</h3>
-          <p class="bb-flip-hint">Click to learn more</p>
-        </div>
-      </div>
-      <div class="bb-flip-back">
+    <div class="bb-flip-front">
+      <div class="bb-flip-front-body">
         <h3>Medicine</h3>
-        <p>Insulin for diabetics is made by bacteria engineered to carry the human insulin gene. CAR-T therapy takes your own immune cells, genetically reprograms them to recognize cancer, and injects them back.</p>
-        <div class="bb-flip-org-badges">
-          <span class="bb-flip-org-badge">Moderna</span>
-          <span class="bb-flip-org-badge">Pfizer</span>
-          <span class="bb-flip-org-badge">Genentech</span>
-        </div>
+        <p class="bb-flip-hint">Click to learn more</p>
+      </div>
+    </div>
+    <div class="bb-flip-back">
+      <h3>Medicine</h3>
+      <p>Insulin for diabetics is made by bacteria engineered to carry the human insulin gene. CAR-T therapy takes your own immune cells, genetically reprograms them to recognize cancer, and injects them back.</p>
+      <div class="bb-flip-org-badges">
+        <span class="bb-flip-org-badge">Moderna</span>
+        <span class="bb-flip-org-badge">Pfizer</span>
+        <span class="bb-flip-org-badge">Genentech</span>
       </div>
     </div>
   </div>
 
   <div class="bb-flip-card" role="button" tabindex="0" aria-label="Agriculture example: click to flip">
-    <div class="bb-flip-card-inner">
-      <div class="bb-flip-front">
-        <div class="bb-flip-front-img"><img src="/assets/images/biotech-agriculture.jpg" alt="Agriculture"></div>
-        <div class="bb-flip-front-body">
-          <h3>Agriculture</h3>
-          <p class="bb-flip-hint">Click to learn more</p>
-        </div>
-      </div>
-      <div class="bb-flip-back">
+    <div class="bb-flip-front">
+      <div class="bb-flip-front-body">
         <h3>Agriculture</h3>
-        <p>Drought-resistant crops can survive on 30% less water. Plant-based meat uses heme (a protein from engineered yeast) to replicate the taste and texture of beef.</p>
-        <div class="bb-flip-org-badges">
-          <span class="bb-flip-org-badge">Bayer</span>
-          <span class="bb-flip-org-badge">Monsanto</span>
-          <span class="bb-flip-org-badge">Syngenta</span>
-        </div>
+        <p class="bb-flip-hint">Click to learn more</p>
+      </div>
+    </div>
+    <div class="bb-flip-back">
+      <h3>Agriculture</h3>
+      <p>Drought-resistant crops can survive on 30% less water. Plant-based meat uses heme (a protein from engineered yeast) to replicate the taste and texture of beef.</p>
+      <div class="bb-flip-org-badges">
+        <span class="bb-flip-org-badge">Bayer</span>
+        <span class="bb-flip-org-badge">Monsanto</span>
+        <span class="bb-flip-org-badge">Syngenta</span>
       </div>
     </div>
   </div>
 
   <div class="bb-flip-card" role="button" tabindex="0" aria-label="Environment example: click to flip">
-    <div class="bb-flip-card-inner">
-      <div class="bb-flip-front">
-        <div class="bb-flip-front-img"><img src="/assets/images/biotech-environment.jpg" alt="Environment"></div>
-        <div class="bb-flip-front-body">
-          <h3>Environment</h3>
-          <p class="bb-flip-hint">Click to learn more</p>
-        </div>
-      </div>
-      <div class="bb-flip-back">
+    <div class="bb-flip-front">
+      <div class="bb-flip-front-body">
         <h3>Environment</h3>
-        <p>Bioremediation uses bacteria that break down petroleum into harmless compounds. Bioplastics made from plants instead of petroleum decompose in months, not centuries.</p>
-        <div class="bb-flip-org-badges">
-          <span class="bb-flip-org-badge">Bolt Threads</span>
-          <span class="bb-flip-org-badge">LanzaTech</span>
-          <span class="bb-flip-org-badge">Novozymes</span>
-        </div>
+        <p class="bb-flip-hint">Click to learn more</p>
+      </div>
+    </div>
+    <div class="bb-flip-back">
+      <h3>Environment</h3>
+      <p>Bioremediation uses bacteria that break down petroleum into harmless compounds. Bioplastics made from plants instead of petroleum decompose in months, not centuries.</p>
+      <div class="bb-flip-org-badges">
+        <span class="bb-flip-org-badge">Bolt Threads</span>
+        <span class="bb-flip-org-badge">LanzaTech</span>
+        <span class="bb-flip-org-badge">Novozymes</span>
       </div>
     </div>
   </div>
 
   <div class="bb-flip-card" role="button" tabindex="0" aria-label="Cutting Edge example: click to flip">
-    <div class="bb-flip-card-inner">
-      <div class="bb-flip-front">
-        <div class="bb-flip-front-img"><img src="/assets/images/biotech-cuttingedge.jpg" alt="The Cutting Edge"></div>
-        <div class="bb-flip-front-body">
-          <h3>The Cutting Edge</h3>
-          <p class="bb-flip-hint">Click to learn more</p>
-        </div>
-      </div>
-      <div class="bb-flip-back">
+    <div class="bb-flip-front">
+      <div class="bb-flip-front-body">
         <h3>The Cutting Edge</h3>
-        <p>Bioprinting uses 3D printers loaded with living cells to build skin grafts, cartilage, and blood vessels. Mini-brains grown from stem cells are helping scientists study Alzheimer's without human trials.</p>
-        <div class="bb-flip-org-badges">
-          <span class="bb-flip-org-badge">10x Genomics</span>
-          <span class="bb-flip-org-badge">CRISPR Therapeutics</span>
-          <span class="bb-flip-org-badge">Illumina</span>
-        </div>
+        <p class="bb-flip-hint">Click to learn more</p>
+      </div>
+    </div>
+    <div class="bb-flip-back">
+      <h3>The Cutting Edge</h3>
+      <p>Bioprinting uses 3D printers loaded with living cells to build skin grafts, cartilage, and blood vessels. Mini-brains grown from stem cells are helping scientists study Alzheimer's without human trials.</p>
+      <div class="bb-flip-org-badges">
+        <span class="bb-flip-org-badge">10x Genomics</span>
+        <span class="bb-flip-org-badge">CRISPR Therapeutics</span>
+        <span class="bb-flip-org-badge">Illumina</span>
       </div>
     </div>
   </div>
@@ -480,7 +406,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     <p>That's why biotech needs business people, engineers, lawyers, writers, and project managers just as much as it needs scientists.</p>
   </div>
   <div>
-    <div class="bb-photo-frame bb-photo-frame--tilt-left">
+    <div class="bb-photo-frame">
       <img src="/assets/images/team-illustration.jpg?v=2" alt="Cross-functional team behind a biotech breakthrough">
     </div>
     <span class="bb-photo-frame__caption">not a single lab coat in sight</span>
@@ -502,7 +428,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 <div class="bb-misconception">
   <strong>"It's all lab work."</strong>
-  <p>Lab work is one slice of a much bigger picture. There's also manufacturing, regulatory affairs, sales, policy, data analysis, and more. The <a href="/career-pathways/" style="color: #5C6335; font-weight: 600;">Career Pathways</a> page shows the full range.</p>
+  <p>Lab work is one slice of a much bigger picture. There's also manufacturing, regulatory affairs, sales, policy, data analysis, and more. The <a href="/career-pathways/">Career Pathways</a> page shows the full range.</p>
 </div>
 
 <div class="bb-misconception">

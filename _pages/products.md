@@ -12,27 +12,13 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 :root {
   --bb-green: #24221A;
   --bb-green-accent: #5C6335;
-  --bb-green-bright: #5C6335;
   --bb-green-hover: #3B4223;
-  --bb-green-dark: #3B4223;
-  --bb-green-bg: #E6DBC2;
-  --bb-green-bg-subtle: #DED2B7;
   --bb-navy: #24221A;
-  --bb-charcoal: #24221A;
   --bb-white: #EFE6D2;
   --bb-off-white: #E6DBC2;
   --bb-text-secondary: #5B5745;
   --bb-gray: #5B5745;
-  --bb-border: rgba(36,34,26,0.14);
-}
-
-/* Hero logo */
-.bb-hero-logo {
-  display: block;
-  height: 52px;
-  width: auto;
-  margin-bottom: 1rem;
-  filter: brightness(0) saturate(100%) invert(79%) sepia(38%) saturate(475%) hue-rotate(2deg) brightness(0.98) contrast(0.92);
+  --bb-border: rgba(36,34,26,0.12);
 }
 
 /* Main product layout */
@@ -40,12 +26,12 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.75rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
-/* Product image */
+/* Product image: the one product photo on the site, kept because
+   it's the actual guide cover, not decorative stock photography */
 .bb-product-img {
-  border-radius: 2px;
   overflow: hidden;
   min-height: 180px;
 }
@@ -54,52 +40,51 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   height: 100%;
   display: block;
   object-fit: cover;
-  border-radius: 2px;
 }
 
-/* Product card */
+/* Product details: no card box, set off by a top rule */
 .bb-product-card {
-  background: var(--bb-white);
-  border: 1px solid var(--bb-border);
-  border-radius: 2px;
-  padding: 1.75rem 1.5rem;
+  border-top: 1px solid var(--bb-border);
+  padding-top: 1.5rem;
 }
 .bb-product-eyebrow {
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--bb-green-accent);
-  margin: 0 0 0.4rem;
+  margin: 0 0 0.5rem;
 }
 .bb-product-card h2 {
   font-family: 'Fraunces', Georgia, serif;
   color: var(--bb-navy);
-  font-size: 1.45rem;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 500;
   margin: 0 0 0.65rem;
   letter-spacing: -0.02em;
   line-height: 1.2;
 }
 .bb-product-tagline {
   color: var(--bb-text-secondary);
+  opacity: 0.82;
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.88rem;
-  line-height: 1.7;
+  font-size: 17px;
+  line-height: 1.65;
   margin: 0 0 1.25rem;
+  max-width: 62ch;
 }
 
 /* Section headers inside card */
 .bb-section-label {
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--bb-green);
+  color: var(--bb-green-accent);
   margin: 0 0 0.65rem;
-  padding-top: 1.1rem;
+  padding-top: 1.5rem;
   border-top: 1px solid var(--bb-border);
 }
 .bb-section-label:first-of-type {
@@ -112,13 +97,15 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   list-style: none;
   padding: 0;
   margin: 0 0 1.25rem;
+  max-width: 62ch;
 }
 .bb-feature-list li {
   position: relative;
-  padding-left: 1.65rem;
-  margin-bottom: 0.6rem;
+  padding-left: 1.4rem;
+  margin-bottom: 0.75rem;
   color: var(--bb-text-secondary);
-  font-size: 0.87rem;
+  opacity: 0.82;
+  font-size: 17px;
   line-height: 1.65;
 }
 .bb-feature-list li::before {
@@ -127,125 +114,104 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   left: 0;
   color: var(--bb-green-accent);
   font-weight: 700;
-  font-size: 0.9rem;
-  line-height: 1.65;
 }
 
 /* Who It's For prose */
 .bb-who-prose {
   color: var(--bb-text-secondary);
-  font-size: 0.87rem;
-  line-height: 1.75;
+  opacity: 0.82;
+  font-size: 17px;
+  line-height: 1.65;
   margin: 0 0 1.25rem;
+  max-width: 62ch;
 }
 
 /* Price & CTA */
 .bb-price-row {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 0.85rem;
   margin-bottom: 0.85rem;
   flex-wrap: wrap;
 }
 .bb-price-tag {
-  display: inline-block;
-  background: var(--bb-navy);
-  color: var(--bb-white);
-  padding: 0.4rem 1.25rem;
-  border-radius: 2px;
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 1.3rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--bb-navy);
+  letter-spacing: -0.01em;
 }
 .bb-buy-btn {
   display: inline-block;
   background: var(--bb-green-accent);
   color: var(--bb-white) !important;
-  padding: 0.75rem 2rem;
-  border-radius: 2px;
+  padding: 0.85rem 2rem;
   font-family: 'Instrument Sans', sans-serif;
   font-weight: 600;
-  font-size: 0.88rem;
+  font-size: 17px;
   text-decoration: none !important;
-  transition: all 0.22s ease;
-  border: 1.5px solid var(--bb-green-accent);
+  transition: background 0.15s ease;
 }
 .bb-buy-btn:hover {
-  background: var(--bb-green);
-  border-color: var(--bb-green);
+  background: var(--bb-green-hover);
   color: var(--bb-white) !important;
 }
 .bb-coming-soon-note {
   color: var(--bb-gray);
-  font-size: 0.78rem;
+  font-size: 17px;
+  opacity: 0.7;
   font-style: italic;
-  margin-top: 0.35rem;
+  margin-top: 0.5rem;
 }
 
-/* Why a Paid Guide section */
+/* Why a Paid Guide section: rules, not a filled box */
 .bb-why-paid {
-  background: var(--bb-green-bg-subtle);
-  border: 1px solid var(--bb-border);
-  border-radius: 2px;
-  padding: 1.5rem 1.5rem;
+  border-top: 1px solid var(--bb-border);
+  border-bottom: 1px solid var(--bb-border);
+  padding: 1.75rem 0;
   margin-bottom: 1.5rem;
 }
 .bb-why-paid h2 {
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: 'Fraunces', Georgia, serif;
   color: var(--bb-navy);
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 500;
   margin: 0 0 0.85rem;
 }
 .bb-why-paid p {
   color: var(--bb-text-secondary);
-  font-size: 0.87rem;
-  line-height: 1.8;
+  opacity: 0.82;
+  font-size: 17px;
+  line-height: 1.65;
   margin: 0 0 0.75rem;
+  max-width: 62ch;
 }
 .bb-why-paid p:last-child { margin-bottom: 0; }
 
 /* Coming Soon roadmap */
 .bb-roadmap {
-  background: var(--bb-white);
-  border: 1px solid var(--bb-border);
-  border-radius: 2px;
-  padding: 1.5rem 1.5rem;
+  padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--bb-border);
 }
 .bb-roadmap h2 {
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: 'Fraunces', Georgia, serif;
   color: var(--bb-navy);
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 500;
   margin: 0 0 1rem;
 }
 .bb-roadmap-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.85rem;
-  margin-bottom: 0.85rem;
-  padding-bottom: 0.85rem;
-  border-bottom: 1px solid #DED2B7;
+  padding: 1rem 0;
+  border-top: 1px solid var(--bb-border);
+  max-width: 62ch;
 }
-.bb-roadmap-item:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-.bb-roadmap-dot {
-  width: 8px;
-  height: 8px;
-  min-width: 8px;
-  background: var(--bb-green-accent);
-  border-radius: 2px;
-  margin-top: 0.4rem;
-}
+.bb-roadmap-dot { display: none; }
 .bb-roadmap-item p {
   color: var(--bb-text-secondary);
-  font-size: 0.87rem;
-  line-height: 1.55;
+  opacity: 0.82;
+  font-size: 17px;
+  line-height: 1.65;
   margin: 0;
 }
 .bb-roadmap-item strong {
@@ -254,63 +220,59 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 /* Contact note */
 .bb-contact-note {
-  text-align: center;
   color: var(--bb-gray);
-  font-size: 0.85rem;
+  opacity: 0.7;
+  font-size: 17px;
 }
 .bb-contact-note a {
   color: var(--bb-green-accent);
   font-weight: 600;
 }
 
-/* Free Preview Card */
+/* Free Preview: a rule-framed callout, not a heavily bordered card */
 .bb-preview-card {
-  background: var(--bb-off-white);
-  border: 1.5px solid #5C6335;
-  border-top: 4px solid #3B4223;
-  border-radius: 2px;
-  padding: 1.75rem 1.5rem;
-  margin-bottom: 1.75rem;
+  border-top: 1px solid var(--bb-border);
+  border-bottom: 1px solid var(--bb-border);
+  padding: 1.75rem 0;
+  margin-bottom: 2.5rem;
 }
 .bb-preview-eyebrow {
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #3B4223;
-  margin: 0 0 0.4rem;
+  color: var(--bb-green-accent);
+  margin: 0 0 0.5rem;
 }
 .bb-preview-card h2 {
   font-family: 'Fraunces', Georgia, serif;
-  color: #3B4223;
-  font-size: 1.2rem;
-  font-weight: 700;
+  color: var(--bb-navy);
+  font-size: 30px;
+  font-weight: 500;
   margin: 0 0 0.6rem;
   letter-spacing: -0.02em;
 }
 .bb-preview-card p {
   font-family: 'Instrument Sans', sans-serif;
-  color: #5B5745;
-  font-size: 0.87rem;
-  line-height: 1.75;
+  color: var(--bb-text-secondary);
+  opacity: 0.82;
+  font-size: 17px;
+  line-height: 1.65;
   margin: 0 0 1.1rem;
+  max-width: 62ch;
 }
 .bb-preview-sample {
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: var(--bb-white);
-  border: 1px solid #5C6335;
-  border-radius: 2px;
-  padding: 0.85rem 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--bb-border);
+  border-bottom: 1px solid var(--bb-border);
   margin-bottom: 1rem;
   flex-wrap: wrap;
 }
-.bb-preview-sample-icon {
-  font-size: 1.75rem;
-  flex-shrink: 0;
-}
+.bb-preview-sample-icon { display: none; }
 .bb-preview-sample-info {
   flex: 1;
   min-width: 0;
@@ -318,70 +280,62 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 .bb-preview-sample-info strong {
   display: block;
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.9rem;
+  font-size: 17px;
   font-weight: 600;
-  color: #3B4223;
-  margin-bottom: 0.15rem;
+  color: var(--bb-navy);
+  margin-bottom: 0.25rem;
 }
 .bb-preview-sample-info span {
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.78rem;
+  font-size: 17px;
   color: var(--bb-gray);
+  opacity: 0.7;
 }
 .bb-preview-btn {
   display: inline-block;
-  background: #3B4223;
-  color: var(--bb-white) !important;
-  padding: 0.65rem 1.5rem;
-  border-radius: 2px;
+  color: var(--bb-green-accent) !important;
   font-family: 'Instrument Sans', sans-serif;
   font-weight: 600;
-  font-size: 0.85rem;
-  text-decoration: none !important;
-  transition: all 0.22s ease;
+  font-size: 17px;
   white-space: nowrap;
   flex-shrink: 0;
 }
 .bb-preview-btn:hover {
-  background: var(--bb-green-accent);
-  color: var(--bb-white) !important;
+  color: var(--bb-green-hover) !important;
 }
 .bb-preview-coming-soon {
-  display: inline-block;
-  background: rgba(82,88,52,0.1);
-  border: 1px solid rgba(82,88,52,0.35);
-  border-radius: 2px;
-  padding: 0.2rem 0.65rem;
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.75rem;
+  font-size: 11px;
   font-weight: 600;
-  color: #3B4223;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bb-green-hover);
 }
 
 /* International callout */
 .bb-international-callout {
-  background: #EFE6D2;
-  border: 1px solid #E6DBC2;
-  border-radius: 2px;
-  padding: 1rem 1.25rem;
-  margin: 1.25rem 0;
+  border-top: 1px solid var(--bb-border);
+  border-bottom: 1px solid var(--bb-border);
+  padding: 1.25rem 0;
+  margin: 1.5rem 0;
+  max-width: 62ch;
 }
 .bb-international-callout .bb-intl-header {
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--bb-green);
-  margin: 0 0 0.4rem;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--bb-green-accent);
+  margin: 0 0 0.5rem;
 }
 .bb-international-callout p {
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.82rem;
+  font-size: 17px;
   font-style: italic;
   color: var(--bb-text-secondary);
-  line-height: 1.7;
+  opacity: 0.82;
+  line-height: 1.65;
   margin: 0;
 }
 
@@ -392,12 +346,8 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
     align-items: stretch;
     gap: 0.75rem;
   }
-  .bb-preview-sample-icon {
-    text-align: center;
-  }
   .bb-preview-btn {
-    width: 100%;
-    text-align: center;
+    text-align: left;
     display: block;
   }
 }
@@ -405,13 +355,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 /* Desktop */
 @media (min-width: 769px) {
   .bb-product-layout { grid-template-columns: 2fr 3fr; align-items: start; gap: 2.25rem; }
-  .bb-product-card { padding: 2rem 2.25rem; }
-  .bb-product-card h2 { font-size: 1.75rem; }
   .bb-product-img { min-height: 260px; }
-  .bb-why-paid { padding: 1.75rem 2rem; }
-  .bb-roadmap { padding: 1.75rem 2rem; }
-  .bb-preview-card { padding: 2rem 2.25rem; }
-  .bb-preview-card h2 { font-size: 1.4rem; }
 }
 </style>
 
