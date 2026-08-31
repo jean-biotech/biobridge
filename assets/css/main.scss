@@ -60,24 +60,41 @@ $type-size-8: 0.65rem !default;
   --olive-soft: #8E9469;
   --mustard: #A9781F; // sparing use only: tiny marks like figure numbers, never backgrounds/buttons
 
-  // translucent-ink hairlines: structure without heavy borders, never a shadow
-  --line: rgba(36, 34, 26, 0.22);
-  --line-soft: rgba(36, 34, 26, 0.1);
+  // translucent-ink hairlines: structure without heavy borders, never a shadow.
+  // Every rule and divider on the site reads at 12% opacity of the ink color.
+  --line: rgba(36, 34, 26, 0.12);
+  --line-soft: rgba(36, 34, 26, 0.12);
 
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Instrument Sans", -apple-system, BlinkMacSystemFont, sans-serif;
-
-  // handwritten marker font: annotations and captions only, never body text
-  --font-hand: "Caveat", cursive;
 
   // one genuine accent moment: a deep, saturated pine/ink green, distinct
   // from the olive family, used sparingly for a single callout/tag/button
   --ink-green: #1B3B2E;
 
-  --radius: 2px;
+  --radius: 0;
+
+  // ============================================================
+  // TYPE SCALE: exactly four sizes, site-wide. Nothing in between.
+  // Hierarchy below this scale comes from font-family, weight, and
+  // color/opacity, never from a fifth font size.
+  // ============================================================
+  --fs-display: 60px;   // Fraunces, page/hero headlines
+  --fs-heading: 30px;   // Fraunces, section headings
+  --fs-body: 17px;      // Instrument Sans, running text and item titles
+  --fs-label: 11px;     // Instrument Sans, uppercase eyebrows/markers
+
+  --space-section: 160px; // vertical padding between major sections
+  --measure: 62ch;        // body text max-width
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Instrument+Sans:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Instrument+Sans:wght@400;500;600;700&display=swap');
+
+// Every box-shadow on the site is disabled from this single origin.
+// Component rules below no longer declare their own shadow values.
+*, *::before, *::after {
+  box-shadow: none !important;
+}
 
 // ============================================================
 // GLOBAL RESETS & BASE STYLES
@@ -109,27 +126,30 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
   color: var(--ink);
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: var(--fs-body);
   line-height: 1.65;
 }
 
 p {
   font-family: var(--font-body);
-  font-size: 1rem;
-  line-height: 1.75;
+  font-size: var(--fs-body);
+  line-height: 1.65;
+  color: var(--ink);
+  opacity: 0.82;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
 }
 
-// small uppercase labels: Instrument Sans, never monospace
+// small uppercase labels: Instrument Sans, never monospace.
+// This is the site's one "label" size: 11px, uppercase, tracked, olive.
 .eyebrow {
   display: inline-block;
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: var(--fs-label);
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--olive);
 }
@@ -137,9 +157,10 @@ h1, h2, h3, h4, h5, h6 {
 .section-number {
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: 0.85rem;
-  color: var(--ink-soft);
-  letter-spacing: 0.02em;
+  font-size: var(--fs-label);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--olive);
 }
 
 // Editorial drop cap: use on a lead paragraph via <p class="lede">
@@ -153,6 +174,16 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--olive-deep);
 }
 
+// A caption or marginal note set where the handwritten Caveat mark used
+// to sit: Fraunces italic, quiet, never a display size.
+.bb-quiet-note {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--ink);
+  opacity: 0.6;
+}
+
 // Large serif pull statement, standing directly in the page flow.
 // No stripe, no surrounding box.
 .pull-quote {
@@ -160,7 +191,7 @@ h1, h2, h3, h4, h5, h6 {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: italic;
-  font-size: clamp(1.5rem, 3.4vw, 2.35rem);
+  font-size: var(--fs-heading);
   line-height: 1.32;
   color: var(--ink);
   margin: 1.75rem 0;
@@ -172,31 +203,32 @@ h1, h2, h3, h4, h5, h6 {
 // ============================================================
 
 .bb-page-header {
-  padding: 1.5rem 0 1.75rem;
-  margin-bottom: 2rem;
+  padding: 0 0 2.5rem;
+  margin-bottom: 0;
   border-bottom: 1px solid var(--line);
 
   .eyebrow {
-    margin-bottom: 0.85rem;
+    margin-bottom: 1rem;
   }
 
   h1 {
-    margin: 0 0 0.6rem;
-    font-size: clamp(1.9rem, 4vw, 2.6rem);
-    line-height: 1.15;
+    margin: 0 0 0.75rem;
+    font-size: var(--fs-display);
+    line-height: 1.05;
   }
 }
 
 .bb-page-header__deck {
   font-family: var(--font-body);
-  font-size: 1.05rem;
-  color: var(--ink-soft);
-  max-width: 42rem;
-  line-height: 1.6;
+  font-size: var(--fs-body);
+  color: var(--ink);
+  opacity: 0.82;
+  max-width: var(--measure);
+  line-height: 1.65;
   margin: 0;
 }
 
-// Numbered contents list, replacing any boxed "on this page" widget.
+// Numbered contents list: a plain hairline-divided list, no box.
 .bb-contents {
   list-style: none;
   margin: 0 0 2rem;
@@ -207,21 +239,21 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     gap: 0.85rem;
     align-items: baseline;
-    padding: 0.6rem 0;
+    padding: 0.9rem 0;
     border-bottom: 1px solid var(--line);
   }
 
   .bb-contents__num {
     font-family: var(--font-display);
     color: var(--ink-soft);
-    font-size: 0.9rem;
+    font-size: var(--fs-body);
     flex-shrink: 0;
     width: 1.6rem;
   }
 
   a {
-    font-family: var(--font-body);
-    font-size: 0.95rem;
+    font-family: var(--font-display);
+    font-size: var(--fs-body);
   }
 }
 
@@ -230,7 +262,7 @@ h1, h2, h3, h4, h5, h6 {
 .bb-section-num {
   display: block;
   font-family: var(--font-display);
-  font-size: 0.95rem;
+  font-size: var(--fs-body);
   color: var(--ink-soft);
   margin-bottom: 0.4rem;
 }
@@ -248,167 +280,47 @@ h1, h2, h3, h4, h5, h6 {
 
   figcaption {
     font-family: var(--font-body);
-    font-size: 0.85rem;
-    color: var(--ink-soft);
+    font-size: var(--fs-body);
+    color: var(--ink);
+    opacity: 0.7;
     margin-top: 0.6rem;
   }
 }
 
-// Flat warm color block used in place of a photo when no distinct,
-// appropriate image exists for a slot.
-.bb-color-block {
-  aspect-ratio: 4 / 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--line);
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1.1rem;
-  color: var(--paper);
-  text-align: center;
-  padding: 1.5rem;
-
-  &.bb-color-block--olive { background: var(--olive); }
-  &.bb-color-block--olive-deep { background: var(--olive-deep); }
-  &.bb-color-block--paper-2 { background: var(--paper-2); color: var(--ink-soft); }
-}
-
 // ============================================================
-// TEXTURED EDITORIAL SYSTEM: tonal bands, varied dividers,
-// photo framing, hand-drawn annotation marks, one-off callouts.
-// Use sparingly and once each, not as a repeated component.
+// FLAT EDITORIAL SYSTEM: alternating tonal bands (straight edges
+// only) and a single hairline-rule divider used everywhere a
+// section needs to end. No shadows, no tilt, no drawn marks.
 // ============================================================
 
 // Alternate section backgrounds instead of one flat fill throughout.
+// A few percent darker than the paper, always a straight edge.
 .bb-band--warm { background: var(--paper); }
 .bb-band--cool { background: var(--paper-2); }
 
-// A dotted rule variant, for the one section transition that
-// shouldn't use the plain hairline.
-.bb-rule--dotted {
+// The one section-divider treatment: a 1px rule at 12% opacity
+// and nothing else.
+.bb-rule {
   border: none;
-  border-top: 2px dotted var(--line);
-  margin: 2.5rem 0;
+  border-top: 1px solid var(--line);
+  margin: 0;
 }
 
-// A hand-drawn squiggle rule, as an SVG background line.
-.bb-rule--squiggle {
-  height: 12px;
-  margin: 2.5rem 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='12' viewBox='0 0 120 12'%3E%3Cpath d='M0 6 Q 6 0, 12 6 T 24 6 T 36 6 T 48 6 T 60 6 T 72 6 T 84 6 T 96 6 T 108 6 T 120 6' fill='none' stroke='%235C6335' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: repeat-x;
-  background-position: left center;
-  opacity: 0.55;
-}
-
-// A torn/deckle paper edge, used at one section transition
-// instead of a plain straight color block.
-.bb-torn-edge {
-  height: 18px;
-  background: var(--paper);
-  clip-path: polygon(
-    0% 100%, 0% 30%, 4% 60%, 8% 10%, 12% 55%, 16% 20%, 20% 65%,
-    24% 15%, 28% 50%, 32% 5%, 36% 60%, 40% 25%, 44% 70%, 48% 10%,
-    52% 55%, 56% 20%, 60% 65%, 64% 15%, 68% 50%, 72% 5%, 76% 60%,
-    80% 25%, 84% 70%, 88% 10%, 92% 55%, 96% 20%, 100% 65%, 100% 100%
-  );
-}
-.bb-band--cool + .bb-torn-edge,
-.bb-torn-edge + .bb-band--cool {
-  background: var(--paper-2);
-}
-
-// Editorial photo framing: slight rotation, thin printed-photo
-// border, small tactile lift so it reads as a physical print
-// rather than a flat digital image. The one deliberate exception
-// to "no shadow": it's load-bearing for the tactile effect the
-// textured-editorial direction asks for, kept small and quiet.
-.bb-photo-frame {
-  display: inline-block;
-  background: var(--paper);
-  border: 6px solid var(--paper);
-  box-shadow: 2px 3px 10px rgba(36, 34, 26, 0.16);
-  max-width: 100%;
-
-  &.bb-photo-frame--tilt-left { transform: rotate(-2deg); }
-  &.bb-photo-frame--tilt-right { transform: rotate(1.5deg); }
-
-  @media (prefers-reduced-motion: reduce) {
-    transform: none;
-  }
-
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-}
-
-.bb-photo-frame__caption {
-  display: block;
-  font-family: var(--font-hand);
-  font-size: 1.15rem;
-  color: var(--ink-soft);
-  text-align: center;
-  margin-top: 0.5rem;
-  transform: rotate(-1deg);
-
-  @media (prefers-reduced-motion: reduce) {
-    transform: none;
-  }
-}
-
-// Small hand-drawn annotation marks near key phrases. Use sparingly:
-// 1-2 per page. Wrap the phrase in <span class="bb-annotate ...">.
-.bb-annotate {
-  position: relative;
-  white-space: nowrap;
-}
-.bb-annotate--circle::after {
-  content: '';
-  position: absolute;
-  left: -0.35em;
-  right: -0.35em;
-  top: -0.3em;
-  bottom: -0.2em;
-  border: 2px solid var(--ink-green);
-  border-radius: 50% 48% 52% 49% / 55% 50% 52% 48%;
-  opacity: 0.75;
-  pointer-events: none;
-}
-.bb-annotate--underline::after {
-  content: '';
-  position: absolute;
-  left: -0.1em;
-  right: -0.1em;
-  bottom: -0.18em;
-  height: 6px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='6' viewBox='0 0 60 6'%3E%3Cpath d='M0 3 Q 5 0, 10 3 T 20 3 T 30 3 T 40 3 T 50 3 T 60 3' fill='none' stroke='%231B3B2E' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: repeat-x;
-  pointer-events: none;
-}
-
-// Sticky-note / index-card styled callout: a genuine one-off
-// variant, not the default callout treatment everywhere.
+// A quiet callout, set off from surrounding copy by rules only:
+// no border box, no fill, no dashed edge.
 .bb-index-card {
-  background: var(--paper-2);
-  border: 1px dashed var(--line);
-  padding: 1.25rem 1.5rem;
-  max-width: 32rem;
-  transform: rotate(-0.6deg);
-  box-shadow: 2px 3px 8px rgba(36, 34, 26, 0.12);
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  max-width: var(--measure);
 
-  @media (prefers-reduced-motion: reduce) {
-    transform: none;
-  }
-
-  .eyebrow { margin-bottom: 0.5rem; }
+  .eyebrow { margin-bottom: 0.6rem; }
 
   p {
     margin: 0;
-    font-size: 0.92rem;
-    color: var(--ink-soft);
+    font-size: var(--fs-body);
+    color: var(--ink);
+    opacity: 0.82;
     line-height: 1.65;
   }
 }
@@ -481,7 +393,6 @@ h1, h2, h3, h4, h5, h6 {
 .masthead {
   background-color: var(--paper);
   border-bottom: 1px solid var(--line);
-  box-shadow: none;
   padding: 0.5rem 0;
   position: sticky;
   top: 0;
@@ -521,6 +432,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.55rem !important;
   letter-spacing: -0.01em;
   color: var(--ink) !important;
+  text-decoration: none;
   padding: 0;
   display: flex !important;
   align-items: center;
@@ -537,15 +449,19 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+// The main nav reads at the label scale: 11px, uppercase, tracked,
+// so it stops competing with the wordmark for size.
 .greedy-nav {
   align-items: center;
   background: var(--paper);
 
   a {
     font-family: var(--font-body);
-    font-size: 0.95rem;
-    font-weight: 500;
-    letter-spacing: 0.01em;
+    font-size: var(--fs-label);
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    text-decoration: none;
     transition: color 0.2s ease;
   }
 
@@ -578,40 +494,45 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   color: var(--ink);
   font-weight: 600;
-  font-size: 1.6rem;
+  font-size: var(--fs-display);
   letter-spacing: -0.01em;
+  line-height: 1.05;
 }
 
 h1 {
   font-family: var(--font-display);
   color: var(--ink);
-  font-size: 1.75rem;
-  font-weight: 600;
+  font-size: var(--fs-display);
+  font-weight: 500;
   letter-spacing: -0.01em;
-  line-height: 1.2;
+  line-height: 1.05;
 }
 
 h2 {
   font-family: var(--font-display);
   color: var(--ink);
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: var(--fs-heading);
+  font-weight: 500;
   letter-spacing: -0.01em;
-  line-height: 1.3;
+  line-height: 1.2;
 }
 
 h3 {
   font-family: var(--font-display);
   color: var(--ink);
-  font-size: 1.1rem;
+  font-size: var(--fs-body);
   font-weight: 600;
 }
 
 h4, h5, h6 {
   font-family: var(--font-body);
   color: var(--ink);
-  font-size: 0.95rem;
+  font-size: var(--fs-body);
   font-weight: 600;
+}
+
+p, li, blockquote, dd, dt {
+  max-width: var(--measure);
 }
 
 // ============================================================
@@ -627,7 +548,6 @@ h4, h5, h6 {
   font-size: 0.9rem;
   letter-spacing: 0.01em;
   transition: background-color 0.15s ease;
-  box-shadow: none;
 
   &:hover {
     background-color: var(--olive-deep) !important;
@@ -640,46 +560,56 @@ h4, h5, h6 {
 
 .toc {
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--paper-2);
-  font-size: 0.82rem;
-  box-shadow: none;
+  border-radius: 0;
+  background: transparent;
+  font-size: var(--fs-body);
 
   .nav__title {
-    background: var(--olive-deep);
+    background: transparent;
+    border-bottom: 1px solid var(--line);
     border-radius: 0;
+    color: var(--olive);
     font-family: var(--font-body);
-    font-size: 0.75rem;
-    letter-spacing: 0.06em;
+    font-size: var(--fs-label);
+    letter-spacing: 0.16em;
     text-transform: uppercase;
   }
 
   a {
-    color: var(--ink-soft);
-    font-size: 0.82rem;
+    color: var(--ink);
+    opacity: 0.82;
+    font-size: var(--fs-body);
+    text-decoration: none;
 
     &:hover {
       color: var(--olive);
+      opacity: 1;
     }
   }
 
   .active {
     a {
       color: var(--olive-deep) !important;
+      opacity: 1;
       font-weight: 600;
     }
   }
 }
 
 // ============================================================
-// LINKS
+// LINKS: text with a quiet underline, solid on hover. No pills.
 // ============================================================
 
 a {
   color: var(--olive-deep);
+  text-decoration-line: underline;
+  text-decoration-color: rgba(59, 66, 35, 0.35);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 
   &:hover {
     color: var(--olive);
+    text-decoration-color: currentColor;
   }
 }
 
@@ -693,23 +623,26 @@ input:focus-visible,
 [tabindex]:focus-visible {
   outline: 2.5px solid var(--olive);
   outline-offset: 2px;
-  border-radius: 2px;
+  border-radius: 0;
 }
 
 // ============================================================
-// FOOTER
+// FOOTER: paper, not olive. Olive is reserved for its labels
+// and links, matching the rest of the site's color discipline.
 // ============================================================
 
 .page__footer {
-  background: var(--olive-deep);
-  color: rgba(239, 230, 210, 0.75);
-  font-size: 0.85rem;
-  box-shadow: none;
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+  font-size: var(--fs-body);
 
   a {
-    color: rgba(239, 230, 210, 0.85);
+    color: var(--ink);
+    opacity: 0.82;
     &:hover {
-      color: var(--olive-soft);
+      color: var(--olive);
+      opacity: 1;
     }
   }
 
@@ -720,14 +653,14 @@ input:focus-visible,
 }
 
 .bb-site-footer {
-  padding: 2.5rem 0 1.5rem;
+  padding: 3.5rem 0 2rem;
 }
 
 .bb-site-footer__top {
   display: grid;
   gap: 2rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(239, 230, 210, 0.18);
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--line);
 
   @media (min-width: 769px) {
     grid-template-columns: 2fr 1fr 1fr;
@@ -737,16 +670,17 @@ input:focus-visible,
 .bb-site-footer__title {
   display: block;
   font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--paper);
+  font-size: var(--fs-heading);
+  font-weight: 500;
+  color: var(--ink);
   margin-bottom: 0.5rem;
 }
 
 .bb-site-footer__tagline {
-  color: rgba(239, 230, 210, 0.75);
-  font-size: 0.9rem;
-  line-height: 1.6;
+  color: var(--ink);
+  opacity: 0.82;
+  font-size: var(--fs-body);
+  line-height: 1.65;
   max-width: 32rem;
   margin: 0;
 }
@@ -754,7 +688,7 @@ input:focus-visible,
 .bb-site-footer__nav,
 .bb-site-footer__connect {
   .eyebrow {
-    color: var(--olive-soft);
+    color: var(--olive);
     display: block;
     margin-bottom: 0.75rem;
   }
@@ -770,12 +704,15 @@ input:focus-visible,
   }
 
   a {
-    font-size: 0.9rem;
+    font-size: var(--fs-body);
+    text-decoration: none;
   }
 }
 
 .bb-site-footer__bottom {
-  padding-top: 1.25rem;
-  font-size: 0.78rem;
-  color: rgba(239, 230, 210, 0.6);
+  padding-top: 1.5rem;
+  font-size: var(--fs-label);
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  opacity: 0.6;
 }

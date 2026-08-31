@@ -12,32 +12,21 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 :root {
   --bb-green: #24221A;
   --bb-green-accent: #5C6335;
-  --bb-green-bright: #5C6335;
-  --bb-green-hover: #3B4223;
-  --bb-green-dark: #3B4223;
-  --bb-green-bg: #E6DBC2;
-  --bb-green-bg-subtle: #DED2B7;
   --bb-navy: #24221A;
-  --bb-charcoal: #24221A;
-  --bb-white: #EFE6D2;
-  --bb-off-white: #E6DBC2;
   --bb-text-secondary: #5B5745;
   --bb-gray: #5B5745;
-  --bb-border: rgba(36,34,26,0.14);
+  --bb-border: rgba(36,34,26,0.12);
 }
 
-/* Accordion container */
+/* Accordion container: rows separated by hairline rules, no boxes */
 .bb-accordion {
   max-width: 100%;
+  border-top: 1px solid var(--bb-border);
 }
 
 /* Individual accordion item */
 .bb-accordion-item {
-  border: 1px solid var(--bb-border);
-  border-radius: 2px;
-  margin-bottom: 0.6rem;
-  background: var(--bb-white);
-  overflow: hidden;
+  border-bottom: 1px solid var(--bb-border);
 }
 
 /* Question button */
@@ -46,45 +35,31 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   text-align: left;
   background: none;
   border: none;
-  padding: 0.9rem 1.1rem;
+  padding: 1.25rem 0;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.85rem;
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.88rem;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 17px;
   font-weight: 600;
   color: var(--bb-navy);
   line-height: 1.45;
-  transition: background 0.15s ease;
-}
-.bb-accordion-btn:hover {
-  background: var(--bb-green-bg-subtle);
 }
 .bb-accordion-item.open .bb-accordion-btn {
-  background: var(--bb-green-bg-subtle);
-  color: var(--bb-green);
+  color: var(--bb-green-accent);
 }
 
-/* Chevron icon */
+/* Chevron marker: text only, no filled tile */
 .bb-chevron {
   flex-shrink: 0;
-  width: 18px;
-  height: 18px;
-  border: 1px solid var(--bb-border);
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.25s ease;
   color: var(--bb-gray);
-  font-size: 0.68rem;
+  font-size: 11px;
+  transition: transform 0.25s ease, color 0.25s ease;
 }
 .bb-accordion-item.open .bb-chevron {
-  background: var(--bb-green-accent);
-  border-color: var(--bb-green-accent);
-  color: var(--bb-white);
+  color: var(--bb-green-accent);
   transform: rotate(180deg);
 }
 
@@ -100,13 +75,14 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 /* Answer content */
 .bb-accordion-body {
-  padding: 0 1.1rem 1.1rem;
-  border-top: 1px solid var(--bb-border);
+  padding: 0 0 1.25rem;
+  max-width: 62ch;
 }
 .bb-accordion-body p {
   color: var(--bb-text-secondary);
-  font-size: 0.87rem;
-  line-height: 1.8;
+  opacity: 0.82;
+  font-size: 17px;
+  line-height: 1.65;
   margin: 0.75rem 0 0;
 }
 .bb-accordion-body p + p {
@@ -115,18 +91,10 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 .bb-accordion-body a {
   color: var(--bb-green-accent);
   font-weight: 600;
-  text-decoration: none;
 }
-.bb-accordion-body a:hover { text-decoration: underline; }
 .bb-accordion-body strong {
   color: var(--bb-navy);
   font-weight: 600;
-}
-
-/* Desktop */
-@media (min-width: 769px) {
-  .bb-accordion-btn { font-size: 0.92rem; padding: 1rem 1.25rem; }
-  .bb-accordion-body { padding: 0 1.25rem 1.25rem; }
 }
 </style>
 

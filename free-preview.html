@@ -47,12 +47,12 @@ description: "Download a free chapter from The Biotech Blueprint by Jean Tran: t
     body {
       font-family: 'Instrument Sans', system-ui, sans-serif;
       background-color: var(--paper);
-      color: var(--ink-soft);
-      line-height: 1.6;
+      color: var(--ink);
+      line-height: 1.65;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: stretch;
     }
 
     /* Layout */
@@ -62,46 +62,45 @@ description: "Download a free chapter from The Biotech Blueprint by Jean Tran: t
       padding: 0 24px;
     }
 
-    /* Hero block: flat olive-deep, no gradient */
+    /* Hero block: flat olive-deep, the page's one accent panel */
     .hero {
       width: 100%;
       background: var(--olive-deep);
-      padding: 40px 24px 72px;
+      padding: 80px 24px;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
     }
 
     .hero-logo {
       display: block;
       height: 48px;
       width: auto;
-      margin: 0 auto 36px;
+      margin: 0 0 36px;
       filter: brightness(0) invert(1);
     }
 
     .hero-inner {
+      width: 100%;
       max-width: 640px;
-      text-align: center;
+      text-align: left;
     }
 
     .eyebrow {
       display: inline-block;
-      font-size: 0.75rem;
+      font-size: 11px;
       font-weight: 600;
       letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--paper);
-      border: 1px solid rgba(239,230,210,0.35);
-      border-radius: 2px;
-      padding: 6px 16px;
+      opacity: 0.85;
       margin-bottom: 28px;
     }
 
     .hero h1 {
       font-family: 'Fraunces', Georgia, serif;
-      font-size: clamp(2rem, 5vw, 3rem);
+      font-size: 60px;
       font-weight: 500;
-      line-height: 1.15;
+      line-height: 1.05;
       color: var(--paper);
       margin-bottom: 20px;
       letter-spacing: -0.01em;
@@ -112,11 +111,11 @@ description: "Download a free chapter from The Biotech Blueprint by Jean Tran: t
     }
 
     .hero-sub {
-      font-size: 1.0625rem;
-      line-height: 1.7;
+      font-size: 17px;
+      line-height: 1.65;
       color: rgba(239,230,210,0.82);
-      max-width: 520px;
-      margin: 0 auto 36px;
+      max-width: 62ch;
+      margin: 0 0 36px;
     }
 
     .hero-sub strong {
@@ -124,7 +123,7 @@ description: "Download a free chapter from The Biotech Blueprint by Jean Tran: t
       font-weight: 600;
     }
 
-    /* Download button: flat, squared, color-change on hover only */
+    /* Download button: the one solid button on this page */
     .btn-download {
       display: inline-flex;
       align-items: center;
@@ -132,47 +131,45 @@ description: "Download a free chapter from The Biotech Blueprint by Jean Tran: t
       background: var(--olive);
       color: var(--paper);
       text-decoration: none;
-      font-size: 1rem;
+      font-size: 17px;
       font-weight: 700;
       letter-spacing: 0.01em;
       padding: 16px 36px;
-      border-radius: 2px;
+      border-radius: 0;
       transition: background 0.15s ease;
     }
 
     .btn-download:hover {
-      background: var(--olive-deep);
-      border: 1px solid var(--paper);
+      background: var(--paper);
+      color: var(--olive-deep);
     }
 
     .btn-note {
       display: block;
       margin-top: 14px;
-      font-size: 0.8125rem;
+      font-size: 11px;
+      letter-spacing: 0.04em;
       color: rgba(239,230,210,0.6);
-      letter-spacing: 0.01em;
     }
 
-    /* Content card */
+    /* Content section: a rule, not a filled card */
     .card {
-      background: var(--paper-2);
-      border: 1px solid var(--line);
-      border-radius: 2px;
-      padding: 48px 40px;
-      margin: 0 auto;
+      border-top: 1px solid var(--line);
+      padding: 56px 0 0;
+      text-align: left;
     }
 
     .section-wrap {
       width: 100%;
       max-width: 680px;
-      padding: 56px 24px 0;
+      padding: 0 24px;
     }
 
     /* Preview content section */
     .preview-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--olive);
       margin-bottom: 14px;
@@ -180,7 +177,7 @@ description: "Download a free chapter from The Biotech Blueprint by Jean Tran: t
 
     .preview-title {
       font-family: 'Fraunces', Georgia, serif;
-      font-size: clamp(1.35rem, 3vw, 1.75rem);
+      font-size: 30px;
       font-weight: 500;
       color: var(--ink);
       line-height: 1.2;
@@ -189,15 +186,17 @@ description: "Download a free chapter from The Biotech Blueprint by Jean Tran: t
 
     .divider {
       width: 48px;
-      height: 2px;
-      background: var(--olive);
+      height: 1px;
+      background: var(--line);
       margin-bottom: 24px;
     }
 
     .preview-text {
-      font-size: 1rem;
-      line-height: 1.75;
-      color: var(--ink-soft);
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--ink);
+      opacity: 0.82;
+      max-width: 62ch;
     }
 
     .preview-text + .preview-text {
@@ -206,49 +205,50 @@ description: "Download a free chapter from The Biotech Blueprint by Jean Tran: t
 
     /* What's in the preview */
     .chapter-badge {
-      display: inline-flex;
+      display: flex;
       align-items: center;
       gap: 8px;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 2px;
-      padding: 12px 16px;
+      border-top: 1px solid var(--line);
+      padding: 16px 0 0;
       margin: 24px 0 0;
       width: 100%;
     }
 
     .chapter-badge-text {
-      font-size: 0.875rem;
+      font-size: 17px;
       font-weight: 600;
       color: var(--ink);
     }
 
     .chapter-badge-sub {
-      font-size: 0.8125rem;
+      font-size: 17px;
       color: var(--ink-soft);
       font-weight: 400;
+      opacity: 0.7;
     }
 
-    /* Full guide section: flat olive-deep, no gradient, no glow orbs */
+    /* Full guide section: a tonal band with a straight edge,
+       not a second solid-olive panel */
     .full-guide-card {
-      background: var(--olive-deep);
-      border-radius: 2px;
-      padding: 48px 40px;
+      background: var(--paper-2);
+      border-radius: 0;
+      padding: 56px 24px;
+      text-align: left;
     }
 
     .guide-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--paper);
+      color: var(--olive);
       margin-bottom: 14px;
     }
 
     .guide-title {
       font-family: 'Fraunces', Georgia, serif;
-      font-size: clamp(1.35rem, 3vw, 1.75rem);
-      color: var(--paper);
+      font-size: 30px;
+      color: var(--ink);
       font-weight: 500;
       line-height: 1.2;
       margin-bottom: 20px;
@@ -260,21 +260,23 @@ description: "Download a free chapter from The Biotech Blueprint by Jean Tran: t
       display: flex;
       flex-direction: column;
       gap: 10px;
+      max-width: 62ch;
     }
 
     .guide-list li {
       display: flex;
       align-items: baseline;
       gap: 10px;
-      font-size: 0.9375rem;
-      color: rgba(239,230,210,0.85);
+      font-size: 17px;
+      color: var(--ink);
+      opacity: 0.82;
       line-height: 1.5;
     }
 
     .guide-list li::before {
       content: '-';
       flex-shrink: 0;
-      color: var(--paper);
+      color: var(--olive);
       font-weight: 700;
     }
 
@@ -282,34 +284,33 @@ description: "Download a free chapter from The Biotech Blueprint by Jean Tran: t
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--paper);
       color: var(--olive-deep);
-      text-decoration: none;
-      font-size: 1rem;
+      text-decoration: underline;
+      text-decoration-color: rgba(59, 66, 35, 0.35);
+      font-size: 17px;
       font-weight: 700;
-      padding: 15px 32px;
-      border-radius: 2px;
-      transition: background 0.15s ease;
+      transition: color 0.15s ease;
     }
 
     .btn-full-guide:hover {
-      background: var(--paper-2);
+      color: var(--olive);
+      text-decoration-color: currentColor;
     }
 
     /* Footer */
     .site-footer {
       width: 100%;
-      padding: 40px 24px 48px;
+      padding: 56px 24px 48px;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       gap: 10px;
       margin-top: 56px;
       border-top: 1px solid var(--line);
     }
 
     .footer-brand {
-      font-size: 0.875rem;
+      font-size: 17px;
       font-weight: 600;
       color: var(--ink);
       letter-spacing: 0.01em;
@@ -319,11 +320,11 @@ description: "Download a free chapter from The Biotech Blueprint by Jean Tran: t
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
-      justify-content: center;
     }
 
     .footer-links a {
-      font-size: 0.8125rem;
+      font-size: 11px;
+      letter-spacing: 0.04em;
       color: var(--ink-soft);
       text-decoration: none;
       transition: color 0.15s ease;
@@ -334,29 +335,29 @@ description: "Download a free chapter from The Biotech Blueprint by Jean Tran: t
     }
 
     .footer-copy {
-      font-size: 0.75rem;
+      font-size: 11px;
       color: var(--ink-soft);
+      opacity: 0.7;
       margin-top: 4px;
     }
 
     /* Responsive */
     @media (max-width: 600px) {
-      .card,
       .full-guide-card {
-        padding: 36px 24px;
+        padding: 40px 20px;
       }
 
       .hero {
-        padding: 48px 20px 60px;
+        padding: 56px 20px;
       }
 
       .btn-download {
         padding: 15px 28px;
-        font-size: 0.9375rem;
+        font-size: 17px;
       }
 
       .section-wrap {
-        padding: 40px 20px 0;
+        padding: 0 20px;
       }
     }
   </style>

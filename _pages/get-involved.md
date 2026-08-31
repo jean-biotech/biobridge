@@ -12,147 +12,100 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 :root {
   --bb-green: #24221A;
   --bb-green-accent: #5C6335;
-  --bb-green-bright: #5C6335;
-  --bb-green-hover: #3B4223;
-  --bb-green-dark: #3B4223;
-  --bb-green-bg: #E6DBC2;
-  --bb-green-bg-subtle: #DED2B7;
   --bb-navy: #24221A;
-  --bb-charcoal: #24221A;
   --bb-white: #EFE6D2;
-  --bb-off-white: #E6DBC2;
   --bb-text-secondary: #5B5745;
   --bb-gray: #5B5745;
-  --bb-border: rgba(36,34,26,0.14);
+  --bb-border: rgba(36,34,26,0.12);
 }
 
-/* Involvement list: stacked, numbered, not a 3-card row */
+/* Involvement list: stacked rows, separated by hairline rules */
 .bb-involve-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
+  border-top: 1px solid var(--bb-border);
   margin-bottom: 2.5rem;
 }
-/* Index-card metaphor: dashed edge, slight alternating tilt,
-   oversized numeral in the corner like a filed card, not the
-   hairline-divider numbering used on other pages. */
 .bb-involve-card {
-  position: relative;
-  background: var(--bb-white);
-  border: 1.5px dashed var(--bb-border);
-  border-radius: 2px;
-  padding: 1.75rem 1.5rem;
-  transform: rotate(-0.5deg);
-}
-.bb-involve-card:nth-child(2) { transform: rotate(0.4deg); }
-.bb-involve-card:nth-child(3) { transform: rotate(-0.3deg); }
-@media (prefers-reduced-motion: reduce) {
-  .bb-involve-card,
-  .bb-involve-card:nth-child(2),
-  .bb-involve-card:nth-child(3) { transform: none; }
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--bb-border);
 }
 .bb-involve-card .bb-card-num {
-  position: absolute;
-  top: -0.6rem;
-  right: 1rem;
-  background: var(--bb-white);
-  padding: 0 0.4rem;
+  display: block;
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: var(--bb-green-accent);
-  line-height: 1;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--bb-gray);
+  margin-bottom: 0.75rem;
 }
 .bb-involve-card h2 {
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: 'Fraunces', Georgia, serif;
   color: var(--bb-navy);
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 500;
   margin-top: 0;
   margin-bottom: 1rem;
 }
 .bb-involve-card p {
   color: var(--bb-text-secondary);
-  font-size: 0.92rem;
-  line-height: 1.75;
+  opacity: 0.82;
+  font-size: 17px;
+  line-height: 1.65;
+  max-width: 62ch;
 }
 .bb-involve-card ul {
   color: var(--bb-text-secondary);
-  font-size: 0.92rem;
-  line-height: 1.75;
+  opacity: 0.82;
+  font-size: 17px;
+  line-height: 1.65;
   padding-left: 1.25rem;
+  max-width: 62ch;
 }
 .bb-involve-card li {
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.4rem;
 }
 .bb-involve-card em {
   color: var(--bb-gray);
-  font-size: 0.875rem;
+  opacity: 0.7;
 }
 
-/* Contact Section */
+/* Contact section: left-aligned, rule-framed, no fill */
 .bb-contact-section {
-  background: var(--bb-green-bg);
-  border: 1px solid var(--bb-border);
-  border-radius: 2px;
-  padding: 2rem 1.5rem;
-  text-align: center;
+  border-top: 1px solid var(--bb-border);
+  padding-top: 2rem;
   margin-bottom: 2rem;
 }
 .bb-contact-section h2 {
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: 'Fraunces', Georgia, serif;
   color: var(--bb-navy);
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 500;
   margin: 0 0 1.25rem;
 }
 .bb-contact-links {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
+  gap: 1.75rem;
   flex-wrap: wrap;
   margin-bottom: 1.5rem;
 }
 .bb-contact-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.25rem;
-  border-radius: 2px;
-  border: 1px solid var(--bb-border);
-  background: var(--bb-white);
-  color: var(--bb-navy) !important;
-  text-decoration: none !important;
   font-family: 'Instrument Sans', sans-serif;
   font-weight: 500;
-  font-size: 0.9rem;
-  transition: all 0.2s ease;
-  min-height: 44px;
-}
-.bb-contact-link:hover {
-  border-color: var(--bb-green-accent);
-  color: var(--bb-green-accent) !important;
+  font-size: 17px;
+  color: var(--bb-navy) !important;
 }
 .bb-feedback-note {
   color: var(--bb-gray);
+  opacity: 0.7;
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.7;
-  max-width: 560px;
-  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.65;
+  max-width: 62ch;
 }
 
 /* Desktop */
 @media (min-width: 769px) {
-  .bb-involve-card {
-    padding: 2rem;
-  }
   .bb-involve-card h2 {
-    font-size: 1.25rem;
-  }
-  .bb-contact-section {
-    padding: 2.5rem 3rem;
-    border-radius: 2px;
+    font-size: 30px;
   }
 }
 </style>
