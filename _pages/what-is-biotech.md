@@ -21,38 +21,37 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 
 /* Definition caption, set beneath the pull-quote statement:
-   Fraunces italic, quiet, 60% opacity, no rotation. */
+   Fraunces italic at body size, quiet by voice not by size. */
 .bb-definition-caption {
   font-family: 'Fraunces', Georgia, serif;
   font-style: italic;
-  font-size: 15px;
+  font-size: 17px;
   color: var(--bb-navy);
-  opacity: 0.6;
-  margin: -1rem 0 1.5rem;
+  opacity: 0.8;
+  margin: 0 0 var(--s5);
 }
 
-/* Contents list: large graphic numerals, plain hairline rows. */
+/* Contents list: hanging numerals, grouped by space, no rules. */
 .bb-contents-notes {
   list-style: none;
-  margin: 0.5rem 0 2.5rem;
+  margin: 0 0 var(--s6);
   padding: 0;
 }
 .bb-contents-notes li {
-  display: flex;
+  display: grid;
+  grid-template-columns: 24px 1fr;
   align-items: baseline;
-  flex-wrap: wrap;
-  column-gap: 0.9rem;
-  row-gap: 0.15rem;
-  padding: 0.9rem 0;
-  border-bottom: 1px solid var(--bb-border);
+  column-gap: var(--s3);
+  row-gap: var(--s1);
+  padding: 0 0 var(--s3);
 }
 .bb-contents-notes__num {
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 30px;
+  font-size: 17px;
   font-weight: 500;
-  color: var(--bb-green-accent);
-  line-height: 1;
-  min-width: 2.4rem;
+  color: var(--bb-navy);
+  opacity: 0.45;
+  line-height: 1.6;
 }
 .bb-contents-notes a {
   font-family: 'Fraunces', Georgia, serif;
@@ -61,11 +60,12 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   color: var(--bb-navy);
 }
 .bb-contents-notes__hint {
+  grid-column: 2;
   font-family: 'Fraunces', Georgia, serif;
   font-style: italic;
-  font-size: 15px;
+  font-size: 17px;
   color: var(--bb-navy);
-  opacity: 0.6;
+  opacity: 0.8;
   display: inline-block;
 }
 
@@ -74,23 +74,37 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   font-family: 'Instrument Sans', sans-serif;
   font-size: 17px;
   color: #24221A;
-  opacity: 0.92;
-  line-height: 1.65;
-  margin-bottom: 1.25rem;
-  max-width: 62ch;
+  opacity: 0.9;
+  line-height: 1.6;
+  margin-bottom: var(--s3);
+  max-width: var(--measure);
 }
 
-/* Visual divider with label: a hairline rule and a label, no box */
-.bb-divider {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  margin: 1.75rem 0;
+/* A one-line instruction under a heading */
+.bb-section-hint {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--bb-gray);
+  opacity: 0.8;
+  margin: 0 0 var(--s3);
 }
-.bb-divider-line {
-  flex: 1;
-  height: 1px;
-  background: var(--bb-border);
+
+/* Chapter marker: a hanging numeral and a label, no flanking rules. */
+.bb-divider {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: baseline;
+  gap: var(--s3);
+  margin: var(--s6) 0 var(--s4);
+}
+.bb-divider .bb-num {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: var(--bb-navy);
+  opacity: 0.45;
 }
 .bb-divider-label {
   font-family: 'Instrument Sans', sans-serif;
@@ -99,28 +113,20 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--bb-green-accent);
-  white-space: nowrap;
-}
-.bb-divider-label .bb-num {
-  font-family: 'Fraunces', Georgia, serif;
-  font-weight: 500;
-  text-transform: none;
-  letter-spacing: 0;
-  margin-right: 0.5em;
-  color: var(--bb-gray);
 }
 
 /* ============================================
-   REAL-WORLD EXAMPLES: rule-divided rows, not
-   flip cards with stock photography.
+   REAL-WORLD EXAMPLES: expandable entries,
+   grouped by space rather than ruled rows.
    ============================================ */
 .bb-flip-grid {
-  border-top: 1px solid var(--bb-border);
-  margin: 1.25rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s5);
+  margin: var(--s3) 0 var(--s6);
 }
 .bb-flip-card {
-  border-bottom: 1px solid var(--bb-border);
-  padding: 1.5rem 0;
+  padding: 0;
   cursor: pointer;
 }
 .bb-flip-front-body h3 {
@@ -128,11 +134,11 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   color: var(--bb-navy);
   font-size: 17px;
   font-weight: 600;
-  margin: 0 0 0.4rem;
+  margin: 0 0 var(--s1);
 }
 .bb-flip-front-body p {
   color: var(--bb-gray);
-  opacity: 0.7;
+  opacity: 0.9;
   font-size: 17px;
   margin: 0;
 }
@@ -152,50 +158,54 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   color: var(--bb-navy);
   font-size: 17px;
   font-weight: 600;
-  margin: 0 0 0.6rem;
+  margin: 0 0 var(--s2);
 }
 .bb-flip-back p {
   color: var(--bb-text-secondary);
-  opacity: 0.92;
+  opacity: 0.9;
   font-size: 17px;
-  line-height: 1.65;
-  margin: 0 0 0.65rem;
+  line-height: 1.6;
+  margin: 0 0 var(--s2);
+  max-width: var(--measure);
 }
 .bb-flip-back p:last-child { margin-bottom: 0; }
 .bb-flip-org-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem 0.9rem;
-  margin-top: 0.75rem;
+  gap: var(--s1) var(--s3);
+  margin-top: var(--s2);
 }
 .bb-flip-org-badge {
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   color: var(--bb-green-accent);
 }
 
-/* Two-column split */
+@media (min-width: 769px) {
+  .bb-flip-grid { grid-template-columns: repeat(2, 1fr); column-gap: var(--s5); }
+}
+
+/* Two-column split: prose beside the photo */
 .bb-two-col {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
-  margin: 1.25rem 0;
+  gap: var(--s4);
+  margin: var(--s3) 0 var(--s6);
   align-items: start;
 }
 .bb-two-col-text p {
   font-family: 'Instrument Sans', sans-serif;
   color: #24221A;
-  opacity: 0.92;
+  opacity: 0.9;
   font-size: 17px;
-  line-height: 1.65;
-  margin: 0 0 0.85rem;
-  max-width: 62ch;
+  line-height: 1.6;
+  margin: 0 0 var(--s3);
+  max-width: var(--measure);
 }
 .bb-two-col-text p:last-child { margin-bottom: 0; }
 
 /* The one remaining photo on this page: straight edge, no tilt,
-   no shadow. Caption sits where the handwritten Caveat mark used
-   to: Fraunces italic, quiet, 60% opacity. */
+   no shadow. Caption in Fraunces italic at body size. */
 .bb-photo-frame {
   display: block;
   max-width: 100%;
@@ -210,42 +220,38 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   display: block;
   font-family: 'Fraunces', Georgia, serif;
   font-style: italic;
-  font-size: 15px;
+  font-size: 17px;
   color: var(--bb-navy);
-  opacity: 0.6;
-  margin-top: 0.5rem;
+  opacity: 0.8;
+  margin-top: var(--s2);
 }
 
-/* Misconception rows: a rule, not a filled block */
+/* Misconceptions: the claim in quotes, the answer beneath it.
+   Grouped by space, no rules. */
 .bb-misconception {
-  border-top: 1px solid var(--bb-border);
-  padding: 1.1rem 0;
-}
-.bb-misconception:last-of-type {
-  border-bottom: 1px solid var(--bb-border);
+  padding: 0 0 var(--s4);
 }
 .bb-misconception strong {
   color: var(--bb-navy);
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: 'Fraunces', Georgia, serif;
   font-size: 17px;
   font-weight: 600;
 }
 .bb-misconception p {
   color: var(--bb-text-secondary);
-  opacity: 0.92;
-  margin: 0.4rem 0 0;
+  opacity: 0.9;
+  margin: var(--s1) 0 0;
   font-size: 17px;
-  line-height: 1.65;
-  max-width: 62ch;
+  line-height: 1.6;
+  max-width: var(--measure);
 }
 
-/* International callout (shared style): rules, no box */
+/* The one aside on the page: indented off the margin, not boxed */
 .bb-international-callout {
-  border-top: 1px solid var(--bb-border);
-  border-bottom: 1px solid var(--bb-border);
-  padding: 1.5rem 0;
-  margin: 1.75rem 0;
-  max-width: 62ch;
+  padding: 0 0 0 var(--s3);
+  border-left: 2px solid var(--bb-border);
+  margin: var(--s5) 0;
+  max-width: var(--measure);
 }
 .bb-international-callout .bb-intl-header {
   font-family: 'Instrument Sans', sans-serif;
@@ -254,21 +260,21 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   text-transform: uppercase;
   letter-spacing: 0.16em;
   color: var(--bb-green-accent);
-  margin: 0 0 0.5rem;
+  margin: 0 0 var(--s1);
 }
 .bb-international-callout p {
   font-family: 'Instrument Sans', sans-serif;
   font-size: 17px;
   font-style: italic;
   color: var(--bb-text-secondary);
-  opacity: 0.92;
-  line-height: 1.65;
+  opacity: 0.9;
+  line-height: 1.6;
   margin: 0;
 }
 
 /* Desktop */
 @media (min-width: 769px) {
-  .bb-two-col { grid-template-columns: 3fr 2fr; gap: 2.25rem; }
+  .bb-two-col { grid-template-columns: 3fr 2fr; gap: var(--s5); }
 }
 </style>
 
@@ -304,14 +310,13 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 <p class="bb-intro-text">It sounds vague because biotech is <strong>incredibly broad</strong>. It touches medicine, agriculture, environmental science, manufacturing, and more. The best way to understand it is through examples.</p>
 
 <div class="bb-divider">
-  <div class="bb-divider-line"></div>
-  <div class="bb-divider-label"><span class="bb-num">01</span>Real-World Examples</div>
-  <div class="bb-divider-line"></div>
+  <span class="bb-num">01</span>
+  <div class="bb-divider-label">Real-World Examples</div>
 </div>
 
 ## Real-World Examples
 
-<p class="bb-intro-text" style="font-size:15px; color: var(--bb-gray); opacity: 0.7;">Click each row (or tap on mobile) to see more.</p>
+<p class="bb-section-hint">Click each row (or tap on mobile) to see more.</p>
 
 <div class="bb-flip-grid">
 
@@ -390,9 +395,8 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 </div>
 
 <div class="bb-divider">
-  <div class="bb-divider-line"></div>
-  <div class="bb-divider-label"><span class="bb-num">02</span>Beyond the Lab</div>
-  <div class="bb-divider-line"></div>
+  <span class="bb-num">02</span>
+  <div class="bb-divider-label">Beyond the Lab</div>
 </div>
 
 ## Beyond the Science
@@ -413,9 +417,8 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 </div>
 
 <div class="bb-divider">
-  <div class="bb-divider-line"></div>
-  <div class="bb-divider-label"><span class="bb-num">03</span>Common Misconceptions</div>
-  <div class="bb-divider-line"></div>
+  <span class="bb-num">03</span>
+  <div class="bb-divider-label">Common Misconceptions</div>
 </div>
 
 ## Common Misconceptions

@@ -18,10 +18,11 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   --bb-border: rgba(36,34,26,0.12);
 }
 
-/* Accordion container: rows separated by hairline rules, no boxes */
+/* The one hairline-ruled list on this page: these are collapsible
+   controls and the rule is the affordance. */
 .bb-accordion {
   max-width: 100%;
-  margin-top: 0.5rem;
+  margin-top: var(--s3);
 }
 
 /* Individual accordion item */
@@ -35,12 +36,12 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   text-align: left;
   background: none;
   border: none;
-  padding: 1.25rem 0;
+  padding: var(--s3) 0;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.85rem;
+  gap: var(--s2);
   font-family: 'Fraunces', Georgia, serif;
   font-size: 17px;
   font-weight: 600;
@@ -75,18 +76,18 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 /* Answer content */
 .bb-accordion-body {
-  padding: 0 0 1.25rem;
-  max-width: 62ch;
+  padding: 0 0 var(--s3);
+  max-width: var(--measure);
 }
 .bb-accordion-body p {
   color: var(--bb-text-secondary);
-  opacity: 0.92;
+  opacity: 0.9;
   font-size: 17px;
-  line-height: 1.65;
-  margin: 0.75rem 0 0;
+  line-height: 1.6;
+  margin: var(--s2) 0 0;
 }
 .bb-accordion-body p + p {
-  margin-top: 0.65rem;
+  margin-top: var(--s2);
 }
 .bb-accordion-body a {
   color: var(--bb-green-accent);

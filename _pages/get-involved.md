@@ -19,73 +19,77 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   --bb-border: rgba(36,34,26,0.12);
 }
 
-/* Involvement list: stacked rows, separated by hairline rules */
+/* Involvement list: hanging numerals, grouped by space, no rules */
 .bb-involve-grid {
-  margin-top: 0.5rem;
-  margin-bottom: 2.5rem;
+  margin: 0 0 var(--s6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s6);
 }
 .bb-involve-card {
-  padding: 2rem 0;
-  border-bottom: 1px solid var(--bb-border);
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 .bb-involve-card .bb-card-num {
   display: block;
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  color: var(--bb-gray);
-  margin-bottom: 0.75rem;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--bb-navy);
+  opacity: 0.45;
+  margin-bottom: var(--s1);
 }
 .bb-involve-card h2 {
   font-family: 'Fraunces', Georgia, serif;
   color: var(--bb-navy);
   font-size: 30px;
   font-weight: 500;
+  line-height: 1.2;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: var(--s3);
 }
 .bb-involve-card p {
   color: var(--bb-text-secondary);
-  opacity: 0.92;
+  opacity: 0.9;
   font-size: 17px;
-  line-height: 1.65;
-  max-width: 62ch;
+  line-height: 1.6;
+  max-width: var(--measure);
 }
 .bb-involve-card ul {
   color: var(--bb-text-secondary);
-  opacity: 0.92;
+  opacity: 0.9;
   font-size: 17px;
-  line-height: 1.65;
-  padding-left: 1.25rem;
-  max-width: 62ch;
+  line-height: 1.6;
+  padding-left: var(--s3);
+  max-width: var(--measure);
 }
 .bb-involve-card li {
-  margin-bottom: 0.4rem;
+  margin-bottom: var(--s1);
 }
 .bb-involve-card em {
   color: var(--bb-gray);
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 /* Contact section: left-aligned, rule-framed, no fill */
 .bb-contact-section {
   border-top: 1px solid var(--bb-border);
-  padding-top: 2rem;
-  margin-bottom: 2rem;
+  padding-top: var(--s4);
+  margin-bottom: var(--s4);
 }
 .bb-contact-section h2 {
   font-family: 'Fraunces', Georgia, serif;
   color: var(--bb-navy);
   font-size: 30px;
   font-weight: 500;
-  margin: 0 0 1.25rem;
+  margin: 0 0 var(--s3);
 }
 .bb-contact-links {
   display: flex;
-  gap: 1.75rem;
+  gap: var(--s4);
   flex-wrap: wrap;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--s3);
 }
 .bb-contact-link {
   font-family: 'Instrument Sans', sans-serif;
@@ -95,11 +99,11 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-feedback-note {
   color: var(--bb-gray);
-  opacity: 0.7;
+  opacity: 0.8;
   font-family: 'Instrument Sans', sans-serif;
   font-size: 17px;
-  line-height: 1.65;
-  max-width: 62ch;
+  line-height: 1.6;
+  max-width: var(--measure);
 }
 
 /* Desktop */
