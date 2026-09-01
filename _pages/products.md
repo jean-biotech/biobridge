@@ -25,8 +25,8 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 .bb-product-layout {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.75rem;
-  margin-bottom: 2.5rem;
+  gap: var(--s4);
+  margin-bottom: var(--s4);
 }
 
 /* Product image: the one product photo on the site, kept because
@@ -50,25 +50,25 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--bb-green-accent);
-  margin: 0 0 0.5rem;
+  margin: 0 0 var(--s1);
 }
 .bb-product-card h2 {
   font-family: 'Fraunces', Georgia, serif;
   color: var(--bb-navy);
   font-size: 30px;
   font-weight: 500;
-  margin: 0 0 0.65rem;
+  margin: 0 0 var(--s1);
   letter-spacing: -0.02em;
   line-height: 1.2;
 }
 .bb-product-tagline {
   color: var(--bb-text-secondary);
-  opacity: 0.92;
+  opacity: 0.9;
   font-family: 'Instrument Sans', sans-serif;
   font-size: 17px;
-  line-height: 1.65;
-  margin: 0 0 1.25rem;
-  max-width: 62ch;
+  line-height: 1.6;
+  margin: 0 0 var(--s3);
+  max-width: var(--measure);
 }
 
 /* Section headers inside card */
@@ -79,8 +79,8 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--bb-green-accent);
-  margin: 0 0 0.65rem;
-  padding-top: 1.5rem;
+  margin: 0 0 var(--s1);
+  padding-top: var(--s3);
   border-top: 1px solid var(--bb-border);
 }
 .bb-section-label:first-of-type {
@@ -92,17 +92,17 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 .bb-feature-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 1.25rem;
-  max-width: 62ch;
+  margin: 0 0 var(--s3);
+  max-width: var(--measure);
 }
 .bb-feature-list li {
   position: relative;
-  padding-left: 1.4rem;
-  margin-bottom: 0.75rem;
+  padding-left: var(--s3);
+  margin-bottom: var(--s2);
   color: var(--bb-text-secondary);
-  opacity: 0.92;
+  opacity: 0.9;
   font-size: 17px;
-  line-height: 1.65;
+  line-height: 1.6;
 }
 .bb-feature-list li::before {
   content: '-';
@@ -115,19 +115,19 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 /* Who It's For prose */
 .bb-who-prose {
   color: var(--bb-text-secondary);
-  opacity: 0.92;
+  opacity: 0.9;
   font-size: 17px;
-  line-height: 1.65;
-  margin: 0 0 1.25rem;
-  max-width: 62ch;
+  line-height: 1.6;
+  margin: 0 0 var(--s3);
+  max-width: var(--measure);
 }
 
 /* Price & CTA */
 .bb-price-row {
   display: flex;
   align-items: baseline;
-  gap: 0.85rem;
-  margin-bottom: 0.85rem;
+  gap: var(--s2);
+  margin-bottom: var(--s2);
   flex-wrap: wrap;
 }
 .bb-price-tag {
@@ -141,7 +141,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   display: inline-block;
   background: var(--bb-green-accent);
   color: var(--bb-white) !important;
-  padding: 0.85rem 2rem;
+  padding: var(--s2) var(--s4);
   font-family: 'Instrument Sans', sans-serif;
   font-weight: 600;
   font-size: 17px;
@@ -155,39 +155,39 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 .bb-coming-soon-note {
   color: var(--bb-gray);
   font-size: 17px;
-  opacity: 0.7;
+  opacity: 0.8;
   font-style: italic;
-  margin-top: 0.5rem;
+  margin-top: var(--s1);
 }
 
 /* Why a Paid Guide section: one rule above, not a boxed-in block */
 .bb-why-paid {
   border-top: 1px solid var(--bb-border);
-  padding-top: 1.75rem;
-  margin-bottom: 1.5rem;
+  padding-top: var(--s4);
+  margin-bottom: var(--s3);
 }
 .bb-why-paid h2 {
   font-family: 'Fraunces', Georgia, serif;
   color: var(--bb-navy);
   font-size: 30px;
   font-weight: 500;
-  margin: 0 0 0.85rem;
+  margin: 0 0 var(--s2);
 }
 .bb-why-paid p {
   color: var(--bb-text-secondary);
-  opacity: 0.92;
+  opacity: 0.9;
   font-size: 17px;
-  line-height: 1.65;
-  margin: 0 0 0.75rem;
-  max-width: 62ch;
+  line-height: 1.6;
+  margin: 0 0 var(--s2);
+  max-width: var(--measure);
 }
 .bb-why-paid p:last-child { margin-bottom: 0; }
 
 /* Coming Soon roadmap */
 .bb-roadmap {
-  padding-top: 1.75rem;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1.5rem;
+  padding-top: var(--s4);
+  padding-bottom: var(--s1);
+  margin-bottom: var(--s3);
   border-top: 1px solid var(--bb-border);
 }
 .bb-roadmap h2 {
@@ -195,19 +195,18 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   color: var(--bb-navy);
   font-size: 30px;
   font-weight: 500;
-  margin: 0 0 1rem;
+  margin: 0 0 var(--s2);
 }
 .bb-roadmap-item {
-  padding: 1rem 0;
-  border-top: 1px solid var(--bb-border);
-  max-width: 62ch;
+  padding: 0 0 var(--s3);
+  max-width: var(--measure);
 }
 .bb-roadmap-dot { display: none; }
 .bb-roadmap-item p {
   color: var(--bb-text-secondary);
-  opacity: 0.92;
+  opacity: 0.9;
   font-size: 17px;
-  line-height: 1.65;
+  line-height: 1.6;
   margin: 0;
 }
 .bb-roadmap-item strong {
@@ -217,7 +216,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 /* Contact note */
 .bb-contact-note {
   color: var(--bb-gray);
-  opacity: 0.7;
+  opacity: 0.8;
   font-size: 17px;
 }
 .bb-contact-note a {
@@ -228,8 +227,8 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 /* Free Preview: set off by a single rule below, not a boxed card */
 .bb-preview-card {
   border-bottom: 1px solid var(--bb-border);
-  padding-bottom: 1.75rem;
-  margin-bottom: 2.5rem;
+  padding-bottom: var(--s4);
+  margin-bottom: var(--s4);
 }
 .bb-preview-eyebrow {
   font-family: 'Instrument Sans', sans-serif;
@@ -238,30 +237,30 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--bb-green-accent);
-  margin: 0 0 0.5rem;
+  margin: 0 0 var(--s1);
 }
 .bb-preview-card h2 {
   font-family: 'Fraunces', Georgia, serif;
   color: var(--bb-navy);
   font-size: 30px;
   font-weight: 500;
-  margin: 0 0 0.6rem;
+  margin: 0 0 var(--s1);
   letter-spacing: -0.02em;
 }
 .bb-preview-card p {
   font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-text-secondary);
-  opacity: 0.92;
+  opacity: 0.9;
   font-size: 17px;
-  line-height: 1.65;
-  margin: 0 0 1.1rem;
-  max-width: 62ch;
+  line-height: 1.6;
+  margin: 0 0 var(--s2);
+  max-width: var(--measure);
 }
 .bb-preview-sample {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding-top: 1rem;
+  gap: var(--s2);
+  padding-top: var(--s2);
   border-top: 1px solid var(--bb-border);
   margin-bottom: 0;
   flex-wrap: wrap;
@@ -277,13 +276,13 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   font-size: 17px;
   font-weight: 600;
   color: var(--bb-navy);
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--s1);
 }
 .bb-preview-sample-info span {
   font-family: 'Instrument Sans', sans-serif;
   font-size: 17px;
   color: var(--bb-gray);
-  opacity: 0.7;
+  opacity: 0.8;
 }
 .bb-preview-btn {
   display: inline-block;
@@ -308,11 +307,10 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 /* International callout */
 .bb-international-callout {
-  border-top: 1px solid var(--bb-border);
-  border-bottom: 1px solid var(--bb-border);
-  padding: 1.25rem 0;
-  margin: 1.5rem 0;
-  max-width: 62ch;
+  padding: 0 0 0 var(--s3);
+  border-left: 2px solid var(--bb-border);
+  margin: var(--s5) 0;
+  max-width: var(--measure);
 }
 .bb-international-callout .bb-intl-header {
   font-family: 'Instrument Sans', sans-serif;
@@ -321,15 +319,15 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--bb-green-accent);
-  margin: 0 0 0.5rem;
+  margin: 0 0 var(--s1);
 }
 .bb-international-callout p {
   font-family: 'Instrument Sans', sans-serif;
   font-size: 17px;
   font-style: italic;
   color: var(--bb-text-secondary);
-  opacity: 0.92;
-  line-height: 1.65;
+  opacity: 0.9;
+  line-height: 1.6;
   margin: 0;
 }
 
@@ -338,7 +336,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   .bb-preview-sample {
     flex-direction: column;
     align-items: stretch;
-    gap: 0.75rem;
+    gap: var(--s2);
   }
   .bb-preview-btn {
     text-align: left;
@@ -348,7 +346,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 /* Desktop */
 @media (min-width: 769px) {
-  .bb-product-layout { grid-template-columns: 2fr 3fr; align-items: start; gap: 2.25rem; }
+  .bb-product-layout { grid-template-columns: 2fr 3fr; align-items: start; gap: var(--s4); }
   .bb-product-img { min-height: 260px; }
 }
 </style>

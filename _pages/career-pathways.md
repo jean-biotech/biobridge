@@ -28,30 +28,32 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 }
 
 /* ============================================
-   PATHWAY ROWS: no cards, no carousel. Every
-   pathway stacks vertically, separated by a
-   1px hairline rule, all visible at once.
+   PATHWAY ENTRIES: no cards, no carousel, no rule
+   per row. Each pathway is a numbered entry with a
+   hanging numeral; space does the separating.
    ============================================ */
 .bb-path-list {
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s6);
 }
 .bb-path-row {
-  padding: 1.75rem 0;
-  border-bottom: 1px solid var(--bb-border);
+  padding: 0;
 }
 .bb-path-row__head {
-  display: flex;
+  display: grid;
+  grid-template-columns: 24px 1fr;
   align-items: baseline;
-  gap: 1rem;
-  margin-bottom: 1.1rem;
+  gap: var(--s3);
+  margin-bottom: var(--s3);
 }
 .bb-path-row__num {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  color: var(--bb-gray);
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--bb-navy);
+  opacity: 0.45;
 }
 .bb-path-row__title {
   font-family: 'Fraunces', Georgia, serif;
@@ -60,11 +62,14 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   font-weight: 500;
   margin: 0;
   letter-spacing: -0.01em;
+  line-height: 1.2;
 }
+/* The fields align to the title, clearing the numeral column, so the
+   whole entry reads as one indented block. */
 .bb-path-fields {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.25rem 2.5rem;
+  gap: var(--s3) var(--s5);
   max-width: 900px;
 }
 .bb-detail-label {
@@ -74,22 +79,23 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   text-transform: uppercase;
   letter-spacing: 0.16em;
   font-weight: 600;
-  margin-bottom: 0.3rem;
+  margin-bottom: var(--s1);
 }
 .bb-detail-value {
   color: var(--bb-charcoal);
-  opacity: 0.92;
+  opacity: 0.9;
   font-size: 17px;
   line-height: 1.6;
   margin: 0;
 }
 .bb-detail-value ul {
   margin: 0;
-  padding-left: 1.1rem;
+  padding-left: var(--s2);
 }
 .bb-detail-value li {
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--s1);
   font-size: 17px;
+  line-height: 1.6;
 }
 .bb-companies-label {
   font-family: 'Instrument Sans', sans-serif;
@@ -98,51 +104,52 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   text-transform: uppercase;
   letter-spacing: 0.16em;
   font-weight: 600;
-  margin-bottom: 0.4rem;
+  margin-bottom: var(--s1);
 }
 .bb-org-list {
   color: var(--bb-charcoal);
-  opacity: 0.92;
+  opacity: 0.9;
   font-size: 17px;
-  line-height: 1.65;
+  line-height: 1.6;
 }
-/* The org list spans the full row: it closes out the pathway
-   rather than sitting as just another grid cell. */
+/* The org list closes out the pathway across the full width. */
 .bb-path-fields > div:last-child {
   grid-column: 1 / -1;
-  padding-top: 0.35rem;
-  border-top: 1px solid var(--bb-border);
 }
 
 @media (min-width: 700px) {
-  .bb-path-fields { grid-template-columns: 1fr 1fr; }
+  .bb-path-fields {
+    grid-template-columns: 1fr 1fr;
+    margin-left: calc(24px + var(--s3));
+  }
 }
 
 /* ============================================
    NEXT STEPS
    ============================================ */
 .bb-next-steps {
-  border-bottom: 1px solid var(--bb-border);
-  padding: 1.5rem 0;
-  margin-top: 0.5rem;
+  padding: 0;
+  margin-top: var(--s6);
 }
 .bb-next-steps h2 {
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: 'Fraunces', Georgia, serif;
   color: var(--bb-navy);
-  font-size: 17px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 500;
   margin-top: 0;
-  margin-bottom: 0.75rem;
+  margin-bottom: var(--s3);
 }
 .bb-next-steps ul {
-  padding-left: 1.1rem;
+  padding-left: var(--s2);
   margin: 0;
+  max-width: var(--measure);
 }
 .bb-next-steps li {
-  margin-bottom: 0.4rem;
+  margin-bottom: var(--s2);
   color: var(--bb-text-secondary);
-  opacity: 0.92;
+  opacity: 0.9;
   font-size: 17px;
+  line-height: 1.6;
 }
 .bb-next-steps a {
   color: var(--bb-green-accent);
@@ -154,35 +161,32 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
    ============================================ */
 .bb-cream-wrap {
   background: #EFE6D2;
-  border-top: 1px solid #E6DBC2;
-  border-bottom: 1px solid #E6DBC2;
-  margin: 2rem -48px;
-  padding: 2rem 48px;
+  margin: var(--s6) -48px;
+  padding: var(--s6) 48px;
 }
 @media (min-width: 1200px) {
   .bb-cream-wrap {
-    margin: 2rem -72px;
-    padding: 2rem 72px;
+    margin: var(--s6) -72px;
+    padding: var(--s6) 72px;
   }
 }
 
 /* ============================================
-   CHAPTER MARK: a numeral and a label, set off
-   by a hairline rule instead of a filled tile.
+   CHAPTER MARK: a numeral and a label, no rule.
    ============================================ */
 .bb-chapter-mark {
-  display: flex;
+  display: grid;
+  grid-template-columns: 24px 1fr;
   align-items: baseline;
-  gap: 1rem;
-  margin: 2.5rem 0 1.75rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--bb-border);
+  gap: var(--s3);
+  margin: 0 0 var(--s4);
 }
 .bb-chapter-mark__num {
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 30px;
+  font-size: 17px;
   font-weight: 500;
-  color: var(--bb-green-accent);
+  color: var(--bb-navy);
+  opacity: 0.45;
 }
 .bb-chapter-mark__label {
   font-family: 'Instrument Sans', sans-serif;
@@ -190,8 +194,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--bb-navy);
-  opacity: 0.7;
+  color: var(--bb-green-accent);
 }
 
 /* ============================================
@@ -202,30 +205,29 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   color: var(--bb-green);
   font-size: 30px;
   font-weight: 500;
-  margin: 0 0 0.5rem;
+  margin: 0 0 var(--s3);
   letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 .bb-internship-section .bb-section-intro {
   font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-text-secondary);
   font-size: 17px;
-  line-height: 1.65;
-  margin: 0 0 1.5rem;
-  max-width: 62ch;
+  line-height: 1.6;
+  margin: 0 0 var(--s5);
+  max-width: var(--measure);
 }
 .bb-internship-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0;
-  margin-bottom: 1.25rem;
-  border-top: 1px solid var(--bb-border);
+  gap: var(--s5);
+  margin-bottom: var(--s4);
 }
 @media (min-width: 769px) {
-  .bb-internship-grid { grid-template-columns: repeat(2, 1fr); column-gap: 64px; }
+  .bb-internship-grid { grid-template-columns: repeat(2, 1fr); column-gap: var(--s5); }
 }
 .bb-internship-block {
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--bb-border);
+  padding: 0;
 }
 .bb-internship-block h3 {
   font-family: 'Instrument Sans', sans-serif;
@@ -234,40 +236,64 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   color: var(--bb-green-accent);
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  margin: 0 0 0.65rem;
+  margin: 0 0 var(--s2);
 }
 .bb-internship-block p {
   font-family: 'Instrument Sans', sans-serif;
   font-size: 17px;
   color: var(--bb-text-secondary);
-  line-height: 1.65;
-  margin: 0 0 0.4rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  margin: 0 0 var(--s2);
 }
 .bb-internship-block p:last-child { margin-bottom: 0; }
 .bb-internship-block ul {
   margin: 0;
-  padding-left: 1.1rem;
+  padding-left: var(--s2);
 }
 .bb-internship-block li {
   font-size: 17px;
   color: var(--bb-text-secondary);
-  line-height: 1.65;
-  margin-bottom: 0.35rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  margin-bottom: var(--s2);
 }
+/* Program names read as a comma-free run of names at body size, not a
+   grid of tags. */
 .bb-program-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 0.9rem;
-  margin-top: 0.75rem;
+  gap: var(--s1) var(--s3);
+  margin-top: var(--s2);
 }
 .bb-program-badge {
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   color: var(--bb-text-secondary);
-  opacity: 0.92;
+  opacity: 0.9;
 }
-.bb-program-badge::after {
-  content: '';
+/* A closing note under a block's list */
+.bb-block-note {
+  margin-top: var(--s2) !important;
+}
+/* An aside inside a block: italic, same size as the body around it */
+.bb-block-aside {
+  margin-top: var(--s3) !important;
+  font-size: 17px;
+  font-style: italic;
+  color: var(--bb-text-secondary);
+  opacity: 0.9;
+}
+.bb-block-aside a { font-style: normal; font-weight: 600; color: var(--bb-green-accent); }
+/* A one-line instruction under a section intro */
+.bb-section-hint {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--bb-gray);
+  opacity: 0.8;
+  margin: 0 0 var(--s4);
 }
 
 /* ============================================
@@ -278,29 +304,28 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   color: var(--bb-green);
   font-size: 30px;
   font-weight: 500;
-  margin: 0 0 0.5rem;
+  margin: 0 0 var(--s3);
   letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 .bb-future-section .bb-section-intro {
   font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-text-secondary);
   font-size: 17px;
-  line-height: 1.65;
-  margin: 0 0 1.5rem;
-  max-width: 62ch;
+  line-height: 1.6;
+  margin: 0 0 var(--s3);
+  max-width: var(--measure);
 }
 .bb-future-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0;
-  border-top: 1px solid var(--bb-border);
+  gap: var(--s5);
 }
 @media (min-width: 769px) {
-  .bb-future-grid { grid-template-columns: repeat(2, 1fr); column-gap: 64px; }
+  .bb-future-grid { grid-template-columns: repeat(2, 1fr); column-gap: var(--s5); }
 }
 .bb-future-card {
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--bb-border);
+  padding: 0;
   cursor: pointer;
 }
 .bb-future-card h3 {
@@ -308,26 +333,27 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   font-size: 17px;
   font-weight: 600;
   color: var(--bb-navy);
-  margin: 0 0 0.6rem;
+  margin: 0 0 var(--s1);
 }
 .bb-future-card p {
   font-family: 'Instrument Sans', sans-serif;
   font-size: 17px;
   color: var(--bb-text-secondary);
-  opacity: 0.92;
-  line-height: 1.65;
+  opacity: 0.9;
+  line-height: 1.6;
   margin: 0;
+  max-width: var(--measure);
 }
 
 /* ============================================
    INTERNATIONAL CALLOUT
    ============================================ */
+/* The one aside on the page: indented off the margin, not boxed. */
 .bb-international-callout {
-  padding: 1.5rem 0;
-  border-top: 1px solid var(--bb-border);
-  border-bottom: 1px solid var(--bb-border);
-  margin: 1.5rem 0;
-  max-width: 62ch;
+  padding: 0 0 0 var(--s3);
+  border-left: 2px solid var(--bb-border);
+  margin: var(--s5) 0;
+  max-width: var(--measure);
 }
 .bb-international-callout .bb-intl-header {
   font-family: 'Instrument Sans', sans-serif;
@@ -336,26 +362,30 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   text-transform: uppercase;
   letter-spacing: 0.16em;
   color: var(--bb-green-accent);
-  margin: 0 0 0.5rem;
+  margin: 0 0 var(--s1);
 }
 .bb-international-callout p {
   font-family: 'Instrument Sans', sans-serif;
   font-size: 17px;
   font-style: italic;
   color: var(--bb-text-secondary);
-  line-height: 1.65;
+  opacity: 0.9;
+  line-height: 1.6;
   margin: 0;
 }
 
 /* ============================================
    PROGRAM CATEGORY ACCORDIONS
+   The one hairline-ruled list on this page: these
+   are collapsible controls and the rule is the
+   affordance.
    ============================================ */
 .bb-program-category {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   border-bottom: 1px solid var(--bb-border);
 }
 .bb-program-category summary {
-  padding: 0.6rem 0;
+  padding: var(--s2) 0;
   font-family: 'Instrument Sans', sans-serif;
   font-size: 17px;
   font-weight: 600;
@@ -376,30 +406,32 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-program-category[open] summary::after { content: '\2212'; }
 .bb-program-category .bb-program-badges {
-  padding: 0 0 0.85rem;
+  padding: 0 0 var(--s3);
 }
 
 /* ============================================
-   FLIP CARDS: Industry Trends
+   INDUSTRY TRENDS: expandable entries
    ============================================ */
 .bb-flip-icon {
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 30px;
-  color: var(--bb-green-accent);
-  margin-bottom: 0.5rem;
+  font-size: 17px;
+  color: var(--bb-navy);
+  opacity: 0.45;
+  margin-bottom: var(--s1);
   display: block;
 }
 .bb-flip-front h3 {
   font-size: 17px;
   color: var(--bb-navy);
-  margin: 0 0 0.5rem;
+  margin: 0 0 var(--s1);
 }
 .bb-flip-teaser {
   font-size: 17px;
   color: var(--bb-text-secondary);
-  opacity: 0.92;
-  line-height: 1.65;
-  margin: 0 0 0.75rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  margin: 0 0 var(--s2);
+  max-width: var(--measure);
 }
 .bb-flip-hint {
   display: inline-block;
@@ -415,14 +447,15 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 .bb-flip-back h3 {
   color: var(--bb-navy);
   font-size: 17px;
-  margin: 0 0 0.6rem;
+  margin: 0 0 var(--s2);
 }
 .bb-flip-back p {
   color: var(--bb-text-secondary);
-  opacity: 0.92;
+  opacity: 0.9;
   font-size: 17px;
-  line-height: 1.65;
-  margin: 0 0 0.75rem;
+  line-height: 1.6;
+  margin: 0 0 var(--s2);
+  max-width: var(--measure);
 }
 .bb-flip-back-link {
   display: inline-block;
@@ -434,10 +467,10 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   display: block;
   font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.16em;
   color: var(--bb-gray);
-  opacity: 0.6;
-  margin-top: 1rem;
+  opacity: 0.8;
+  margin-top: var(--s3);
   cursor: pointer;
 }
 </style>
@@ -781,7 +814,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
         </div>
       </details>
 
-      <p style="margin-top:0.65rem;">Check each company's careers page directly. Most open applications between October and February for summer positions.</p>
+      <p class="bb-block-note">Check each company's careers page directly. Most open applications between October and February for summer positions.</p>
     </div>
 
     <div class="bb-internship-block">
@@ -804,7 +837,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
         <li><strong>References:</strong> Have 2 to 3 professors or supervisors ready. Ask them in advance.</li>
         <li><strong>Writing sample (if requested):</strong> A lab report, class paper, or anything that demonstrates your ability to communicate science clearly.</li>
       </ul>
-      <p style="margin-top:0.75rem; font-size:15px; color:var(--bb-text-secondary); font-style:italic;">Want real examples? <a href="/products/">The Biotech Blueprint</a> includes annotated resume samples, cover letter templates, and cold email scripts built specifically for biotech applications. If you want to see what a strong application actually looks like, start there.</p>
+      <p class="bb-block-aside">Want real examples? <a href="/products/">The Biotech Blueprint</a> includes annotated resume samples, cover letter templates, and cold email scripts built specifically for biotech applications. If you want to see what a strong application actually looks like, start there.</p>
     </div>
 
     <div class="bb-internship-block">
@@ -852,7 +885,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   <h2>Where Biotech Is Heading</h2>
   <p class="bb-section-intro">The biotech industry is changing faster than most career guides acknowledge. These five areas are shaping where the jobs, funding, and scientific energy are flowing in the next decade, and what that means for you.</p>
 
-  <p style="font-size:11px; text-transform:uppercase; letter-spacing:0.16em; color:var(--bb-gray); margin: -0.75rem 0 1.25rem; font-family:'Instrument Sans',sans-serif;">Click any item to expand the full picture.</p>
+  <p class="bb-section-hint">Click any item to expand the full picture.</p>
 
   <div class="bb-future-grid">
 

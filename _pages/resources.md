@@ -20,11 +20,9 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   --bb-border: rgba(36,34,26,0.12);
 }
 
-/* Section header: a label, not a filled bar */
+/* Section header: a label with space under it, no bar, no rule */
 .bb-section-head {
-  margin-bottom: 0.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--bb-border);
+  margin-bottom: var(--s3);
 }
 .bb-section-head h2 {
   font-family: 'Instrument Sans', sans-serif;
@@ -36,29 +34,26 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   letter-spacing: 0.16em;
 }
 
-/* Resource section wrapper */
+/* Resource section wrapper: sections are separated by space alone */
 .bb-resource-section {
-  padding: 1.75rem 0;
-  border-bottom: 1px solid var(--bb-border);
+  padding: 0 0 var(--s6);
 }
 .bb-resource-section:last-of-type {
-  border-bottom: none;
+  padding-bottom: var(--s5);
 }
 
-/* Grid: rows separated by a hairline rule, no boxes */
+/* The resource list is allowed to run wider than a prose column */
 .bb-resource-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0;
+  gap: var(--s4);
 }
 
-/* Resource row */
+/* Resource entry: logo, title, description. No rule, no box. */
 .bb-resource-card {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
-  padding: 1.1rem 0;
-  border-bottom: 1px solid var(--bb-border);
+  gap: var(--s3);
 }
 .bb-resource-thumb {
   width: 28px;
@@ -68,7 +63,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin-top: 0.15rem;
+  margin-top: 2px;
 }
 .bb-resource-thumb img {
   width: 100%;
@@ -81,10 +76,10 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   min-width: 0;
 }
 .bb-resource-card h3 {
-  margin: 0 0 0.25rem;
+  margin: 0 0 var(--s1);
   font-family: 'Fraunces', Georgia, serif;
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .bb-resource-card h3 a {
   color: var(--bb-navy);
@@ -93,9 +88,10 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 .bb-resource-card p {
   color: var(--bb-text-secondary);
   opacity: 0.9;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.6;
   margin: 0;
+  max-width: var(--measure);
 }
 
 /* Book covers: taller ratio, still capped at the 28px logo width */
@@ -106,7 +102,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   min-width: 28px;
   overflow: hidden;
   display: block;
-  margin-top: 0.15rem;
+  margin-top: 2px;
 }
 .bb-book-thumb img {
   width: 100%;
@@ -115,14 +111,26 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   display: block;
 }
 
-/* CTA footer: a rule, not a filled box */
+/* A note under a section label, before its list starts */
+.bb-section-note {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--bb-text-secondary);
+  opacity: 0.9;
+  margin: 0 0 var(--s4);
+  max-width: var(--measure);
+}
+
+/* Closing line: the page's one rule, marking the end of the library */
 .bb-cta-footer {
-  padding: 2rem 0 0;
+  padding: var(--s4) 0 0;
+  border-top: 1px solid var(--bb-border);
   text-align: left;
 }
 .bb-cta-footer p {
   color: var(--bb-text-secondary);
-  opacity: 0.92;
+  opacity: 0.9;
   font-size: 17px;
   margin: 0;
 }
@@ -133,7 +141,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 /* Desktop: two columns, 64px gutter */
 @media (min-width: 769px) {
-  .bb-resource-grid { grid-template-columns: repeat(2, 1fr); column-gap: 64px; }
+  .bb-resource-grid { grid-template-columns: repeat(2, 1fr); column-gap: var(--s5); }
 }
 </style>
 
@@ -400,7 +408,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   <div class="bb-section-head">
     <h2>Online Courses (Free)</h2>
   </div>
-  <p style="font-family: 'Instrument Sans', sans-serif; font-size: 17px; color: var(--bb-text-secondary); opacity: 0.7; margin-top: -0.25rem; margin-bottom: 1.25rem;">From lab fundamentals to data science, regulatory affairs, and industry business skills. All free.</p>
+  <p class="bb-section-note">From lab fundamentals to data science, regulatory affairs, and industry business skills. All free.</p>
   <div class="bb-resource-grid">
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">

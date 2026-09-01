@@ -12,25 +12,40 @@ classes: wide
    Olive is the only accent. No monospace anywhere.
    ================================================================ */
 
-.hp { max-width: 1160px; margin: 0 auto; padding: 0 1.25rem; }
+.hp { max-width: 1160px; margin: 0 auto; padding: 0 var(--s3); }
 .hp-band { padding: var(--space-section) 0; }
 .hp-band + .hp-band { border-top: 1px solid var(--line); }
 .hp-band--tint { background: var(--paper-2); }
-.hp .eyebrow { margin-bottom: 0.75rem; display: inline-block; }
+.hp .eyebrow { margin-bottom: var(--s2); display: inline-block; }
 .hp h2 { font-size: var(--fs-heading); margin: 0; }
+
+/* A section's lead-in paragraph. Sits at prose measure even where the
+   content below it runs wider. */
+.section-deck {
+  color: var(--ink);
+  opacity: 0.9;
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  margin: var(--s3) 0 0;
+  max-width: var(--measure);
+}
+/* The Learning Lab opens tighter than the other sections: the deck
+   hands straight off to the lists rather than sitting in its own band
+   of space. */
+.lab-deck { margin-bottom: var(--s5); }
 
 /* The one big typographic quote moment on the page: Fraunces italic
    at the section-heading size, standing on its own, no box, no tilt. */
 .pull-quote--feature {
   font-size: var(--fs-heading);
   max-width: var(--measure);
-  margin: 2.25rem 0 2.5rem;
+  margin: var(--s4) 0;
 }
 
 /* ---------------- Hero: single column, full measure, no reserved empty space ---------------- */
 .hero {
-  padding-top: 2.5rem;
-  padding-bottom: 2rem;
+  padding-top: var(--s4);
+  padding-bottom: var(--s4);
 }
 .hero-copy { max-width: 700px; }
 .hero-copy h1 {
@@ -38,7 +53,7 @@ classes: wide
   font-weight: 500;
   line-height: 1.05;
   letter-spacing: -0.01em;
-  margin: 0.9rem 0 1.1rem;
+  margin: var(--s2) 0 var(--s3);
   color: var(--ink);
 }
 .hero-copy h1 em {
@@ -47,34 +62,34 @@ classes: wide
 .hero-copy .hero-sub {
   font-size: var(--fs-body);
   color: var(--ink);
-  opacity: 0.92;
-  line-height: 1.65;
-  margin: 0 0 1.5rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  margin: 0 0 var(--s4);
   max-width: var(--measure);
 }
-.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; margin-bottom: 1.75rem; }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s4); margin-bottom: var(--s4); }
 .btn-start {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--s1);
   background: var(--olive);
   color: var(--paper) !important;
   font-family: var(--font-body);
   font-weight: 600;
   font-size: var(--fs-body);
-  padding: 0.85rem 1.6rem;
+  padding: var(--s2) var(--s3);
   border-radius: 0;
   text-decoration: none !important;
   transition: background 0.15s ease;
 }
 .btn-start:hover { background: var(--olive-deep); color: var(--paper) !important; }
-.hero-quiet-links { display: flex; flex-direction: column; gap: 0.5rem; }
+.hero-quiet-links { display: flex; flex-direction: column; gap: var(--s1); }
 .hero-quiet-links a {
   font-family: var(--font-body);
   font-size: var(--fs-body);
   font-weight: 500;
   color: var(--ink) !important;
-  opacity: 0.92;
+  opacity: 0.9;
   text-decoration: underline !important;
   text-decoration-color: rgba(59, 66, 35, 0.35) !important;
   text-underline-offset: 2px;
@@ -84,51 +99,55 @@ classes: wide
 .hero-quiet-links a:hover { color: var(--olive-deep) !important; opacity: 1; text-decoration-color: currentColor !important; }
 
 /* Where the handwritten Caveat pull quote used to sit: Fraunces
-   italic, quiet, at 60% opacity. No rotation, no marker color. */
+   italic at body size, quieter by voice rather than by a smaller size. */
 .hero-honest-line {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 15px;
+  font-size: var(--fs-body);
   color: var(--ink);
-  opacity: 0.6;
-  max-width: 380px;
-  margin-top: 0.5rem;
+  opacity: 0.8;
+  max-width: var(--measure);
+  margin-top: var(--s2);
 }
 
-@media (min-width: 900px) {
-  .hero {
-    padding-top: 3.5rem;
-    padding-bottom: 3rem;
-  }
-}
-
-/* ---------------- How BioBridge works: numbered editorial list ---------------- */
-.works-head { max-width: var(--measure); margin-bottom: 2rem; }
-.works-list { border-top: 1px solid var(--line); }
+/* ---------------- How BioBridge works: hanging numerals, no ruled rows ---------------- */
+.works-head { max-width: var(--measure); margin-bottom: var(--s4); }
+.works-list { display: flex; flex-direction: column; gap: var(--s4); }
 .works-row {
   display: grid;
-  grid-template-columns: 3rem 1fr auto;
-  align-items: center;
-  gap: 1.25rem;
-  padding: 1.25rem 1rem;
-  border-bottom: 1px solid var(--line);
+  grid-template-columns: 24px 1fr;
+  align-items: baseline;
+  gap: var(--s3);
   text-decoration: none !important;
   color: inherit !important;
-  transition: background 0.2s ease;
 }
-.works-row:hover { background: var(--paper-2); }
-.works-row__num { font-family: var(--font-body); font-weight: 600; font-size: var(--fs-label); letter-spacing: 0.1em; color: var(--ink-soft); }
-.works-row__title { font-family: var(--font-display); font-size: var(--fs-body); font-weight: 600; margin: 0 0 0.3rem; color: var(--ink); }
-.works-row__desc { font-family: var(--font-body); font-size: var(--fs-body); color: var(--ink); opacity: 0.92; margin: 0; max-width: var(--measure); }
-.works-row__arrow { font-size: var(--fs-body); color: var(--ink-soft); }
-.works-row:hover .works-row__arrow { color: var(--olive); }
-
-@media (min-width: 700px) {
-  .works-row { grid-template-columns: 4rem 1fr auto; padding: 1.5rem 1.25rem; }
+.works-row__num {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-body);
+  color: var(--ink);
+  opacity: 0.45;
 }
+.works-row__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-body);
+  font-weight: 600;
+  margin: 0 0 var(--s1);
+  color: var(--ink);
+  display: inline-block;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s ease;
+}
+.works-row:hover .works-row__title { text-decoration-color: var(--olive); }
+.works-row__desc { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.6; color: var(--ink); opacity: 0.9; margin: 0; max-width: var(--measure); }
+/* The row is a link and the title underline on hover says so, so the
+   arrow glyph no longer has to. */
+.works-row__arrow { display: none; }
 
 /* ---------------- Founder story: photo + bio side by side ---------------- */
-.story-grid { display: grid; grid-template-columns: 1fr; gap: 1.75rem; margin-top: 1.25rem; }
+.story-grid { display: grid; grid-template-columns: 1fr; gap: var(--s4); margin-top: var(--s3); }
 .story-photo {
   width: 100%;
   max-width: 220px;
@@ -136,32 +155,30 @@ classes: wide
   object-fit: cover;
   display: block;
 }
-.story-byline { display: flex; align-items: baseline; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.85rem; }
+.story-byline { display: flex; flex-direction: column; gap: var(--s1); margin-top: var(--s2); }
 .story-byline .name { font-family: var(--font-display); font-size: var(--fs-body); font-weight: 600; color: var(--ink); }
-.story-byline .role { font-family: var(--font-body); font-size: var(--fs-label); letter-spacing: 0.04em; color: var(--ink-soft); }
-.story-content p { color: var(--ink); opacity: 0.92; line-height: 1.65; margin-bottom: 1rem; font-size: var(--fs-body); max-width: var(--measure); }
-.story-connect { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 1.5rem; }
+.story-byline .role { font-family: var(--font-body); font-size: var(--fs-label); text-transform: uppercase; letter-spacing: 0.16em; color: var(--olive); }
+.story-content p { color: var(--ink); opacity: 0.9; line-height: 1.6; margin-bottom: var(--s3); font-size: var(--fs-body); max-width: var(--measure); }
+.story-connect { display: flex; align-items: baseline; gap: var(--s3); flex-wrap: wrap; margin-top: var(--s4); }
 .story-connect-label { font-family: var(--font-body); font-size: var(--fs-label); text-transform: uppercase; letter-spacing: 0.16em; color: var(--olive); }
 .story-connect a {
   font-family: var(--font-body); font-weight: 500; font-size: var(--fs-body);
   color: var(--ink) !important;
-  opacity: 0.92;
+  opacity: 0.9;
 }
 .story-connect a:hover { color: var(--olive-deep) !important; opacity: 1; }
 
 @media (min-width: 700px) {
-  .story-grid { grid-template-columns: 220px 1fr; gap: 3rem; align-items: start; }
+  .story-grid { grid-template-columns: 220px 1fr; gap: var(--s5); align-items: start; }
 }
 
 /* ---------------- Career Explorer ---------------- */
-.explorer-head { max-width: var(--measure); margin-bottom: 1.75rem; }
+.explorer-head { max-width: var(--measure); margin-bottom: var(--s4); }
 .explorer-filters {
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 1.5rem 0;
-  margin-bottom: 2rem;
+  padding: 0;
+  margin-bottom: var(--s5);
 }
-.filter-group { margin-bottom: 1.1rem; }
+.filter-group { margin-bottom: var(--s4); }
 .filter-group:last-child { margin-bottom: 0; }
 .filter-group-label {
   display: block;
@@ -171,100 +188,103 @@ classes: wide
   text-transform: uppercase;
   letter-spacing: 0.16em;
   color: var(--olive);
-  margin-bottom: 0.6rem;
+  margin-bottom: var(--s1);
 }
-.explorer-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+/* Filters read as a line of choices, not a toolbar: no borders, no
+   fills, no rectangles. State is carried by weight, color, underline. */
+.explorer-chips { display: flex; flex-wrap: wrap; gap: var(--s2) var(--s3); }
 .chip {
   font-family: var(--font-body);
-  font-size: var(--fs-label);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  padding: 0.5rem 0.9rem;
+  font-size: var(--fs-body);
+  font-weight: 400;
+  padding: 0;
+  border: none;
   border-radius: 0;
-  border: 1px solid var(--line);
   background: transparent;
   color: var(--ink);
-  opacity: 0.92;
+  opacity: 0.7;
   cursor: pointer;
-  transition: all 0.15s ease;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: color 0.15s ease, opacity 0.15s ease, text-decoration-color 0.15s ease;
 }
-.chip:hover { border-color: var(--olive); opacity: 1; }
+.chip:hover { opacity: 1; text-decoration-color: var(--line); }
 .chip[aria-pressed="true"] {
-  border-color: var(--olive);
   color: var(--olive-deep);
   opacity: 1;
-  font-weight: 700;
+  font-weight: 600;
+  text-decoration-color: currentColor;
 }
-.explorer-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1.25rem; padding-top: 1.1rem; border-top: 1px solid var(--line); }
-.explorer-count { font-family: var(--font-body); font-size: var(--fs-label); letter-spacing: 0.04em; color: var(--ink-soft); }
+.explorer-toolbar { display: flex; align-items: baseline; gap: var(--s3); margin-top: var(--s4); }
+.explorer-count { font-family: var(--font-body); font-size: var(--fs-label); text-transform: uppercase; letter-spacing: 0.16em; color: var(--ink); opacity: 0.8; }
 .explorer-reset {
   font-family: var(--font-body);
   font-size: var(--fs-label);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   font-weight: 600;
   color: var(--olive-deep);
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.25rem 0;
+  padding: 0;
 }
 .explorer-reset:hover { color: var(--olive); }
-.explorer-results { display: grid; grid-template-columns: 1fr; gap: 1.1rem; }
-.explorer-empty { color: var(--ink-soft); font-style: italic; padding: 2rem 0; }
+.explorer-results { display: grid; grid-template-columns: 1fr; gap: var(--s4); }
+.explorer-empty { color: var(--ink); opacity: 0.8; font-style: italic; padding: var(--s4) 0; }
 .role-card {
-  border-top: 1px solid var(--line);
-  padding: 1.25rem 0;
+  padding: 0;
 }
-.role-card__top { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.65rem; }
-.role-card__title { margin: 0; font-size: var(--fs-body); font-family: var(--font-display); color: var(--ink); }
+.role-card__top { display: flex; align-items: baseline; gap: var(--s2); margin-bottom: var(--s1); flex-wrap: wrap; }
+.role-card__title { margin: 0; font-size: var(--fs-body); font-family: var(--font-display); font-weight: 600; color: var(--ink); }
+/* Match/maybe/later reads as a small label beside the role name, not a
+   bordered tag. */
 .badge {
   font-family: var(--font-body);
   font-size: var(--fs-label);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding: 0.3rem 0.55rem;
-  border: 1px solid var(--line);
+  letter-spacing: 0.16em;
+  padding: 0;
+  border: none;
   white-space: nowrap;
   flex-shrink: 0;
 }
-.badge--go { color: var(--olive-deep); }
-.badge--maybe { color: var(--ink); }
-.badge--later { color: var(--ink); opacity: 0.6; }
+.badge--go { color: var(--olive); }
+.badge--maybe { color: var(--ink); opacity: 0.8; }
+.badge--later { color: var(--ink); opacity: 0.8; }
 .role-card__salary { font-size: var(--fs-body); color: var(--ink); margin: 0 0 0.65rem; line-height: 1.5; }
 .role-card__salary .eyebrow { color: var(--olive); }
-.role-card__step { font-size: var(--fs-body); color: var(--ink); opacity: 0.92; line-height: 1.65; margin: 0 0 0.85rem; }
+.role-card__step { font-size: var(--fs-body); color: var(--ink); opacity: 0.9; line-height: 1.6; margin: 0 0 var(--s2); max-width: var(--measure); }
 .role-card__link { font-family: var(--font-body); font-weight: 600; font-size: var(--fs-body); color: var(--olive-deep); }
 
-@media (min-width: 700px) { .explorer-results { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 700px) { .explorer-results { grid-template-columns: repeat(2, 1fr); column-gap: var(--s5); } }
 
-/* ---------------- Learning Lab: rules, not cards ---------------- */
-.lab-grid { display: grid; grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--line); }
-.lab-card {
-  padding: 1.25rem 0;
-  border-bottom: 1px solid var(--line);
-}
-.lab-card h3 { font-size: var(--fs-body); font-weight: 600; margin: 0 0 0.3rem; color: var(--ink); }
-.lab-card .eyebrow { display: block; margin-bottom: 0.6rem; }
-.lab-card p.lab-desc { color: var(--ink); opacity: 0.85; font-size: var(--fs-body); margin: 0 0 1rem; }
-.lab-logos { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.25rem; }
+/* ---------------- Learning Lab: grouped by space, not ruled ---------------- */
+.lab-grid { display: grid; grid-template-columns: 1fr; gap: var(--s5); }
+.lab-card { padding: 0; }
+.lab-card h3 { font-size: var(--fs-body); font-weight: 600; margin: 0 0 var(--s1); color: var(--ink); }
+.lab-card .eyebrow { display: block; margin-bottom: var(--s1); }
+.lab-card p.lab-desc { color: var(--ink); opacity: 0.9; font-size: var(--fs-body); line-height: 1.6; margin: 0 0 var(--s3); }
+.lab-logos { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s3); }
 .lab-logos img { height: 28px; width: auto; max-width: 100px; object-fit: contain; }
-.lab-books-row { display: flex; gap: 0.6rem; }
+.lab-books-row { display: flex; gap: var(--s1); }
 .lab-books-row img { width: 52px; height: 76px; object-fit: cover; }
-.lab-more { margin-top: 1.75rem; }
+.lab-more { margin-top: var(--s5); }
 .lab-more a { font-weight: 600; color: var(--olive-deep); }
 
 @media (min-width: 900px) {
-  .lab-grid { grid-template-columns: repeat(2, 1fr); column-gap: 64px; }
-  .lab-card { border-right: none; }
+  .lab-grid { grid-template-columns: repeat(2, 1fr); column-gap: var(--s5); row-gap: var(--s5); }
 }
 
 /* ---------------- Close ---------------- */
 .close-band { text-align: left; }
 .close-inner { max-width: var(--measure); }
-.close-inner h2 { font-size: var(--fs-heading); margin: 0 0 1rem; }
-.close-inner p { color: var(--ink); opacity: 0.92; font-size: var(--fs-body); line-height: 1.65; margin: 0 0 1.5rem; max-width: var(--measure); }
+.close-inner h2 { font-size: var(--fs-heading); margin: 0 0 var(--s3); }
+.close-inner p { color: var(--ink); opacity: 0.9; font-size: var(--fs-body); line-height: 1.6; margin: 0 0 var(--s4); max-width: var(--measure); }
 </style>
 
 <!-- ============ HERO ============ -->
@@ -356,7 +376,7 @@ classes: wide
     <div class="explorer-head">
       <span class="eyebrow">A tool to try</span>
       <h2>Find your lane.</h2>
-      <p style="color:var(--ink-soft); margin-top:0.75rem;">Filter by where you're coming from and what you're drawn to. Every range below is a rounded, approximate US entry-level estimate, not a promise.</p>
+      <p class="section-deck">Filter by where you're coming from and what you're drawn to. Every range below is a rounded, approximate US entry-level estimate, not a promise.</p>
     </div>
 
     <div id="career-explorer">
@@ -405,9 +425,9 @@ classes: wide
   <div class="hp">
     <span class="eyebrow">Hand-picked, not algorithmic</span>
     <h2>The Learning Lab.</h2>
-    <p style="color:var(--ink-soft); margin-top:0.75rem; max-width:640px;">A running library of the newsletters, podcasts, courses, and books that actually explain biotech well. Free and beginner-friendly, every one of them checked before it's added.</p>
+    <p class="section-deck lab-deck">A running library of the newsletters, podcasts, courses, and books that actually explain biotech well. Free and beginner-friendly, every one of them checked before it's added.</p>
 
-    <div class="lab-grid" style="margin-top:2rem;">
+    <div class="lab-grid">
       <div class="lab-card">
         <span class="eyebrow">Newsletters</span>
         <h3>What's happening, weekly</h3>
