@@ -21,7 +21,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 /* Involvement list: stacked rows, separated by hairline rules */
 .bb-involve-grid {
-  border-top: 1px solid var(--bb-border);
+  margin-top: 0.5rem;
   margin-bottom: 2.5rem;
 }
 .bb-involve-card {
@@ -47,14 +47,14 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-involve-card p {
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
   font-size: 17px;
   line-height: 1.65;
   max-width: 62ch;
 }
 .bb-involve-card ul {
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
   font-size: 17px;
   line-height: 1.65;
   padding-left: 1.25rem;

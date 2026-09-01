@@ -42,11 +42,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   object-fit: cover;
 }
 
-/* Product details: no card box, set off by a top rule */
-.bb-product-card {
-  border-top: 1px solid var(--bb-border);
-  padding-top: 1.5rem;
-}
+/* Product details: no card box, no rule — set apart by the image beside it */
 .bb-product-eyebrow {
   font-family: 'Instrument Sans', sans-serif;
   font-size: 11px;
@@ -67,7 +63,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-product-tagline {
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
   font-family: 'Instrument Sans', sans-serif;
   font-size: 17px;
   line-height: 1.65;
@@ -104,7 +100,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   padding-left: 1.4rem;
   margin-bottom: 0.75rem;
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
   font-size: 17px;
   line-height: 1.65;
 }
@@ -119,7 +115,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 /* Who It's For prose */
 .bb-who-prose {
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
   font-size: 17px;
   line-height: 1.65;
   margin: 0 0 1.25rem;
@@ -164,11 +160,10 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   margin-top: 0.5rem;
 }
 
-/* Why a Paid Guide section: rules, not a filled box */
+/* Why a Paid Guide section: one rule above, not a boxed-in block */
 .bb-why-paid {
   border-top: 1px solid var(--bb-border);
-  border-bottom: 1px solid var(--bb-border);
-  padding: 1.75rem 0;
+  padding-top: 1.75rem;
   margin-bottom: 1.5rem;
 }
 .bb-why-paid h2 {
@@ -180,7 +175,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-why-paid p {
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
   font-size: 17px;
   line-height: 1.65;
   margin: 0 0 0.75rem;
@@ -190,9 +185,10 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 /* Coming Soon roadmap */
 .bb-roadmap {
-  padding-bottom: 1.5rem;
+  padding-top: 1.75rem;
+  padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
-  border-bottom: 1px solid var(--bb-border);
+  border-top: 1px solid var(--bb-border);
 }
 .bb-roadmap h2 {
   font-family: 'Fraunces', Georgia, serif;
@@ -209,7 +205,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 .bb-roadmap-dot { display: none; }
 .bb-roadmap-item p {
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
   font-size: 17px;
   line-height: 1.65;
   margin: 0;
@@ -229,11 +225,10 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   font-weight: 600;
 }
 
-/* Free Preview: a rule-framed callout, not a heavily bordered card */
+/* Free Preview: set off by a single rule below, not a boxed card */
 .bb-preview-card {
-  border-top: 1px solid var(--bb-border);
   border-bottom: 1px solid var(--bb-border);
-  padding: 1.75rem 0;
+  padding-bottom: 1.75rem;
   margin-bottom: 2.5rem;
 }
 .bb-preview-eyebrow {
@@ -256,7 +251,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 .bb-preview-card p {
   font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
   font-size: 17px;
   line-height: 1.65;
   margin: 0 0 1.1rem;
@@ -266,10 +261,9 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 0;
+  padding-top: 1rem;
   border-top: 1px solid var(--bb-border);
-  border-bottom: 1px solid var(--bb-border);
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   flex-wrap: wrap;
 }
 .bb-preview-sample-icon { display: none; }
@@ -334,7 +328,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   font-size: 17px;
   font-style: italic;
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
   line-height: 1.65;
   margin: 0;
 }

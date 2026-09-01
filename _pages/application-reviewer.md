@@ -67,8 +67,8 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   display: grid;
   grid-template-columns: 1fr;
   gap: 0;
+  margin-top: 0.5rem;
   margin-bottom: 2rem;
-  border-top: 1px solid var(--bb-border);
 }
 .bb-step {
   padding: 1.1rem 0;
@@ -94,7 +94,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   font-family: 'Instrument Sans', sans-serif;
   font-size: 17px;
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
   line-height: 1.55;
 }
 
@@ -130,7 +130,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   font-family: 'Instrument Sans', sans-serif;
   font-size: 17px;
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
   line-height: 1.65;
   margin: 0 0 1.5rem;
   max-width: 62ch;
@@ -302,7 +302,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   font-family: 'Instrument Sans', sans-serif;
   font-size: 17px;
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
   line-height: 1.65;
   max-width: 62ch;
   margin: 0;
@@ -422,7 +422,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   font-family: 'Instrument Sans', sans-serif;
   font-size: 17px;
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
   line-height: 1.65;
   margin: 0;
   max-width: 62ch;
@@ -476,7 +476,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   font-family: 'Instrument Sans', sans-serif;
   font-size: 17px;
   color: var(--bb-green);
-  opacity: 0.82;
+  opacity: 0.92;
   line-height: 1.65;
 }
 .bb-item-marker {

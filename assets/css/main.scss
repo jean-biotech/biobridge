@@ -84,7 +84,7 @@ $type-size-8: 0.65rem !default;
   --fs-body: 17px;      // Instrument Sans, running text and item titles
   --fs-label: 11px;     // Instrument Sans, uppercase eyebrows/markers
 
-  --space-section: 160px; // vertical padding between major sections
+  --space-section: 80px;  // vertical padding between major sections
   --measure: 62ch;        // body text max-width
 }
 
@@ -135,7 +135,7 @@ p {
   font-size: var(--fs-body);
   line-height: 1.65;
   color: var(--ink);
-  opacity: 0.82;
+  opacity: 0.92;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -222,7 +222,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-body);
   font-size: var(--fs-body);
   color: var(--ink);
-  opacity: 0.82;
+  opacity: 0.92;
   max-width: var(--measure);
   line-height: 1.65;
   margin: 0;
@@ -320,7 +320,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     font-size: var(--fs-body);
     color: var(--ink);
-    opacity: 0.82;
+    opacity: 0.92;
     line-height: 1.65;
   }
 }
@@ -678,7 +678,7 @@ input:focus-visible,
 
 .bb-site-footer__tagline {
   color: var(--ink);
-  opacity: 0.82;
+  opacity: 0.9;
   font-size: var(--fs-body);
   line-height: 1.65;
   max-width: 32rem;

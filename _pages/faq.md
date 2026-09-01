@@ -21,7 +21,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 /* Accordion container: rows separated by hairline rules, no boxes */
 .bb-accordion {
   max-width: 100%;
-  border-top: 1px solid var(--bb-border);
+  margin-top: 0.5rem;
 }
 
 /* Individual accordion item */
@@ -80,7 +80,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-accordion-body p {
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
   font-size: 17px;
   line-height: 1.65;
   margin: 0.75rem 0 0;

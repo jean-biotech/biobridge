@@ -36,9 +36,9 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   letter-spacing: 0.16em;
 }
 
-/* Resource section wrapper: 160px between major sections */
+/* Resource section wrapper */
 .bb-resource-section {
-  padding: 2.5rem 0;
+  padding: 1.75rem 0;
   border-bottom: 1px solid var(--bb-border);
 }
 .bb-resource-section:last-of-type {
@@ -92,7 +92,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 .bb-resource-card h3 a:hover { color: var(--bb-green-accent); }
 .bb-resource-card p {
   color: var(--bb-text-secondary);
-  opacity: 0.7;
+  opacity: 0.9;
   font-size: 15px;
   line-height: 1.6;
   margin: 0;
@@ -122,7 +122,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-cta-footer p {
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
   font-size: 17px;
   margin: 0;
 }
