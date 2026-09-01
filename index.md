@@ -27,16 +27,12 @@ classes: wide
   margin: 2.25rem 0 2.5rem;
 }
 
-/* ---------------- Hero: left column carries the copy, right 40% stays empty ---------------- */
+/* ---------------- Hero: single column, full measure, no reserved empty space ---------------- */
 .hero {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2.5rem;
-  align-items: start;
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
 }
-.hero-copy { max-width: 660px; }
+.hero-copy { max-width: 700px; }
 .hero-copy h1 {
   font-size: var(--fs-display);
   font-weight: 500;
@@ -51,7 +47,7 @@ classes: wide
 .hero-copy .hero-sub {
   font-size: var(--fs-body);
   color: var(--ink);
-  opacity: 0.82;
+  opacity: 0.92;
   line-height: 1.65;
   margin: 0 0 1.5rem;
   max-width: var(--measure);
@@ -78,7 +74,7 @@ classes: wide
   font-size: var(--fs-body);
   font-weight: 500;
   color: var(--ink) !important;
-  opacity: 0.82;
+  opacity: 0.92;
   text-decoration: underline !important;
   text-decoration-color: rgba(59, 66, 35, 0.35) !important;
   text-underline-offset: 2px;
@@ -101,9 +97,8 @@ classes: wide
 
 @media (min-width: 900px) {
   .hero {
-    grid-template-columns: 3fr 2fr;
-    padding-top: 3rem;
-    padding-bottom: 2.5rem;
+    padding-top: 3.5rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -115,7 +110,7 @@ classes: wide
   grid-template-columns: 3rem 1fr auto;
   align-items: center;
   gap: 1.25rem;
-  padding: 1.6rem 1rem;
+  padding: 1.25rem 1rem;
   border-bottom: 1px solid var(--line);
   text-decoration: none !important;
   color: inherit !important;
@@ -124,27 +119,39 @@ classes: wide
 .works-row:hover { background: var(--paper-2); }
 .works-row__num { font-family: var(--font-body); font-weight: 600; font-size: var(--fs-label); letter-spacing: 0.1em; color: var(--ink-soft); }
 .works-row__title { font-family: var(--font-display); font-size: var(--fs-body); font-weight: 600; margin: 0 0 0.3rem; color: var(--ink); }
-.works-row__desc { font-family: var(--font-body); font-size: var(--fs-body); color: var(--ink); opacity: 0.82; margin: 0; max-width: var(--measure); }
+.works-row__desc { font-family: var(--font-body); font-size: var(--fs-body); color: var(--ink); opacity: 0.92; margin: 0; max-width: var(--measure); }
 .works-row__arrow { font-size: var(--fs-body); color: var(--ink-soft); }
 .works-row:hover .works-row__arrow { color: var(--olive); }
 
 @media (min-width: 700px) {
-  .works-row { grid-template-columns: 4rem 1fr auto; padding: 1.85rem 1.25rem; }
+  .works-row { grid-template-columns: 4rem 1fr auto; padding: 1.5rem 1.25rem; }
 }
 
-/* ---------------- Founder story: text only, no portrait ---------------- */
-.story-byline { display: flex; align-items: baseline; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem; margin-bottom: 1.5rem; }
+/* ---------------- Founder story: photo + bio side by side ---------------- */
+.story-grid { display: grid; grid-template-columns: 1fr; gap: 1.75rem; margin-top: 1.25rem; }
+.story-photo {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+.story-byline { display: flex; align-items: baseline; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.85rem; }
 .story-byline .name { font-family: var(--font-display); font-size: var(--fs-body); font-weight: 600; color: var(--ink); }
 .story-byline .role { font-family: var(--font-body); font-size: var(--fs-label); letter-spacing: 0.04em; color: var(--ink-soft); }
-.story-content p { color: var(--ink); opacity: 0.82; line-height: 1.65; margin-bottom: 1rem; font-size: var(--fs-body); max-width: var(--measure); }
+.story-content p { color: var(--ink); opacity: 0.92; line-height: 1.65; margin-bottom: 1rem; font-size: var(--fs-body); max-width: var(--measure); }
 .story-connect { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 1.5rem; }
 .story-connect-label { font-family: var(--font-body); font-size: var(--fs-label); text-transform: uppercase; letter-spacing: 0.16em; color: var(--olive); }
 .story-connect a {
   font-family: var(--font-body); font-weight: 500; font-size: var(--fs-body);
   color: var(--ink) !important;
-  opacity: 0.82;
+  opacity: 0.92;
 }
 .story-connect a:hover { color: var(--olive-deep) !important; opacity: 1; }
+
+@media (min-width: 700px) {
+  .story-grid { grid-template-columns: 220px 1fr; gap: 3rem; align-items: start; }
+}
 
 /* ---------------- Career Explorer ---------------- */
 .explorer-head { max-width: var(--measure); margin-bottom: 1.75rem; }
@@ -177,7 +184,7 @@ classes: wide
   border: 1px solid var(--line);
   background: transparent;
   color: var(--ink);
-  opacity: 0.82;
+  opacity: 0.92;
   cursor: pointer;
   transition: all 0.15s ease;
 }
@@ -227,7 +234,7 @@ classes: wide
 .badge--later { color: var(--ink); opacity: 0.6; }
 .role-card__salary { font-size: var(--fs-body); color: var(--ink); margin: 0 0 0.65rem; line-height: 1.5; }
 .role-card__salary .eyebrow { color: var(--olive); }
-.role-card__step { font-size: var(--fs-body); color: var(--ink); opacity: 0.82; line-height: 1.65; margin: 0 0 0.85rem; }
+.role-card__step { font-size: var(--fs-body); color: var(--ink); opacity: 0.92; line-height: 1.65; margin: 0 0 0.85rem; }
 .role-card__link { font-family: var(--font-body); font-weight: 600; font-size: var(--fs-body); color: var(--olive-deep); }
 
 @media (min-width: 700px) { .explorer-results { grid-template-columns: repeat(2, 1fr); } }
@@ -235,12 +242,12 @@ classes: wide
 /* ---------------- Learning Lab: rules, not cards ---------------- */
 .lab-grid { display: grid; grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--line); }
 .lab-card {
-  padding: 1.75rem 0;
+  padding: 1.25rem 0;
   border-bottom: 1px solid var(--line);
 }
 .lab-card h3 { font-size: var(--fs-body); font-weight: 600; margin: 0 0 0.3rem; color: var(--ink); }
 .lab-card .eyebrow { display: block; margin-bottom: 0.6rem; }
-.lab-card p.lab-desc { color: var(--ink); opacity: 0.7; font-size: var(--fs-body); margin: 0 0 1rem; }
+.lab-card p.lab-desc { color: var(--ink); opacity: 0.85; font-size: var(--fs-body); margin: 0 0 1rem; }
 .lab-logos { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.25rem; }
 .lab-logos img { height: 28px; width: auto; max-width: 100px; object-fit: contain; }
 .lab-books-row { display: flex; gap: 0.6rem; }
@@ -257,7 +264,7 @@ classes: wide
 .close-band { text-align: left; }
 .close-inner { max-width: var(--measure); }
 .close-inner h2 { font-size: var(--fs-heading); margin: 0 0 1rem; }
-.close-inner p { color: var(--ink); opacity: 0.82; font-size: var(--fs-body); line-height: 1.65; margin: 0 0 1.5rem; max-width: var(--measure); }
+.close-inner p { color: var(--ink); opacity: 0.92; font-size: var(--fs-body); line-height: 1.65; margin: 0 0 1.5rem; max-width: var(--measure); }
 </style>
 
 <!-- ============ HERO ============ -->
@@ -319,20 +326,25 @@ classes: wide
 <div class="hp-band">
   <div class="hp">
     <span class="eyebrow">The story behind BioBridge</span>
-    <div class="story-byline">
-      <span class="name">Jean Tran</span>
-      <span class="role">Founder, BioBridge &middot; BS/MS Biotechnology</span>
-    </div>
-    <div class="story-content">
-      <p class="lede">I was certain I would become a doctor. In college, I completed the shadowing hours, prerequisites, and extracurriculars. But the closer I pushed myself toward a future in clinical work, the more I questioned whether it was actually right for me. I realized I needed a different direction.</p>
-      <p>While searching for alternatives, I discovered my school offered a combined BS/MS in biotechnology that I could complete in four years. I knew almost nothing about biotech when I applied, but the program revealed just how expansive the field actually is, spanning lab work, business strategy, regulatory policy, manufacturing operations, and more.</p>
-      <p>I started documenting what I was learning on social media, and the audience grew quickly. Tens of thousands of people followed along, and my messages became a constant stream of the same questions.</p>
-      <blockquote class="pull-quote pull-quote--feature">"What is biotech? How do I get in? Do I need a PhD?"</blockquote>
-      <p>People were curious, but lacked a practical starting point. BioBridge is the resource I wish had existed when I was trying to figure it out.</p>
-      <div class="story-connect">
-        <span class="story-connect-label">Follow the journey:</span>
-        <a href="https://instagram.com/jeans.scenes" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://linkedin.com/in/jeantrann" target="_blank" rel="noopener">LinkedIn</a>
+    <div class="story-grid">
+      <div>
+        <img class="story-photo" src="/assets/images/profile-photo.jpg" alt="Jean Tran, founder of BioBridge">
+        <div class="story-byline">
+          <span class="name">Jean Tran</span>
+          <span class="role">Founder, BioBridge &middot; BS/MS Biotechnology</span>
+        </div>
+      </div>
+      <div class="story-content">
+        <p class="lede">I was certain I would become a doctor. In college, I completed the shadowing hours, prerequisites, and extracurriculars. But the closer I pushed myself toward a future in clinical work, the more I questioned whether it was actually right for me. I realized I needed a different direction.</p>
+        <p>While searching for alternatives, I discovered my school offered a combined BS/MS in biotechnology that I could complete in four years. I knew almost nothing about biotech when I applied, but the program revealed just how expansive the field actually is, spanning lab work, business strategy, regulatory policy, manufacturing operations, and more.</p>
+        <p>I started documenting what I was learning on social media, and the audience grew quickly. Tens of thousands of people followed along, and my messages became a constant stream of the same questions.</p>
+        <blockquote class="pull-quote pull-quote--feature">"What is biotech? How do I get in? Do I need a PhD?"</blockquote>
+        <p>People were curious, but lacked a practical starting point. BioBridge is the resource I wish had existed when I was trying to figure it out.</p>
+        <div class="story-connect">
+          <span class="story-connect-label">Follow the journey:</span>
+          <a href="https://instagram.com/jeans.scenes" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://linkedin.com/in/jeantrann" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
       </div>
     </div>
   </div>

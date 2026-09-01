@@ -33,11 +33,11 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
    1px hairline rule, all visible at once.
    ============================================ */
 .bb-path-list {
-  border-top: 1px solid var(--bb-border);
+  margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
 .bb-path-row {
-  padding: 2.5rem 0;
+  padding: 1.75rem 0;
   border-bottom: 1px solid var(--bb-border);
 }
 .bb-path-row__head {
@@ -64,8 +64,8 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 .bb-path-fields {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.1rem;
-  max-width: 62ch;
+  gap: 1.25rem 2.5rem;
+  max-width: 900px;
 }
 .bb-detail-label {
   font-family: 'Instrument Sans', sans-serif;
@@ -78,9 +78,9 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-detail-value {
   color: var(--bb-charcoal);
-  opacity: 0.82;
+  opacity: 0.92;
   font-size: 17px;
-  line-height: 1.65;
+  line-height: 1.6;
   margin: 0;
 }
 .bb-detail-value ul {
@@ -102,20 +102,26 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-org-list {
   color: var(--bb-charcoal);
-  opacity: 0.82;
+  opacity: 0.92;
   font-size: 17px;
   line-height: 1.65;
 }
+/* The org list spans the full row: it closes out the pathway
+   rather than sitting as just another grid cell. */
+.bb-path-fields > div:last-child {
+  grid-column: 1 / -1;
+  padding-top: 0.35rem;
+  border-top: 1px solid var(--bb-border);
+}
 
-@media (min-width: 769px) {
-  .bb-path-row__title { font-size: 30px; }
+@media (min-width: 700px) {
+  .bb-path-fields { grid-template-columns: 1fr 1fr; }
 }
 
 /* ============================================
    NEXT STEPS
    ============================================ */
 .bb-next-steps {
-  border-top: 1px solid var(--bb-border);
   border-bottom: 1px solid var(--bb-border);
   padding: 1.5rem 0;
   margin-top: 0.5rem;
@@ -135,7 +141,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 .bb-next-steps li {
   margin-bottom: 0.4rem;
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
   font-size: 17px;
 }
 .bb-next-steps a {
@@ -168,7 +174,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   display: flex;
   align-items: baseline;
   gap: 1rem;
-  margin: 5rem 0 1.75rem;
+  margin: 2.5rem 0 1.75rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--bb-border);
 }
@@ -258,7 +264,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   font-family: 'Instrument Sans', sans-serif;
   font-size: 15px;
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
 }
 .bb-program-badge::after {
   content: '';
@@ -308,7 +314,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
   font-family: 'Instrument Sans', sans-serif;
   font-size: 17px;
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
   line-height: 1.65;
   margin: 0;
 }
@@ -391,7 +397,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 .bb-flip-teaser {
   font-size: 17px;
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
   line-height: 1.65;
   margin: 0 0 0.75rem;
 }
@@ -413,7 +419,7 @@ h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-flip-back p {
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
   font-size: 17px;
   line-height: 1.65;
   margin: 0 0 0.75rem;

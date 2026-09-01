@@ -34,9 +34,8 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 /* Contents list: large graphic numerals, plain hairline rows. */
 .bb-contents-notes {
   list-style: none;
-  margin: 0 0 2.5rem;
+  margin: 0.5rem 0 2.5rem;
   padding: 0;
-  border-top: 1px solid var(--bb-border);
 }
 .bb-contents-notes li {
   display: flex;
@@ -75,7 +74,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   font-family: 'Instrument Sans', sans-serif;
   font-size: 17px;
   color: #24221A;
-  opacity: 0.82;
+  opacity: 0.92;
   line-height: 1.65;
   margin-bottom: 1.25rem;
   max-width: 62ch;
@@ -157,7 +156,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-flip-back p {
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
   font-size: 17px;
   line-height: 1.65;
   margin: 0 0 0.65rem;
@@ -186,7 +185,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 .bb-two-col-text p {
   font-family: 'Instrument Sans', sans-serif;
   color: #24221A;
-  opacity: 0.82;
+  opacity: 0.92;
   font-size: 17px;
   line-height: 1.65;
   margin: 0 0 0.85rem;
@@ -233,7 +232,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 }
 .bb-misconception p {
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
   margin: 0.4rem 0 0;
   font-size: 17px;
   line-height: 1.65;
@@ -262,7 +261,7 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
   font-size: 17px;
   font-style: italic;
   color: var(--bb-text-secondary);
-  opacity: 0.82;
+  opacity: 0.92;
   line-height: 1.65;
   margin: 0;
 }
